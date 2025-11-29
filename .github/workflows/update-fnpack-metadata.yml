@@ -11,6 +11,9 @@ on:
 jobs:
   update-fnpack:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
     
     steps:
       - name: Checkout repository
@@ -45,6 +48,7 @@ jobs:
           fi
           
       - name: Commit and push changes
+        id: commit_changes
         if: steps.check_changes.outputs.no_changes == 'false'
         run: |
           # 添加变更文件
@@ -53,3 +57,14 @@ jobs:
           git commit -m "Update FnPack metadata [automated]"
           # 推送到仓库
           git push
+          # 设置输出以指示有变更
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+      
+      # 触发部署Pages
+      - name: Trigger deployment workflow
+        if: steps.commit_changes.outputs.has_changes == 'true'
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: deploy-pages
+          client-payload: '{"message": "Trigger deployment after metadata update"}'

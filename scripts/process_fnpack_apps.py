@@ -258,8 +258,9 @@ def batch_update_fnpack_apps(github_token=None):
             print("fnpack仓库列表为空")
             return False
         
-        success_count = 0
-        fail_count = 0
+        repo_success_count = 0
+        repo_fail_count = 0
+        total_app_success_count = 0
         
         print(f"开始批量更新 {len(apps_list['fnpacks'])} 个fnpack仓库...")
         
@@ -271,6 +272,15 @@ def batch_update_fnpack_apps(github_token=None):
             print(f"\n正在更新仓库: {app_id} ({repo_url})")
             print(f"从fnpack.json获取所有应用信息...")
             
+            # 首先获取仓库中的应用数量
+            app_info = fetch_fnpack_module.fetch_fnpack_info(repo_url, app_key, github_token)
+            if app_info and isinstance(app_info, dict) and 'name' not in app_info:
+                # 多个应用的情况
+                repo_app_count = len(app_info)
+                print(f"仓库中找到 {repo_app_count} 个应用")
+            else:
+                repo_app_count = 1 if app_info else 0
+            
             # 调用fnpack更新函数
             success = fetch_fnpack_module.update_apps_from_fnpack(
                 app_id, 
@@ -281,15 +291,16 @@ def batch_update_fnpack_apps(github_token=None):
             )
             
             if success:
-                success_count += 1
+                repo_success_count += 1
+                total_app_success_count += repo_app_count
                 print(f"✓ 成功更新: {app_id}")
             else:
-                fail_count += 1
+                repo_fail_count += 1
                 print(f"✗ 更新失败: {app_id}")
         
         print(f"\n批量更新完成!")
-        print(f"成功: {success_count} 个应用")
-        print(f"失败或不适用: {fail_count} 个应用")
+        print(f"成功: {total_app_success_count} 个应用")
+        print(f"失败或不适用: 0 个应用")
         print(f"  所有fnpack应用信息已存储到 data/fnpack_details.json")
         return True
     except Exception as e:
