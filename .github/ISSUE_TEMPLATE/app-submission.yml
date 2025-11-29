@@ -1,0 +1,39 @@
+name: 应用提交
+description: 提交新应用到仓库
+title: '应用提交: '
+labels: ["app-submission"]
+body:
+  - type: input
+    id: app-id
+    attributes:
+      label: 应用唯一ID
+      description: 仅使用小写字母、数字、符号“-”
+      placeholder: your-app-id
+    validations:
+      required: true
+
+  - type: input
+    id: app-name
+    attributes:
+      label: 应用名称
+      description: 您的应用显示名称
+      placeholder: 我的应用名称
+    validations:
+      required: true
+
+  - type: input
+    id: repo-url
+    attributes:
+      label: GitHub仓库URL
+      description: 您的应用GitHub仓库地址
+      placeholder: https://github.com/your-username/your-repo
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        提交前请确保：
+        - 仓库Release中包含有效的.fpk下载文件
+        - 有明确的应用描述
+        - 已添加适当的图标

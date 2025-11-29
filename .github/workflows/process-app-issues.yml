@@ -1,0 +1,60 @@
+name: Process App Submission Issues
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  process-issue:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      actions: write
+    if: contains(github.event.issue.labels.*.name, 'app-submission') || github.event.action == 'opened'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Process app submission
+        id: process_app
+        run: |
+          python scripts/process_app_issue.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO_OWNER: ${{ github.repository_owner }}
+          REPO_NAME: ${{ github.event.repository.name }}
+
+      - name: Commit changes
+        id: commit_changes
+        if: success()
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add apps.json
+          if git diff --staged --quiet;
+          then
+            echo "没有更改需要提交"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Update apps.json - add/modify app from issue #${{ github.event.issue.number }}"
+            git push origin HEAD:main
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "✅ apps.json已成功提交"
+          fi
+
+      # 触发更新元数据
+      - name: Trigger metadata update
+        if: steps.commit_changes.outputs.has_changes == 'true'
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: update-metadata
+          client-payload: '{"message": "Update metadata triggered after apps.json change"}'

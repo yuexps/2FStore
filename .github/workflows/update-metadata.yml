@@ -1,0 +1,59 @@
+name: Update App Metadata
+
+on:
+  schedule:
+    - cron: '0 16 * * *' # 每天 0 点自动运行（UTC+8）
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps.json'
+  repository_dispatch:
+    types: [update-metadata]
+
+jobs:
+  update-metadata:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: 批量更新所有应用元数据
+        run: |
+          python scripts/batch_update_apps.py
+
+      - name: Commit changes
+        id: commit_changes
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add data/app_details.json
+          if git diff --staged --quiet;
+          then
+            echo "没有更改需要提交"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "自动更新 app details metadata"
+            git push
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+      
+      # 触发部署Pages
+      - name: Trigger deployment workflow
+        if: steps.commit_changes.outputs.has_changes == 'true'
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: deploy-pages
+          client-payload: '{"message": "Trigger deployment after metadata update"}'

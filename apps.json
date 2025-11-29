@@ -1,0 +1,24 @@
+{
+  "apps": [
+    {
+      "id": "test3",
+      "name": "测试3",
+      "repository": "https://github.com/yuexps/v2raya-fnos"
+    },
+    {
+      "id": "test4",
+      "name": "测试4",
+      "repository": "https://github.com/yuexps/v2raya-fnos"
+    },
+    {
+      "id": "test5",
+      "name": "测试5",
+      "repository": "https://github.com/yuexps/v2raya-fnos"
+    },
+    {
+      "id": "test1",
+      "name": "测试1",
+      "repository": "https://github.com/yuexps/v2raya-fnos"
+    }
+  ]
+}
