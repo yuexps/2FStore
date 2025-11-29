@@ -298,6 +298,10 @@ function renderAppList() {
 function createAppCard(app) {
     const initial = app.name.charAt(0).toUpperCase();
     const iconUrl = app.iconUrl || '';
+    let sourceBadge = '';
+    if (app.source) {
+        sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
+    }
     
     return `
         <div class="miuix-card app-card" data-app-id="${app.id}">
@@ -306,7 +310,7 @@ function createAppCard(app) {
                     ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">` : initial}
                 </div>
                 <div class="app-info">
-                    <div class="app-name">${app.name}</div>
+                    <div class="app-name">${app.name} ${sourceBadge}</div>
                     <div class="app-author">作者: ${app.author}</div>
                 </div>
             </div>
@@ -328,6 +332,10 @@ function showAppDetail(appId) {
     
     const initial = app.name.charAt(0).toUpperCase();
     const iconUrl = app.iconUrl || '';
+    let sourceBadge = '';
+    if (app.source) {
+        sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
+    }
     
     appDetailContent.innerHTML = `
         <div class="app-detail-header">
@@ -335,7 +343,7 @@ function showAppDetail(appId) {
                 ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">` : initial}
             </div>
             <div class="app-detail-info">
-                <div class="app-detail-name">${app.name}</div>
+                <div class="app-detail-name">${app.name} ${sourceBadge}</div>
                 <div class="app-detail-author">作者: ${app.author}</div>
                 <div class="app-detail-stats">
                     <span>⭐ ${app.stars || 0}</span>
@@ -435,9 +443,30 @@ async function loadAppsData() {
         // 显示加载动画
         showLoading();
         
-        const response = await fetch('./app_details.json');
-        const data = await response.json();
-        appsData = data.apps || [];
+        // 同时加载两个数据源
+        const [appResponse, fnpackResponse] = await Promise.all([
+            fetch('./app_details.json'),
+            fetch('./fnpack_details.json')
+        ]);
+        
+        // 解析JSON数据
+        const appData = await appResponse.json();
+        const fnpackData = await fnpackResponse.json();
+        
+        // 合并两个数据源的应用数据，并为不同来源的应用添加标识
+        const standardApps = (appData.apps || []).map(app => ({ ...app, source: '2FStore' }));
+        const fnpackApps = (fnpackData.apps || []).map(app => ({ ...app, source: 'FnDepot' }));
+        
+        // 合并并去重（如果有重复的应用ID）
+        const appMap = new Map();
+        [...standardApps, ...fnpackApps].forEach(app => {
+            // 优先保留标准应用，如果没有则使用FnPack应用
+            if (!appMap.has(app.id)) {
+                appMap.set(app.id, app);
+            }
+        });
+        
+        appsData = Array.from(appMap.values());
         
         // 提取所有分类
         extractCategories();

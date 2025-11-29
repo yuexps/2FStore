@@ -385,6 +385,26 @@ body {
     border: 1px solid var(--miuix-color-outline-variant);
 }
 
+/* 应用来源标识 */
+.app-source-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.app-source-badge.store-2fstore {
+    background-color: #2196F3;
+    color: white;
+}
+
+.app-source-badge.store-fndepot {
+    background-color: #4CAF50;
+    color: white;
+}
+
 .app-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);

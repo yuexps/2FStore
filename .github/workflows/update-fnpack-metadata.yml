@@ -1,0 +1,55 @@
+name: Update FnPack Metadata
+
+on:
+  schedule:
+    - cron: '0 16 * * *' # 每天 0 点自动运行（UTC+8）
+  workflow_dispatch:
+  push:
+    paths:
+      - 'fnpacks.json'
+
+jobs:
+  update-fnpack:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          
+      - name: Update FnPack metadata
+        env:
+          # 使用GitHub Token进行API调用
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # 执行批量更新fnpack应用
+          python scripts/process_fnpack_apps.py --token $GITHUB_TOKEN batch-update
+          
+      - name: Check for changes
+        id: check_changes
+        run: |
+          # 检查是否有文件变更
+          if git diff --quiet data/fnpack_details.json; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.no_changes == 'false'
+        run: |
+          # 添加变更文件
+          git add data/fnpack_details.json
+          # 提交变更
+          git commit -m "Update FnPack metadata [automated]"
+          # 推送到仓库
+          git push

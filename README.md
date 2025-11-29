@@ -2,6 +2,8 @@
 
 一个为FNOS创建的中心化应用仓库，开发者可以通过PR提交应用，用户可以浏览和下载应用。
 
+## 注意：项目未完善，摸鱼中~
+
 ## 功能特点
 
 - 应用搜索和分类浏览
@@ -22,7 +24,7 @@
 
 ### 2. 通过Pull Request提交
 1. Fork 本仓库
-2. 在项目根目录的 apps.json 文件中添加你的应用信息，示例如下：
+2. 在项目根目录的 `apps.json` 文件的 `apps` 数组中添加你的应用信息，示例如下：
 {
     "id": "your-app-id", // 应用ID，必须唯一
     "name": "你的应用名称", // 应用名称，随便取
@@ -60,6 +62,26 @@ app_id/
 
 应用需遵循FNOS规范，包含manifest文件，详细规范请参考：[飞牛文档](https://developer.fnnas.com/docs/core-concepts/manifest)
 
+
+## 兼容：如何将 FnDepot 应用仓库添加到 2FStore
+
+通过提交PR在`fnpacks.json`文件的`fnpacks`数组中添加你的 FnDepot 仓库信息：
+
+```json
+{
+  "key": "你的GitHub用户名",
+  "repo": "https://github.com/你的用户名/FnDepot"
+}
+```
+
+FnDepot示例仓库：https://github.com/EWEDLCM/FnDepot
+
+FnDepot文档：https://ecn6sp7e44q3.feishu.cn/wiki/VSrmwqtjhigaygkWkyoceEvvnlb
+
+
+
 ## GitHub Actions
 
-本项目使用GitHub Actions实现自动化处理，更多信息请参考：[GitHub Actions文档](https://docs.github.com/zh/actions)
+本项目使用GitHub Actions实现自动化处理
+
+更多信息请参考：[GitHub Actions文档](https://docs.github.com/zh/actions)

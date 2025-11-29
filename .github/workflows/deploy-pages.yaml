@@ -30,8 +30,10 @@ jobs:
           fetch-depth: 0
 
       # 复制数据文件到web根目录
-      - name: Copy app details to web directory
-        run: cp ./data/app_details.json ./web
+      - name: Copy data files to web directory
+        run: |
+          cp ./data/app_details.json ./web
+          cp ./data/fnpack_details.json ./web
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
