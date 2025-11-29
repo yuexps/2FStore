@@ -24,9 +24,9 @@
 1. Fork 本仓库
 2. 在项目根目录的 apps.json 文件中添加你的应用信息，示例如下：
 {
-    "id": "your-app-id",
-    "name": "你的应用名称",
-    "repository": "https://github.com/user/your-repo"
+    "id": "your-app-id", // 应用ID，必须唯一
+    "name": "你的应用名称", // 应用名称，随便取
+    "repository": "https://github.com/user/your-repo" // 应用GitHub仓库URL
 }
 3. 创建 Pull Request 到主分支
 4. 等待合并

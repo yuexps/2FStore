@@ -99,25 +99,17 @@
                 <button class="miuix-modal-close">&times;</button>
             </div>
             <div class="miuix-modal-body">
-                <p>开发者可以通过以下步骤提交应用到仓库：</p>
+                <p>开发者可以通过 Issues 提交应用到仓库：</p>
                 <ol>
-                    <li>Fork 本仓库。</li>
-                    <li>在项目根目录的 <code>apps.json</code> 文件中添加你的应用信息，示例如下：</li>
-                </ol>
-                <div class="miuix-code-block">
-                    <pre>{
-    "id": "your-app-id",
-    "name": "你的应用名称",
-    "repository": "https://github.com/user/your-repo"
-}</pre>
-                </div>
-                <ol start="3">
-                    <li>创建 Pull Request 到主分支。</li>
-                    <li>等待自动验证和更新。</li>
+                    <li>点击仓库中的 "Issues" 标签</li>
+                    <li>点击 "New issue" 按钮</li>
+                    <li>选择 "应用提交" 模板</li>
+                    <li>填写应用信息（应用ID、应用名称、GitHub仓库URL）</li>
+                    <li>提交 Issue，系统将自动处理并更新元数据</li>
                 </ol>
             </div>
             <div class="miuix-modal-footer">
-                <a href="https://github.com/yuexps/FN-Free-Store/pulls" target="_blank" class="miuix-button miuix-button-primary">创建PR</a>
+                <a href="https://github.com/yuexps/2FStore/issues/new?template=app-submission.yml" target="_blank" class="miuix-button miuix-button-primary">提交应用</a>
             </div>
         </div>
     </div>
