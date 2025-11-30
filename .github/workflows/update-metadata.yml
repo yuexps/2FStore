@@ -2,7 +2,7 @@ name: Update App Metadata
 
 on:
   schedule:
-    - cron: '0 16 * * *' # 每天 0 点自动运行（UTC+8）
+    - cron: '0 2 * * 5' # 每周五 UTC 2:00 检查更新
   workflow_dispatch:
   push:
     branches:
