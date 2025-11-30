@@ -87,7 +87,43 @@
       "fnpack_repo_key": "htnanako",
       "install_type": "存储空间",
       "size": "19"
+    },
+    {
+      "id": "IMGZCQ_fndesk",
+      "name": "fndesk",
+      "repository": "https://github.com/IMGZCQ/FnDepot",
+      "description": "我的飞牛我做主,多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口",
+      "version": "0.80.7",
+      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/fndesk.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/01.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/2.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/3.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/4.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/5.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/6.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/7.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/8.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/9.jpg"
+      ],
+      "author": "米恋泥",
+      "author_url": "https://github.com/IMGZCQ/FnDepot",
+      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
+      "history": {
+        "v0.80.7": "外链分享自定义(PC和移动Web端Logo标题描述链接等),优化一键还原,还原后不需要重启,优化窗口最大化/调整默认排序",
+        "v0.79": "窗口/文件夹兼容飞牛窗口不再遮挡,登录页增加记住密码选项",
+        "v0.78": "适配 飞牛 V1.0.0 正式版,集成图标库 + 离线图标包（可选）.优化右键菜单，打开方式及其他细节"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-11-26T05:10:27Z",
+      "fnpack_app_key": "fndesk",
+      "fnpack_repo_key": "IMGZCQ",
+      "install_type": "系统空间",
+      "size": "1"
     }
   ],
-  "lastUpdated": "2025-11-30T03:45:34.254782Z"
+  "lastUpdated": "2025-11-30T03:48:17.553390Z"
 }
