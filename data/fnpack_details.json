@@ -21,10 +21,10 @@
       "history": {
         "v1.0.0": "1. 初始版本发布。"
       },
-      "stars": 16,
+      "stars": 21,
       "forks": 6,
       "category": "utility",
-      "lastUpdate": "2025-11-30T10:04:44Z",
+      "lastUpdate": "2025-11-30T14:06:28Z",
       "fnpack_app_key": "fntermx",
       "fnpack_repo_key": "EWEDLCM",
       "install_type": "系统空间",
@@ -82,7 +82,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-11-30T09:54:58Z",
+      "lastUpdate": "2025-11-30T12:53:02Z",
       "fnpack_app_key": "notifyhub",
       "fnpack_repo_key": "htnanako",
       "install_type": "存储空间",
@@ -118,12 +118,12 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-11-26T05:10:27Z",
+      "lastUpdate": "2025-11-30T11:09:17Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
       "size": "1"
     }
   ],
-  "lastUpdated": "2025-11-30T10:04:58.586552Z"
+  "lastUpdated": "2025-11-30T16:24:59.883108Z"
 }
