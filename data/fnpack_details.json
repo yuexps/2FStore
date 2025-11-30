@@ -53,7 +53,41 @@
       "fnpack_repo_key": "EWEDLCM",
       "install_type": "存储空间",
       "size": "3"
+    },
+    {
+      "id": "htnanako_notifyhub",
+      "name": "NotifyHub",
+      "repository": "https://github.com/htnanako/FnDepot",
+      "description": "智能通知调度中心 —— 多渠道消息推送统一管理平台",
+      "version": "v0.16.2",
+      "iconUrl": "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/notifyhub.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/01.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/02.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/03.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/04.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/05.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/06.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/07.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/08.png"
+      ],
+      "author": "htnanako",
+      "author_url": "https://github.com/htnanako",
+      "bug_report_url": "https://github.com/htnanako/NotifyHub/issues",
+      "history": {
+        "v0.16.2": "修复插件启动事件循环后等待返回逻辑错误的问题",
+        "v0.16.1": "修复接口请求pydantic验证失败的问题"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-11-27T12:03:49Z",
+      "fnpack_app_key": "notifyhub",
+      "fnpack_repo_key": "htnanako",
+      "install_type": "存储空间",
+      "size": "19"
     }
   ],
-  "lastUpdated": "2025-11-29T16:27:17.219248Z"
+  "lastUpdated": "2025-11-30T03:45:34.254782Z"
 }
