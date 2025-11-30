@@ -1,6 +1,6 @@
 # 2FStore
 
-一个为 fnOS 创建的中心化应用商店，开发者可以通过 PR 提交应用，用户可以浏览和下载应用。
+为 fnOS 创建的应用仓库，开发者可以通过 PR 提交应用，用户可以浏览和下载应用。
 
 > ⚠️ **注意**：项目仍在开发中，欢迎一起完善！摸鱼~
 
@@ -26,7 +26,7 @@
 ### 2. 通过 Pull Request 提交
 
 1. Fork 本仓库
-2. 在项目根目录的 [apps.json](file:///d:/Users/yuyue/Documents/Code/2FStore/apps.json) 文件的 `apps` 数组中添加你的应用信息，示例如下：
+2. 在项目根目录的 [apps.json](https://github.com/yuexps/2FStore/apps.json) 文件的 `apps` 数组中添加你的应用信息，示例如下：
 
 ```json
 {
@@ -65,11 +65,11 @@ app_id/
 
 示例仓库：[v2raya-fnos](https://github.com/yuexps/v2raya-fnos)
 
-应用需遵循 fnOS 规范，包含 manifest 文件，详细规范请参考：[飞牛文档](https://developer.fnnas.com/docs/core-concepts/manifest)
+应用需遵循 fnOS 规范，包含 manifest 文件，详细规范请参考：[FNOS文档](https://developer.fnnas.com/docs/core-concepts/manifest)
 
 ## 🔗 兼容：如何将 FnDepot 应用仓库添加到 2FStore
 
-通过提交 PR 在 [fnpacks.json](file:///d:/Users/yuyue/Documents/Code/2FStore/fnpacks.json) 文件的 `fnpacks` 数组中添加你的 FnDepot 仓库信息：
+通过提交 PR 在 [fnpacks.json](https://github.com/yuexps/2FStore/fnpacks.json) 文件的 `fnpacks` 数组中添加你的 FnDepot 仓库信息：
 
 ```json
 {
@@ -85,5 +85,3 @@ FnDepot 文档：[飞书文档](https://ecn6sp7e44q3.feishu.cn/wiki/VSrmwqtjhiga
 ## ⚙️ GitHub Actions
 
 本项目使用 GitHub Actions 实现自动化处理。
-
-更多信息请参考：[GitHub Actions文档](https://docs.github.com/zh/actions)
