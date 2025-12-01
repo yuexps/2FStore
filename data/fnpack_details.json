@@ -1,36 +1,6 @@
 {
   "apps": [
     {
-      "id": "EWEDLCM_fntermx",
-      "name": "终端",
-      "repository": "https://github.com/EWEDLCM/FnDepot",
-      "description": "这是一个非常酷的应用<br/>它拥有很多强大的功能。",
-      "version": "1.1.0",
-      "iconUrl": "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/fntermx.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/Preview/1.png",
-        "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/Preview/2.png",
-        "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/Preview/3.png",
-        "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/Preview/4.png",
-        "https://raw.githubusercontent.com/EWEDLCM/FnDepot/main/fntermx/Preview/5.png"
-      ],
-      "author": "EWEDL",
-      "author_url": "https://github.com/EWEDLCM/",
-      "bug_report_url": "https://github.com/EWEDLCM/FnDepot/fntermx/issues",
-      "history": {
-        "v1.0.0": "1. 初始版本发布。"
-      },
-      "stars": 21,
-      "forks": 6,
-      "category": "utility",
-      "lastUpdate": "2025-11-30T14:06:28Z",
-      "fnpack_app_key": "fntermx",
-      "fnpack_repo_key": "EWEDLCM",
-      "install_type": "系统空间",
-      "size": "42.5"
-    },
-    {
       "id": "htnanako_notifyhub",
       "name": "NotifyHub",
       "repository": "https://github.com/htnanako/FnDepot",
