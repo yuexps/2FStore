@@ -4,6 +4,11 @@
       "id": "v2raya",
       "name": "V2rayA",
       "repository": "https://github.com/yuexps/v2raya-fnos"
+    },
+    {
+      "id": "lunatv",
+      "name": "LunaTV",
+      "repository": "https://github.com/yuexps/lunatv-fnos"
     }
   ]
 }
