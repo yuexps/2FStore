@@ -65,11 +65,12 @@ app_id/
 └── README.md
 ```
 
-示例仓库：[v2raya-fnos](https://github.com/yuexps/v2raya-fnos)
+示例仓库：https://github.com/yuexps/reader-fnos
 
 应用需遵循 fnOS 规范，包含 manifest 文件，详细规范请参考：[FNOS文档](https://developer.fnnas.com/docs/core-concepts/manifest)
 
-## 🔗 兼容：如何将 FnDepot 应用仓库添加到 2FStore
+
+## 🔗 兼容：如何将 FnDepot 应用仓库添加到 2FStore ?
 
 通过提交 PR 在 [fnpacks.json](https://github.com/yuexps/2FStore/fnpacks.json) 文件的 `fnpacks` 数组中添加你的 FnDepot 仓库信息：
 
@@ -80,7 +81,7 @@ app_id/
 }
 ```
 
-FnDepot 示例仓库：[FnDepot](https://github.com/EWEDLCM/FnDepot)
+FnDepot 示例仓库：https://github.com/EWEDLCM/FnDepot
 
 FnDepot 文档：[飞书文档](https://ecn6sp7e44q3.feishu.cn/wiki/VSrmwqtjhigaygkWkyoceEvvnlb)
 
