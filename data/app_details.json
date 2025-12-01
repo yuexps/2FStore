@@ -10,10 +10,10 @@
       "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 31,
-      "forks": 3,
+      "stars": 35,
+      "forks": 5,
       "category": "network",
-      "lastUpdate": "2025-11-30T20:02:50Z"
+      "lastUpdate": "2025-12-01T09:49:08Z"
     },
     {
       "id": "lunatv",
@@ -25,11 +25,26 @@
       "downloadUrl": "https://github.com/yuexps/lunatv-fnos/releases/download/1.0.0/lunatv.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "media",
-      "lastUpdate": "2025-12-01T05:30:32Z"
+      "lastUpdate": "2025-12-01T08:56:40Z"
+    },
+    {
+      "id": "reader",
+      "name": "Reader",
+      "repository": "https://github.com/yuexps/reader-fnos",
+      "description": "Reader 是一款开源的网络小说阅读器，提供书源管理、书架同步、WebDAV备份等功能，支持多用户模式。",
+      "version": "3.2.14",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/reader-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/reader-fnos/releases/download/3.2.14/reader.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 0,
+      "forks": 0,
+      "category": "network",
+      "lastUpdate": "2025-12-01T11:57:18Z"
     }
   ],
-  "lastUpdated": "2025-12-01T05:35:57.381702Z"
+  "lastUpdated": "2025-12-01T15:35:39.525983Z"
 }
