@@ -9,6 +9,11 @@
       "id": "lunatv",
       "name": "LunaTV",
       "repository": "https://github.com/yuexps/lunatv-fnos"
+    },
+    {
+      "id": "reader",
+      "name": "Reader",
+      "repository": "https://github.com/yuexps/reader-fnos"
     }
   ]
 }
