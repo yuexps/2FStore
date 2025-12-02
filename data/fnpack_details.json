@@ -41,7 +41,7 @@
       "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• ✨ 实现图标，文件夹自由，彻底取代收藏夹 • 🌈 多项个性化设置：背景、LOGO、主题库<br> • 👑 多层文件夹，自由缩放拖动，右键菜单 • 🌐 智能识别内外网环境，更多自定义链接<br><br>更多信息请关注:<br>• 飞牛论坛（搜：飞牛桌面管理工具）<br>• GitHub：IMGZCQ/fndesk",
       "version": "0.83.3",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/fndesk.fpk",
+      "downloadUrl": "https://fndesk.imcq.top/fndesk.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/01.jpg",
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/2.jpg",
@@ -63,10 +63,10 @@
         "v0.83.2": "适配飞牛1.1.0内测版,每个图标/文件夹增加独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
         "v0.83.3": "支持创建飞牛原生图标(内测)"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T12:40:36Z",
+      "lastUpdate": "2025-12-02T06:10:19Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -79,7 +79,7 @@
       "description": "一个完整的三阶魔方",
       "version": "0.77",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/fncube.fpk",
+      "downloadUrl": "https://fndesk.imcq.top/fncube.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/Preview/1.png",
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/Preview/2.png"
@@ -90,10 +90,10 @@
       "history": {
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-01T12:40:36Z",
+      "lastUpdate": "2025-12-02T06:10:19Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -116,10 +116,10 @@
       "history": {
         "v1.9.6": "初始版本"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T06:56:41Z",
+      "lastUpdate": "2025-12-02T07:58:13Z",
       "fnpack_app_key": "linker",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -149,7 +149,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T14:47:44Z",
+      "lastUpdate": "2025-12-01T20:45:43Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -182,7 +182,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T14:47:44Z",
+      "lastUpdate": "2025-12-01T20:45:43Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -221,12 +221,92 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T14:47:44Z",
+      "lastUpdate": "2025-12-01T20:45:43Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
       "size": "0.3"
+    },
+    {
+      "id": "IMGZCQ_boombird",
+      "name": "压爆只雀",
+      "repository": "https://github.com/IMGZCQ/FnDepot",
+      "description": "压扁小鸟的解压小游戏",
+      "version": "0.77",
+      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/boombird/ICON.PNG",
+      "downloadUrl": "https://fndesk.imcq.top/FPK/boombird.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/boombird/Preview/1.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/boombird/Preview/2.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/boombird/Preview/3.png"
+      ],
+      "author": "米恋泥",
+      "author_url": "https://github.com/IMGZCQ/FnDepot",
+      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
+      "history": {
+        "v0.77": "修复错误,性能优化"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "games",
+      "lastUpdate": "2025-12-02T06:10:19Z",
+      "fnpack_app_key": "boombird",
+      "fnpack_repo_key": "IMGZCQ",
+      "install_type": "系统空间",
+      "size": "0.9"
+    },
+    {
+      "id": "snltty_certimate",
+      "name": "Certimate",
+      "repository": "https://github.com/snltty/FnDepot",
+      "description": "完全开源免费的自托管 SSL 证书 ACME 工具，申请、部署、续期全流程自动化可视化，支持各大主流云厂商。",
+      "version": "0.4.7",
+      "iconUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/certimate/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/certimate/certimate.fpk",
+      "screenshots": [],
+      "author": "certimate-go",
+      "author_url": "https://docs.certimate.me",
+      "bug_report_url": "https://docs.certimate.me",
+      "history": {
+        "v0.4.7": "初始版本"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-02T07:58:13Z",
+      "fnpack_app_key": "certimate",
+      "fnpack_repo_key": "snltty",
+      "install_type": "存储空间",
+      "size": "32.9"
+    },
+    {
+      "id": "moxyis_fpk-panindex",
+      "name": "PanIndex",
+      "repository": "https://github.com/moxyis/FnDepot",
+      "description": "PanIndex是一个简易的网盘目录列表.跨平台、易部署、多模式，多账户、多主题、下载直链、防盗链.目前支持的网盘:本地目录、天翼云网盘、teambition盘（个人、项目、国际服）、阿里云盘、115网盘、123云盘、OneDrive. 本套件默认帐号：admin 密码：PanIndex",
+      "version": "3.1.5",
+      "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-panindex/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-panindex/fpk-panindex.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-panindex/Preview/ScreenShot_2025-12-01_233540_303.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-panindex/Preview/ScreenShot_2025-12-01_233826_047.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-panindex/Preview/ScreenShot_2025-12-01_234003_318.png"
+      ],
+      "author": "moxyis",
+      "author_url": "https://github.com/moxyis",
+      "bug_report_url": "https://github.com/moxyis/FnDepot/issues",
+      "history": {
+        "V3.1.5": "https://github.com/px-org/PanIndex/releases/tag/v3.1.5"
+      },
+      "stars": 2,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-01T20:45:43Z",
+      "fnpack_app_key": "fpk-panindex",
+      "fnpack_repo_key": "moxyis",
+      "install_type": "系统空间",
+      "size": "15"
     }
   ],
-  "lastUpdated": "2025-12-01T16:31:06.636709Z"
+  "lastUpdated": "2025-12-02T15:06:27.423331Z"
 }
