@@ -5,6 +5,83 @@ let currentCategory = 'all';
 let currentSort = 'name';
 let githubProxy = ''; // 新增全局变量存储GitHub代理URL
 
+// Bing 每日图片 API
+const BING_API = 'https://bing.biturl.top/?resolution=1920&format=json&index=0&mkt=zh-CN';
+
+// 安全 HTML 标签白名单
+const ALLOWED_TAGS = ['b', 'i', 'strong', 'em', 'br', 'a', 'p', 'ul', 'ol', 'li', 'code', 'pre', 'span'];
+const ALLOWED_ATTRS = {
+    'a': ['href', 'target', 'rel'],
+    'span': ['class'],
+    'code': ['class'],
+    'pre': ['class']
+};
+
+/**
+ * 安全的 HTML 过滤函数
+ * 只允许白名单中的标签和属性，防止 XSS 攻击
+ */
+function sanitizeHtml(html) {
+    if (!html || typeof html !== 'string') return '';
+    
+    // 创建临时 DOM 解析 HTML
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = html;
+    
+    // 递归清理节点
+    function cleanNode(node) {
+        const childNodes = Array.from(node.childNodes);
+        
+        for (const child of childNodes) {
+            if (child.nodeType === Node.TEXT_NODE) {
+                // 文本节点保留
+                continue;
+            } else if (child.nodeType === Node.ELEMENT_NODE) {
+                const tagName = child.tagName.toLowerCase();
+                
+                if (!ALLOWED_TAGS.includes(tagName)) {
+                    // 不在白名单中的标签，用其文本内容替换
+                    const textNode = document.createTextNode(child.textContent);
+                    node.replaceChild(textNode, child);
+                } else {
+                    // 清理属性
+                    const allowedAttrs = ALLOWED_ATTRS[tagName] || [];
+                    const attrs = Array.from(child.attributes);
+                    
+                    for (const attr of attrs) {
+                        if (!allowedAttrs.includes(attr.name)) {
+                            child.removeAttribute(attr.name);
+                        } else if (attr.name === 'href') {
+                            // 检查 href 是否安全（只允许 http/https/mailto）
+                            const href = attr.value.toLowerCase().trim();
+                            if (!href.startsWith('http://') && 
+                                !href.startsWith('https://') && 
+                                !href.startsWith('mailto:')) {
+                                child.removeAttribute('href');
+                            }
+                        }
+                    }
+                    
+                    // 为外部链接添加安全属性
+                    if (tagName === 'a') {
+                        child.setAttribute('target', '_blank');
+                        child.setAttribute('rel', 'noopener noreferrer');
+                    }
+                    
+                    // 递归清理子节点
+                    cleanNode(child);
+                }
+            } else {
+                // 其他类型节点（如注释）直接移除
+                node.removeChild(child);
+            }
+        }
+    }
+    
+    cleanNode(tempDiv);
+    return tempDiv.innerHTML;
+}
+
 // DOM元素
 const appList = document.getElementById('app-list');
 const appDetail = document.getElementById('app-detail');
@@ -17,16 +94,56 @@ const sortSelect = document.getElementById('sort-select');
 const submitAppBtn = document.getElementById('submit-app-btn');
 const submitModal = document.getElementById('submit-modal');
 const closeModal = document.querySelector('.miuix-modal-close');
-const proxySelect = document.getElementById('proxy-select'); // 新增代理选择元素
-const customProxyContainer = document.getElementById('custom-proxy-container'); // 自定义代理容器
-const customProxyInput = document.getElementById('custom-proxy-input'); // 自定义代理输入框
+const proxySelect = document.getElementById('proxy-select');
+const customProxyContainer = document.getElementById('custom-proxy-container');
+const customProxyInput = document.getElementById('custom-proxy-input');
+const appCountEl = document.getElementById('app-count');
+const filterBtn = document.getElementById('filter-btn');
+const filterModal = document.getElementById('filter-modal');
+const mobileCategoryList = document.getElementById('mobile-category-list');
+const mobileSortSelect = document.getElementById('mobile-sort-select');
+const proxyBtn = document.getElementById('proxy-btn');
+const proxyModal = document.getElementById('proxy-modal');
+const mobileProxySelect = document.getElementById('mobile-proxy-select');
+const mobileCustomProxyContainer = document.getElementById('mobile-custom-proxy-container');
+const mobileCustomProxyInput = document.getElementById('mobile-custom-proxy-input');
 
 // 初始化应用
 document.addEventListener('DOMContentLoaded', () => {
     loadProxySetting(); // 加载保存的代理设置
+    loadBingBackground(); // 加载 Bing 每日背景
     loadAppsData();
     setupEventListeners();
 });
+
+// 加载 Bing 每日背景图片
+async function loadBingBackground() {
+    try {
+        // 检查本地缓存
+        const cached = localStorage.getItem('bingBackground');
+        const cachedDate = localStorage.getItem('bingBackgroundDate');
+        const today = new Date().toDateString();
+        
+        if (cached && cachedDate === today) {
+            document.body.style.backgroundImage = `url(${cached})`;
+            return;
+        }
+        
+        const response = await fetch(BING_API);
+        if (response.ok) {
+            const data = await response.json();
+            if (data.url) {
+                document.body.style.backgroundImage = `url(${data.url})`;
+                // 缓存到本地
+                localStorage.setItem('bingBackground', data.url);
+                localStorage.setItem('bingBackgroundDate', today);
+            }
+        }
+    } catch (error) {
+        console.warn('加载 Bing 背景图片失败:', error);
+        // 失败时使用默认背景色
+    }
+}
 
 // 设置事件监听器
 function setupEventListeners() {
@@ -76,6 +193,159 @@ function setupEventListeners() {
             filterApps();
         }
     });
+    
+    // 移动端筛选按钮
+    if (filterBtn) {
+        filterBtn.addEventListener('click', () => {
+            filterModal.classList.remove('hidden');
+            updateMobileFilterUI();
+        });
+    }
+    
+    // 移动端筛选模态框关闭
+    if (filterModal) {
+        filterModal.addEventListener('click', (e) => {
+            if (e.target === filterModal) {
+                filterModal.classList.add('hidden');
+            }
+        });
+        
+        const closeBtn = filterModal.querySelector('.miuix-modal-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                filterModal.classList.add('hidden');
+            });
+        }
+    }
+    
+    // 移动端分类点击
+    if (mobileCategoryList) {
+        mobileCategoryList.addEventListener('click', (e) => {
+            const listItem = e.target.closest('.miuix-list-item');
+            if (listItem) {
+                currentCategory = listItem.dataset.category;
+                filterApps();
+                updateMobileFilterUI();
+                filterModal.classList.add('hidden');
+            }
+        });
+    }
+    
+    // 移动端排序
+    if (mobileSortSelect) {
+        mobileSortSelect.addEventListener('change', () => {
+            currentSort = mobileSortSelect.value;
+            sortSelect.value = currentSort;
+            filterApps();
+        });
+    }
+    
+    // 移动端代理设置按钮
+    if (proxyBtn) {
+        proxyBtn.addEventListener('click', () => {
+            proxyModal.classList.remove('hidden');
+            // 同步当前代理设置到移动端
+            if (mobileProxySelect) {
+                mobileProxySelect.value = proxySelect.value;
+                if (proxySelect.value === 'custom') {
+                    mobileCustomProxyContainer.classList.remove('hidden');
+                    mobileCustomProxyInput.value = customProxyInput.value;
+                } else {
+                    mobileCustomProxyContainer.classList.add('hidden');
+                }
+            }
+        });
+    }
+    
+    // 移动端代理模态框关闭
+    if (proxyModal) {
+        proxyModal.addEventListener('click', (e) => {
+            if (e.target === proxyModal) {
+                proxyModal.classList.add('hidden');
+            }
+        });
+        
+        const closeBtn = proxyModal.querySelector('.miuix-modal-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                proxyModal.classList.add('hidden');
+            });
+        }
+    }
+    
+    // 移动端代理选择
+    if (mobileProxySelect) {
+        mobileProxySelect.addEventListener('change', () => {
+            const value = mobileProxySelect.value;
+            proxySelect.value = value; // 同步到桌面端选择器
+            
+            if (value === 'custom') {
+                mobileCustomProxyContainer.classList.remove('hidden');
+                customProxyContainer.classList.remove('hidden');
+            } else {
+                mobileCustomProxyContainer.classList.add('hidden');
+                customProxyContainer.classList.add('hidden');
+                githubProxy = value;
+                saveProxySetting();
+                reloadCurrentView();
+            }
+        });
+    }
+    
+    // 移动端自定义代理输入
+    if (mobileCustomProxyInput) {
+        mobileCustomProxyInput.addEventListener('blur', () => {
+            const value = mobileCustomProxyInput.value.trim();
+            customProxyInput.value = value; // 同步到桌面端
+            handleCustomProxyChange();
+        });
+        mobileCustomProxyInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                customProxyInput.value = mobileCustomProxyInput.value.trim();
+                handleCustomProxyChange();
+                proxyModal.classList.add('hidden');
+            }
+        });
+    }
+    
+    // 键盘快捷键：ESC 关闭模态框和详情
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            if (!submitModal.classList.contains('hidden')) {
+                submitModal.classList.add('hidden');
+            } else if (filterModal && !filterModal.classList.contains('hidden')) {
+                filterModal.classList.add('hidden');
+            } else if (proxyModal && !proxyModal.classList.contains('hidden')) {
+                proxyModal.classList.add('hidden');
+            } else if (!appDetail.classList.contains('hidden')) {
+                showAppList();
+            }
+        }
+    });
+}
+
+// 更新移动端筛选界面
+function updateMobileFilterUI() {
+    if (!mobileCategoryList) return;
+    
+    // 同步分类列表
+    mobileCategoryList.innerHTML = '';
+    const categories = Array.from(categoryList.querySelectorAll('.miuix-list-item'));
+    categories.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'miuix-list-item';
+        li.dataset.category = item.dataset.category;
+        if (item.dataset.category === currentCategory) {
+            li.classList.add('active');
+        }
+        li.innerHTML = `<span class="miuix-list-item-text">${item.textContent}</span>`;
+        mobileCategoryList.appendChild(li);
+    });
+    
+    // 同步排序选项
+    if (mobileSortSelect) {
+        mobileSortSelect.value = currentSort;
+    }
 }
 
 // 处理代理设置变化
@@ -254,8 +524,24 @@ function handleSort() {
 
 // 渲染应用列表
 function renderAppList() {
+    // 更新应用计数
+    if (appCountEl) {
+        appCountEl.textContent = `共 ${filteredApps.length} 个应用`;
+    }
+    
     if (filteredApps.length === 0) {
-        appList.innerHTML = '<div class="miuix-card"><div class="miuix-card-content" style="padding: 32px; text-align: center; font-size: 16px;">没有找到匹配的应用</div></div>';
+        appList.innerHTML = `
+            <div class="empty-state">
+                <svg class="empty-icon" xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                    <path d="M8 8l6 6"></path>
+                    <path d="M14 8l-6 6"></path>
+                </svg>
+                <p class="empty-title">没有找到匹配的应用</p>
+                <p class="empty-desc">试试其他搜索关键词或分类</p>
+            </div>
+        `;
         return;
     }
     
@@ -303,11 +589,14 @@ function createAppCard(app) {
         sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
     }
     
+    // 图片错误处理：失败时显示首字母
+    const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
+    
     return `
         <div class="miuix-card app-card" data-app-id="${app.id}">
             <div class="app-card-header">
                 <div class="app-icon">
-                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">` : initial}
+                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
                 </div>
                 <div class="app-info">
                     <div class="app-name">${app.name} ${sourceBadge}</div>
@@ -315,7 +604,7 @@ function createAppCard(app) {
                 </div>
             </div>
             <div class="app-card-body">
-                <div class="app-description">${app.description || '暂无描述'}</div>
+                <div class="app-description">${sanitizeHtml(app.description) || '暂无描述'}</div>
                 <div class="app-meta">
                     <span>⭐ ${app.stars || 0}</span>
                     <span>🔄 ${formatDate(app.lastUpdate)}</span>
@@ -337,10 +626,13 @@ function showAppDetail(appId) {
         sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
     }
     
+    // 图片错误处理
+    const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
+    
     appDetailContent.innerHTML = `
         <div class="app-detail-header">
             <div class="app-detail-icon">
-                ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">` : initial}
+                ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
             </div>
             <div class="app-detail-info">
                 <div class="app-detail-name">${app.name} ${sourceBadge}</div>
@@ -355,7 +647,7 @@ function showAppDetail(appId) {
         </div>
         
         <div class="app-detail-description">
-            ${app.description || '暂无描述'}
+            ${sanitizeHtml(app.description) || '暂无描述'}
         </div>
         
         <div class="app-detail-actions">
@@ -430,11 +722,86 @@ function showError(message) {
 
 // 显示加载动画
 function showLoading() {
-    appList.innerHTML = `
-        <div class="loading-spinner">
-            <div class="spinner"></div>
+    // 使用骨架屏代替旋转加载器
+    const skeletonCards = Array(6).fill('').map(() => `
+        <div class="skeleton-card">
+            <div class="skeleton-header">
+                <div class="skeleton-icon skeleton-pulse"></div>
+                <div class="skeleton-info">
+                    <div class="skeleton-title skeleton-pulse"></div>
+                    <div class="skeleton-author skeleton-pulse"></div>
+                </div>
+            </div>
+            <div class="skeleton-body">
+                <div class="skeleton-desc skeleton-pulse"></div>
+                <div class="skeleton-desc skeleton-pulse" style="width: 60%;"></div>
+            </div>
         </div>
-    `;
+    `).join('');
+    
+    appList.innerHTML = skeletonCards;
+}
+
+// 智能缓存：检查数据是否有更新
+async function fetchWithCache(url, cacheKey) {
+    const cachedData = localStorage.getItem(cacheKey);
+    const cachedETag = localStorage.getItem(`${cacheKey}_etag`);
+    const cachedTime = localStorage.getItem(`${cacheKey}_time`);
+    
+    // 如果缓存存在且未超过1小时，直接使用缓存
+    const ONE_HOUR = 60 * 60 * 1000;
+    if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime)) < ONE_HOUR) {
+        try {
+            return JSON.parse(cachedData);
+        } catch (e) {
+            // 缓存数据损坏，继续请求新数据
+        }
+    }
+    
+    // 构建请求头，如果有 ETag 则发送条件请求
+    const headers = {};
+    if (cachedETag) {
+        headers['If-None-Match'] = cachedETag;
+    }
+    
+    try {
+        const response = await fetch(url, { headers });
+        
+        // 304 Not Modified - 数据未变化，使用缓存
+        if (response.status === 304 && cachedData) {
+            localStorage.setItem(`${cacheKey}_time`, Date.now().toString());
+            return JSON.parse(cachedData);
+        }
+        
+        if (response.ok) {
+            const data = await response.json();
+            const newETag = response.headers.get('ETag');
+            
+            // 保存到缓存
+            localStorage.setItem(cacheKey, JSON.stringify(data));
+            localStorage.setItem(`${cacheKey}_time`, Date.now().toString());
+            if (newETag) {
+                localStorage.setItem(`${cacheKey}_etag`, newETag);
+            }
+            
+            return data;
+        }
+        
+        // 请求失败但有缓存，使用缓存
+        if (cachedData) {
+            console.warn(`请求 ${url} 失败，使用缓存数据`);
+            return JSON.parse(cachedData);
+        }
+        
+        throw new Error(`HTTP ${response.status}`);
+    } catch (error) {
+        // 网络错误时尝试使用缓存
+        if (cachedData) {
+            console.warn(`网络错误，使用缓存数据:`, error);
+            return JSON.parse(cachedData);
+        }
+        throw error;
+    }
 }
 
 // 加载应用数据
@@ -443,15 +810,11 @@ async function loadAppsData() {
         // 显示加载动画
         showLoading();
         
-        // 同时加载两个数据源
-        const [appResponse, fnpackResponse] = await Promise.all([
-            fetch('./app_details.json'),
-            fetch('./fnpack_details.json')
+        // 使用智能缓存同时加载两个数据源
+        const [appData, fnpackData] = await Promise.all([
+            fetchWithCache('./app_details.json', 'appDetailsCache'),
+            fetchWithCache('./fnpack_details.json', 'fnpackDetailsCache')
         ]);
-        
-        // 解析JSON数据
-        const appData = await appResponse.json();
-        const fnpackData = await fnpackResponse.json();
         
         // 合并两个数据源的应用数据，并为不同来源的应用添加标识
         const standardApps = (appData.apps || []).map(app => ({ ...app, source: '2FStore' }));

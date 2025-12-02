@@ -1,14 +1,3 @@
 {
-  "apps": [
-    {
-      "id": "v2raya",
-      "name": "V2rayA",
-      "repository": "https://github.com/yuexps/v2raya-fnos"
-    },
-    {
-      "id": "test2",
-      "name": "测试2",
-      "repository": "https://github.com/yuexps/v2raya-fnos"
-    }
-  ]
+  "apps": []
 }

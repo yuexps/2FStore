@@ -1,0 +1,51 @@
+name: FnPack 应用提交
+description: 提交使用 FnDepot 规范的应用
+title: 'FnPack提交: '
+labels: ["fnpack-submission"]
+body:
+  - type: input
+    id: repo-url
+    attributes:
+      label: FnDepot 仓库URL
+      description: 您的 FnDepot 仓库地址（仓库名必须为 FnDepot，包含 fnpack.json）
+      placeholder: https://github.com/your-username/FnDepot
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## FnDepot 仓库要求
+        
+        提交前请确保您的仓库符合 [FnDepot 应用源构建规范](https://github.com/EWEDLCM/FnDepot)：
+        
+        ### 仓库结构
+        ```
+        FnDepot/                      # 仓库名必须为 FnDepot
+        ├── fnpack.json               # 全局元数据索引文件
+        └── {app_name}/               # 应用目录 (名称即为 app_key)
+            ├── ICON.PNG              # 应用图标 (强制全大写)
+            ├── {app_name}.fpk        # 安装包
+            ├── README.md             # 应用详情文档
+            └── Preview/              # 预览图目录
+        ```
+        
+        ### fnpack.json 示例
+        ```json
+        {
+          "app-key": {
+            "display_name": "应用名称",
+            "version": "1.0.0",
+            "desc": "应用描述",
+            "labels": "工具,效率",
+            "author": "开发者",
+            "author_url": "https://github.com/xxx",
+            "bug_report_url": "https://github.com/xxx/issues",
+            "install_type": "系统空间",
+            "size": "15",
+            "history": {
+              "v1.0.0": "Initial Release"
+            }
+          }
+        }
+        ```

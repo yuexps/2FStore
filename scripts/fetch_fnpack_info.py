@@ -1,90 +1,23 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+"""
+从 FnDepot 仓库获取 fnpack.json 应用信息
+支持解析 fnpack.json 规范格式的应用信息
+"""
+
 import json
 import sys
 import os
 import re
 import base64
 from datetime import datetime
-import urllib.request
 
-def fetch_github_api(url, github_token=None, max_retries=3):
-    """
-    从GitHub API获取数据，支持token认证以提高API调用限制
-    添加重试机制以处理网络错误
-    
-    参数:
-    - url: GitHub API URL
-    - github_token: GitHub API token
-    - max_retries: 最大重试次数
-    """
-    import time
-    
-    req = urllib.request.Request(url)
-    req.add_header('User-Agent', '2FStore-App/1.0')
-    
-    # 如果提供了GitHub token，则添加认证头
-    if github_token:
-        req.add_header('Authorization', f'token {github_token}')
-    
-    # 实现重试逻辑
-    for attempt in range(max_retries):
-        try:
-            response = urllib.request.urlopen(req, timeout=10)  # 添加超时设置
-            data = response.read()
-            return json.loads(data)
-        except Exception as e:
-            if attempt < max_retries - 1:
-                print(f"错误 (尝试 {attempt + 1}/{max_retries}): {str(e)}")
-                print(f"{3 ** attempt}秒后重试...")  # 指数退避策略
-                time.sleep(3 ** attempt)
-            else:
-                print(f"Error fetching {url} (所有尝试均失败): {str(e)}")
-                return None
+# 添加项目根目录到 Python 路径
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-def auto_classify_app(name, description):
-    """
-    智能分类函数 - 根据应用名称和描述自动确定分类
-    从fetch_app_info.py复用此函数以保持一致性
-    """
-    # 组合名称和描述用于分析
-    text = (name + ' ' + description).lower()
-    
-    # 定义分类关键词映射
-    category_keywords = {
-        'games': ['游戏', 'game', 'gaming', '休闲', 'entertainment', '娱乐', 'play', 'player', 'arcade', 'puzzle'],
-        'media': ['视频', '音乐', 'video', 'music', 'player', '播放', 'audio', 'image', '图片', 'photo', 'gallery'],
-        'network': ['网络', 'net', 'browser', '浏览器', 'vpn', '代理', 'proxy', '连接', 'connect', 'wifi', 'v2ray', 'clash'],
-        'development': ['开发', 'dev', 'code', '编程', 'program', 'ide', 'editor', '开发工具', 'developer'],
-        'system': ['系统', 'system', '设置', 'setting', '优化', 'optimize', '管理', 'manager', '监控', 'monitor', 'terminal', '终端'],
-        'productivity': ['办公', 'office', '文档', 'document', '效率', 'productivity', '笔记', 'note', 'todo', 'task', 'calendar', '日历'],
-        'utility': ['工具', 'utility', '计算器', 'calculator', '转换', 'convert', '下载', 'download', '搜索', 'search', '助手', 'helper']
-    }
-    
-    # 计算每个分类的匹配分数
-    best_category = 'uncategorized'
-    highest_score = 0
-    
-    for category, keywords in category_keywords.items():
-        score = 0
-        for keyword in keywords:
-            if keyword in text:
-                score += 1
-        
-        if score > highest_score:
-            highest_score = score
-            best_category = category
-    
-    # 只有当找到至少一个匹配时才分类，否则保持未分类
-    return best_category if highest_score > 0 else 'uncategorized'
+from utils import fetch_github_api, auto_classify_app, validate_app_key, parse_github_url
 
-def validate_app_key(app_key):
-    """
-    验证应用唯一标识是否符合规范
-    规范要求: 仅允许使用小写字母(a-z)、数字(0-9)和连字符(-)
-    """
-    return bool(re.match(r'^[a-z0-9-]+$', app_key))
 
 def fetch_fnpack_info(repo_url, app_name_in_fnpack=None, github_token=None):
     """
@@ -169,33 +102,41 @@ def _process_single_app(app_config, app_key, owner, repo, repo_info, github_toke
         if not validate_app_key(app_key):
             print(f"警告: 应用键 '{app_key}' 不符合规范，仅允许使用小写字母(a-z)、数字(0-9)和连字符(-)")
         
-        # 按照规范获取图标URL: /{app_name}/ICON.PNG
+        # 获取图标URL，支持多种大小写变体
         icon_url = ''
+        icon_variants = ['ICON.PNG', 'ICON.png', 'icon.png', 'Icon.png', 'icon.PNG']
         try:
-            # 严格按照规范在/{app_key}/目录下查找ICON.PNG（全大写）
-            icon_url = f'https://raw.githubusercontent.com/{owner}/{repo}/main/{app_key}/ICON.PNG'
-            # 验证图标是否存在
-            icon_res = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}/contents/{app_key}/ICON.PNG', github_token)
-            if icon_res:
-                print(f"找到图标: {icon_url}")
-            else:
-                print(f"警告: 未找到规范的图标文件 /{app_key}/ICON.PNG")
+            for icon_name in icon_variants:
+                icon_res = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}/contents/{app_key}/{icon_name}', github_token)
+                if icon_res:
+                    icon_url = f'https://raw.githubusercontent.com/{owner}/{repo}/main/{app_key}/{icon_name}'
+                    print(f"找到图标: {icon_url}")
+                    break
+            if not icon_url:
+                print(f"警告: 未找到图标文件 /{app_key}/ICON.PNG (尝试了多种大小写变体)")
         except Exception as e:
             print(f"获取图标失败: {str(e)}")
         
-        # 按照规范获取安装包URL: /{app_name}/{app_name}.fpk
+        # 按照规范获取安装包URL
+        # 优先使用 fnpack.json 中配置的 download_url
+        # 如果没有配置，则按照规范在 /{app_key}/目录下查找 {app_key}.fpk
         download_url = ''
-        try:
-            # 严格按照规范在/{app_key}/目录下查找{app_key}.fpk
-            download_url = f'https://raw.githubusercontent.com/{owner}/{repo}/main/{app_key}/{app_key}.fpk'
-            # 验证安装包是否存在
-            fpk_res = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}/contents/{app_key}/{app_key}.fpk', github_token)
-            if fpk_res:
-                print(f"找到安装包: {download_url}")
-            else:
-                print(f"警告: 未找到规范的安装包文件 /{app_key}/{app_key}.fpk")
-        except Exception as e:
-            print(f"获取安装包失败: {str(e)}")
+        if app_config.get('download_url'):
+            # 使用配置中指定的下载URL
+            download_url = app_config.get('download_url')
+            print(f"使用配置的下载URL: {download_url}")
+        else:
+            try:
+                # 严格按照规范在/{app_key}/目录下查找{app_key}.fpk
+                download_url = f'https://raw.githubusercontent.com/{owner}/{repo}/main/{app_key}/{app_key}.fpk'
+                # 验证安装包是否存在
+                fpk_res = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}/contents/{app_key}/{app_key}.fpk', github_token)
+                if fpk_res:
+                    print(f"找到安装包: {download_url}")
+                else:
+                    print(f"警告: 未找到规范的安装包文件 /{app_key}/{app_key}.fpk")
+            except Exception as e:
+                print(f"获取安装包失败: {str(e)}")
         
         # 尝试获取预览图
         screenshots = []

@@ -25,28 +25,31 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: 批量更新所有应用元数据
         run: |
-          python scripts/batch_update_apps.py
+          python scripts/process_apps.py batch-update
 
       - name: Commit changes
         id: commit_changes
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add data/app_details.json
-          if git diff --staged --quiet;
-          then
-            echo "没有更改需要提交"
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
+          
+          # 检查是否有实质性变更（忽略 lastUpdate 等时间字段）
+          if git diff data/app_details.json | grep -E '^[+-]\s+"(name|description|version|iconUrl|downloadUrl|author|category|repository|stars|forks)"' > /dev/null 2>&1; then
+            echo "检测到实质性变更"
+            git add data/app_details.json
             git commit -m "自动更新 app details metadata"
             git push
             echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "没有实质性变更，跳过提交"
+            git checkout -- data/app_details.json 2>/dev/null || true
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
       
       # 触发部署Pages

@@ -1,17 +1,17 @@
-name: Process App Submission Issues
+name: Process FnPack Submission Issues
 
 on:
   issues:
     types: [opened, labeled]
 
 jobs:
-  process-issue:
+  process-fnpack-issue:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
       actions: write
-    if: contains(github.event.issue.labels.*.name, 'app-submission') || github.event.action == 'opened'
+    if: contains(github.event.issue.labels.*.name, 'fnpack-submission')
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,10 +21,10 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Process app submission
-        id: process_app
+      - name: Process fnpack submission
+        id: process_fnpack
         run: |
-          python scripts/process_app_issue.py
+          python scripts/process_fnpack_issue.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
@@ -37,23 +37,23 @@ jobs:
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add apps.json
+          git add fnpacks.json
           if git diff --staged --quiet;
           then
             echo "没有更改需要提交"
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            git commit -m "Update apps.json - add/modify app from issue #${{ github.event.issue.number }}"
+            git commit -m "Update fnpacks.json - add fnpack repo from issue #${{ github.event.issue.number }}"
             git push origin HEAD:main
             echo "has_changes=true" >> $GITHUB_OUTPUT
-            echo "✅ apps.json已成功提交"
+            echo "✅ fnpacks.json已成功提交"
           fi
 
       # 触发更新元数据
-      - name: Trigger metadata update
+      - name: Trigger fnpack metadata update
         if: steps.commit_changes.outputs.has_changes == 'true'
         uses: peter-evans/repository-dispatch@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          event-type: update-metadata
-          client-payload: '{"message": "Update metadata triggered after apps.json change"}'
+          event-type: update-fnpack-metadata
+          client-payload: '{"message": "Update fnpack metadata triggered after fnpacks.json change"}'

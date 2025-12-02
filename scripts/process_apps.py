@@ -1,101 +1,46 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import json
+"""
+FN-Free-Store 应用管理工具
+提供添加、移除、列出、预览和批量更新应用的命令行功能
+"""
+
 import os
 import sys
 import argparse
-from datetime import datetime
 
-# 添加项目根目录到Python路径
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+# 添加项目根目录到 Python 路径
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-try:
-    from fetch_app_info import fetch_app_info
-except ImportError:
-    # 如果作为模块运行，使用相对导入
-    from .fetch_app_info import fetch_app_info
-
-def load_apps_list():
-    """
-    加载应用列表
-    """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    apps_list_file_path = os.path.join(script_dir, '..', 'apps.json')
-    
-    try:
-        with open(apps_list_file_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return {"apps": []}
-    except Exception as e:
-        print(f"加载应用列表时出错: {str(e)}")
-        return {"apps": []}
-
-
-def save_apps_list(apps_data):
-    """
-    保存应用列表
-    """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    apps_list_file_path = os.path.join(script_dir, '..', 'apps.json')
-    
-    try:
-        os.makedirs(os.path.dirname(apps_list_file_path), exist_ok=True)
-        with open(apps_list_file_path, 'w', encoding='utf-8') as f:
-            json.dump(apps_data, f, ensure_ascii=False, indent=2)
-        return True
-    except Exception as e:
-        print(f"保存应用列表时出错: {str(e)}")
-        return False
+from utils import AppsStore
+from fetch_app_info import fetch_app_info, update_apps
 
 
 def add_app(app_id, app_name, repo_url):
     """
     添加新应用到列表
     """
-    apps_data = load_apps_list()
+    store = AppsStore()
     
-    # 检查是否已存在
-    for app in apps_data["apps"]:
-        if app["id"] == app_id:
-            print(f"应用 {app_id} 已存在于列表中")
-            return False
-    
-    # 添加新应用
-    new_app = {
-        "id": app_id,
-        "name": app_name,
-        "repository": repo_url
-    }
-    
-    apps_data["apps"].append(new_app)
-    
-    if save_apps_list(apps_data):
-        print(f"成功添加应用: {app_name} ({app_id})")
-        return True
-    else:
-        print(f"添加应用失败: {app_name} ({app_id})")
+    if store.find_app(app_id):
+        print(f"应用 {app_id} 已存在于列表中")
         return False
+    
+    store.add_or_update_app(app_id, app_name, repo_url)
+    print(f"成功添加应用: {app_name} ({app_id})")
+    return True
 
 
 def remove_app(app_id):
     """
     从列表中移除应用
     """
-    apps_data = load_apps_list()
+    store = AppsStore()
     
-    # 查找并移除应用
-    original_length = len(apps_data["apps"])
-    apps_data["apps"] = [app for app in apps_data["apps"] if app["id"] != app_id]
-    
-    if len(apps_data["apps"]) < original_length:
-        if save_apps_list(apps_data):
-            print(f"成功移除应用: {app_id}")
-            return True
-        else:
-            print(f"移除应用失败: {app_id}")
-            return False
+    if store.remove_app(app_id):
+        print(f"成功移除应用: {app_id}")
+        return True
     else:
         print(f"未找到应用: {app_id}")
         return False
@@ -105,8 +50,8 @@ def list_apps():
     """
     列出所有应用
     """
-    apps_data = load_apps_list()
-    apps = apps_data.get("apps", [])
+    store = AppsStore()
+    apps = store.get_all_apps()
     
     if not apps:
         print("应用列表为空")
@@ -140,6 +85,47 @@ def preview_app(repo_url):
         return None
 
 
+def batch_update_apps():
+    """
+    批量更新所有应用信息
+    """
+    apps_store = AppsStore()
+    apps = apps_store.get_apps()
+    
+    if not apps:
+        print("应用列表为空")
+        return
+    
+    # 获取当前活跃的应用ID集合
+    active_app_ids = apps_store.get_app_ids()
+    
+    # 首先清理已删除的应用
+    update_apps(active_app_ids=active_app_ids)
+    
+    # 遍历并更新每个应用
+    success_count = 0
+    fail_count = 0
+    
+    for app in apps:
+        app_id = app.get('id')
+        app_name = app.get('name')
+        repo_url = app.get('repository')
+        
+        if not app_id or not app_name or not repo_url:
+            print(f"跳过无效的应用条目: {app}")
+            continue
+        
+        try:
+            print(f"\n正在处理应用: {app_name} ({app_id})")
+            update_apps(app_id, app_name, repo_url)
+            success_count += 1
+        except Exception as e:
+            print(f"处理应用 {app_name} 时出错: {str(e)}")
+            fail_count += 1
+    
+    print(f"\n批量更新完成: 成功 {success_count} 个，失败 {fail_count} 个")
+
+
 def main():
     parser = argparse.ArgumentParser(description="FN-Free-Store 应用管理工具")
     subparsers = parser.add_subparsers(dest='command', help='可用命令')
@@ -161,6 +147,9 @@ def main():
     preview_parser = subparsers.add_parser('preview', help='预览应用信息')
     preview_parser.add_argument('repo', help='仓库URL')
     
+    # 批量更新命令
+    subparsers.add_parser('batch-update', help='批量更新所有应用元数据')
+    
     args = parser.parse_args()
     
     if args.command == 'add':
@@ -171,6 +160,8 @@ def main():
         list_apps()
     elif args.command == 'preview':
         preview_app(args.repo)
+    elif args.command == 'batch-update':
+        batch_update_apps()
     else:
         parser.print_help()
 

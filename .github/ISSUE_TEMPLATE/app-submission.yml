@@ -1,13 +1,13 @@
-name: 应用提交
-description: 提交新应用到仓库
-title: '应用提交: '
+name: 2FStore 应用提交
+description: 提交新应用到 2FStore
+title: '2FStore应用提交: '
 labels: ["app-submission"]
 body:
   - type: input
     id: app-id
     attributes:
       label: 应用唯一ID
-      description: 仅使用小写字母、数字、符号“-”
+      description: 仅使用小写字母、数字、符号"-"
       placeholder: your-app-id
     validations:
       required: true
@@ -33,7 +33,40 @@ body:
   - type: markdown
     attributes:
       value: |
-        提交前请确保：
-        - 仓库Release中包含有效的.fpk下载文件
-        - 有明确的应用描述
-        - 已添加适当的图标
+        ## 仓库要求
+        
+        提交前请确保您的仓库满足以下条件，详见 [飞牛开发者文档](https://developer.fnnas.com/docs/core-concepts/manifest)：
+        
+        ### 必要文件
+        - **Release**: 包含有效的 `.fpk` 下载文件
+        - **manifest 文件**: 仓库根目录包含 `manifest` 文件（key=value 格式）
+        - **ICON.PNG**: 应用图标（全大写）
+        
+        ### manifest 文件示例
+        参考: [reader-fnos](https://github.com/yuexps/reader-fnos)
+        ```
+        appname         = myapp
+        version         = 1.0.0
+        display_name    = 我的应用
+        desc            = 应用描述
+        arch            = x86_64
+        source          = thirdparty
+        maintainer      = 开发者
+        maintainer_url  = https://github.com/xxx
+        distributor     = 发布者
+        distributor_url = https://github.com/xxx
+        os_min_ver      = 0.8.1
+        service_port    = 8080
+        ```
+        
+        ### 仓库结构示例
+        ```
+        your-app/
+        ├── manifest          # 应用配置文件
+        ├── ICON.PNG          # 应用图标 (256x256)
+        ├── README.md         # 说明文档
+        ```
+        
+        ---
+        
+        > 💡 **提示**: 如果您的应用符合 [FnDepot 规范](https://github.com/EWEDLCM/FnDepot)，请使用 **FnPack 应用提交** 模板。
