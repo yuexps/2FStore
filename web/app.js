@@ -1,3 +1,9 @@
+// ============ 测试模式配置 ============
+const TEST_MODE = true; // 设为 true 从 GitHub 远程获取数据，false 使用本地数据
+const TEST_DATA_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/app_details.json';
+const TEST_FNPACK_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/fnpack_details.json';
+// ======================================
+
 // 全局变量
 let appsData = [];
 let filteredApps = [];
@@ -599,7 +605,7 @@ function createAppCard(app) {
                     ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
                 </div>
                 <div class="app-info">
-                    <div class="app-name">${app.name} ${sourceBadge}</div>
+                    <div class="app-name">${app.name}</div>
                     <div class="app-author">作者: ${app.author}</div>
                 </div>
             </div>
@@ -607,7 +613,9 @@ function createAppCard(app) {
                 <div class="app-description">${sanitizeHtml(app.description) || '暂无描述'}</div>
                 <div class="app-meta">
                     <span>⭐ ${app.stars || 0}</span>
-                    <span>🔄 ${formatDate(app.lastUpdate)}</span>
+                    <span>🍴 ${app.forks || 0}</span>
+                    <span>🕐 ${formatDate(app.lastUpdate)}</span>
+                    ${sourceBadge}
                 </div>
             </div>
         </div>
@@ -630,44 +638,46 @@ function showAppDetail(appId) {
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
     
     appDetailContent.innerHTML = `
-        <div class="app-detail-header">
-            <div class="app-detail-icon">
-                ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
-            </div>
-            <div class="app-detail-info">
-                <div class="app-detail-name">${app.name} ${sourceBadge}</div>
-                <div class="app-detail-author">作者: ${app.author}</div>
-                <div class="app-detail-stats">
-                    <span>⭐ ${app.stars || 0}</span>
-                    <span>🍴 ${app.forks || 0}</span>
-                    <span>🏷️ ${getCategoryDisplayName(app.category || 'uncategorized')}</span>
-                    <span>📦 ${app.version || '1.0.0'}</span>
+        <div class="app-detail-container">
+            <div class="app-detail-header">
+                <div class="app-detail-icon">
+                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
+                </div>
+                <div class="app-detail-info">
+                    <div class="app-detail-name">${app.name} ${sourceBadge}</div>
+                    <div class="app-detail-author">作者: ${app.author}</div>
+                    <div class="app-detail-stats">
+                        <span>⭐ ${app.stars || 0}</span>
+                        <span>🍴 ${app.forks || 0}</span>
+                        <span>🏷️ ${getCategoryDisplayName(app.category || 'uncategorized')}</span>
+                        <span>📦 ${app.version || '1.0.0'}</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="app-detail-description">
-            ${sanitizeHtml(app.description) || '暂无描述'}
-        </div>
-        
-        <div class="app-detail-actions">
-            ${app.downloadUrl ? `<a href="${getProxyUrl(app.downloadUrl)}" class="download-btn" download><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>下载应用</a>` : ''}
-            <a href="${app.repository}" target="_blank" class="repo-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>查看仓库</a>
-        </div>
-        
-        ${app.screenshots && app.screenshots.length > 0 ? `
-            <div class="app-screenshots">
-                <h3>截图</h3>
-                <div class="screenshot-container">
-                    ${app.screenshots.map(screenshot => `
-                        <img src="${getProxyUrl(screenshot)}" alt="应用截图" class="screenshot">
-                    `).join('')}
-                </div>
+            
+            <div class="app-detail-description">
+                ${sanitizeHtml(app.description) || '暂无描述'}
             </div>
-        ` : ''}
-        
-        <div class="app-last-update">
-            最后更新: ${formatDate(app.lastUpdate)}
+            
+            <div class="app-detail-actions">
+                ${app.downloadUrl ? `<a href="${getProxyUrl(app.downloadUrl)}" class="download-btn" download><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>下载应用</a>` : ''}
+                <a href="${app.repository}" target="_blank" class="repo-btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>查看仓库</a>
+            </div>
+            
+            ${app.screenshots && app.screenshots.length > 0 ? `
+                <div class="app-screenshots">
+                    <h3>截图</h3>
+                    <div class="screenshot-container">
+                        ${app.screenshots.map(screenshot => `
+                            <img src="${getProxyUrl(screenshot)}" alt="应用截图" class="screenshot">
+                        `).join('')}
+                    </div>
+                </div>
+            ` : ''}
+            
+            <div class="app-last-update">
+                最后更新: ${formatDate(app.lastUpdate)}
+            </div>
         </div>
     `;
     
@@ -810,10 +820,18 @@ async function loadAppsData() {
         // 显示加载动画
         showLoading();
         
+        // 根据测试模式选择数据源
+        const appUrl = TEST_MODE ? TEST_DATA_URL : './app_details.json';
+        const fnpackUrl = TEST_MODE ? TEST_FNPACK_URL : './fnpack_details.json';
+        
+        if (TEST_MODE) {
+            console.log('🧪 测试模式已启用，从 GitHub 远程获取数据');
+        }
+        
         // 使用智能缓存同时加载两个数据源
         const [appData, fnpackData] = await Promise.all([
-            fetchWithCache('./app_details.json', 'appDetailsCache'),
-            fetchWithCache('./fnpack_details.json', 'fnpackDetailsCache')
+            fetchWithCache(appUrl, 'appDetailsCache'),
+            fetchWithCache(fnpackUrl, 'fnpackDetailsCache')
         ]);
         
         // 合并两个数据源的应用数据，并为不同来源的应用添加标识
