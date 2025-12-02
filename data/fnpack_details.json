@@ -1,4 +1,232 @@
 {
-  "apps": [],
-  "lastUpdated": "2025-12-02T13:57:48.990983Z"
+  "apps": [
+    {
+      "id": "htnanako_notifyhub",
+      "name": "NotifyHub",
+      "repository": "https://github.com/htnanako/FnDepot",
+      "description": "智能通知调度中心 —— 多渠道消息推送统一管理平台",
+      "version": "v0.16.2",
+      "iconUrl": "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/notifyhub.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/01.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/02.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/03.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/04.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/05.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/06.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/07.png",
+        "https://raw.githubusercontent.com/htnanako/FnDepot/main/notifyhub/Preview/08.png"
+      ],
+      "author": "htnanako",
+      "author_url": "https://github.com/htnanako",
+      "bug_report_url": "https://github.com/htnanako/NotifyHub/issues",
+      "history": {
+        "v0.16.2": "修复插件启动事件循环后等待返回逻辑错误的问题",
+        "v0.16.1": "修复接口请求pydantic验证失败的问题"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-11-30T12:53:02Z",
+      "fnpack_app_key": "notifyhub",
+      "fnpack_repo_key": "htnanako",
+      "install_type": "存储空间",
+      "size": "19"
+    },
+    {
+      "id": "IMGZCQ_fndesk",
+      "name": "飞牛桌面管理工具",
+      "repository": "https://github.com/IMGZCQ/FnDepot",
+      "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• ✨ 实现图标，文件夹自由，彻底取代收藏夹 • 🌈 多项个性化设置：背景、LOGO、主题库<br> • 👑 多层文件夹，自由缩放拖动，右键菜单 • 🌐 智能识别内外网环境，更多自定义链接<br><br>更多信息请关注:<br>• 飞牛论坛（搜：飞牛桌面管理工具）<br>• GitHub：IMGZCQ/fndesk",
+      "version": "0.83.3",
+      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/fndesk.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/01.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/2.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/3.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/4.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/5.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/6.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/7.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/8.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/9.jpg"
+      ],
+      "author": "米恋泥",
+      "author_url": "https://github.com/IMGZCQ/FnDepot",
+      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
+      "history": {
+        "v0.80.7": "外链分享自定义(PC和移动Web端Logo标题描述链接等),优化一键还原,还原后不需要重启,优化窗口最大化/调整默认排序",
+        "v0.78": "适配 飞牛 V1.0.0 正式版,集成图标库 + 离线图标包（可选）.优化右键菜单，打开方式及其他细节",
+        "v0.79": "窗口/文件夹兼容飞牛窗口不再遮挡,登录页增加记住密码选项",
+        "v0.83.2": "适配飞牛1.1.0内测版,每个图标/文件夹增加独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
+        "v0.83.3": "支持创建飞牛原生图标(内测)"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-01T12:40:36Z",
+      "fnpack_app_key": "fndesk",
+      "fnpack_repo_key": "IMGZCQ",
+      "install_type": "系统空间",
+      "size": "1"
+    },
+    {
+      "id": "IMGZCQ_fncube",
+      "name": "三阶魔方",
+      "repository": "https://github.com/IMGZCQ/FnDepot",
+      "description": "一个完整的三阶魔方",
+      "version": "0.77",
+      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/fncube.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/Preview/1.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/Preview/2.png"
+      ],
+      "author": "米恋泥",
+      "author_url": "https://github.com/IMGZCQ/FnDepot",
+      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
+      "history": {
+        "v0.77": "修复错误,性能优化"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "games",
+      "lastUpdate": "2025-12-01T12:40:36Z",
+      "fnpack_app_key": "fncube",
+      "fnpack_repo_key": "IMGZCQ",
+      "install_type": "系统空间",
+      "size": "0.5"
+    },
+    {
+      "id": "snltty_linker",
+      "name": "Linker",
+      "repository": "https://github.com/snltty/FnDepot",
+      "description": "极具特色的异地组网+内网穿透，由P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发实现。让你那些散落在世界各地的联网设备就像在隔壁房间一样轻松访问。",
+      "version": "1.9.6",
+      "iconUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/linker/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/linker/linker.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/snltty/FnDepot/main/linker/Preview/home.png"
+      ],
+      "author": "snltty",
+      "author_url": "https://linker.snltty.com",
+      "bug_report_url": "https://linker-doc.snltty.com",
+      "history": {
+        "v1.9.6": "初始版本"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-01T06:56:41Z",
+      "fnpack_app_key": "linker",
+      "fnpack_repo_key": "snltty",
+      "install_type": "存储空间",
+      "size": "10.4"
+    },
+    {
+      "id": "moxyis_fpk-napcatqq",
+      "name": "NapCatQQ",
+      "repository": "https://github.com/moxyis/FnDepot",
+      "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
+      "version": "4.9.80",
+      "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/Preview/ScreenShot_2025-12-01_045435_944.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/Preview/ScreenShot_2025-12-01_045522_033.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/Preview/ScreenShot_2025-12-01_045537_681.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/Preview/ScreenShot_2025-12-01_045544_817.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/Preview/ScreenShot_2025-12-01_045605_384.png"
+      ],
+      "author": "moxyis",
+      "author_url": "https://github.com/moxyis",
+      "bug_report_url": "https://github.com/moxyis/FnDepot/issues",
+      "history": {
+        "V4.9.80": "1、新增 pnpm-lock.yaml 以跟踪依赖项并更新 .gitignore <br> 2、新增 9.9.25-42905 (x64/Win) 和 6.9.86-42905 (arm64/Mac) 版本支持"
+      },
+      "stars": 2,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-01T14:47:44Z",
+      "fnpack_app_key": "fpk-napcatqq",
+      "fnpack_repo_key": "moxyis",
+      "install_type": "系统空间",
+      "size": "0.3"
+    },
+    {
+      "id": "moxyis_fpk-dnsmgr",
+      "name": "彩虹聚合DNS管理系统",
+      "repository": "https://github.com/moxyis/FnDepot",
+      "description": "彩虹聚合DNS管理系统 是一款基于ThinkPHP开发的网站程序，可实现在单一网站内管理多个平台的域名解析，目前已支持的域名解析平台有：阿里云、腾讯云、华为云、百度云、西部数码、火山引擎、DNSLA、CloudFlare、Namesilo、PowerDNS",
+      "version": "2.11",
+      "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/fpk-dnsmgr.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f626c6f672e63636379756e2e636e2f636f6e74656e742f75706c6f616466696c652f3230323431322f515125453625383825414125453525394225424532303234313232313135343635322e706e673f61.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f626c6f672e63636379756e2e636e2f636f6e74656e742f75706c6f616466696c652f3230323431322f515125453625383825414125453525394225424532303234313232313135343730322e706e67.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f626c6f672e63636379756e2e636e2f636f6e74656e742f75706c6f616466696c652f3230323431322f515125453625383825414125453525394225424532303234313232313135343830342e706e67.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f626c6f672e63636379756e2e636e2f636f6e74656e742f75706c6f616466696c652f3230323431322f515125453625383825414125453525394225424532303234313232313135343835372e706e67.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f70302e6d65697475616e2e6e65742f6373632f30393035303863646337616161626431383562613963373661386330393966393238333934362e706e67.webp",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f70302e6d65697475616e2e6e65742f6373632f36306266336636303764343066333066313532616431663665653362653039383335373833392e706e67.webp",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f70302e6d65697475616e2e6e65742f6373632f66393963353939643466656263656434303463383836373264643530643632633231323839352e706e67.webp",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-dnsmgr/Preview/68747470733a2f2f70312e6d65697475616e2e6e65742f6373632f64613730633736373533616565346263653034346431366661646435366535663231373636302e706e67.webp"
+      ],
+      "author": "moxyis",
+      "author_url": "https://github.com/moxyis",
+      "bug_report_url": "https://github.com/moxyis/FnDepot/issues",
+      "history": {
+        "V2.11": "JS、CSS本地化"
+      },
+      "stars": 2,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-01T14:47:44Z",
+      "fnpack_app_key": "fpk-dnsmgr",
+      "fnpack_repo_key": "moxyis",
+      "install_type": "系统空间",
+      "size": "0.3"
+    },
+    {
+      "id": "moxyis_fpk-zflie",
+      "name": "ZFile",
+      "repository": "https://github.com/moxyis/FnDepot",
+      "description": "基于 Java 的在线网盘程序，支持对接 S3、OneDrive、SharePoint、又拍云、本地存储、FTP 等存储源，支持在线浏览图片、播放音视频，文本文件等文件类型",
+      "version": "4.5.0",
+      "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/fpk-zflie.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/ScreenShot_2025-12-01_045435_944.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/gallery.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/generate-link.jpeg",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/login.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/page-setting.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-3d.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-audio.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-office.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-pdf.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-video.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/storage-edit-local.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/storage-list.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/user-edit.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/view-setting.png"
+      ],
+      "author": "moxyis",
+      "author_url": "https://github.com/moxyis",
+      "bug_report_url": "https://github.com/moxyis/FnDepot/issues",
+      "history": {
+        "V4.5.0": "https://docs.zfile.vip/changelog/os"
+      },
+      "stars": 2,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-01T14:47:44Z",
+      "fnpack_app_key": "fpk-zflie",
+      "fnpack_repo_key": "moxyis",
+      "install_type": "系统空间",
+      "size": "0.3"
+    }
+  ],
+  "lastUpdated": "2025-12-01T16:31:06.636709Z"
 }

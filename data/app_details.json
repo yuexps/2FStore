@@ -1,4 +1,65 @@
 {
-  "apps": [],
-  "lastUpdated": "2025-12-02T13:56:20.562056Z"
+  "apps": [
+    {
+      "id": "v2raya",
+      "name": "V2rayA",
+      "repository": "https://github.com/yuexps/v2raya-fnos",
+      "description": "v2rayA 是一个支持全局透明代理的 V2Ray 客户端，提供 Web 界面管理。",
+      "version": "2.2.7.4",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/v2raya-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 36,
+      "forks": 5,
+      "category": "network",
+      "lastUpdate": "2025-12-02T08:56:22Z"
+    },
+    {
+      "id": "lunatv",
+      "name": "LunaTV",
+      "repository": "https://github.com/yuexps/lunatv-fnos",
+      "description": "是一个开箱即用的、跨平台的影视聚合播放器。它基于 Next.js 14 + Tailwind CSS + TypeScript 构建，支持多资源搜索、在线播放、收藏同步、播放记录、云端存储，让你可以随时随地畅享海量免费影视内容。",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/lunatv-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/lunatv-fnos/releases/download/1.0.0/lunatv.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 1,
+      "forks": 0,
+      "category": "media",
+      "lastUpdate": "2025-12-01T08:56:40Z"
+    },
+    {
+      "id": "reader",
+      "name": "Reader",
+      "repository": "https://github.com/yuexps/reader-fnos",
+      "description": "Reader 是一款开源的网络小说阅读器，提供书源管理、书架同步、WebDAV备份等功能，支持多用户模式。",
+      "version": "3.2.14",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/reader-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/reader-fnos/releases/download/3.2.14/reader.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 0,
+      "forks": 0,
+      "category": "network",
+      "lastUpdate": "2025-12-01T15:49:28Z"
+    },
+    {
+      "id": "read",
+      "name": "轻阅读",
+      "repository": "https://github.com/UCKETX/qreader-fnos",
+      "description": "\"\"\"",
+      "version": "3.3.3",
+      "iconUrl": "",
+      "downloadUrl": "https://github.com/UCKETX/qreader-fnos/releases/download/3.3.3/read.fpk",
+      "screenshots": [],
+      "author": "UCKETX",
+      "stars": 1,
+      "forks": 0,
+      "category": "uncategorized",
+      "lastUpdate": "2025-12-01T15:54:52Z"
+    }
+  ],
+  "lastUpdated": "2025-12-02T11:07:40.639576Z"
 }
