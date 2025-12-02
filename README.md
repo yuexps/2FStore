@@ -1,5 +1,3 @@
-# 2FStore
-
 <p align="center">
   <strong>为 FNOS 生态打造的第三方中心化应用仓库</strong>
 </p>
@@ -8,8 +6,11 @@
   开发者可通过 Issue 或 Pull Request 提交应用，用户可便捷浏览与下载各类应用
 </p>
 
-> ⚠️ **注意**：项目仍在开发中，欢迎一起完善！
-主要作用：维护app_details和fnpack_details两个元数据文件
+> ⚠️ **注意**：本项目仍在积极开发中，欢迎大家共同参与完善！
+>
+> **主要作用：**
+> - 自动维护 `app_details.json` 和 `fnpack_details.json` 两个应用元数据文件
+> - 持续提升应用收录与元数据更新的便捷性和准确性
 
 ---
 
@@ -92,14 +93,10 @@
 
 ```
 your-app-repo/
-├── ICON.PNG              # 应用图标（必须大写，建议 256x256）
-├── ICON_256.PNG          # 高清图标（可选，优先使用）
+├── ICON.PNG              # 应用图标（必须大写）
+├── ICON_256.PNG          # 256x256图标（可选，优先使用）
 ├── manifest              # fnOS 应用清单文件（必须）
-├── README.md             # 应用说明
-├── app/                  # 应用程序文件
-├── cmd/                  # 启动脚本
-├── config/               # 配置文件
-└── wizard/               # 安装向导
+└── README.md             # 应用说明
 ```
 
 ### manifest 文件示例
@@ -169,10 +166,11 @@ FnDepot/
 
 | 触发条件 | 操作 |
 |----------|------|
-| Issue 提交（应用提交模板） | 自动验证应用信息并更新 `apps.json` |
+| Issue 提交（应用提交模板） | 自动验证应用信息并更新 `apps.json` , `fnpacks.json` |
 | PR 合并到 main | 自动验证应用格式 |
 | 每日定时（北京时间 00:00） | 批量更新所有应用元数据 |
 | `apps.json` 变更 | 触发元数据更新 |
+| `fnpacks.json` 变更 | 触发 FnDepot 仓库更新 |
 
 ---
 
