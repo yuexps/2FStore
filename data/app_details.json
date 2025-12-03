@@ -89,7 +89,22 @@
       "forks": 5,
       "category": "network",
       "lastUpdate": "2025-12-03T07:29:10Z"
+    },
+    {
+      "id": "test2",
+      "name": "测试2",
+      "repository": "https://github.com/yuexps/v2raya-fnos",
+      "description": "v2rayA 是一个支持全局透明代理的 V2Ray 客户端，提供 Web 界面管理。",
+      "version": "2.2.7.4",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/v2raya-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 41,
+      "forks": 5,
+      "category": "network",
+      "lastUpdate": "2025-12-03T07:29:10Z"
     }
   ],
-  "lastUpdated": "2025-12-03T14:43:45.224374Z"
+  "lastUpdated": "2025-12-03T14:46:56.206342Z"
 }
