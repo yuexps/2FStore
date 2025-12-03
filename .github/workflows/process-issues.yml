@@ -12,8 +12,23 @@ jobs:
       contents: write
       issues: write
       actions: write
-    if: contains(github.event.issue.labels.*.name, 'app-submission')
+    # 根据 label 或 Issue 标题判断
+    if: |
+      contains(github.event.issue.labels.*.name, 'app-submission') ||
+      (github.event.action == 'opened' && startsWith(github.event.issue.title, '2FStore应用提交'))
     steps:
+      - name: Add label if missing
+        if: ${{ !contains(github.event.issue.labels.*.name, 'app-submission') }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['app-submission']
+            });
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -65,8 +80,23 @@ jobs:
       contents: write
       issues: write
       actions: write
-    if: contains(github.event.issue.labels.*.name, 'fnpack-submission')
+    # 根据 label 或 Issue 标题判断
+    if: |
+      contains(github.event.issue.labels.*.name, 'fnpack-submission') ||
+      (github.event.action == 'opened' && startsWith(github.event.issue.title, 'FnDepot仓库提交'))
     steps:
+      - name: Add label if missing
+        if: ${{ !contains(github.event.issue.labels.*.name, 'fnpack-submission') }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['fnpack-submission']
+            });
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
