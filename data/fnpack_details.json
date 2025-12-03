@@ -38,10 +38,10 @@
       "id": "IMGZCQ_fndesk",
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
-      "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• ✨ 实现图标，文件夹自由，彻底取代收藏夹 • 🌈 多项个性化设置：背景、LOGO、主题库<br> • 👑 多层文件夹，自由缩放拖动，右键菜单 • 🌐 智能识别内外网环境，更多自定义链接<br><br>更多信息请关注:<br>• 飞牛论坛（搜：飞牛桌面管理工具）<br>• GitHub：IMGZCQ/fndesk",
-      "version": "0.83.3",
+      "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• ✨ 实现图标，文件夹自由，彻底取代收藏夹 • 🌈 多项个性化设置：背景、LOGO、主题库<br> • 👑 多层文件夹，自由缩放拖动，右键菜单 • 🌐 智能识别内外网环境，更多自定义链接<br><br>更多信息请关注:<br>• 飞牛论坛（搜：飞牛桌面管理工具）或 GitHub：IMGZCQ/fndesk",
+      "version": "0.85",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
-      "downloadUrl": "https://fndesk.imcq.top/fndesk.fpk",
+      "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/01.jpg",
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/2.jpg",
@@ -57,16 +57,14 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
-        "v0.80.7": "外链分享自定义(PC和移动Web端Logo标题描述链接等),优化一键还原,还原后不需要重启,优化窗口最大化/调整默认排序",
-        "v0.78": "适配 飞牛 V1.0.0 正式版,集成图标库 + 离线图标包（可选）.优化右键菜单，打开方式及其他细节",
-        "v0.79": "窗口/文件夹兼容飞牛窗口不再遮挡,登录页增加记住密码选项",
-        "v0.83.2": "适配飞牛1.1.0内测版,每个图标/文件夹增加独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
-        "v0.83.3": "支持创建飞牛原生图标(内测)"
+        "v0.85": "📢 支持创建飞牛原生图标！APP也能用完美支持FN Connect，适配飞牛内测版1.1.2",
+        "v0.83": "☑️ 适配飞牛1.1.0内测版,每个图标/文件夹独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
+        "v0.80": "✅ 外链分享自定义(PC和移动Web端Logo标题描述链接等),优化一键还原,还原后不需要重启,优化窗口最大化/调整默认排序"
       },
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-02T06:10:19Z",
+      "lastUpdate": "2025-12-02T20:37:13Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -79,7 +77,7 @@
       "description": "一个完整的三阶魔方",
       "version": "0.77",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/ICON.PNG",
-      "downloadUrl": "https://fndesk.imcq.top/fncube.fpk",
+      "downloadUrl": "https://fndesk.imcq.top/FPK/fncube.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/Preview/1.png",
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/Preview/2.png"
@@ -93,7 +91,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-02T06:10:19Z",
+      "lastUpdate": "2025-12-02T20:37:13Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -103,7 +101,7 @@
       "id": "snltty_linker",
       "name": "Linker",
       "repository": "https://github.com/snltty/FnDepot",
-      "description": "极具特色的异地组网+内网穿透，由P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发实现。让你那些散落在世界各地的联网设备就像在隔壁房间一样轻松访问。",
+      "description": "极具特色的异地组网+内网穿透，由P2P打洞(UDP+TCP、IPV4+IPV6) + 服务器转发实现。让你那些散落在世界各地的联网设备就像在隔壁房间一样轻松访问。也可以前往<a href='https://linker.snltty.com' target='_blank'>官网下载安装包</a>",
       "version": "1.9.6",
       "iconUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/linker/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/linker/linker.fpk",
@@ -119,7 +117,7 @@
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-02T07:58:13Z",
+      "lastUpdate": "2025-12-03T02:27:24Z",
       "fnpack_app_key": "linker",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -249,7 +247,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-02T06:10:19Z",
+      "lastUpdate": "2025-12-02T20:37:13Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -273,7 +271,7 @@
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-02T07:58:13Z",
+      "lastUpdate": "2025-12-03T02:27:24Z",
       "fnpack_app_key": "certimate",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -308,5 +306,5 @@
       "size": "15"
     }
   ],
-  "lastUpdated": "2025-12-02T15:06:27.423331Z"
+  "lastUpdated": "2025-12-03T04:25:41.184784Z"
 }
