@@ -10,10 +10,10 @@
       "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 39,
+      "stars": 41,
       "forks": 5,
       "category": "network",
-      "lastUpdate": "2025-12-03T03:36:53Z"
+      "lastUpdate": "2025-12-03T07:29:10Z"
     },
     {
       "id": "lunatv",
@@ -49,7 +49,7 @@
       "id": "read",
       "name": "轻阅读",
       "repository": "https://github.com/UCKETX/qreader-fnos",
-      "description": "<p><b>轻阅读</b> —— 一个专为移动端设计的轻量级阅读应用，支持多端同步，让阅读体验更流畅、更自由。</p>\n<ul>\n  <li>📱 全移动端可用，界面简洁直观</li>\n  <li>☁️ 多端同步阅读进度，不丢章节 不重来</li>\n  <li>🌓 支持深色模式与字体自定义</li>\n  <li>📚 支持 txt/epub 等多种书籍格式</li>\n</ul>\n<p>后台管理页面：<a href=\"http://ip:15432/admin\" target=\"_blank\">http://ip:15432/admin</a></p>\n<p>客户端下载：<a href=\"https://github.com/autobcb/read/releases/tag/3.3.3\" target=\"_blank\">https://github.com/autobcb/read/releases/tag/3.3.3</a></p>",
+      "description": "<p><b>轻阅读</b> —— 一个专为移动端设计的轻量级阅读应用，支持多端同步，让阅读体验更流畅、更自由。</p>\n<ul>\n  <li>📱 全移动端可用，界面简洁直观</li>\n  <li>☁️ 多端同步阅读进度，不丢章节 不重来</li>\n  <li>🌓 支持深色模式与字体自定义</li>\n  <li>📚 支持 txt/epub 等多种书籍格式</li>\n</ul>\n<p>后台管理页面：<a href=\"http://ip:15432/admin\" target=\"_blank\">http://ip:15432/admin</a></p>\n<p>客户端下载：<a href=\"https://github.com/autobcb/read/releases/tag/3.3.3\" target=\"_blank\">https://github.com/autobcb/read/releases/tag/3.3.3</a></p>\n<p style=\"color:#e67e22;\">⚠️提示：安装失败时请检查 Docker 站点的连接性，镜像下载失败请配置镜像代理。</p>",
       "version": "3.3.3",
       "iconUrl": "https://raw.githubusercontent.com/UCKETX/qreader-fnos/main/ICON_256.png",
       "downloadUrl": "https://github.com/UCKETX/qreader-fnos/releases/download/3.3.3/read.fpk",
@@ -57,9 +57,24 @@
       "author": "UCKETX",
       "stars": 1,
       "forks": 0,
-      "category": "system",
-      "lastUpdate": "2025-12-02T12:28:17Z"
+      "category": "network",
+      "lastUpdate": "2025-12-03T09:07:41Z"
+    },
+    {
+      "id": "moviepilot",
+      "name": "MoviePilot",
+      "repository": "https://github.com/UCKETX/moviepilot",
+      "description": "<div class=\"moviepilot-desc\">\n  <p>MoviePilot 是新一代智能化个人媒体库管理工具，基于前后端分离设计架构，拥有丰富的插件生态系统。</p>\n  <p>前端端口：<strong>20669</strong><br>后端端口：<strong>47901</strong></p>\n  <p style=\"color:#e67e22;\">⚠️提示：安装失败时请检查 Docker 站点的连接性，镜像下载失败请配置镜像代理。</p>\n</div>",
+      "version": "3.3",
+      "iconUrl": "https://raw.githubusercontent.com/UCKETX/moviepilot/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/UCKETX/moviepilot/releases/download/3.3/moviepilot.fpk",
+      "screenshots": [],
+      "author": "UCKETX",
+      "stars": 0,
+      "forks": 0,
+      "category": "network",
+      "lastUpdate": "2025-12-03T08:43:51Z"
     }
   ],
-  "lastUpdated": "2025-12-03T06:16:39.502200Z"
+  "lastUpdated": "2025-12-03T09:15:26.192152Z"
 }
