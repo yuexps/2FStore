@@ -74,7 +74,22 @@
       "forks": 5,
       "category": "network",
       "lastUpdate": "2025-12-03T07:29:10Z"
+    },
+    {
+      "id": "test-uk",
+      "name": "测试UK",
+      "repository": "https://github.com/UCKETX/moviepilot",
+      "description": "<p>MoviePilot 是新一代智能化个人媒体库管理工具，基于前后端分离设计架构，拥有丰富的插件生态系统。</p>\n<p>前端端口：<strong>20669</strong><br>后端端口：<strong>47901</strong></p>\n<p style=\"color:#e67e22;\">⚠️提示：安装失败时请检查 Docker 站点的连接性，镜像下载失败请配置镜像代理。</p>",
+      "version": "3.3",
+      "iconUrl": "https://raw.githubusercontent.com/UCKETX/moviepilot/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/UCKETX/moviepilot/releases/download/3.3/moviepilot.fpk",
+      "screenshots": [],
+      "author": "UCKETX",
+      "stars": 0,
+      "forks": 0,
+      "category": "network",
+      "lastUpdate": "2025-12-03T09:41:13Z"
     }
   ],
-  "lastUpdated": "2025-12-03T10:11:59.678874Z"
+  "lastUpdated": "2025-12-03T12:41:09.808041Z"
 }
