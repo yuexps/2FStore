@@ -19,6 +19,11 @@
       "id": "read",
       "name": "轻阅读",
       "repository": "https://github.com/UCKETX/qreader-fnos"
+    },
+    {
+      "id": "moviepilot",
+      "name": "MoviePilot",
+      "repository": "https://github.com/UCKETX/moviepilot"
     }
   ]
 }
