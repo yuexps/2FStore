@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cp data/app_details.json web/ && cp data/fnpack_details.json web/",
+  "buildCommand": "cp data/app_details.json web/ && cp data/fnpack_details.json web/ && cp data/version.json web/",
   "outputDirectory": "web",
   "installCommand": "echo 'No install needed'",
-  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- web/ data/app_details.json data/fnpack_details.json"
+  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- web/ data/app_details.json data/fnpack_details.json data/version.json"
 }

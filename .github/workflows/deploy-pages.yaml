@@ -29,6 +29,7 @@ jobs:
         run: |
           cp ./data/app_details.json ./web
           cp ./data/fnpack_details.json ./web
+          cp ./data/version.json ./web 2>/dev/null || echo "{}" > ./web/version.json
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

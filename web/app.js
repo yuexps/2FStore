@@ -1,7 +1,8 @@
-// ============ 本地调试（默认False） ============
+// ============ 本地调试 ============
 const TEST_MODE = false; // 设为 true 从 GitHub 远程获取数据，false 使用本地数据
 const TEST_DATA_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/app_details.json';
 const TEST_FNPACK_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/fnpack_details.json';
+const TEST_VERSION_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/version.json';
 
 // GitHub 代理地址列表
 const PROXY_OPTIONS = [
@@ -705,48 +706,34 @@ function showLoading() {
     appList.innerHTML = skeletonCards;
 }
 
-// 智能缓存：检查数据是否有更新
-async function fetchWithCache(url, cacheKey) {
+// 智能缓存：基于版本哈希，只在数据变化时下载
+async function fetchWithVersionCheck(url, cacheKey, versionKey, remoteVersion) {
     const cachedData = localStorage.getItem(cacheKey);
-    const cachedETag = localStorage.getItem(`${cacheKey}_etag`);
-    const cachedTime = localStorage.getItem(`${cacheKey}_time`);
+    const cachedVersion = localStorage.getItem(`${cacheKey}_version`);
     
-    // 如果缓存存在且未超过1小时，直接使用缓存
-    const ONE_HOUR = 60 * 60 * 1000;
-    if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime)) < ONE_HOUR) {
+    // 如果版本号相同且有缓存，直接使用缓存
+    if (remoteVersion && cachedVersion === remoteVersion && cachedData) {
+        console.log(`[Cache] ${cacheKey}: 版本未变化(${remoteVersion})，使用缓存`);
         try {
             return JSON.parse(cachedData);
         } catch (e) {
-            // 缓存数据损坏，继续请求新数据
+            // 缓存损坏，继续下载
         }
-    }
-    
-    // 构建请求头，如果有 ETag 则发送条件请求
-    const headers = {};
-    if (cachedETag) {
-        headers['If-None-Match'] = cachedETag;
     }
     
     try {
-        const response = await fetch(url, { headers });
-        
-        // 304 Not Modified - 数据未变化，使用缓存
-        if (response.status === 304 && cachedData) {
-            localStorage.setItem(`${cacheKey}_time`, Date.now().toString());
-            return JSON.parse(cachedData);
-        }
+        const response = await fetch(url, { cache: 'no-cache' });
         
         if (response.ok) {
             const data = await response.json();
-            const newETag = response.headers.get('ETag');
             
             // 保存到缓存
             localStorage.setItem(cacheKey, JSON.stringify(data));
-            localStorage.setItem(`${cacheKey}_time`, Date.now().toString());
-            if (newETag) {
-                localStorage.setItem(`${cacheKey}_etag`, newETag);
+            if (remoteVersion) {
+                localStorage.setItem(`${cacheKey}_version`, remoteVersion);
             }
             
+            console.log(`[Cache] ${cacheKey}: 已更新缓存，版本: ${remoteVersion || 'unknown'}`);
             return data;
         }
         
@@ -767,6 +754,20 @@ async function fetchWithCache(url, cacheKey) {
     }
 }
 
+// 获取远程版本信息
+async function fetchVersionInfo() {
+    const versionUrl = TEST_MODE ? TEST_VERSION_URL : './version.json';
+    try {
+        const response = await fetch(versionUrl, { cache: 'no-cache' });
+        if (response.ok) {
+            return await response.json();
+        }
+    } catch (error) {
+        console.warn('获取版本信息失败:', error);
+    }
+    return null;
+}
+
 // 加载应用数据
 async function loadAppsData() {
     try {
@@ -778,13 +779,18 @@ async function loadAppsData() {
         const fnpackUrl = TEST_MODE ? TEST_FNPACK_URL : './fnpack_details.json';
         
         if (TEST_MODE) {
-            console.log('🧪 测试模式已启用，从 GitHub 远程获取数据');
+            console.log('[Debug] 测试模式已启用，从 GitHub 远程获取数据');
         }
         
-        // 使用智能缓存同时加载两个数据源
+        // 首先获取版本信息（小文件，~100字节）
+        const versionInfo = await fetchVersionInfo();
+        const appVersion = versionInfo?.app_details?.hash;
+        const fnpackVersion = versionInfo?.fnpack_details?.hash;
+        
+        // 根据版本信息智能加载数据
         const [appData, fnpackData] = await Promise.all([
-            fetchWithCache(appUrl, 'appDetailsCache'),
-            fetchWithCache(fnpackUrl, 'fnpackDetailsCache')
+            fetchWithVersionCheck(appUrl, 'appDetailsCache', 'app_details', appVersion),
+            fetchWithVersionCheck(fnpackUrl, 'fnpackDetailsCache', 'fnpack_details', fnpackVersion)
         ]);
         
         // 合并两个数据源的应用数据，并为不同来源的应用添加标识

@@ -8,6 +8,7 @@
 
 import json
 import os
+import hashlib
 from datetime import datetime
 from .config import (
     get_apps_json_path,
@@ -292,6 +293,7 @@ class AppDetailsStore:
     def __init__(self):
         ensure_data_dir()
         self.file_path = get_data_path('app_details.json')
+        self.version_file_path = get_data_path('version.json')
     
     def load(self):
         """加载应用详情"""
@@ -300,10 +302,38 @@ class AppDetailsStore:
             'lastUpdated': ''
         })
     
+    def _get_apps_hash(self, data):
+        """计算应用数据的哈希（不包含 lastUpdated）"""
+        apps_only = {'apps': data.get('apps', [])}
+        content = json.dumps(apps_only, sort_keys=True, ensure_ascii=False)
+        return hashlib.md5(content.encode('utf-8')).hexdigest()[:8]
+    
     def save(self, data):
-        """保存应用详情"""
-        data['lastUpdated'] = datetime.utcnow().isoformat() + 'Z'
-        return DataStore.save_json(self.file_path, data)
+        """保存应用详情（只有数据变化时才更新）"""
+        # 计算新数据的哈希
+        new_hash = self._get_apps_hash(data)
+        
+        # 获取当前版本哈希
+        version_data = DataStore.load_json(self.version_file_path, {})
+        old_hash = version_data.get('app_details', {}).get('hash', '')
+        
+        # 只有哈希变化时才保存
+        if new_hash != old_hash:
+            data['lastUpdated'] = datetime.utcnow().isoformat() + 'Z'
+            result = DataStore.save_json(self.file_path, data)
+            if result:
+                self._update_version_file('app_details', new_hash)
+            return result
+        return True  # 数据未变化，视为成功
+    
+    def _update_version_file(self, source, content_hash):
+        """更新版本文件"""
+        version_data = DataStore.load_json(self.version_file_path, {})
+        version_data[source] = {
+            'hash': content_hash,
+            'updated': datetime.utcnow().isoformat() + 'Z'
+        }
+        DataStore.save_json(self.version_file_path, version_data)
     
     def get_apps(self):
         """获取所有应用详情"""
@@ -384,6 +414,7 @@ class FnpackDetailsStore:
     def __init__(self):
         ensure_data_dir()
         self.file_path = get_data_path('fnpack_details.json')
+        self.version_file_path = get_data_path('version.json')
     
     def load(self):
         """加载 fnpack 应用详情"""
@@ -392,10 +423,38 @@ class FnpackDetailsStore:
             'lastUpdated': ''
         })
     
+    def _get_apps_hash(self, data):
+        """计算应用数据的哈希（不包含 lastUpdated）"""
+        apps_only = {'apps': data.get('apps', [])}
+        content = json.dumps(apps_only, sort_keys=True, ensure_ascii=False)
+        return hashlib.md5(content.encode('utf-8')).hexdigest()[:8]
+    
     def save(self, data):
-        """保存 fnpack 应用详情"""
-        data['lastUpdated'] = datetime.utcnow().isoformat() + 'Z'
-        return DataStore.save_json(self.file_path, data)
+        """保存 fnpack 应用详情（只有数据变化时才更新）"""
+        # 计算新数据的哈希
+        new_hash = self._get_apps_hash(data)
+        
+        # 获取当前版本哈希
+        version_data = DataStore.load_json(self.version_file_path, {})
+        old_hash = version_data.get('fnpack_details', {}).get('hash', '')
+        
+        # 只有哈希变化时才保存
+        if new_hash != old_hash:
+            data['lastUpdated'] = datetime.utcnow().isoformat() + 'Z'
+            result = DataStore.save_json(self.file_path, data)
+            if result:
+                self._update_version_file('fnpack_details', new_hash)
+            return result
+        return True  # 数据未变化，视为成功
+    
+    def _update_version_file(self, source, content_hash):
+        """更新版本文件"""
+        version_data = DataStore.load_json(self.version_file_path, {})
+        version_data[source] = {
+            'hash': content_hash,
+            'updated': datetime.utcnow().isoformat() + 'Z'
+        }
+        DataStore.save_json(self.version_file_path, version_data)
     
     def get_apps(self):
         """获取所有应用详情"""
