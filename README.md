@@ -9,7 +9,10 @@
 > ⚠️ **注意**：本项目仍在摸鱼中，目前由Bug驱动！欢迎大家共同参与完善！
 >
 > **主要作用：**
-> - 自动维护 `app_details.json` 和 `fnpack_details.json` 两个应用元数据文件
+>
+> - 自动维护两个应用元数据文件：  
+>   - `app_details.json`：https://gh.2fstore.cfd/app_details.json
+>   - `fnpack_details.json`：https://gh.2fstore.cfd/fnpack_details.json
 > - 持续提升应用收录与元数据更新的便捷性和准确性
 
 ---
