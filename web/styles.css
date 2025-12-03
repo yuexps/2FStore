@@ -28,6 +28,42 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* 颜色变量：使用 :root 确保在浅色/深色模式下都能正常生效 */
+:root {
+    --miuix-color-primary: #1976d2;
+    --miuix-color-primary-rgb: 25, 118, 210;
+    --miuix-color-on-primary: #ffffff;
+    --miuix-color-primary-container: #e3f2fd;
+    --miuix-color-on-primary-container: #0d47a1;
+    --miuix-color-secondary: #03a9f4;
+    --miuix-color-secondary-rgb: 3, 169, 244;
+    --miuix-color-on-secondary: #ffffff;
+    --miuix-color-secondary-container: #e1f5fe;
+    --miuix-color-on-secondary-container: #01579b;
+    --miuix-color-tertiary: #009688;
+    --miuix-color-tertiary-rgb: 0, 150, 136;
+    --miuix-color-on-tertiary: #ffffff;
+    --miuix-color-tertiary-container: #e0f2f1;
+    --miuix-color-on-tertiary-container: #004d40;
+    --miuix-color-surface: #ffffff;
+    --miuix-color-surface-rgb: 255, 255, 255;
+    --miuix-color-on-surface: #000000;
+    --miuix-color-surface-variant: #f5f5f5;
+    --miuix-color-on-surface-variant: #424242;
+    --miuix-color-outline: #e0e0e0;
+    --miuix-color-outline-variant: #f0f0f0;
+    --miuix-color-background: #fafafa;
+    --miuix-color-on-background: #212121;
+    --miuix-color-error: #b00020;
+    --miuix-color-on-error: #ffffff;
+    --miuix-color-success: #4caf50;
+    --miuix-color-on-success: #ffffff;
+    --miuix-color-warning: #ff9800;
+    --miuix-color-on-warning: #ffffff;
+    --miuix-color-info: #2196f3;
+    --miuix-color-on-info: #ffffff;
+}
+
 /* 背景遮罩层 */
 body::before {
     content: '';
@@ -162,41 +198,7 @@ body::before {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* 深色模式下的高斯模糊效果调整 */
-@media (prefers-color-scheme: dark) {
-    body::before {
-        background: rgba(var(--miuix-color-surface-rgb), 0.8);
-    }
-    
-    .miuix-topbar {
-        background-color: rgba(var(--miuix-color-surface-rgb), 0.6);
-        backdrop-filter: blur(20px) saturate(180%);
-        -webkit-backdrop-filter: blur(20px) saturate(180%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    
-    .miuix-sidebar {
-        background-color: rgba(var(--miuix-color-surface-rgb), 0.65);
-        border-right: 1px solid rgba(255, 255, 255, 0.06);
-    }
-    
-    .miuix-card {
-        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-    }
-    
-    .miuix-search {
-        background-color: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(12px) saturate(150%);
-        -webkit-backdrop-filter: blur(12px) saturate(150%);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .miuix-search:focus-within {
-        background-color: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.2);
-    }
-}
+
 
 /* 确保在浅色模式下搜索框也有正确的样式 */
 .miuix-search:focus-within {
@@ -214,7 +216,7 @@ body::before {
 }
 
 .miuix-modal-dialog {
-    background-color: #fff;
+    background-color: var(--miuix-color-surface);
     /* 或者用 var(--miuix-color-surface) 若已定义为纯色 */
     border: 1px solid var(--miuix-color-outline);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
@@ -491,38 +493,7 @@ html.sidebar-collapsed .miuix-sidebar {
     cursor: not-allowed;
 }
 
-@media (prefers-color-scheme: dark) {
-    .miuix-topbar {
-        background-color: rgba(var(--miuix-color-surface-rgb), 0.5);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .miuix-search {
-        background-color: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .miuix-search:focus-within {
-        background-color: rgba(255, 255, 255, 0.25);
-    }
-    
-    .miuix-select option:hover {
-        background-color: rgba(103, 80, 164, 0.3);
-        color: #e8def8;
-    }
-    .miuix-select option:checked {
-        background-color: #6750a4;
-        color: #ffffff;
-    }
-    .miuix-select option:disabled {
-        background-color: #333333;
-        color: #888888;
-    }
-}
+
 
 /* 主内容区域 */
 .miuix-main {
@@ -1355,101 +1326,7 @@ html.sidebar-collapsed .miuix-sidebar {
     --miuix-color-on-info: #ffffff;
 }
 
-/* 深色模式支持 */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --miuix-color-primary: #90caf9;
-        --miuix-color-primary-rgb: 144, 202, 249;
-        --miuix-color-on-primary: #0d47a1;
-        --miuix-color-primary-container: #1565c0;
-        --miuix-color-on-primary-container: #e3f2fd;
-        --miuix-color-secondary: #81d4fa;
-        --miuix-color-secondary-rgb: 129, 212, 250;
-        --miuix-color-on-secondary: #01579b;
-        --miuix-color-secondary-container: #0288d1;
-        --miuix-color-on-secondary-container: #e1f5fe;
-        --miuix-color-tertiary: #80cbc4;
-        --miuix-color-tertiary-rgb: 128, 203, 196;
-        --miuix-color-on-tertiary: #004d40;
-        --miuix-color-tertiary-container: #00796b;
-        --miuix-color-on-tertiary-container: #e0f2f1;
-        --miuix-color-surface: #121212;
-        --miuix-color-surface-rgb: 18, 18, 18;
-        --miuix-color-on-surface: #ffffff;
-        --miuix-color-surface-variant: #1e1e1e;
-        --miuix-color-on-surface-variant: #bdbdbd;
-        --miuix-color-outline: #424242;
-        --miuix-color-outline-variant: #333333;
-        --miuix-color-background: #121212;
-        --miuix-color-on-background: #ffffff;
-        --miuix-color-error: #ef5350;
-        --miuix-color-on-error: #ffffff;
-        --miuix-color-success: #66bb6a;
-        --miuix-color-on-success: #ffffff;
-        --miuix-color-warning: #ffb74d;
-        --miuix-color-on-warning: #ffffff;
-        --miuix-color-info: #64b5f6;
-        --miuix-color-on-info: #ffffff;
-    }
-    
-    /* 深色模式下调整半透明元素样式 */
-    .miuix-topbar-button:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    .miuix-icon-button:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    .miuix-search {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .miuix-search:focus-within {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    /* 深色模式下应用详情玻璃效果 */
-    .app-detail-container {
-        background-color: rgba(var(--miuix-color-surface-rgb), 0.5);
-        border-color: rgba(255, 255, 255, 0.08);
-    }
-    
-    .app-detail-header {
-        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.4);
-        border-color: rgba(255, 255, 255, 0.06);
-    }
-    
-    .app-detail-description {
-        background-color: rgba(var(--miuix-color-surface-rgb), 0.3);
-    }
-    
-    .app-detail-actions {
-        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.4);
-        border-color: rgba(255, 255, 255, 0.06);
-    }
-    
-    .app-screenshots {
-        background-color: rgba(var(--miuix-color-surface-rgb), 0.2);
-    }
-    
-    .app-last-update {
-        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.3);
-    }
-    
-    .back-btn {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .back-btn:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    .repo-btn {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-}
+
 
 /* 顶栏按钮样式 */
 .miuix-topbar-button {
@@ -1477,25 +1354,7 @@ html.sidebar-collapsed .miuix-sidebar {
     transform: translateY(0);
 }
 
-/* 深色模式下的顶栏按钮样式 */
-@media (prefers-color-scheme: dark) {
-    /* 深色模式下调整半透明元素样式 */
-    .miuix-topbar-button:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    .miuix-icon-button:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-    
-    .miuix-search {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .miuix-search:focus-within {
-        background-color: rgba(255, 255, 255, 0.15);
-    }
-}
+
 
 .miuix-topbar-button svg {
     margin-right: 6px;
@@ -1673,4 +1532,179 @@ html.sidebar-collapsed .miuix-sidebar {
 
 .footer-disclaimer:hover {
     opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --miuix-color-primary: #90caf9;
+        --miuix-color-primary-rgb: 144, 202, 249;
+        --miuix-color-on-primary: #0d47a1;
+        --miuix-color-primary-container: #1565c0;
+        --miuix-color-on-primary-container: #e3f2fd;
+        --miuix-color-secondary: #81d4fa;
+        --miuix-color-secondary-rgb: 129, 212, 250;
+        --miuix-color-on-secondary: #01579b;
+        --miuix-color-secondary-container: #0288d1;
+        --miuix-color-on-secondary-container: #e1f5fe;
+        --miuix-color-tertiary: #80cbc4;
+        --miuix-color-tertiary-rgb: 128, 203, 196;
+        --miuix-color-on-tertiary: #004d40;
+        --miuix-color-tertiary-container: #00796b;
+        --miuix-color-on-tertiary-container: #e0f2f1;
+        --miuix-color-surface: #121212;
+        --miuix-color-surface-rgb: 18, 18, 18;
+        --miuix-color-on-surface: #ffffff;
+        --miuix-color-surface-variant: #1e1e1e;
+        --miuix-color-on-surface-variant: #bdbdbd;
+        --miuix-color-outline: #424242;
+        --miuix-color-outline-variant: #333333;
+        --miuix-color-background: #121212;
+        --miuix-color-on-background: #ffffff;
+        --miuix-color-error: #ef5350;
+        --miuix-color-on-error: #ffffff;
+        --miuix-color-success: #66bb6a;
+        --miuix-color-on-success: #ffffff;
+        --miuix-color-warning: #ffb74d;
+        --miuix-color-on-warning: #ffffff;
+        --miuix-color-info: #64b5f6;
+        --miuix-color-on-info: #ffffff;
+    }
+
+    body::before {
+        background: rgba(var(--miuix-color-surface-rgb), 0.8);
+    }
+    
+    .miuix-topbar {
+        background-color: rgba(var(--miuix-color-surface-rgb), 0.6);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.08);
+    }
+    
+    .miuix-sidebar {
+        background-color: rgba(var(--miuix-color-surface-rgb), 0.65);
+        border-right: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.06);
+    }
+    
+    .miuix-card {
+        background-color: rgba(var(--miuix-color-surface-variant-rgb), 0.5);
+        border: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.08);
+    }
+
+    /* 深色模式下的应用卡片优化 */
+    .app-card {
+        background-color: rgba(var(--miuix-color-surface-rgb), 0.9);
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.12);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .app-card-header {
+        background: linear-gradient(
+            135deg,
+            rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.9),
+            rgba(var(--miuix-color-surface-rgb), 0.7)
+        );
+        border-bottom-color: rgba(var(--miuix-color-on-surface-rgb), 0.12);
+    }
+
+    .app-meta span {
+        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.8);
+    }
+    
+    .miuix-search {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.08);
+        backdrop-filter: blur(12px) saturate(150%);
+        -webkit-backdrop-filter: blur(12px) saturate(150%);
+        border: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.1);
+    }
+    
+    .miuix-search:focus-within {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.12);
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.2);
+    }
+
+    .miuix-select option:hover {
+        background-color: rgba(103, 80, 164, 0.3);
+        color: #e8def8;
+    }
+
+    .miuix-select option:checked {
+        background-color: #6750a4;
+        color: #ffffff;
+    }
+
+    .miuix-select option:disabled {
+        background-color: #333333;
+        color: #888888;
+    }
+
+    .miuix-topbar-button:hover {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.15);
+    }
+    
+    .miuix-icon-button:hover {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.15);
+    }
+    
+    /* 深色模式下应用详情卡片整体加深，保证可读性 */
+    .app-detail-container {
+        background-color: rgba(var(--miuix-color-surface-rgb), 0.96);
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.16);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75);
+    }
+    
+    .app-detail-header {
+        background: linear-gradient(
+            135deg,
+            rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.95),
+            rgba(var(--miuix-color-surface-rgb), 0.9)
+        );
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.16);
+    }
+    
+    .app-detail-description {
+        background-color: rgba(var(--miuix-color-surface-rgb), 0.95);
+    }
+    
+    .app-detail-actions {
+        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.95);
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.16);
+    }
+    
+    .app-screenshots {
+        background-color: rgba(var(--miuix-color-surface-rgb), 0.9);
+    }
+    
+    .app-last-update {
+        background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.9);
+    }
+    
+    .back-btn {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.1);
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.1);
+    }
+    
+    .back-btn:hover {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.15);
+    }
+    
+    .repo-btn {
+        background-color: rgba(var(--miuix-color-on-surface-rgb), 0.1);
+    }
+
+    .footer-disclaimer {
+        background: linear-gradient(135deg, 
+            rgba(var(--miuix-color-on-surface-rgb), 0.04) 0%,
+            rgba(var(--miuix-color-on-surface-rgb), 0.02) 100%);
+        border-color: rgba(var(--miuix-color-on-surface-rgb), 0.06);
+    }
+
+    .miuix-brand-button {
+        color: var(--miuix-color-on-surface);
+    }
+
+    ::selection {
+        background-color: rgba(var(--miuix-color-primary-rgb), 0.3);
+        color: var(--miuix-color-on-surface);
+    }
 }
