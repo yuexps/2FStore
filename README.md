@@ -119,7 +119,7 @@ service_port=8080
 
 📖 详细规范请参考：[fnOS 开发文档 - Manifest](https://developer.fnnas.com/docs/core-concepts/manifest)
 
-📂 示例仓库：[v2raya-fnos](https://github.com/yuexps/v2raya-fnos)
+📂 示例仓库：[Reader](https://github.com/yuexps/reader-fnos)
 
 ---
 
@@ -187,6 +187,81 @@ FnDepot/
 
 ---
 
-## 📄 许可证
+## 🛠️ 技术栈 & 资源致谢
 
-本项目采用 MIT 许可证。
+### 前端技术
+- 纯原生 HTML / CSS / JavaScript
+- [Miuix](https://compose-miuix-ui.github.io/miuix) 风格 UI 设计灵感
+- CSS Variables 实现亮/暗主题
+
+### 后端 & 自动化
+- [GitHub Actions](https://github.com/features/actions) - CI/CD 自动化
+- [GitHub Pages](https://pages.github.com/) - 静态站点托管
+- [Vercel](https://vercel.com/) - 备用部署平台
+- Python 3.11 - 数据处理脚本
+
+### 第三方服务
+- [Bing 每日壁纸 API](https://bing.biturl.top/) - 背景图片
+- GitHub API - 仓库元数据获取
+
+### 相关项目
+- [FnDepot](https://github.com/EWEDLCM/FnDepot) - 去中心化应用源规范
+- [fnOS 开发文档](https://developer.fnnas.com/) - 包含应用规范、开发指南等
+
+---
+
+## ⚠️ 免责声明
+
+1. **非官方项目**  
+   本项目为社区驱动的第三方应用仓库，与广州铁刃智造技术有限公司（fnOS 官方）无任何关联。
+
+2. **应用安全**  
+   本仓库仅提供应用索引和下载链接聚合服务，**不对任何第三方应用的安全性、稳定性、合法性负责**。用户下载和安装任何应用前，请自行评估风险。
+
+3. **数据来源**  
+   所有应用信息均来自开发者提交的 GitHub 公开仓库，本项目不存储任何应用安装包。
+
+4. **版权声明**  
+   各应用的版权归其原作者所有。如有侵权，请通过 [Issue](https://github.com/yuexps/2FStore/issues) 联系我们，我们将及时处理。
+
+5. **服务可用性**  
+   本项目为开源免费服务，不保证服务的持续可用性。GitHub API 限制、网络问题等可能影响服务正常运行。
+
+6. **使用风险**  
+   使用本仓库提供的任何应用造成的数据丢失、设备损坏或其他损失，本项目及贡献者不承担任何责任。
+
+---
+
+## 📄 开源许可证
+
+本项目采用 [MIT 许可证](LICENSE) 开源。
+
+```
+MIT License
+
+Copyright (c) 2024 2FStore Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/yuexps/2FStore">2FStore</a> Contributors
+</p>

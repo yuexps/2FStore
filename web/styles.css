@@ -527,7 +527,7 @@ html.sidebar-collapsed .miuix-sidebar {
 /* 主内容区域 */
 .miuix-main {
     flex: 1;
-    padding: 24px;
+    padding: 16px 24px;
     overflow-y: auto;
     height: 100%;
 }
@@ -1053,15 +1053,20 @@ html.sidebar-collapsed .miuix-sidebar {
 }
 
 .miuix-modal-dialog {
-    background-color: var(--miuix-color-surface);
-    border-radius: 16px;
+    background: rgba(var(--miuix-color-surface-rgb), 0.85);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-radius: 20px;
     max-width: 500px;
     width: 90%;
     max-height: 90%;
     overflow: hidden;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    box-shadow: 
+        0 24px 48px rgba(0, 0, 0, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    border: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.1);
     transform: scale(0.95);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .miuix-modal:not(.hidden) .miuix-modal-dialog {
@@ -1072,8 +1077,11 @@ html.sidebar-collapsed .miuix-sidebar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid var(--miuix-color-outline);
+    padding: 20px 24px;
+    border-bottom: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.08);
+    background: linear-gradient(180deg, 
+        rgba(var(--miuix-color-surface-rgb), 0.5) 0%,
+        transparent 100%);
 }
 
 .miuix-modal-title {
@@ -1108,62 +1116,102 @@ html.sidebar-collapsed .miuix-sidebar {
 
 /* 提交应用选项样式 */
 .submit-option {
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-radius: 12px;
-    padding: 16px;
-    margin: 12px 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-primary-rgb), 0.06) 0%,
+        rgba(var(--miuix-color-primary-rgb), 0.02) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 20px;
+    margin: 16px 0;
+    border: 1px solid rgba(var(--miuix-color-primary-rgb), 0.12);
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.06),
+        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%,
+        rgba(var(--miuix-color-primary-rgb), 0.3) 50%,
+        transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .submit-option:hover {
-    background: rgba(255, 255, 255, 0.75);
-    border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-primary-rgb), 0.1) 0%,
+        rgba(var(--miuix-color-primary-rgb), 0.04) 100%);
+    border-color: rgba(var(--miuix-color-primary-rgb), 0.2);
+    box-shadow: 
+        0 8px 24px rgba(var(--miuix-color-primary-rgb), 0.12),
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset;
     transform: translateY(-2px);
 }
 
-@media (prefers-color-scheme: dark) {
-    .submit-option {
-        background: rgba(45, 45, 50, 0.6);
-        border-color: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-    }
-    
-    .submit-option:hover {
-        background: rgba(55, 55, 60, 0.7);
-        border-color: rgba(255, 255, 255, 0.15);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    }
+.submit-option:hover::before {
+    opacity: 1;
+}
+
+.submit-option:active {
+    transform: translateY(0);
 }
 
 .submit-option h4 {
-    margin: 0 0 8px 0;
-    font-size: 16px;
+    margin: 0 0 10px 0;
+    font-size: 17px;
+    font-weight: 600;
     color: var(--miuix-color-on-surface);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .submit-option p {
-    margin: 0 0 12px 0;
+    margin: 0 0 16px 0;
     font-size: 14px;
+    line-height: 1.6;
     color: var(--miuix-color-on-surface-variant);
 }
 
 .submit-option a.miuix-button {
     width: 100%;
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 12px;
 }
 
 .miuix-button-outline {
-    background-color: transparent;
-    border: 1px solid var(--miuix-color-primary);
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-primary-rgb), 0.08) 0%,
+        rgba(var(--miuix-color-primary-rgb), 0.04) 100%);
+    border: 1.5px solid rgba(var(--miuix-color-primary-rgb), 0.4);
     color: var(--miuix-color-primary);
+    backdrop-filter: blur(8px);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .miuix-button-outline:hover {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-primary-rgb), 0.15) 0%,
+        rgba(var(--miuix-color-primary-rgb), 0.1) 100%);
+    border-color: var(--miuix-color-primary);
+    box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.2);
+    transform: translateY(-1px);
+}
+
+.miuix-button-outline:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .miuix-code-block {
@@ -1496,8 +1544,8 @@ html.sidebar-collapsed .miuix-sidebar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
-    margin-bottom: 16px;
+    padding: 8px 0;
+    margin-bottom: 12px;
     border-bottom: 1px solid var(--miuix-color-outline-variant);
 }
 
@@ -1592,4 +1640,37 @@ html.sidebar-collapsed .miuix-sidebar {
 .app-detail-icon .img-placeholder {
     font-size: 36px;
     border-radius: 16px;
+}
+
+/* ============ 页脚样式 ============ */
+.site-footer {
+    margin-top: auto;
+    padding: 20px 24px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-disclaimer {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--miuix-color-on-surface-variant);
+    padding: 10px 20px;
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.04) 0%,
+        rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.02) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.06);
+    backdrop-filter: blur(8px);
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.footer-disclaimer:hover {
+    opacity: 1;
 }
