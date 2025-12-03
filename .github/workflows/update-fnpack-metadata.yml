@@ -2,7 +2,7 @@ name: Update FnPack Metadata
 
 on:
   schedule:
-    - cron: '0 16 * * *' # 每天 0 点自动运行（UTC+8）
+    - cron: '0 4 * * *' # 每天 12 点自动运行（UTC+8）
   workflow_dispatch:
   push:
     branches:
