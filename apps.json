@@ -24,6 +24,11 @@
       "id": "test-html",
       "name": "测试HTML格式",
       "repository": "https://github.com/UCKETX/moviepilot"
+    },
+    {
+      "id": "test1",
+      "name": "测试1",
+      "repository": "https://github.com/yuexps/v2raya-fnos"
     }
   ]
 }
