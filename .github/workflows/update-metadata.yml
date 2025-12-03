@@ -9,8 +9,9 @@ on:
       - main
     paths:
       - 'apps.json'
+      - 'fnpacks.json'
   repository_dispatch:
-    types: [update-metadata]
+    types: [update-metadata, update-fnpack-metadata]
 
 jobs:
   update-metadata:
