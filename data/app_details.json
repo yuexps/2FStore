@@ -61,53 +61,8 @@
       "lastUpdate": "2025-12-03T09:41:13Z"
     },
     {
-      "id": "test-html",
-      "name": "测试HTML格式",
-      "repository": "https://github.com/UCKETX/moviepilot",
-      "description": "<p>MoviePilot 是新一代智能化个人媒体库管理工具，基于前后端分离设计架构，拥有丰富的插件生态系统。</p>\n<p>前端端口：<strong>20669</strong><br>后端端口：<strong>47901</strong></p>\n<p style=\"color:#e67e22;\">⚠️提示：安装失败时请检查 Docker 站点的连接性，镜像下载失败请配置镜像代理。</p>",
-      "version": "3.3",
-      "iconUrl": "https://raw.githubusercontent.com/UCKETX/moviepilot/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/UCKETX/moviepilot/releases/download/3.3/moviepilot.fpk",
-      "screenshots": [],
-      "author": "UCKETX",
-      "stars": 0,
-      "forks": 0,
-      "category": "network",
-      "lastUpdate": "2025-12-03T09:41:13Z"
-    },
-    {
-      "id": "test1",
-      "name": "测试1",
-      "repository": "https://github.com/yuexps/v2raya-fnos",
-      "description": "v2rayA 是一个支持全局透明代理的 V2Ray 客户端，提供 Web 界面管理。",
-      "version": "2.2.7.4",
-      "iconUrl": "https://raw.githubusercontent.com/yuexps/v2raya-fnos/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
-      "screenshots": [],
-      "author": "yuexps",
-      "stars": 41,
-      "forks": 5,
-      "category": "network",
-      "lastUpdate": "2025-12-03T07:29:10Z"
-    },
-    {
-      "id": "test2",
-      "name": "测试2",
-      "repository": "https://github.com/yuexps/v2raya-fnos",
-      "description": "v2rayA 是一个支持全局透明代理的 V2Ray 客户端，提供 Web 界面管理。",
-      "version": "2.2.7.4",
-      "iconUrl": "https://raw.githubusercontent.com/yuexps/v2raya-fnos/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
-      "screenshots": [],
-      "author": "yuexps",
-      "stars": 41,
-      "forks": 5,
-      "category": "network",
-      "lastUpdate": "2025-12-03T07:29:10Z"
-    },
-    {
-      "id": "test3",
-      "name": "测试3",
+      "id": "v2raya",
+      "name": "V2rayA",
       "repository": "https://github.com/yuexps/v2raya-fnos",
       "description": "v2rayA 是一个支持全局透明代理的 V2Ray 客户端，提供 Web 界面管理。",
       "version": "2.2.7.4",
@@ -121,5 +76,5 @@
       "lastUpdate": "2025-12-03T07:29:10Z"
     }
   ],
-  "lastUpdated": "2025-12-03T14:50:51.879758Z"
+  "lastUpdated": "2025-12-03T14:52:55.074606Z"
 }
