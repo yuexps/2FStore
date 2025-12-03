@@ -2,7 +2,7 @@ name: Process Submission Issues
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 
 jobs:
   # 处理 2FStore 应用提交
