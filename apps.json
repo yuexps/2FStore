@@ -34,6 +34,11 @@
       "id": "test2",
       "name": "测试2",
       "repository": "https://github.com/yuexps/v2raya-fnos"
+    },
+    {
+      "id": "test3",
+      "name": "测试3",
+      "repository": "https://github.com/yuexps/v2raya-fnos"
     }
   ]
 }
