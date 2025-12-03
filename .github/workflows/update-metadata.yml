@@ -67,7 +67,7 @@ jobs:
           
           # 有任何变更则提交
           if [ "$HAS_APP_CHANGES" = "true" ] || [ "$HAS_FNPACK_CHANGES" = "true" ]; then
-            git add data/app_details.json data/fnpack_details.json
+            git add data/app_details.json data/fnpack_details.json data/version.json
             git commit -m "自动更新应用元数据 [2FStore: $HAS_APP_CHANGES, FnPack: $HAS_FNPACK_CHANGES]"
             git push
             echo "has_changes=true" >> $GITHUB_OUTPUT
