@@ -21,23 +21,8 @@
       "repository": "https://github.com/UCKETX/moviepilot"
     },
     {
-      "id": "test-html",
-      "name": "测试HTML格式",
-      "repository": "https://github.com/UCKETX/moviepilot"
-    },
-    {
-      "id": "test1",
-      "name": "测试1",
-      "repository": "https://github.com/yuexps/v2raya-fnos"
-    },
-    {
-      "id": "test2",
-      "name": "测试2",
-      "repository": "https://github.com/yuexps/v2raya-fnos"
-    },
-    {
-      "id": "test3",
-      "name": "测试3",
+      "id": "v2raya",
+      "name": "V2rayA",
       "repository": "https://github.com/yuexps/v2raya-fnos"
     }
   ]
