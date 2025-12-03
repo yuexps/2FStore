@@ -19,16 +19,6 @@
       "id": "moviepilot",
       "name": "MoviePilot",
       "repository": "https://github.com/UCKETX/moviepilot"
-    },
-    {
-      "id": "test3",
-      "name": "测试3",
-      "repository": "https://github.com/yuexps/v2raya-fnos"
-    },
-    {
-      "id": "test-uk",
-      "name": "测试UK",
-      "repository": "https://github.com/UCKETX/moviepilot"
     }
   ]
 }

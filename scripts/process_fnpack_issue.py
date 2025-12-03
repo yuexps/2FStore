@@ -162,14 +162,23 @@ def process_fnpack_issue():
                 comment_body += f"| 应用Key | `{key}` |\n"
                 comment_body += f"| 应用名称 | `{info.get('name', '未知')}` |\n"
                 comment_body += f"| 版本 | `{info.get('version', '未知')}` |\n"
-                comment_body += f"| 描述 | {info.get('description', '暂无描述')} |\n"
                 comment_body += f"| 作者 | `{info.get('author', '未知')}` |\n"
                 comment_body += f"| 分类 | `{info.get('category', 'uncategorized')}` |\n"
                 
                 if info.get('downloadUrl'):
                     comment_body += f"| 下载链接 | [下载]({info.get('downloadUrl')}) |\n"
                 
-                comment_body += "\n"
+                # 检查描述是否包含HTML标签
+                description = info.get('description', '暂无描述')
+                has_html = bool(re.search(r'<[^>]+>', description)) if description else False
+                
+                if has_html:
+                    # 包含HTML的描述单独显示
+                    comment_body += "\n**📝 应用描述**\n\n"
+                    comment_body += f"<blockquote>\n{description}\n</blockquote>\n\n"
+                else:
+                    # 纯文本描述放在表格中
+                    comment_body += f"| 描述 | {description} |\n\n"
             
             # 更新 fnpacks.json
             update_fnpacks_json(owner, repo_url)

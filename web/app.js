@@ -1,4 +1,4 @@
-// ============ 配置区域 ============
+// ============ 本地调试（默认False） ============
 const TEST_MODE = false; // 设为 true 从 GitHub 远程获取数据，false 使用本地数据
 const TEST_DATA_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/app_details.json';
 const TEST_FNPACK_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/fnpack_details.json';
@@ -18,19 +18,65 @@ let appsData = [];
 let filteredApps = [];
 let currentCategory = 'all';
 let currentSort = 'name';
-let githubProxy = ''; // 新增全局变量存储GitHub代理URL
+let githubProxy = ''; // 全局变量存储GitHub代理URL
 
 // Bing 每日图片 API
 const BING_API = 'https://bing.biturl.top/?resolution=1920&format=json&index=0&mkt=zh-CN';
 
 // 安全 HTML 标签白名单
-const ALLOWED_TAGS = ['b', 'i', 'strong', 'em', 'br', 'a', 'p', 'ul', 'ol', 'li', 'code', 'pre', 'span'];
+const ALLOWED_TAGS = [
+    'b', 'i', 'strong', 'em', 'br', 'a', 'p', 'ul', 'ol', 'li', 
+    'code', 'pre', 'span', 'div', 'blockquote', 'hr',
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sub', 'sup', 'mark'
+];
 const ALLOWED_ATTRS = {
     'a': ['href', 'target', 'rel'],
-    'span': ['class'],
+    'span': ['class', 'style'],
+    'div': ['class', 'style'],
+    'p': ['class', 'style'],
     'code': ['class'],
-    'pre': ['class']
+    'pre': ['class'],
+    'blockquote': ['class', 'style'],
+    'h1': ['class', 'style'],
+    'h2': ['class', 'style'],
+    'h3': ['class', 'style'],
+    'h4': ['class', 'style'],
+    'h5': ['class', 'style'],
+    'h6': ['class', 'style']
 };
+
+// 安全的 CSS 属性白名单（防止注入攻击）
+const ALLOWED_STYLES = [
+    'color', 'background-color', 'font-size', 'font-weight', 'font-style',
+    'text-align', 'text-decoration', 'line-height', 'margin', 'padding',
+    'margin-top', 'margin-bottom', 'margin-left', 'margin-right',
+    'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
+    'border', 'border-radius', 'opacity'
+];
+
+/**
+ * 过滤 style 属性，只保留安全的 CSS 属性
+ */
+function sanitizeStyle(styleString) {
+    if (!styleString) return '';
+    
+    const safeStyles = [];
+    const styles = styleString.split(';');
+    
+    for (const style of styles) {
+        const [prop, value] = style.split(':').map(s => s.trim().toLowerCase());
+        if (prop && value && ALLOWED_STYLES.includes(prop)) {
+            // 检查值中是否包含危险内容（如 url(), expression(), javascript:）
+            if (!value.includes('url(') && 
+                !value.includes('expression(') && 
+                !value.includes('javascript:')) {
+                safeStyles.push(`${prop}: ${value}`);
+            }
+        }
+    }
+    
+    return safeStyles.join('; ');
+}
 
 /**
  * 安全的 HTML 过滤函数
@@ -73,6 +119,14 @@ function sanitizeHtml(html) {
                                 !href.startsWith('https://') && 
                                 !href.startsWith('mailto:')) {
                                 child.removeAttribute('href');
+                            }
+                        } else if (attr.name === 'style') {
+                            // 过滤 style 属性
+                            const safeStyle = sanitizeStyle(attr.value);
+                            if (safeStyle) {
+                                child.setAttribute('style', safeStyle);
+                            } else {
+                                child.removeAttribute('style');
                             }
                         }
                     }

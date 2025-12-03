@@ -163,13 +163,24 @@ def process_app_issue():
             comment_body += f"| 应用ID | `{app_id}` |\n"
             comment_body += f"| 应用名称 | `{app_name}` |\n"
             comment_body += f"| 仓库URL | [{repo_url}]({repo_url}) |\n"
-            comment_body += f"| 应用描述 | {app_info.get('description', '暂无描述')} |\n"
             comment_body += f"| 作者信息 | `{app_info.get('author')}` |\n"
             comment_body += f"| 星标数/分支数 | ⭐ {app_info.get('stars', 0)} / 🍴 {app_info.get('forks', 0)} |\n"
             comment_body += f"| 最后更新时间 | {app_info.get('lastUpdate', '未知')} |\n"
             comment_body += f"| 最新版本 | `{app_info.get('version', '未知')}` |\n"
             comment_body += f"| 下载链接 | [{app_info.get('downloadUrl', '未知')}]({app_info.get('downloadUrl', '未知')}) |\n"
-            comment_body += f"| 应用分类 | `{app_info.get('category', 'uncategorized')}` |\n\n"
+            comment_body += f"| 应用分类 | `{app_info.get('category', 'uncategorized')}` |\n"
+            
+            # 检查描述是否包含HTML标签
+            description = app_info.get('description', '暂无描述')
+            has_html = bool(re.search(r'<[^>]+>', description)) if description else False
+            
+            if has_html:
+                # 包含HTML的描述单独显示
+                comment_body += "\n### 📝 应用描述\n\n"
+                comment_body += f"<blockquote>\n{description}\n</blockquote>\n\n"
+            else:
+                # 纯文本描述放在表格中
+                comment_body += f"| 应用描述 | {description} |\n\n"
             
             comment_body += "✅ **应用信息验证通过！**\n\n"
             

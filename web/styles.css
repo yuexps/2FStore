@@ -217,7 +217,6 @@ body::before {
 
 .miuix-modal-dialog {
     background-color: var(--miuix-color-surface);
-    /* 或者用 var(--miuix-color-surface) 若已定义为纯色 */
     border: 1px solid var(--miuix-color-outline);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
