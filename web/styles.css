@@ -1,6 +1,20 @@
 /* 参考 Miuix UI 的自定义样式 */
 
 /* 全局样式 */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 自定义选中文本样式 */
+::selection {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.3);
+    color: var(--miuix-color-on-surface);
+}
+
 body {
     margin: 0;
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
@@ -10,6 +24,8 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* 背景遮罩层 */
@@ -32,6 +48,58 @@ body::before {
     overflow: hidden;
 }
 
+/* 顶栏品牌区域 */
+.miuix-topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 品牌按钮（汉堡菜单 + 标题合并） */
+.miuix-brand-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    color: var(--miuix-color-on-surface);
+}
+
+.miuix-brand-button:hover {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
+}
+
+.miuix-brand-button:active {
+    transform: scale(0.97);
+}
+
+.miuix-brand-button .menu-icon {
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s, transform 0.3s ease;
+}
+
+.miuix-brand-button:hover .menu-icon {
+    opacity: 1;
+}
+
+/* 侧边栏收起时旋转汉堡菜单图标 */
+.sidebar-collapsed .miuix-brand-button .menu-icon,
+.miuix-sidebar.collapsed ~ .miuix-topbar .menu-icon {
+    transform: rotate(90deg);
+}
+
+.miuix-brand-button .brand-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
 /* 顶栏标题样式 */
 .miuix-topbar h1,
 .miuix-topbar-title {
@@ -41,6 +109,17 @@ body::before {
     margin: 0;
     color: var(--miuix-color-on-surface);
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+}
+
+.miuix-topbar-brand #github-btn {
+    color: var(--miuix-color-on-surface-variant);
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.miuix-topbar-brand #github-btn:hover {
+    opacity: 1;
+    color: var(--miuix-color-on-surface);
 }
 
 .miuix-topbar-actions {
@@ -176,6 +255,15 @@ body::before {
     color: var(--miuix-color-on-surface-variant);
 }
 
+.miuix-search-input:focus {
+    outline: none;
+}
+
+.miuix-search:focus-within {
+    border-color: var(--miuix-color-primary);
+    box-shadow: 0 0 0 2px rgba(var(--miuix-color-primary-rgb), 0.2);
+}
+
 .miuix-icon-button {
     background: transparent;
     border: none;
@@ -217,6 +305,38 @@ body::before {
     overflow-y: auto;
     padding: 16px 0;
     flex-shrink: 0;
+    transition: width 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+}
+
+/* 自定义滚动条 */
+.miuix-sidebar::-webkit-scrollbar,
+.miuix-main::-webkit-scrollbar {
+    width: 6px;
+}
+
+.miuix-sidebar::-webkit-scrollbar-track,
+.miuix-main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.miuix-sidebar::-webkit-scrollbar-thumb,
+.miuix-main::-webkit-scrollbar-thumb {
+    background-color: rgba(var(--miuix-color-on-surface-rgb, 0, 0, 0), 0.2);
+    border-radius: 3px;
+}
+
+.miuix-sidebar::-webkit-scrollbar-thumb:hover,
+.miuix-main::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(var(--miuix-color-on-surface-rgb, 0, 0, 0), 0.3);
+}
+
+/* 侧边栏折叠状态 */
+.miuix-sidebar.collapsed,
+html.sidebar-collapsed .miuix-sidebar {
+    width: 0;
+    padding: 0;
+    overflow: hidden;
+    border-right: none;
 }
 
 .miuix-card {
@@ -414,7 +534,7 @@ body::before {
 
 .miuix-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 24px;
 }
 
@@ -424,10 +544,21 @@ body::before {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     cursor: pointer;
     position: relative;
     border: 1px solid var(--miuix-color-outline-variant);
+}
+
+.app-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    border-color: var(--miuix-color-primary);
+}
+
+.app-card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
 /* 应用来源标识 */
@@ -438,53 +569,53 @@ body::before {
     font-size: 12px;
     font-weight: 500;
     margin-left: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-source-badge:hover {
+    transform: scale(1.05);
 }
 
 .app-source-badge.store-2fstore {
-    background-color: #2196F3;
+    background: linear-gradient(135deg, #2196F3, #1976D2);
     color: white;
+    box-shadow: 0 2px 8px rgba(33, 150, 243, 0.3);
 }
 
 .app-source-badge.store-fndepot {
-    background-color: #4CAF50;
+    background: linear-gradient(135deg, #4CAF50, #388E3C);
     color: white;
-}
-
-.app-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
 }
 
 .app-card-header {
     display: flex;
     align-items: center;
     padding: 16px;
-    background-color: var(--miuix-color-surface-variant);
-    border-bottom: 1px solid var(--miuix-color-outline-variant);
+    background: linear-gradient(135deg, rgba(var(--miuix-color-surface-variant-rgb, 245, 245, 245), 0.8), rgba(var(--miuix-color-surface-rgb), 0.6));
+    border-bottom: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.08);
 }
 
 .app-icon {
     width: 56px;
     height: 56px;
-    border-radius: 12px;
+    border-radius: 14px;
     margin-right: 16px;
-    background-color: var(--miuix-color-primary-container);
+    background: linear-gradient(135deg, var(--miuix-color-primary-container), var(--miuix-color-primary));
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--miuix-color-on-primary-container);
+    color: white;
     font-size: 24px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.app-icon img {
-    transition: transform 0.3s ease;
-}
-
-.app-card:hover .app-icon img {
+.app-card:hover .app-icon {
     transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(var(--miuix-color-primary-rgb), 0.35);
 }
 
 .app-info {
@@ -505,7 +636,64 @@ body::before {
 
 .app-author {
     color: var(--miuix-color-on-surface-variant);
-    font-size: 14px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 6px;
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-primary-rgb), 0.06) 0%, 
+        rgba(var(--miuix-color-primary-rgb), 0.02) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(var(--miuix-color-primary-rgb), 0.1);
+    margin-top: 4px;
+}
+
+.app-author::before {
+    content: '👤';
+    font-size: 12px;
+}
+
+/* 开发者链接样式 */
+.author-link {
+    color: var(--miuix-color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.author-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: linear-gradient(90deg, 
+        var(--miuix-color-primary) 0%, 
+        rgba(var(--miuix-color-primary-rgb), 0.5) 100%);
+    border-radius: 1px;
+    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.author-link:hover {
+    color: var(--miuix-color-primary);
+    filter: brightness(1.1);
+}
+
+.author-link:hover::after {
+    width: 100%;
+}
+
+.author-link:active {
+    transform: scale(0.98);
+}
+
+/* 非链接开发者名称 */
+.app-author span:not(.author-link) {
+    font-weight: 500;
+    color: var(--miuix-color-on-surface);
 }
 
 .app-card-body {
@@ -526,16 +714,28 @@ body::before {
 
 .app-meta {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
     color: var(--miuix-color-on-surface-variant);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 500;
+    padding-top: 12px;
+    border-top: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.06);
 }
 
 .app-meta span {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    gap: 4px;
+    gap: 3px;
+    padding: 3px 6px;
+    background-color: rgba(var(--miuix-color-surface-variant-rgb, 245, 245, 245), 0.6);
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.app-meta span:hover {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
 }
 
 /* 应用详情 */
@@ -579,26 +779,32 @@ body::before {
 .app-detail-header {
     display: flex;
     align-items: center;
-    padding: 24px;
-    background-color: rgba(var(--miuix-color-surface-variant-rgb, 255, 255, 255), 0.3);
+    padding: 32px;
+    background: linear-gradient(135deg, rgba(var(--miuix-color-surface-variant-rgb, 255, 255, 255), 0.4), rgba(var(--miuix-color-primary-rgb), 0.05));
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     margin-bottom: 0;
 }
 
 .app-detail-icon {
-    width: 96px;
-    height: 96px;
-    border-radius: 16px;
-    margin-right: 24px;
-    background-color: var(--miuix-color-primary-container);
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-right: 28px;
+    background: linear-gradient(135deg, var(--miuix-color-primary-container), var(--miuix-color-primary));
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
-    color: var(--miuix-color-on-primary-container);
-    font-size: 36px;
+    color: white;
+    font-size: 40px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(var(--miuix-color-primary-rgb), 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-detail-icon:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 32px rgba(var(--miuix-color-primary-rgb), 0.4);
 }
 
 .app-detail-icon img {
@@ -622,24 +828,54 @@ body::before {
 
 .app-detail-author {
     color: var(--miuix-color-on-surface-variant);
-    margin-bottom: 12px;
-    font-size: 16px;
+    margin-bottom: 16px;
+    font-size: 15px;
     font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px 8px 10px;
+    background: linear-gradient(135deg, 
+        rgba(var(--miuix-color-primary-rgb), 0.08) 0%, 
+        rgba(var(--miuix-color-primary-rgb), 0.03) 100%);
+    border-radius: 24px;
+    border: 1px solid rgba(var(--miuix-color-primary-rgb), 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.app-detail-author::before {
+    content: '👤';
+    font-size: 14px;
+}
+
+.app-detail-author .author-link {
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .app-detail-stats {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 12px;
     color: var(--miuix-color-on-surface-variant);
     font-size: 14px;
 }
 
 .app-detail-stats span {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
     font-weight: 500;
+    padding: 6px 12px;
+    background-color: rgba(var(--miuix-color-surface-rgb), 0.5);
+    border-radius: 20px;
+    border: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.1);
+    transition: all 0.2s ease;
+}
+
+.app-detail-stats span:hover {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
+    border-color: rgba(var(--miuix-color-primary-rgb), 0.3);
 }
 
 .app-detail-description {
@@ -690,6 +926,11 @@ body::before {
     box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.4);
 }
 
+.download-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(var(--miuix-color-primary-rgb), 0.3);
+}
+
 .repo-btn {
     background-color: rgba(var(--miuix-color-surface-rgb), 0.5);
     backdrop-filter: blur(8px);
@@ -702,6 +943,10 @@ body::before {
     background-color: rgba(var(--miuix-color-primary-rgb), 0.15);
     border-color: var(--miuix-color-primary);
     transform: translateY(-2px);
+}
+
+.repo-btn:active {
+    transform: translateY(0);
 }
 
 /* 截图展示区域样式 */
@@ -977,11 +1222,26 @@ body::before {
     background-color: transparent;
     color: var(--miuix-color-primary);
     padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .miuix-button-text:hover {
     background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
     transform: translateY(-1px);
+}
+
+.miuix-button-text:active {
+    transform: translateY(0);
+}
+
+.miuix-button-text svg {
+    transition: transform 0.2s ease;
+}
+
+.miuix-button-text:hover svg {
+    transform: translateX(-3px);
 }
 
 /* 工具类 */
@@ -1009,130 +1269,6 @@ body::before {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-/* 移动端专用元素 - 默认隐藏 */
-.mobile-only {
-    display: none !important;
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    /* 移动端显示筛选按钮和代理按钮 */
-    .mobile-only {
-        display: flex !important;
-    }
-    
-    /* 移动端隐藏 GitHub 按钮 */
-    #github-btn {
-        display: none !important;
-    }
-    
-    .miuix-content {
-        flex-direction: column;
-    }
-    
-    .miuix-sidebar {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid var(--miuix-color-outline);
-        max-height: 200px;
-    }
-    
-    .miuix-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-    
-    .miuix-main {
-        padding: 16px;
-    }
-    
-    .miuix-topbar-actions {
-        flex: 1;
-        justify-content: space-between;
-    }
-    
-    .miuix-search {
-        flex: 1;
-        min-width: 80px;
-        max-width: 200px;
-        margin: 0 8px;
-        padding: 4px 12px;
-    }
-    
-    /* 移动端隐藏搜索按钮，使用回车搜索 */
-    .miuix-search .miuix-icon-button {
-        display: none;
-    }
-    
-    .miuix-search-input {
-        padding: 6px 4px;
-        font-size: 14px;
-    }
-    
-    .miuix-search:focus-within {
-        max-width: 200px;
-    }
-    
-    .app-detail-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .app-detail-icon {
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
-    
-    .app-detail-actions {
-        flex-direction: column;
-        margin: 0 16px 16px;
-        padding: 16px;
-    }
-    
-    .download-btn, .repo-btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .app-detail-description {
-        margin: 16px;
-    }
-    
-    .app-screenshots {
-        margin: 0 16px 16px;
-    }
-    
-    .app-last-update {
-        margin: 0 16px 16px;
-    }
-    
-    .screenshot-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* 更小屏幕适配 */
-@media (max-width: 400px) {
-    .miuix-search {
-        min-width: 80px;
-        max-width: 120px;
-        padding: 6px 12px;
-    }
-    
-    .miuix-topbar-button span {
-        display: none;
-    }
-    
-    .miuix-topbar {
-        padding: 0 8px;
-    }
-    
-    .miuix-topbar-actions {
-        gap: 4px;
-    }
 }
 
 /* Miuix UI颜色变量 */
@@ -1355,88 +1491,6 @@ body::before {
     box-shadow: 0 0 0 2px rgba(var(--miuix-color-primary-rgb), 0.2);
 }
 
-/* 应用卡片 */
-.app-card {
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: 1px solid var(--miuix-color-outline);
-}
-
-.app-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    border-color: var(--miuix-color-primary);
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .miuix-content {
-        flex-direction: column;
-    }
-
-    /* 隐藏标题 */
-    .miuix-topbar-title {
-        display: none;
-    }
-    
-    /* 隐藏侧栏 */
-    .miuix-sidebar {
-        display: none;
-    }
-    
-    .miuix-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-    
-    .miuix-main {
-        padding: 16px;
-    }
-    
-    /* 隐藏提交应用按钮 */
-    #submit-app-btn {
-        display: none !important;
-    }
-    
-    .app-detail-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .app-detail-icon {
-        margin-right: 0;
-        margin-bottom: 16px;
-    }
-    
-    .app-detail-actions {
-        flex-direction: column;
-        margin: 0 16px 16px;
-        padding: 16px;
-    }
-    
-    .download-btn, .repo-btn {
-        width: 100%;
-        justify-content: center;
-    }
-    
-    .app-detail-description {
-        margin: 16px;
-    }
-    
-    .app-screenshots {
-        margin: 0 16px 16px;
-    }
-    
-    .app-last-update {
-        margin: 0 16px 16px;
-    }
-    
-    .screenshot-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* 应用统计样式 */
 .app-stats {
     display: flex;
@@ -1538,30 +1592,4 @@ body::before {
 .app-detail-icon .img-placeholder {
     font-size: 36px;
     border-radius: 16px;
-}
-
-/* 移动端筛选模态框 */
-#filter-modal {
-    z-index: 200;
-}
-
-#filter-modal .miuix-modal-dialog {
-    max-width: 320px;
-    margin: auto 16px;
-}
-
-#filter-modal .miuix-list-item {
-    padding: 12px 16px;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: background-color 0.2s;
-}
-
-#filter-modal .miuix-list-item:hover {
-    background-color: var(--miuix-color-surface-variant);
-}
-
-#filter-modal .miuix-list-item.active {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
-    color: var(--miuix-color-primary);
 }

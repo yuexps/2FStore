@@ -1,8 +1,17 @@
-// ============ 测试模式配置 ============
-const TEST_MODE = false; // 设为 true 从 GitHub 远程获取数据，false 使用本地数据
+// ============ 配置区域 ============
+const TEST_MODE = true; // 设为 true 从 GitHub 远程获取数据，false 使用本地数据
 const TEST_DATA_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/app_details.json';
 const TEST_FNPACK_URL = 'https://raw.githubusercontent.com/yuexps/2FStore/refs/heads/main/data/fnpack_details.json';
-// ======================================
+
+// GitHub 代理地址列表
+const PROXY_OPTIONS = [
+    { value: '', label: '无加速' },
+    { value: 'https://github.akams.cn/', label: 'github.akams.cn' },
+    { value: 'https://gh-proxy.org/', label: 'gh-proxy.org' },
+    { value: 'https://ghfast.top/', label: 'ghfast.top' },
+    { value: 'custom', label: '自定义' }
+];
+// ==================================
 
 // 全局变量
 let appsData = [];
@@ -104,15 +113,8 @@ const proxySelect = document.getElementById('proxy-select');
 const customProxyContainer = document.getElementById('custom-proxy-container');
 const customProxyInput = document.getElementById('custom-proxy-input');
 const appCountEl = document.getElementById('app-count');
-const filterBtn = document.getElementById('filter-btn');
-const filterModal = document.getElementById('filter-modal');
-const mobileCategoryList = document.getElementById('mobile-category-list');
-const mobileSortSelect = document.getElementById('mobile-sort-select');
-const proxyBtn = document.getElementById('proxy-btn');
-const proxyModal = document.getElementById('proxy-modal');
-const mobileProxySelect = document.getElementById('mobile-proxy-select');
-const mobileCustomProxyContainer = document.getElementById('mobile-custom-proxy-container');
-const mobileCustomProxyInput = document.getElementById('mobile-custom-proxy-input');
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.querySelector('.miuix-sidebar');
 
 // 初始化应用
 document.addEventListener('DOMContentLoaded', () => {
@@ -166,6 +168,19 @@ function setupEventListeners() {
         submitModal.classList.add('hidden');
     });
     
+    // 汉堡菜单切换侧边栏
+    menuToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('collapsed');
+        document.documentElement.classList.toggle('sidebar-collapsed');
+        // 保存状态到 localStorage
+        localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+    });
+    
+    // 同步侧边栏状态（从 html 类同步到 sidebar 元素）
+    if (document.documentElement.classList.contains('sidebar-collapsed')) {
+        sidebar.classList.add('collapsed');
+    }
+    
     // 监听代理设置变化
     proxySelect.addEventListener('change', handleProxyChange);
     
@@ -200,158 +215,16 @@ function setupEventListeners() {
         }
     });
     
-    // 移动端筛选按钮
-    if (filterBtn) {
-        filterBtn.addEventListener('click', () => {
-            filterModal.classList.remove('hidden');
-            updateMobileFilterUI();
-        });
-    }
-    
-    // 移动端筛选模态框关闭
-    if (filterModal) {
-        filterModal.addEventListener('click', (e) => {
-            if (e.target === filterModal) {
-                filterModal.classList.add('hidden');
-            }
-        });
-        
-        const closeBtn = filterModal.querySelector('.miuix-modal-close');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                filterModal.classList.add('hidden');
-            });
-        }
-    }
-    
-    // 移动端分类点击
-    if (mobileCategoryList) {
-        mobileCategoryList.addEventListener('click', (e) => {
-            const listItem = e.target.closest('.miuix-list-item');
-            if (listItem) {
-                currentCategory = listItem.dataset.category;
-                filterApps();
-                updateMobileFilterUI();
-                filterModal.classList.add('hidden');
-            }
-        });
-    }
-    
-    // 移动端排序
-    if (mobileSortSelect) {
-        mobileSortSelect.addEventListener('change', () => {
-            currentSort = mobileSortSelect.value;
-            sortSelect.value = currentSort;
-            filterApps();
-        });
-    }
-    
-    // 移动端代理设置按钮
-    if (proxyBtn) {
-        proxyBtn.addEventListener('click', () => {
-            proxyModal.classList.remove('hidden');
-            // 同步当前代理设置到移动端
-            if (mobileProxySelect) {
-                mobileProxySelect.value = proxySelect.value;
-                if (proxySelect.value === 'custom') {
-                    mobileCustomProxyContainer.classList.remove('hidden');
-                    mobileCustomProxyInput.value = customProxyInput.value;
-                } else {
-                    mobileCustomProxyContainer.classList.add('hidden');
-                }
-            }
-        });
-    }
-    
-    // 移动端代理模态框关闭
-    if (proxyModal) {
-        proxyModal.addEventListener('click', (e) => {
-            if (e.target === proxyModal) {
-                proxyModal.classList.add('hidden');
-            }
-        });
-        
-        const closeBtn = proxyModal.querySelector('.miuix-modal-close');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                proxyModal.classList.add('hidden');
-            });
-        }
-    }
-    
-    // 移动端代理选择
-    if (mobileProxySelect) {
-        mobileProxySelect.addEventListener('change', () => {
-            const value = mobileProxySelect.value;
-            proxySelect.value = value; // 同步到桌面端选择器
-            
-            if (value === 'custom') {
-                mobileCustomProxyContainer.classList.remove('hidden');
-                customProxyContainer.classList.remove('hidden');
-            } else {
-                mobileCustomProxyContainer.classList.add('hidden');
-                customProxyContainer.classList.add('hidden');
-                githubProxy = value;
-                saveProxySetting();
-                reloadCurrentView();
-            }
-        });
-    }
-    
-    // 移动端自定义代理输入
-    if (mobileCustomProxyInput) {
-        mobileCustomProxyInput.addEventListener('blur', () => {
-            const value = mobileCustomProxyInput.value.trim();
-            customProxyInput.value = value; // 同步到桌面端
-            handleCustomProxyChange();
-        });
-        mobileCustomProxyInput.addEventListener('keyup', (e) => {
-            if (e.key === 'Enter') {
-                customProxyInput.value = mobileCustomProxyInput.value.trim();
-                handleCustomProxyChange();
-                proxyModal.classList.add('hidden');
-            }
-        });
-    }
-    
     // 键盘快捷键：ESC 关闭模态框和详情
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             if (!submitModal.classList.contains('hidden')) {
                 submitModal.classList.add('hidden');
-            } else if (filterModal && !filterModal.classList.contains('hidden')) {
-                filterModal.classList.add('hidden');
-            } else if (proxyModal && !proxyModal.classList.contains('hidden')) {
-                proxyModal.classList.add('hidden');
             } else if (!appDetail.classList.contains('hidden')) {
                 showAppList();
             }
         }
     });
-}
-
-// 更新移动端筛选界面
-function updateMobileFilterUI() {
-    if (!mobileCategoryList) return;
-    
-    // 同步分类列表
-    mobileCategoryList.innerHTML = '';
-    const categories = Array.from(categoryList.querySelectorAll('.miuix-list-item'));
-    categories.forEach(item => {
-        const li = document.createElement('li');
-        li.className = 'miuix-list-item';
-        li.dataset.category = item.dataset.category;
-        if (item.dataset.category === currentCategory) {
-            li.classList.add('active');
-        }
-        li.innerHTML = `<span class="miuix-list-item-text">${item.textContent}</span>`;
-        mobileCategoryList.appendChild(li);
-    });
-    
-    // 同步排序选项
-    if (mobileSortSelect) {
-        mobileSortSelect.value = currentSort;
-    }
 }
 
 // 处理代理设置变化
@@ -400,8 +273,16 @@ function handleCustomProxyChange() {
     loadAppsData();
 }
 
+// 初始化代理选择器选项
+function initProxyOptions() {
+    proxySelect.innerHTML = PROXY_OPTIONS.map(option => 
+        `<option value="${option.value}">${option.label}</option>`
+    ).join('');
+}
+
 // 加载保存的代理设置
 function loadProxySetting() {
+    initProxyOptions(); // 先初始化选项
     const savedProxy = localStorage.getItem('githubProxy');
     if (savedProxy) {
         githubProxy = savedProxy; // 确保全局变量被设置
@@ -586,6 +467,19 @@ function renderAppList() {
     });
 }
 
+// 获取开发者链接（优先使用 author_url，否则从仓库 URL 提取）
+function getAuthorUrl(app) {
+    if (app.author_url) return app.author_url;
+    // 从 GitHub 仓库 URL 提取所有者链接
+    if (app.repository && app.repository.includes('github.com')) {
+        const match = app.repository.match(/github\.com\/([^\/]+)/);
+        if (match) {
+            return `https://github.com/${match[1]}`;
+        }
+    }
+    return null;
+}
+
 // 创建应用卡片
 function createAppCard(app) {
     const initial = app.name.charAt(0).toUpperCase();
@@ -594,6 +488,8 @@ function createAppCard(app) {
     if (app.source) {
         sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
     }
+    
+    const authorUrl = getAuthorUrl(app);
     
     // 图片错误处理：失败时显示首字母
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
@@ -606,7 +502,7 @@ function createAppCard(app) {
                 </div>
                 <div class="app-info">
                     <div class="app-name">${app.name}</div>
-                    <div class="app-author">作者: ${app.author}</div>
+                    <div class="app-author">${authorUrl ? `<a href="${authorUrl}" target="_blank" class="author-link" onclick="event.stopPropagation()">${app.author}</a>` : `<span>${app.author}</span>`}</div>
                 </div>
             </div>
             <div class="app-card-body">
@@ -614,6 +510,7 @@ function createAppCard(app) {
                 <div class="app-meta">
                     <span>⭐ ${app.stars || 0}</span>
                     <span>🍴 ${app.forks || 0}</span>
+                    <span>📦 ${app.version || '1.0.0'}</span>
                     <span>🕐 ${formatDate(app.lastUpdate)}</span>
                     ${sourceBadge}
                 </div>
@@ -634,6 +531,8 @@ function showAppDetail(appId) {
         sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
     }
     
+    const authorUrl = getAuthorUrl(app);
+    
     // 图片错误处理
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
     
@@ -645,7 +544,7 @@ function showAppDetail(appId) {
                 </div>
                 <div class="app-detail-info">
                     <div class="app-detail-name">${app.name} ${sourceBadge}</div>
-                    <div class="app-detail-author">作者: ${app.author}</div>
+                    <div class="app-detail-author">${authorUrl ? `<a href="${authorUrl}" target="_blank" class="author-link">${app.author}</a>` : `<span>${app.author}</span>`}</div>
                     <div class="app-detail-stats">
                         <span>⭐ ${app.stars || 0}</span>
                         <span>🍴 ${app.forks || 0}</span>

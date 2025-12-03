@@ -1,4 +1,4 @@
-name: Update App Metadata
+name: Update All Metadata
 
 on:
   schedule:
@@ -25,34 +25,57 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: 批量更新所有应用元数据
+      - name: 批量更新 2FStore 应用元数据
         run: |
           python scripts/process_apps.py batch-update
 
-      - name: Commit changes
+      - name: 批量更新 FnPack 应用元数据
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python scripts/process_fnpack_apps.py --token $GITHUB_TOKEN batch-update
+
+      - name: Commit and deploy
         id: commit_changes
         run: |
           git config --local user.email "github-actions@github.com"
           git config --local user.name "GitHub Actions"
           
-          # 检查是否有实质性变更（忽略 lastUpdate 等时间字段）
+          HAS_APP_CHANGES=false
+          HAS_FNPACK_CHANGES=false
+          
+          # 检查 2FStore 变更
           if git diff data/app_details.json | grep -E '^[+-]\s+"(name|description|version|iconUrl|downloadUrl|author|category|repository|stars|forks)"' > /dev/null 2>&1; then
-            echo "检测到实质性变更"
-            git add data/app_details.json
-            git commit -m "自动更新 app details metadata"
+            echo "检测到 2FStore 实质性变更"
+            HAS_APP_CHANGES=true
+          else
+            git checkout -- data/app_details.json 2>/dev/null || true
+          fi
+          
+          # 检查 FnPack 变更
+          if git diff data/fnpack_details.json | grep -E '^[+-]\s+"(name|description|version|iconUrl|downloadUrl|author|category|repository|stars|forks)"' > /dev/null 2>&1; then
+            echo "检测到 FnPack 实质性变更"
+            HAS_FNPACK_CHANGES=true
+          else
+            git checkout -- data/fnpack_details.json 2>/dev/null || true
+          fi
+          
+          # 有任何变更则提交
+          if [ "$HAS_APP_CHANGES" = "true" ] || [ "$HAS_FNPACK_CHANGES" = "true" ]; then
+            git add data/app_details.json data/fnpack_details.json
+            git commit -m "自动更新应用元数据 [2FStore: $HAS_APP_CHANGES, FnPack: $HAS_FNPACK_CHANGES]"
             git push
             echo "has_changes=true" >> $GITHUB_OUTPUT
           else
             echo "没有实质性变更，跳过提交"
-            git checkout -- data/app_details.json 2>/dev/null || true
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
       
-      # 触发部署Pages
+      # 触发部署 Pages
       - name: Trigger deployment workflow
         if: steps.commit_changes.outputs.has_changes == 'true'
         uses: peter-evans/repository-dispatch@v2

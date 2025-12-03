@@ -4,11 +4,6 @@ on:
   workflow_dispatch:
   repository_dispatch:
     types: [deploy-pages]
-  push:
-    branches:
-      - main
-    paths:
-      - 'data/app_details.json'
 
 permissions:
   contents: read

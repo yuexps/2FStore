@@ -1,8 +1,7 @@
 name: Update FnPack Metadata
 
+# 定时更新已合并到 update-metadata.yml，此工作流仅在 fnpacks.json 单独变更时触发
 on:
-  schedule:
-    - cron: '0 16 * * *' # 每天 0 点自动运行（UTC+8）
   workflow_dispatch:
   push:
     branches:
@@ -26,7 +25,7 @@ jobs:
           fetch-depth: 0
         
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.11'
           
