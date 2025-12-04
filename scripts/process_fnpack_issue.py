@@ -110,14 +110,12 @@ def process_fnpack_issue():
             return
         
         # 验证仓库URL格式
-        parsed = parse_github_url(repo_url)
-        if not parsed:
+        owner, repo = parse_github_url(repo_url)
+        if not owner or not repo:
             comment = '❌ **验证失败**：无效的GitHub仓库URL格式。'
             api.add_issue_comment(repo_owner, repo_name, issue_number, comment)
             api.add_issue_labels(repo_owner, repo_name, issue_number, ['invalid'])
             return
-        
-        owner = parsed['owner']
         
         # 获取并验证 fnpack.json
         try:
