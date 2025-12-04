@@ -8,6 +8,8 @@ jobs:
   # 处理 2FStore 应用提交
   process-app-issue:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
     permissions:
       contents: write
       issues: write
@@ -61,6 +63,8 @@ jobs:
   # 处理 FnPack 仓库提交
   process-fnpack-issue:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
     permissions:
       contents: write
       issues: write
