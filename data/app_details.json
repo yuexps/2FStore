@@ -13,7 +13,7 @@
       "stars": 2,
       "forks": 0,
       "category": "media",
-      "lastUpdate": "2025-12-03T14:04:43Z"
+      "lastUpdate": "2025-12-04T09:08:56Z"
     },
     {
       "id": "reader",
@@ -89,7 +89,22 @@
       "forks": 0,
       "category": "media",
       "lastUpdate": "2025-12-04T08:43:15Z"
+    },
+    {
+      "id": "test2",
+      "name": "测试2",
+      "repository": "https://github.com/yuexps/reader-fnos",
+      "description": "Reader 是一款开源的网络小说阅读器，提供书源管理、书架同步、WebDAV备份等功能，支持多用户模式。",
+      "version": "3.2.14",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/reader-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/reader-fnos/releases/download/3.2.14/reader.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 1,
+      "forks": 0,
+      "category": "system",
+      "lastUpdate": "2025-12-04T03:48:22Z"
     }
   ],
-  "lastUpdated": "2025-12-04T08:45:37.236625Z"
+  "lastUpdated": "2025-12-04T16:40:30.439827Z"
 }
