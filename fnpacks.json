@@ -1,20 +1,24 @@
 {
-    "fnpacks": [
-        {
-            "key": "htnanako",
-            "repo": "https://github.com/htnanako/FnDepot"
-        },
-        {
-            "key": "IMGZCQ",
-            "repo": "https://github.com/IMGZCQ/FnDepot"
-        },
-        {
-            "key": "snltty",
-            "repo": "https://github.com/snltty/FnDepot"
-        },
-        {
-            "key": "moxyis",
-            "repo": "https://github.com/moxyis/FnDepot"
-        }
-    ]
+  "fnpacks": [
+    {
+      "key": "htnanako",
+      "repo": "https://github.com/htnanako/FnDepot"
+    },
+    {
+      "key": "IMGZCQ",
+      "repo": "https://github.com/IMGZCQ/FnDepot"
+    },
+    {
+      "key": "snltty",
+      "repo": "https://github.com/snltty/FnDepot"
+    },
+    {
+      "key": "moxyis",
+      "repo": "https://github.com/moxyis/FnDepot"
+    },
+    {
+      "id": "EWEDLCM",
+      "repository": "https://github.com/EWEDLCM/FnDepot"
+    }
+  ]
 }
