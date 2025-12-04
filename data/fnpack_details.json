@@ -148,7 +148,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T16:56:45Z",
+      "lastUpdate": "2025-12-04T17:46:24Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -181,7 +181,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T16:56:45Z",
+      "lastUpdate": "2025-12-04T17:46:24Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -220,7 +220,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T16:56:45Z",
+      "lastUpdate": "2025-12-04T17:46:24Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -300,7 +300,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T16:56:45Z",
+      "lastUpdate": "2025-12-04T17:46:24Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -326,36 +326,39 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T16:56:45Z",
+      "lastUpdate": "2025-12-04T17:46:24Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
-      "size": "15"
+      "size": "34.5"
     },
     {
       "id": "moxyis_fpk-oneapi",
       "name": "One API",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek、字节豆包、ChatGLM、文心一言、讯飞星火、通义千问、360 智脑、腾讯混元等主流模型，统一 API 适配，可用于 key 管理与二次分发。初始账号用户名为 root，密码为 123456",
-      "version": "4.10.1",
-      "iconUrl": "",
+      "version": "0.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-oneapi/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-oneapi/fpk-oneapi.fpk",
-      "screenshots": [],
+      "screenshots": [
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-oneapi/Preview/233837954-ae6683aa-5c4f-429f-a949-6645a83c9490.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-oneapi/Preview/233837971-dab488b7-6d96-43af-b640-a168e8d1c9bf.png"
+      ],
       "author": "moxyis",
       "author_url": "https://github.com/moxyis",
       "bug_report_url": "https://github.com/moxyis/FnDepot/issues",
       "history": {
-        "V4.10.1": "https://github.com/cloudreve/Cloudreve/releases"
+        "V0.0.1": "第一版版本的飞牛应用Docker"
       },
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T16:56:45Z",
+      "lastUpdate": "2025-12-04T17:46:24Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
-      "size": "15"
+      "size": "0.3"
     }
   ],
-  "lastUpdated": "2025-12-04T16:58:08.012484Z"
+  "lastUpdated": "2025-12-04T17:51:16.942301Z"
 }
