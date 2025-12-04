@@ -15,6 +15,10 @@
     {
       "key": "moxyis",
       "repo": "https://github.com/moxyis/FnDepot"
+    },
+    {
+      "key": "yuexps",
+      "repo": "https://github.com/yuexps/FnDepot"
     }
   ]
 }
