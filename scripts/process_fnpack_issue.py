@@ -43,8 +43,8 @@ def update_fnpacks_json(owner, repo_url):
                 break
         
         fnpack_info = {
-            'id': owner,
-            'repository': repo_url
+            'key': owner,
+            'repo': repo_url
         }
         
         if existing_index >= 0:
