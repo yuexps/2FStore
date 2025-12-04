@@ -228,32 +228,15 @@ def update_apps_from_fnpack(app_id, app_name, repo_url, app_name_in_fnpack=None,
     import re
     match = re.search(r'github\.com/([^/]+)/', repo_url)
     repo_key = match.group(1) if match else repo_url.replace('https://github.com/', '').split('/')[0]
-    # 详细元数据文件路径
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    fnpack_details_file_path = os.path.join(script_dir, '..', 'data', 'fnpack_details.json')
     
     try:
-        # 读取现有的fnpack详细元数据
-        fnpack_details_data = {'apps': [], 'lastUpdated': ''}
-        try:
-            with open(fnpack_details_file_path, 'r', encoding='utf-8') as f:
-                # 检查文件是否为空
-                content = f.read().strip()
-                if content:
-                    fnpack_details_data = json.loads(content)
-        except FileNotFoundError:
-            # 如果文件不存在，创建新的数据结构
-            fnpack_details_data = {'apps': [], 'lastUpdated': datetime.utcnow().isoformat() + 'Z'}
-        except Exception as err:
-            print(f"读取fnpack_details.json出错: {str(err)}")
-            fnpack_details_data = {'apps': [], 'lastUpdated': datetime.utcnow().isoformat() + 'Z'}
+        # 使用FnpackDetailsStore管理数据存储
+        from utils.data_store import FnpackDetailsStore
+        store = FnpackDetailsStore()
         
-        # 确保fnpack_details_data是有效的数据结构
-        if not isinstance(fnpack_details_data, dict):
-            fnpack_details_data = {'apps': [], 'lastUpdated': datetime.utcnow().isoformat() + 'Z'}
-        
-        if 'apps' not in fnpack_details_data or not isinstance(fnpack_details_data['apps'], list):
-            fnpack_details_data['apps'] = []
+        # 获取当前存储的数据
+        fnpack_details_data = store.load()
+        apps_list = fnpack_details_data.get('apps', [])
         
         # 获取应用详细信息（从fnpack.json）
         print(f"开始获取仓库 {repo_url} 的fnpack详细信息...")
@@ -295,20 +278,8 @@ def update_apps_from_fnpack(app_id, app_name, repo_url, app_name_in_fnpack=None,
                     'size': app_info.get('size', '')
                 }
                 
-                # 检查应用是否已存在
-                existing_app_index = -1
-                for i, app in enumerate(fnpack_details_data['apps']):
-                    if app.get('id') == final_app_id:
-                        existing_app_index = i
-                        break
-                
-                if existing_app_index >= 0:
-                    fnpack_details_data['apps'][existing_app_index] = new_app_detail
-                    print(f"更新fnpack应用详细信息: {final_app_id} ({display_name})")
-                else:
-                    fnpack_details_data['apps'].append(new_app_detail)
-                    print(f"添加fnpack应用详细信息: {final_app_id} ({display_name})")
-                
+                store.upsert_app(new_app_detail)
+                print(f"更新fnpack应用详细信息: {final_app_id} ({display_name})")
                 updated_count = 1
             else:
                 # 多个应用情况（从仓库获取所有应用）
@@ -342,35 +313,12 @@ def update_apps_from_fnpack(app_id, app_name, repo_url, app_name_in_fnpack=None,
                         'size': single_app_info.get('size', '')
                     }
                     
-                    # 检查应用是否已存在
-                    existing_app_index = -1
-                    for i, app in enumerate(fnpack_details_data['apps']):
-                        if app.get('id') == final_app_id:
-                            existing_app_index = i
-                            break
-                    
-                    if existing_app_index >= 0:
-                        fnpack_details_data['apps'][existing_app_index] = new_app_detail
-                        print(f"更新fnpack应用详细信息: {final_app_id} ({display_name})")
-                    else:
-                        fnpack_details_data['apps'].append(new_app_detail)
-                        print(f"添加fnpack应用详细信息: {final_app_id} ({display_name})")
-                    
+                    store.upsert_app(new_app_detail)
+                    print(f"更新fnpack应用详细信息: {final_app_id} ({display_name})")
                     updated_count += 1
         
         if updated_count > 0:
-            # 更新最后更新时间
-            fnpack_details_data['lastUpdated'] = datetime.utcnow().isoformat() + 'Z'
-            
-            # 确保目录存在
-            os.makedirs(os.path.dirname(fnpack_details_file_path), exist_ok=True)
-            
-            # 保存更新后的详细元数据
-            with open(fnpack_details_file_path, 'w', encoding='utf-8') as f:
-                json.dump(fnpack_details_data, f, ensure_ascii=False, indent=2)
             print(f'fnpack应用详细元数据更新成功，共处理 {updated_count} 个应用')
-            print(f'数据已存储到: {fnpack_details_file_path}')
-            
             return True
         else:
             print(f"无法获取应用信息或没有需要更新的应用")

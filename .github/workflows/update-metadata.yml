@@ -31,10 +31,14 @@ jobs:
           python-version: '3.11'
 
       - name: 批量更新 2FStore 应用元数据
+        if: (github.event_name == 'push' && contains(github.event.head_commit.modified, 'apps.json')) || (github.event_name == 'repository_dispatch' && github.event.action == 'update-metadata') || (github.event_name != 'push' && github.event_name != 'repository_dispatch')
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/process_apps.py batch-update
 
       - name: 批量更新 FnPack 应用元数据
+        if: (github.event_name == 'push' && contains(github.event.head_commit.modified, 'fnpacks.json')) || (github.event_name == 'repository_dispatch' && github.event.action == 'update-fnpack-metadata') || (github.event_name != 'push' && github.event_name != 'repository_dispatch')
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

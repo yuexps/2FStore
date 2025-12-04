@@ -237,38 +237,35 @@ def _cleanup_deleted_fnpack_apps(valid_app_ids):
     """
     清理已从 fnpacks.json 或仓库 fnpack.json 中移除的应用
     """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    fnpack_details_file_path = os.path.join(script_dir, '..', 'data', 'fnpack_details.json')
-    
     try:
-        with open(fnpack_details_file_path, 'r', encoding='utf-8') as f:
-            content = f.read().strip()
-            if not content:
-                return 0
-            fnpack_details_data = json.loads(content)
-    except (FileNotFoundError, json.JSONDecodeError):
+        from utils.data_store import FnpackDetailsStore
+        store = FnpackDetailsStore()
+        
+        # 获取当前存储的数据
+        fnpack_details_data = store.load()
+        
+        if 'apps' not in fnpack_details_data:
+            return 0
+        
+        original_count = len(fnpack_details_data['apps'])
+        
+        # 过滤掉不在有效列表中的应用
+        fnpack_details_data['apps'] = [
+            app for app in fnpack_details_data['apps']
+            if app.get('id') in valid_app_ids
+        ]
+        
+        cleaned_count = original_count - len(fnpack_details_data['apps'])
+        
+        if cleaned_count > 0:
+            # 使用store.save()方法保存，这样会检查数据是否真正变化
+            store.save(fnpack_details_data)
+            print(f"已清理 {cleaned_count} 个已删除的应用")
+        
+        return cleaned_count
+    except Exception as e:
+        print(f"清理已删除应用时出错: {str(e)}")
         return 0
-    
-    if 'apps' not in fnpack_details_data:
-        return 0
-    
-    original_count = len(fnpack_details_data['apps'])
-    
-    # 过滤掉不在有效列表中的应用
-    fnpack_details_data['apps'] = [
-        app for app in fnpack_details_data['apps']
-        if app.get('id') in valid_app_ids
-    ]
-    
-    cleaned_count = original_count - len(fnpack_details_data['apps'])
-    
-    if cleaned_count > 0:
-        # 保存更新后的数据
-        with open(fnpack_details_file_path, 'w', encoding='utf-8') as f:
-            json.dump(fnpack_details_data, f, ensure_ascii=False, indent=2)
-        print(f"已清理 {cleaned_count} 个已删除的应用")
-    
-    return cleaned_count
 
 
 def preview_fnpack_app(repo_url, app_key=None, github_token=None):
