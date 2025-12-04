@@ -28,7 +28,7 @@
       "stars": 1,
       "forks": 0,
       "category": "system",
-      "lastUpdate": "2025-12-03T14:01:06Z"
+      "lastUpdate": "2025-12-04T03:48:22Z"
     },
     {
       "id": "read",
@@ -70,11 +70,26 @@
       "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 41,
-      "forks": 5,
+      "stars": 42,
+      "forks": 6,
       "category": "network",
-      "lastUpdate": "2025-12-03T07:29:10Z"
+      "lastUpdate": "2025-12-04T05:57:18Z"
+    },
+    {
+      "id": "lunatv-enhanced",
+      "name": "LunaTV Enhanced",
+      "repository": "https://github.com/yuexps/lunatv-enhanced-fnos",
+      "description": "基于 MoonTV 深度二次开发的全功能影视聚合播放平台，新增 YouTube 集成、网盘搜索、AI 推荐、短剧功能、IPTV 直播、Bangumi 动漫、播放统计、弹幕系统等 50+ 重大功能增强，打造极致的在线观影体验。",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/lunatv-enhanced-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/lunatv-enhanced-fnos/releases/download/1.0.0/lunatv-enhanced.fpk",
+      "screenshots": [],
+      "author": "yuexps",
+      "stars": 0,
+      "forks": 0,
+      "category": "media",
+      "lastUpdate": "2025-12-04T08:43:15Z"
     }
   ],
-  "lastUpdated": "2025-12-03T15:47:37.287157Z"
+  "lastUpdated": "2025-12-04T08:45:37.236625Z"
 }
