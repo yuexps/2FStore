@@ -91,20 +91,20 @@
       "lastUpdate": "2025-12-04T08:43:15Z"
     },
     {
-      "id": "test2",
-      "name": "测试2",
-      "repository": "https://github.com/yuexps/reader-fnos",
-      "description": "Reader 是一款开源的网络小说阅读器，提供书源管理、书架同步、WebDAV备份等功能，支持多用户模式。",
-      "version": "3.2.14",
-      "iconUrl": "https://raw.githubusercontent.com/yuexps/reader-fnos/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/reader-fnos/releases/download/3.2.14/reader.fpk",
+      "id": "test3",
+      "name": "测试3",
+      "repository": "https://github.com/yuexps/lunatv-enhanced-fnos",
+      "description": "基于 MoonTV 深度二次开发的全功能影视聚合播放平台，新增 YouTube 集成、网盘搜索、AI 推荐、短剧功能、IPTV 直播、Bangumi 动漫、播放统计、弹幕系统等 50+ 重大功能增强，打造极致的在线观影体验。",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/yuexps/lunatv-enhanced-fnos/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/yuexps/lunatv-enhanced-fnos/releases/download/1.0.0/lunatv-enhanced.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 1,
+      "stars": 0,
       "forks": 0,
-      "category": "system",
-      "lastUpdate": "2025-12-04T03:48:22Z"
+      "category": "media",
+      "lastUpdate": "2025-12-04T08:43:15Z"
     }
   ],
-  "lastUpdated": "2025-12-04T16:40:30.439827Z"
+  "lastUpdated": "2025-12-04T16:45:13.840165Z"
 }
