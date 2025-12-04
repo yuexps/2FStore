@@ -164,7 +164,7 @@ def process_fnpack_issue():
                 comment_body += f"| 分类 | `{info.get('category', 'uncategorized')}` |\n"
                 
                 if info.get('downloadUrl'):
-                    comment_body += f"| 下载链接 | [下载]({info.get('downloadUrl')}) |\n"
+                    comment_body += f"| 下载链接 | {info.get('downloadUrl')} |\n"
                 
                 # 检查描述是否包含HTML标签
                 description = info.get('description', '暂无描述')
