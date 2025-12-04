@@ -371,13 +371,6 @@ def update_apps_from_fnpack(app_id, app_name, repo_url, app_name_in_fnpack=None,
             print(f'fnpack应用详细元数据更新成功，共处理 {updated_count} 个应用')
             print(f'数据已存储到: {fnpack_details_file_path}')
             
-            # 自动更新 version.json 内 fnpack_details 的 hash
-            try:
-                from utils.data_store import FnpackDetailsStore
-                FnpackDetailsStore().save(fnpack_details_data)
-            except Exception as e:
-                print(f'自动更新 version.json 失败: {e}')
-            
             return True
         else:
             print(f"无法获取应用信息或没有需要更新的应用")
