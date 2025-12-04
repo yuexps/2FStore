@@ -16,6 +16,9 @@ on:
 jobs:
   update-metadata:
     runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     permissions:
       contents: write
       actions: write
@@ -43,16 +46,12 @@ jobs:
       # 仅在 apps.json 有变更时执行
       - name: 批量更新 2FStore 应用元数据
         if: steps.filter.outputs.apps == 'true' || (github.event_name == 'repository_dispatch' && github.event.action == 'update-metadata') || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/process_apps.py batch-update
 
       # 仅在 fnpacks.json 有变更时执行
       - name: 批量更新 FnPack 应用元数据
         if: steps.filter.outputs.fnpacks == 'true' || (github.event_name == 'repository_dispatch' && github.event.action == 'update-fnpack-metadata') || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/process_fnpack_apps.py --token $GITHUB_TOKEN batch-update
 
