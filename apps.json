@@ -24,6 +24,11 @@
       "id": "v2raya",
       "name": "V2rayA",
       "repository": "https://github.com/yuexps/v2raya-fnos"
+    },
+    {
+      "id": "lunatv-enhanced",
+      "name": "LunaTV Enhanced",
+      "repository": "https://github.com/yuexps/lunatv-enhanced-fnos"
     }
   ]
 }
