@@ -30,15 +30,27 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: 检查哪些文件被更改
+        id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            apps:
+              - 'apps.json'
+            fnpacks:
+              - 'fnpacks.json'
+
+      # 仅在 apps.json 有变更时执行
       - name: 批量更新 2FStore 应用元数据
-        if: (github.event_name == 'push' && contains(github.event.head_commit.modified, 'apps.json')) || (github.event_name == 'repository_dispatch' && github.event.action == 'update-metadata') || (github.event_name != 'push' && github.event_name != 'repository_dispatch')
+        if: steps.filter.outputs.apps == 'true' || (github.event_name == 'repository_dispatch' && github.event.action == 'update-metadata') || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python scripts/process_apps.py batch-update
 
+      # 仅在 fnpacks.json 有变更时执行
       - name: 批量更新 FnPack 应用元数据
-        if: (github.event_name == 'push' && contains(github.event.head_commit.modified, 'fnpacks.json')) || (github.event_name == 'repository_dispatch' && github.event.action == 'update-fnpack-metadata') || (github.event_name != 'push' && github.event_name != 'repository_dispatch')
+        if: steps.filter.outputs.fnpacks == 'true' || (github.event_name == 'repository_dispatch' && github.event.action == 'update-fnpack-metadata') || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -52,7 +64,7 @@ jobs:
           
           HAS_APP_CHANGES=false
           HAS_FNPACK_CHANGES=false
-          
+
           # 检查 2FStore 变更
           if git diff data/app_details.json | grep -E '^[+-]\s+"(name|description|version|iconUrl|downloadUrl|author|category|repository|stars|forks)"' > /dev/null 2>&1; then
             echo "检测到 2FStore 实质性变更"
@@ -60,7 +72,7 @@ jobs:
           else
             git checkout -- data/app_details.json 2>/dev/null || true
           fi
-          
+
           # 检查 FnPack 变更
           if git diff data/fnpack_details.json | grep -E '^[+-]\s+"(name|description|version|iconUrl|downloadUrl|author|category|repository|stars|forks)"' > /dev/null 2>&1; then
             echo "检测到 FnPack 实质性变更"
@@ -68,7 +80,7 @@ jobs:
           else
             git checkout -- data/fnpack_details.json 2>/dev/null || true
           fi
-          
+
           # 有任何变更则提交
           if [ "$HAS_APP_CHANGES" = "true" ] || [ "$HAS_FNPACK_CHANGES" = "true" ]; then
             git add data/app_details.json data/fnpack_details.json data/version.json
@@ -79,8 +91,7 @@ jobs:
             echo "没有实质性变更，跳过提交"
             echo "has_changes=false" >> $GITHUB_OUTPUT
           fi
-      
-      # 触发部署 Pages
+
       - name: Trigger deployment workflow
         if: steps.commit_changes.outputs.has_changes == 'true'
         uses: peter-evans/repository-dispatch@v2
