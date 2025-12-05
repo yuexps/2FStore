@@ -65,7 +65,7 @@
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T13:42:43Z",
+      "lastUpdate": "2025-12-05T10:42:42Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -92,7 +92,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-04T13:42:43Z",
+      "lastUpdate": "2025-12-05T10:42:42Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -231,7 +231,7 @@
       "name": "压爆只雀",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "压扁小鸟的解压小游戏",
-      "version": "0.77",
+      "version": "0.88",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/boombird/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/boombird.fpk",
       "screenshots": [
@@ -243,12 +243,13 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
+        "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-04T13:42:43Z",
+      "lastUpdate": "2025-12-05T10:42:42Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -358,7 +359,33 @@
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
       "size": "0.3"
+    },
+    {
+      "id": "hbestm_memos",
+      "name": "memos",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "一款开源的自托管笔记服务。你的想法、你的数据、由你掌控，多端数据共享，安卓客服端，随时记录，更有浏览器插件，方便快捷。—— 无跟踪、无广告、无订阅费用。",
+      "version": "0.25.0",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/memos.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/Preview/01.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://github.com/usememos/memos",
+      "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "history": {
+        "v0.25.0": "轻量（应用包仅0.18MB）、低占用"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-05T11:46:36Z",
+      "fnpack_app_key": "memos",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.18"
     }
   ],
-  "lastUpdated": "2025-12-04T17:51:16.942301Z"
+  "lastUpdated": "2025-12-05T11:51:59.697612Z"
 }
