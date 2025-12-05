@@ -16,6 +16,7 @@ import subprocess
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from utils import validate_app_info, GitHubAPI, get_apps_json_path
+from utils.validators import validate_content
 from fetch_app_info import fetch_app_info
 
 
@@ -144,6 +145,15 @@ def process_app_issue():
         try:
             print(f'开始获取应用 {app_name} 的详细信息进行校验...')
             app_info = fetch_app_info(repo_url)
+            
+            # 内容验证
+            content_result = validate_content(app_name, app_info.get('description', ''))
+            if not content_result['is_valid']:
+                error_list = '\n'.join([f'- {err}' for err in content_result['errors']])
+                comment = f'❌ **验证失败**：应用信息不符合内容要求\n\n{error_list}'
+                api.add_issue_comment(repo_owner, repo_name, issue_number, comment)
+                api.add_issue_labels(repo_owner, repo_name, issue_number, ['invalid'])
+                return
             
             # 检查必填项 - 下载链接
             if not app_info.get('downloadUrl') or app_info['downloadUrl'] in ['暂无下载链接', '获取失败']:

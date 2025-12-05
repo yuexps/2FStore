@@ -15,6 +15,7 @@ import re
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from utils import GitHubAPI, FnpacksStore, parse_github_url, get_fnpacks_json_path
+from utils.validators import validate_content
 from fetch_fnpack_info import fetch_fnpack_info, update_apps_from_fnpack
 
 
@@ -144,6 +145,29 @@ def process_fnpack_issue():
             app_count = len(apps_to_show) if isinstance(apps_to_show, dict) else 1
             comment_body += f"**仓库**: [{repo_url}]({repo_url})\n"
             comment_body += f"**应用数量**: {app_count}\n\n"
+            
+            # 内容验证（检查每个应用）
+            all_valid = True
+            content_errors = []
+            for key, info in apps_to_show.items():
+                if not isinstance(info, dict):
+                    continue
+                
+                app_name = info.get('name', key)
+                app_description = info.get('description', '')
+                
+                content_result = validate_content(app_name, app_description)
+                if not content_result['is_valid']:
+                    all_valid = False
+                    for error in content_result['errors']:
+                        content_errors.append(f'应用 "{app_name}": {error}')
+            
+            if not all_valid:
+                error_list = '\n'.join([f'- {err}' for err in content_errors])
+                comment = f'❌ **验证失败**：应用信息不符合内容要求\n\n{error_list}'
+                api.add_issue_comment(repo_owner, repo_name, issue_number, comment)
+                api.add_issue_labels(repo_owner, repo_name, issue_number, ['invalid'])
+                return
             
             # 显示每个应用的信息
             for key, info in apps_to_show.items():
