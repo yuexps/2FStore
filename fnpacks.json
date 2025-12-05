@@ -15,6 +15,10 @@
     {
       "key": "moxyis",
       "repo": "https://github.com/moxyis/FnDepot"
+    },
+    {
+      "key": "hbestm",
+      "repo": "https://github.com/hbestm/FnDepot"
     }
   ]
 }
