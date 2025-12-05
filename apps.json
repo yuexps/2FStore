@@ -34,6 +34,11 @@
       "id": "iventoy",
       "name": "iVentoy",
       "repository": "https://github.com/UCKETX/iventoy"
+    },
+    {
+      "id": "omnibox",
+      "name": "OmniBox",
+      "repository": "https://github.com/UCKETX/omnibox"
     }
   ]
 }
