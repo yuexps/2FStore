@@ -14,12 +14,22 @@ const PROXY_OPTIONS = [
 ];
 // ==================================
 
-// 全局变量
-let appsData = [];
-let filteredApps = [];
-let currentCategory = 'all';
-let currentSort = 'name';
-let githubProxy = ''; // 全局变量存储GitHub代理URL
+    // 全局变量
+    let appsData = [];
+    let filteredApps = [];
+    let currentCategory = 'all';
+    let currentSort = 'name';
+    let githubProxy = ''; // 全局变量存储GitHub代理URL
+
+    // 分页相关变量
+    // 当前页码，默认为 1。用户点击分页按钮时会更新此值
+    let currentPage = 1;
+    // 每页显示的应用数量，可根据需要调整
+    // 默认分页数量设置为 12，按需调整此常量即可
+    const APPS_PER_PAGE = 12;
+
+    // 分页容器元素
+    const paginationEl = document.getElementById('pagination');
 
 // Bing 每日图片 API
 const BING_API = 'https://bing.biturl.top/?resolution=1920&format=json&index=0&mkt=zh-CN';
@@ -434,8 +444,10 @@ function filterApps() {
     // 最后排序
     sortApps();
     
-    // 显示应用列表
-    renderAppList();
+        // 显示应用列表
+        // 筛选或排序后返回第一页
+        currentPage = 1;
+        renderAppList();
 }
 
 // 排序应用
@@ -490,34 +502,116 @@ function renderAppList() {
     // 使用分批渲染提高性能
     appList.innerHTML = '';
     const fragment = document.createDocumentFragment();
-    
-    filteredApps.forEach((app, index) => {
+
+    // 计算当前页需要渲染的应用索引区间
+    const startIndex = (currentPage - 1) * APPS_PER_PAGE;
+    const endIndex = startIndex + APPS_PER_PAGE;
+    const pageApps = filteredApps.slice(startIndex, endIndex);
+
+    pageApps.forEach((app, index) => {
         const cardHtml = createAppCard(app);
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = cardHtml;
         const cardElement = tempDiv.firstElementChild;
-        
+
         // 添加渐入动画
         cardElement.style.opacity = '0';
         cardElement.style.transform = 'translateY(20px)';
         cardElement.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
         cardElement.style.transitionDelay = `${index * 50}ms`;
-        
+
         fragment.appendChild(cardElement);
-        
+
         cardElement.addEventListener('click', () => {
             const appId = cardElement.dataset.appId;
             showAppDetail(appId);
         });
     });
-    
+
     appList.appendChild(fragment);
-    
+
+    // 渲染分页导航
+    renderPagination();
+
     // 触发重新排以开始动画
     requestAnimationFrame(() => {
         document.querySelectorAll('.app-card').forEach(card => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
+        });
+    });
+}
+
+// 分页：跳转至指定页码并重新渲染列表
+function goToPage(page) {
+    const totalPages = Math.ceil(filteredApps.length / APPS_PER_PAGE);
+    if (page < 1) page = 1;
+    if (page > totalPages) page = totalPages;
+    // 如果目标页与当前页相同，则无需刷新
+    if (page === currentPage) return;
+    currentPage = page;
+    renderAppList();
+}
+
+// 渲染分页按钮，根据应用数量自动生成页码
+function renderPagination() {
+    // 如果不存在容器或未定义则跳过
+    if (!paginationEl) return;
+    const totalPages = Math.ceil(filteredApps.length / APPS_PER_PAGE);
+    // 当只有一页或没有应用时，不显示分页
+    if (totalPages <= 1) {
+        paginationEl.innerHTML = '';
+        return;
+    }
+    let html = '';
+    // 上一页按钮
+    const prevDisabled = currentPage === 1 ? 'disabled' : '';
+    html += `<button class="page-btn prev-btn" data-page="${currentPage - 1}" ${prevDisabled}>&laquo;</button>`;
+
+    // 工具函数：生成页码按钮
+    const appendPageBtn = (page) => {
+        const active = page === currentPage ? 'active' : '';
+        html += `<button class="page-btn ${active}" data-page="${page}">${page}</button>`;
+    };
+
+    if (totalPages <= 7) {
+        // 页数较少时直接显示所有页码
+        for (let i = 1; i <= totalPages; i++) {
+            appendPageBtn(i);
+        }
+    } else {
+        // 显示首尾页和当前页附近页码，中间使用省略号
+        appendPageBtn(1);
+        // 在当前页前添加省略号
+        if (currentPage > 3) {
+            html += `<span class="page-ellipsis">...</span>`;
+        }
+        // 计算当前页附近的显示范围
+        const start = Math.max(2, currentPage - 1);
+        const end = Math.min(totalPages - 1, currentPage + 1);
+        for (let i = start; i <= end; i++) {
+            appendPageBtn(i);
+        }
+        // 在当前页后添加省略号
+        if (currentPage < totalPages - 2) {
+            html += `<span class="page-ellipsis">...</span>`;
+        }
+        appendPageBtn(totalPages);
+    }
+
+    // 下一页按钮
+    const nextDisabled = currentPage === totalPages ? 'disabled' : '';
+    html += `<button class="page-btn next-btn" data-page="${currentPage + 1}" ${nextDisabled}>&raquo;</button>`;
+
+    paginationEl.innerHTML = html;
+
+    // 为所有页码按钮绑定点击事件
+    Array.from(paginationEl.querySelectorAll('.page-btn')).forEach(btn => {
+        btn.addEventListener('click', () => {
+            const page = parseInt(btn.getAttribute('data-page'), 10);
+            if (!isNaN(page)) {
+                goToPage(page);
+            }
         });
     });
 }

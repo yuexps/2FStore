@@ -115,6 +115,10 @@
                 <div id="app-list" class="miuix-grid">
                     <!-- 应用列表将通过JavaScript动态生成 -->
                 </div>
+
+                <!-- 分页导航 -->
+                <!-- 新增分页容器，用于承载页码按钮。只有当应用数量超过每页显示数量时才会显示 -->
+                <div id="pagination" class="pagination"></div>
                 
                 <!-- 应用详情 -->
                 <div id="app-detail" class="miuix-card hidden">
@@ -172,7 +176,7 @@
     </div>
 
     <script src="app.js"></script>
-    
+        
     <!-- Cloudflare Web Analytics -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "df8e1ba512e6497c9fb30f0dc6f462bf"}'></script>
     
