@@ -107,7 +107,7 @@
     },
     {
       "id": "omnibox",
-      "name": "OmniBox",
+      "name": "omnibox",
       "repository": "https://github.com/UCKETX/omnibox",
       "description": "OmniBox 是一个功能强大的影视综合站，解决了资源分散、查找困难的问题，为影视爱好者提供一站式的观影解决方案。它整合了常见的采集站、网盘资源、IPTV 直播源、各大直播平台等，无论您是付费会员、还是习惯于搜索免费资源，它都能满足您的需求。",
       "version": "1.0.0",
@@ -121,5 +121,5 @@
       "lastUpdate": "2025-12-05T07:16:22Z"
     }
   ],
-  "lastUpdated": "2025-12-05T11:59:05.496761Z"
+  "lastUpdated": "2025-12-05T16:57:48.321482Z"
 }
