@@ -672,6 +672,11 @@ function createAppCard(app) {
 function showAppDetail(appId) {
     const app = appsData.find(a => a.id === appId);
     if (!app) return;
+
+    // 隐藏分页，防止详情页中残留的页码占位
+    if (paginationEl) {
+        paginationEl.classList.add('hidden');
+    }
     
     const initial = app.name.charAt(0).toUpperCase();
     const iconUrl = app.iconUrl || '';
@@ -747,6 +752,10 @@ function showAppList() {
     setTimeout(() => {
         appDetail.classList.add('hidden');
         appList.classList.remove('hidden');
+        // 恢复分页显示
+        if (paginationEl) {
+            paginationEl.classList.remove('hidden');
+        }
         setTimeout(() => {
             appList.style.opacity = '1';
         }, 50);
