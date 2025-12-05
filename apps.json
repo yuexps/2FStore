@@ -37,7 +37,7 @@
     },
     {
       "id": "omnibox",
-      "name": "OmniBox",
+      "name": "omnibox",
       "repository": "https://github.com/UCKETX/omnibox"
     }
   ]
