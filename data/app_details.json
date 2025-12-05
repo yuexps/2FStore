@@ -86,7 +86,7 @@
       "screenshots": [],
       "author": "yuexps",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "category": "media",
       "lastUpdate": "2025-12-04T08:43:15Z"
     },
@@ -104,7 +104,22 @@
       "forks": 0,
       "category": "network",
       "lastUpdate": "2025-12-04T13:12:55Z"
+    },
+    {
+      "id": "omnibox",
+      "name": "OmniBox",
+      "repository": "https://github.com/UCKETX/omnibox",
+      "description": "OmniBox 是一个功能强大的影视综合站，解决了资源分散、查找困难的问题，为影视爱好者提供一站式的观影解决方案。它整合了常见的采集站、网盘资源、IPTV 直播源、各大直播平台等，无论您是付费会员、还是习惯于搜索免费资源，它都能满足您的需求。",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/UCKETX/omnibox/main/ICON_256.PNG",
+      "downloadUrl": "https://github.com/UCKETX/omnibox/releases/download/1.0.0/omnibox.fpk",
+      "screenshots": [],
+      "author": "UCKETX",
+      "stars": 0,
+      "forks": 0,
+      "category": "media",
+      "lastUpdate": "2025-12-05T07:16:22Z"
     }
   ],
-  "lastUpdated": "2025-12-05T04:37:41.431010Z"
+  "lastUpdated": "2025-12-05T11:59:05.496761Z"
 }
