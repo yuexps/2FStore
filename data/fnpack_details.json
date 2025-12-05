@@ -65,18 +65,18 @@
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-05T10:42:42Z",
+      "lastUpdate": "2025-12-05T12:12:11Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "1"
+      "size": "0.876"
     },
     {
       "id": "IMGZCQ_fncube",
       "name": "三阶魔方",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "一个完整的三阶魔方",
-      "version": "0.77",
+      "version": "0.88",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fncube.fpk",
       "screenshots": [
@@ -87,16 +87,17 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
+        "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-05T10:42:42Z",
+      "lastUpdate": "2025-12-05T12:12:11Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.5"
+      "size": "0.455"
     },
     {
       "id": "snltty_linker",
@@ -249,11 +250,11 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-05T10:42:42Z",
+      "lastUpdate": "2025-12-05T12:12:11Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.9"
+      "size": "0.895"
     },
     {
       "id": "snltty_certimate",
@@ -387,5 +388,5 @@
       "size": "0.18"
     }
   ],
-  "lastUpdated": "2025-12-05T11:51:59.697612Z"
+  "lastUpdated": "2025-12-05T15:09:43.521688Z"
 }
