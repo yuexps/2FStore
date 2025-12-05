@@ -381,12 +381,38 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-05T11:46:36Z",
+      "lastUpdate": "2025-12-05T16:06:19Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.18"
+    },
+    {
+      "id": "hbestm_dsm",
+      "name": "DSM",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "群晖7.0容器安装版",
+      "version": "7.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/dsm/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/dsm/dsm.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/dsm/Preview/01.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://github.com/usememos/memos",
+      "bug_report_url": "https://github.com/usememos/memos",
+      "history": {
+        "7.0.1": "初始版本.欢迎反馈"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-05T16:06:19Z",
+      "fnpack_app_key": "dsm",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "80"
     }
   ],
-  "lastUpdated": "2025-12-05T15:09:43.521688Z"
+  "lastUpdated": "2025-12-05T16:27:45.546269Z"
 }
