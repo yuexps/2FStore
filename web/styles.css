@@ -1533,6 +1533,51 @@ html.sidebar-collapsed .miuix-sidebar {
     opacity: 1;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+}
+
+.page-btn {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    font-size: 14px;
+    color: var(--miuix-color-on-surface);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.page-btn:hover {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.2);
+}
+
+.page-btn:active {
+    transform: scale(0.98);
+}
+
+.page-btn.active {
+    background-color: rgba(var(--miuix-color-primary-rgb), 0.3);
+    transform: scale(1.05);
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(var(--miuix-color-primary-rgb), 0.25);
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.page-ellipsis {
+    padding: 6px 12px;
+    color: var(--miuix-color-on-surface);
+    user-select: none;
+    pointer-events: none;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --miuix-color-primary: #90caf9;
@@ -1706,49 +1751,4 @@ html.sidebar-collapsed .miuix-sidebar {
         background-color: rgba(var(--miuix-color-primary-rgb), 0.3);
         color: var(--miuix-color-on-surface);
     }
-
-/*
- * Pagination styles
- *
- * The app list can span many entries, so pagination controls are used to
- * navigate between pages. The container centers the page buttons and provides
- * spacing. Individual page buttons respond to hover and active states. The
- * primary color variables from Miuix are used to ensure the buttons
- * integrate with the existing theme.
- */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 8px;
-}
-
-.page-btn {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease;
-    font-size: 14px;
-    color: var(--miuix-color-on-surface);
-}
-
-.page-btn:hover {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.2);
-}
-
-.page-btn.active {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.3);
-    transform: scale(1.05);
-    font-weight: 600;
-}
-
-/* 省略号样式，用于分页导航中展示连续页码之间的间隔 */
-.page-ellipsis {
-    padding: 6px 12px;
-    color: var(--miuix-color-on-surface);
-    user-select: none;
-    pointer-events: none; /* 省略号不可点击 */
-}
 }
