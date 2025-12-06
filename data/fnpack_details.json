@@ -366,7 +366,7 @@
       "name": "memos",
       "repository": "https://github.com/hbestm/FnDepot",
       "description": "一款开源的自托管笔记服务。你的想法、你的数据、由你掌控，多端数据共享，安卓客服端，随时记录，更有浏览器插件，方便快捷。—— 无跟踪、无广告、无订阅费用。",
-      "version": "0.25.0",
+      "version": "0.25.3",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/memos.fpk",
       "screenshots": [
@@ -376,12 +376,12 @@
       "author_url": "https://github.com/usememos/memos",
       "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
       "history": {
-        "v0.25.0": "轻量（应用包仅0.18MB）、低占用"
+        "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-05T16:06:19Z",
+      "lastUpdate": "2025-12-06T15:55:13Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -391,28 +391,54 @@
       "id": "hbestm_dsm",
       "name": "DSM",
       "repository": "https://github.com/hbestm/FnDepot",
-      "description": "群晖7.0容器安装版",
-      "version": "7.0.1",
+      "description": "群晖7.2容器版，官方镜像，丝滑体验，可安装成功后在后台在线升级。占用内存约2G。",
+      "version": "7.2.2",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/dsm/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/dsm/dsm.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/hbestm/FnDepot/main/dsm/Preview/01.png"
       ],
       "author": "87袜子",
-      "author_url": "https://github.com/usememos/memos",
-      "bug_report_url": "https://github.com/usememos/memos",
+      "author_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
       "history": {
-        "7.0.1": "初始版本.欢迎反馈"
+        "7.2.2": "初始版本.可在线升级"
       },
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-05T16:06:19Z",
+      "lastUpdate": "2025-12-06T15:55:13Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
-      "size": "80"
+      "size": "96"
+    },
+    {
+      "id": "hbestm_miguvideo",
+      "name": "咪咕TV",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "咪咕的官方电视直播源。需要 NodeJS 18+ 环境，自行安装",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/miguvideo/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/miguvideo/miguvideo.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/miguvideo/Preview/01.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "history": {
+        "1.0.0": "初始版本。"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-06T15:55:13Z",
+      "fnpack_app_key": "miguvideo",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.13"
     }
   ],
-  "lastUpdated": "2025-12-05T16:27:45.546269Z"
+  "lastUpdated": "2025-12-06T16:24:29.063394Z"
 }

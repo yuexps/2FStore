@@ -70,10 +70,10 @@
       "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 43,
+      "stars": 45,
       "forks": 6,
       "category": "network",
-      "lastUpdate": "2025-12-05T02:23:43Z"
+      "lastUpdate": "2025-12-06T13:26:43Z"
     },
     {
       "id": "lunatv-enhanced",
@@ -121,5 +121,5 @@
       "lastUpdate": "2025-12-05T07:16:22Z"
     }
   ],
-  "lastUpdated": "2025-12-05T17:09:12.362522Z"
+  "lastUpdated": "2025-12-06T16:23:56.346364Z"
 }
