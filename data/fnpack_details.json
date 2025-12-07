@@ -603,7 +603,34 @@
       "fnpack_repo_key": "Hxido-RXM",
       "install_type": "系统空间",
       "size": "55.41"
+    },
+    {
+      "id": "FNOSP_customIcon",
+      "name": "扩展图标管理",
+      "repository": "https://github.com/FNOSP/FnDepot",
+      "description": "用于自定义生成第三方应用、docker应用及外部链接等图标快捷方式，兼容App、http及https访问方便灵活配置。",
+      "version": "2.3.9-Beta",
+      "iconUrl": "https://raw.githubusercontent.com/FNOSP/FnDepot/main/customIcon/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/FNOSP/FnDepot/main/customIcon/customIcon.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/FNOSP/FnDepot/main/customIcon/Preview/1.png",
+        "https://raw.githubusercontent.com/FNOSP/FnDepot/main/customIcon/Preview/2.png"
+      ],
+      "author": "XIAOBONET",
+      "author_url": "https://club.fnnas.com/home.php?mod=space&uid=15673",
+      "bug_report_url": "https://club.fnnas.com/home.php?mod=space&uid=15673",
+      "history": {
+        "v2.3.9-Beta": "轻量（应用包仅5.2MB）、低占用、原生方案无其他环境依赖，NAS内应用窗口化，支持App及公网访问，兼容反代用户"
+      },
+      "stars": 4,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-02T11:40:47Z",
+      "fnpack_app_key": "customIcon",
+      "fnpack_repo_key": "FNOSP",
+      "install_type": "系统空间",
+      "size": "5.20"
     }
   ],
-  "lastUpdated": "2025-12-07T17:15:20.903877Z"
+  "lastUpdated": "2025-12-07T17:17:46.139407Z"
 }
