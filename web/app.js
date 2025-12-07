@@ -900,13 +900,31 @@ async function loadAppsData() {
         const standardApps = (appData.apps || []).map(app => ({ ...app, source: '2FStore' }));
         const fnpackApps = (fnpackData.apps || []).map(app => ({ ...app, source: 'FnDepot' }));
         
-        // 合并并去重（如果有重复的应用ID）
+        // 建立 2FStore 应用的索引用于去重
+        const standardIds = new Set(standardApps.map(a => a.id));
+        const standardNames = new Set(standardApps.map(a => a.name));
+        
+        // 合并并去重
         const appMap = new Map();
-        [...standardApps, ...fnpackApps].forEach(app => {
-            // 优先保留标准应用，如果没有则使用FnPack应用
-            if (!appMap.has(app.id)) {
-                appMap.set(app.id, app);
-            }
+        
+        // 1. 先添加所有 2FStore 应用 (高优先级)
+        standardApps.forEach(app => {
+            appMap.set(app.id, app);
+        });
+        
+        // 2. 再添加 FnDepot 应用 (低优先级，需去重)
+        fnpackApps.forEach(app => {
+            // 规则1: ID 完全相同则跳过 (已在 Map 中)
+            if (appMap.has(app.id)) return;
+            
+            // 规则2: 名称完全相同则跳过 (优先展示 2FStore 版本)
+            if (app.name && standardNames.has(app.name)) return;
+            
+            // 规则3: 如果 FnPack 的 app_key 存在于 2FStore 的 ID 列表中，视为同一应用，跳过
+            // 例如: 2FStore ID='lunatv', FnDepot ID='yuexps_lunatv' (fnpack_app_key='lunatv')
+            if (app.fnpack_app_key && standardIds.has(app.fnpack_app_key)) return;
+            
+            appMap.set(app.id, app);
         });
         
         appsData = Array.from(appMap.values());
