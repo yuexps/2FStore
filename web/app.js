@@ -569,6 +569,25 @@ function renderPagination() {
     });
 }
 
+// 显示应用列表（从详情页返回）
+function showAppList() {
+    appDetail.style.opacity = '0';
+    
+    setTimeout(() => {
+        appDetail.classList.add('hidden');
+        appList.classList.remove('hidden');
+        
+        // 如果当前列表需要分页，恢复显示分页控件
+        if (paginationEl && filteredApps.length > APPS_PER_PAGE) {
+            paginationEl.classList.remove('hidden');
+        }
+
+        setTimeout(() => {
+            appList.style.opacity = '1';
+        }, 50);
+    }, 200);
+}
+
 function getAuthorUrl(app) {
     if (app.author_url) return app.author_url;
     if (app.repository && app.repository.includes('github.com')) {
