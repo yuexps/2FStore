@@ -14,22 +14,36 @@ const PROXY_OPTIONS = [
 ];
 // ==================================
 
-    // 全局变量
-    let appsData = [];
-    let filteredApps = [];
-    let currentCategory = 'all';
-    let currentSort = 'name';
-    let githubProxy = ''; // 全局变量存储GitHub代理URL
+// 全局变量
+let appsData = [];
+let filteredApps = [];
+let currentCategory = 'all';
+let currentSort = 'name';
+let githubProxy = ''; // 全局变量存储GitHub代理URL
 
-    // 分页相关变量
-    // 当前页码，默认为 1。用户点击分页按钮时会更新此值
-    let currentPage = 1;
-    // 每页显示的应用数量，可根据需要调整
-    // 默认分页数量设置为 12，按需调整此常量即可
-    const APPS_PER_PAGE = 12;
+// 分页相关变量
+let currentPage = 1;
+const APPS_PER_PAGE = 12;
 
-    // 分页容器元素
-    const paginationEl = document.getElementById('pagination');
+// DOM元素引用
+const paginationEl = document.getElementById('pagination');
+const appList = document.getElementById('app-list');
+const appDetail = document.getElementById('app-detail');
+const appDetailContent = document.getElementById('app-detail-content');
+const backBtn = document.getElementById('back-btn');
+const searchInput = document.getElementById('search-input');
+const searchBtn = document.getElementById('search-btn');
+const categoryList = document.getElementById('category-list');
+const sortSelect = document.getElementById('sort-select');
+const submitAppBtn = document.getElementById('submit-app-btn');
+const submitModal = document.getElementById('submit-modal');
+const closeModal = document.querySelector('.miuix-modal-close');
+const proxySelect = document.getElementById('proxy-select');
+const customProxyContainer = document.getElementById('custom-proxy-container');
+const customProxyInput = document.getElementById('custom-proxy-input');
+const appCountEl = document.getElementById('app-count');
+const menuToggle = document.getElementById('menu-toggle');
+const sidebar = document.querySelector('.miuix-sidebar');
 
 // Bing 每日图片 API
 const BING_API = 'https://bing.biturl.top/?resolution=1920&format=json&index=0&mkt=zh-CN';
@@ -56,7 +70,6 @@ const ALLOWED_ATTRS = {
     'h6': ['class', 'style']
 };
 
-// 安全的 CSS 属性白名单（防止注入攻击）
 const ALLOWED_STYLES = [
     'color', 'background-color', 'font-size', 'font-weight', 'font-style',
     'text-align', 'text-decoration', 'line-height', 'margin', 'padding',
@@ -64,6 +77,19 @@ const ALLOWED_STYLES = [
     'padding-top', 'padding-bottom', 'padding-left', 'padding-right',
     'border', 'border-radius', 'opacity'
 ];
+
+/**
+ * 工具函数：防抖
+ * 限制函数在短时间内多次触发，优化搜索性能
+ */
+function debounce(func, wait) {
+    let timeout;
+    return function(...args) {
+        const context = this;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
+}
 
 /**
  * 过滤 style 属性，只保留安全的 CSS 属性
@@ -77,7 +103,7 @@ function sanitizeStyle(styleString) {
     for (const style of styles) {
         const [prop, value] = style.split(':').map(s => s.trim().toLowerCase());
         if (prop && value && ALLOWED_STYLES.includes(prop)) {
-            // 检查值中是否包含危险内容（如 url(), expression(), javascript:）
+            // 检查值中是否包含危险内容
             if (!value.includes('url(') && 
                 !value.includes('expression(') && 
                 !value.includes('javascript:')) {
@@ -91,32 +117,27 @@ function sanitizeStyle(styleString) {
 
 /**
  * 安全的 HTML 过滤函数
- * 只允许白名单中的标签和属性，防止 XSS 攻击
+ * 防止 XSS 攻击
  */
 function sanitizeHtml(html) {
     if (!html || typeof html !== 'string') return '';
     
-    // 创建临时 DOM 解析 HTML
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
     
-    // 递归清理节点
     function cleanNode(node) {
         const childNodes = Array.from(node.childNodes);
         
         for (const child of childNodes) {
             if (child.nodeType === Node.TEXT_NODE) {
-                // 文本节点保留
                 continue;
             } else if (child.nodeType === Node.ELEMENT_NODE) {
                 const tagName = child.tagName.toLowerCase();
                 
                 if (!ALLOWED_TAGS.includes(tagName)) {
-                    // 不在白名单中的标签，用其文本内容替换
                     const textNode = document.createTextNode(child.textContent);
                     node.replaceChild(textNode, child);
                 } else {
-                    // 清理属性
                     const allowedAttrs = ALLOWED_ATTRS[tagName] || [];
                     const attrs = Array.from(child.attributes);
                     
@@ -124,7 +145,6 @@ function sanitizeHtml(html) {
                         if (!allowedAttrs.includes(attr.name)) {
                             child.removeAttribute(attr.name);
                         } else if (attr.name === 'href') {
-                            // 检查 href 是否安全（只允许 http/https/mailto）
                             const href = attr.value.toLowerCase().trim();
                             if (!href.startsWith('http://') && 
                                 !href.startsWith('https://') && 
@@ -132,7 +152,6 @@ function sanitizeHtml(html) {
                                 child.removeAttribute('href');
                             }
                         } else if (attr.name === 'style') {
-                            // 过滤 style 属性
                             const safeStyle = sanitizeStyle(attr.value);
                             if (safeStyle) {
                                 child.setAttribute('style', safeStyle);
@@ -142,17 +161,14 @@ function sanitizeHtml(html) {
                         }
                     }
                     
-                    // 为外部链接添加安全属性
                     if (tagName === 'a') {
                         child.setAttribute('target', '_blank');
                         child.setAttribute('rel', 'noopener noreferrer');
                     }
                     
-                    // 递归清理子节点
                     cleanNode(child);
                 }
             } else {
-                // 其他类型节点（如注释）直接移除
                 node.removeChild(child);
             }
         }
@@ -162,29 +178,10 @@ function sanitizeHtml(html) {
     return tempDiv.innerHTML;
 }
 
-// DOM元素
-const appList = document.getElementById('app-list');
-const appDetail = document.getElementById('app-detail');
-const appDetailContent = document.getElementById('app-detail-content');
-const backBtn = document.getElementById('back-btn');
-const searchInput = document.getElementById('search-input');
-const searchBtn = document.getElementById('search-btn');
-const categoryList = document.getElementById('category-list');
-const sortSelect = document.getElementById('sort-select');
-const submitAppBtn = document.getElementById('submit-app-btn');
-const submitModal = document.getElementById('submit-modal');
-const closeModal = document.querySelector('.miuix-modal-close');
-const proxySelect = document.getElementById('proxy-select');
-const customProxyContainer = document.getElementById('custom-proxy-container');
-const customProxyInput = document.getElementById('custom-proxy-input');
-const appCountEl = document.getElementById('app-count');
-const menuToggle = document.getElementById('menu-toggle');
-const sidebar = document.querySelector('.miuix-sidebar');
-
 // 初始化应用
 document.addEventListener('DOMContentLoaded', () => {
-    loadProxySetting(); // 加载保存的代理设置
-    loadBingBackground(); // 加载 Bing 每日背景
+    loadProxySetting();
+    loadBingBackground();
     loadAppsData();
     setupEventListeners();
 });
@@ -192,7 +189,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // 加载 Bing 每日背景图片
 async function loadBingBackground() {
     try {
-        // 检查本地缓存
         const cached = localStorage.getItem('bingBackground');
         const cachedDate = localStorage.getItem('bingBackgroundDate');
         const today = new Date().toDateString();
@@ -207,14 +203,12 @@ async function loadBingBackground() {
             const data = await response.json();
             if (data.url) {
                 document.body.style.backgroundImage = `url(${data.url})`;
-                // 缓存到本地
                 localStorage.setItem('bingBackground', data.url);
                 localStorage.setItem('bingBackgroundDate', today);
             }
         }
     } catch (error) {
         console.warn('加载 Bing 背景图片失败:', error);
-        // 失败时使用默认背景色
     }
 }
 
@@ -222,9 +216,17 @@ async function loadBingBackground() {
 function setupEventListeners() {
     backBtn.addEventListener('click', showAppList);
     searchBtn.addEventListener('click', handleSearch);
+    
+    // 优化：使用防抖处理搜索输入，延迟 300ms 执行
+    searchInput.addEventListener('input', debounce(() => {
+        handleSearch();
+    }, 300));
+
+    // 保留回车立即搜索
     searchInput.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') handleSearch();
     });
+
     sortSelect.addEventListener('change', handleSort);
     submitAppBtn.addEventListener('click', () => {
         submitModal.classList.remove('hidden');
@@ -237,25 +239,20 @@ function setupEventListeners() {
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('collapsed');
         document.documentElement.classList.toggle('sidebar-collapsed');
-        // 保存状态到 localStorage
         localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
     });
     
-    // 同步侧边栏状态（从 html 类同步到 sidebar 元素）
     if (document.documentElement.classList.contains('sidebar-collapsed')) {
         sidebar.classList.add('collapsed');
     }
     
-    // 监听代理设置变化
+    // 代理设置相关
     proxySelect.addEventListener('change', handleProxyChange);
-    
-    // 监听自定义代理输入框变化
     customProxyInput.addEventListener('blur', handleCustomProxyChange);
     customProxyInput.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') handleCustomProxyChange();
     });
     
-    // 点击模态框背景关闭
     submitModal.addEventListener('click', (e) => {
         if (e.target === submitModal) {
             submitModal.classList.add('hidden');
@@ -266,21 +263,29 @@ function setupEventListeners() {
     categoryList.addEventListener('click', (e) => {
         const listItem = e.target.closest('.miuix-list-item');
         if (listItem) {
-            // 移除所有活动状态
             document.querySelectorAll('.miuix-list-item').forEach(item => {
                 item.classList.remove('active');
             });
-            
-            // 添加活动状态到当前项
             listItem.classList.add('active');
-            
-            // 设置当前分类并过滤应用
             currentCategory = listItem.dataset.category;
             filterApps();
         }
     });
     
-    // 键盘快捷键：ESC 关闭模态框和详情
+    // 优化：事件委托处理应用列表点击
+    // 替代了在每个卡片上单独绑定事件的做法
+    appList.addEventListener('click', (e) => {
+        const card = e.target.closest('.app-card');
+        if (card && appList.contains(card)) {
+            // 防止点击作者链接时触发卡片点击（虽然作者链接有 stopPropagation，但为了保险）
+            if (e.target.closest('.author-link')) return;
+            
+            const appId = card.dataset.appId;
+            showAppDetail(appId);
+        }
+    });
+    
+    // 键盘快捷键
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             if (!submitModal.classList.contains('hidden')) {
@@ -296,18 +301,15 @@ function setupEventListeners() {
 function handleProxyChange() {
     if (proxySelect.value === 'custom') {
         customProxyContainer.classList.remove('hidden');
-        // 如果之前有保存的自定义代理，则加载它
         const savedCustomProxy = localStorage.getItem('customGithubProxy');
         if (savedCustomProxy) {
             customProxyInput.value = savedCustomProxy;
-            githubProxy = savedCustomProxy; // 确保全局变量也被设置
+            githubProxy = savedCustomProxy;
         }
     } else {
         customProxyContainer.classList.add('hidden');
         githubProxy = proxySelect.value;
-        // 保存代理设置到localStorage
         localStorage.setItem('githubProxy', githubProxy);
-        // 重新加载应用数据以应用新的代理设置
         loadAppsData();
     }
 }
@@ -315,49 +317,38 @@ function handleProxyChange() {
 // 处理自定义代理变化
 function handleCustomProxyChange() {
     let customProxy = customProxyInput.value.trim();
-    
-    // 验证URL格式
     if (customProxy && !customProxy.startsWith('http://') && !customProxy.startsWith('https://')) {
         alert('请输入有效的URL，必须以 http:// 或 https:// 开头');
         return;
     }
-    
-    // 确保URL以斜杠结尾
     if (customProxy && !customProxy.endsWith('/')) {
         customProxy += '/';
     }
-    
     githubProxy = customProxy;
     customProxyInput.value = customProxy;
-    
-    // 保存代理设置到localStorage
     localStorage.setItem('githubProxy', 'custom');
     localStorage.setItem('customGithubProxy', customProxy);
-    
-    // 重新加载应用数据以应用新的代理设置
     loadAppsData();
 }
 
-// 初始化代理选择器选项
 function initProxyOptions() {
     proxySelect.innerHTML = PROXY_OPTIONS.map(option => 
         `<option value="${option.value}">${option.label}</option>`
     ).join('');
 }
 
-// 加载保存的代理设置
 function loadProxySetting() {
-    initProxyOptions(); // 先初始化选项
+    initProxyOptions();
     const savedProxy = localStorage.getItem('githubProxy');
     if (savedProxy) {
-        githubProxy = savedProxy; // 确保全局变量被设置
+        githubProxy = savedProxy;
         if (savedProxy === 'custom') {
             proxySelect.value = 'custom';
             customProxyContainer.classList.remove('hidden');
             const savedCustomProxy = localStorage.getItem('customGithubProxy');
             if (savedCustomProxy) {
                 customProxyInput.value = savedCustomProxy;
-                githubProxy = savedCustomProxy; // 确保全局变量也被设置
+                githubProxy = savedCustomProxy;
             }
         } else {
             proxySelect.value = githubProxy;
@@ -365,10 +356,8 @@ function loadProxySetting() {
     }
 }
 
-// 通过代理URL处理函数
 function getProxyUrl(url) {
     if (!githubProxy || !url) return url;
-    // 只对GitHub相关URL应用代理
     if (url.includes('github.com') || url.includes('githubusercontent.com')) {
         return githubProxy + url;
     }
@@ -378,14 +367,12 @@ function getProxyUrl(url) {
 // 提取所有分类
 function extractCategories() {
     const categories = new Set(['all']);
-    
     appsData.forEach(app => {
         if (app.category) {
             categories.add(app.category);
         }
     });
     
-    // 更新分类列表
     categoryList.innerHTML = '';
     categories.forEach(category => {
         const li = document.createElement('li');
@@ -397,16 +384,13 @@ function extractCategories() {
         span.textContent = category === 'all' ? '全部' : getCategoryDisplayName(category);
         
         li.appendChild(span);
-        
         if (category === currentCategory) {
             li.classList.add('active');
         }
-        
         categoryList.appendChild(li);
     });
 }
 
-// 获取分类显示名称
 function getCategoryDisplayName(category) {
     const categoryNames = {
         'uncategorized': '未分类',
@@ -418,20 +402,17 @@ function getCategoryDisplayName(category) {
         'productivity': '生产力',
         'games': '游戏'
     };
-    
     return categoryNames[category] || category;
 }
 
 // 过滤应用
 function filterApps() {
-    // 先按分类过滤
     if (currentCategory === 'all') {
         filteredApps = [...appsData];
     } else {
         filteredApps = appsData.filter(app => app.category === currentCategory);
     }
     
-    // 再按搜索关键词过滤
     const searchTerm = searchInput.value.trim().toLowerCase();
     if (searchTerm) {
         filteredApps = filteredApps.filter(app => 
@@ -441,16 +422,11 @@ function filterApps() {
         );
     }
     
-    // 最后排序
     sortApps();
-    
-        // 显示应用列表
-        // 筛选或排序后返回第一页
-        currentPage = 1;
-        renderAppList();
+    currentPage = 1; // 重置页码
+    renderAppList();
 }
 
-// 排序应用
 function sortApps() {
     switch (currentSort) {
         case 'name':
@@ -465,12 +441,10 @@ function sortApps() {
     }
 }
 
-// 处理搜索
 function handleSearch() {
     filterApps();
 }
 
-// 处理排序
 function handleSort() {
     currentSort = sortSelect.value;
     filterApps();
@@ -478,7 +452,6 @@ function handleSort() {
 
 // 渲染应用列表
 function renderAppList() {
-    // 更新应用计数
     if (appCountEl) {
         appCountEl.textContent = `共 ${filteredApps.length} 个应用`;
     }
@@ -499,11 +472,9 @@ function renderAppList() {
         return;
     }
     
-    // 使用分批渲染提高性能
     appList.innerHTML = '';
     const fragment = document.createDocumentFragment();
 
-    // 计算当前页需要渲染的应用索引区间
     const startIndex = (currentPage - 1) * APPS_PER_PAGE;
     const endIndex = startIndex + APPS_PER_PAGE;
     const pageApps = filteredApps.slice(startIndex, endIndex);
@@ -521,19 +492,12 @@ function renderAppList() {
         cardElement.style.transitionDelay = `${index * 50}ms`;
 
         fragment.appendChild(cardElement);
-
-        cardElement.addEventListener('click', () => {
-            const appId = cardElement.dataset.appId;
-            showAppDetail(appId);
-        });
+        // 注意：此处不再为每个卡片单独绑定 click 事件，由事件委托处理
     });
 
     appList.appendChild(fragment);
-
-    // 渲染分页导航
     renderPagination();
 
-    // 触发重新排以开始动画
     requestAnimationFrame(() => {
         document.querySelectorAll('.app-card').forEach(card => {
             card.style.opacity = '1';
@@ -542,70 +506,59 @@ function renderAppList() {
     });
 }
 
-// 分页：跳转至指定页码并重新渲染列表
+// 分页功能
 function goToPage(page) {
     const totalPages = Math.ceil(filteredApps.length / APPS_PER_PAGE);
     if (page < 1) page = 1;
     if (page > totalPages) page = totalPages;
-    // 如果目标页与当前页相同，则无需刷新
     if (page === currentPage) return;
     currentPage = page;
     renderAppList();
 }
 
-// 渲染分页按钮，根据应用数量自动生成页码
 function renderPagination() {
-    // 如果不存在容器或未定义则跳过
     if (!paginationEl) return;
     const totalPages = Math.ceil(filteredApps.length / APPS_PER_PAGE);
-    // 当只有一页或没有应用时，不显示分页
+    
     if (totalPages <= 1) {
         paginationEl.innerHTML = '';
         return;
     }
+    
     let html = '';
-    // 上一页按钮
     const prevDisabled = currentPage === 1 ? 'disabled' : '';
     html += `<button class="page-btn prev-btn" data-page="${currentPage - 1}" ${prevDisabled}>&laquo;</button>`;
 
-    // 工具函数：生成页码按钮
     const appendPageBtn = (page) => {
         const active = page === currentPage ? 'active' : '';
         html += `<button class="page-btn ${active}" data-page="${page}">${page}</button>`;
     };
 
     if (totalPages <= 7) {
-        // 页数较少时直接显示所有页码
         for (let i = 1; i <= totalPages; i++) {
             appendPageBtn(i);
         }
     } else {
-        // 显示首尾页和当前页附近页码，中间使用省略号
         appendPageBtn(1);
-        // 在当前页前添加省略号
         if (currentPage > 3) {
             html += `<span class="page-ellipsis">...</span>`;
         }
-        // 计算当前页附近的显示范围
         const start = Math.max(2, currentPage - 1);
         const end = Math.min(totalPages - 1, currentPage + 1);
         for (let i = start; i <= end; i++) {
             appendPageBtn(i);
         }
-        // 在当前页后添加省略号
         if (currentPage < totalPages - 2) {
             html += `<span class="page-ellipsis">...</span>`;
         }
         appendPageBtn(totalPages);
     }
 
-    // 下一页按钮
     const nextDisabled = currentPage === totalPages ? 'disabled' : '';
     html += `<button class="page-btn next-btn" data-page="${currentPage + 1}" ${nextDisabled}>&raquo;</button>`;
 
     paginationEl.innerHTML = html;
 
-    // 为所有页码按钮绑定点击事件
     Array.from(paginationEl.querySelectorAll('.page-btn')).forEach(btn => {
         btn.addEventListener('click', () => {
             const page = parseInt(btn.getAttribute('data-page'), 10);
@@ -616,10 +569,8 @@ function renderPagination() {
     });
 }
 
-// 获取开发者链接（优先使用 author_url，否则从仓库 URL 提取）
 function getAuthorUrl(app) {
     if (app.author_url) return app.author_url;
-    // 从 GitHub 仓库 URL 提取所有者链接
     if (app.repository && app.repository.includes('github.com')) {
         const match = app.repository.match(/github\.com\/([^\/]+)/);
         if (match) {
@@ -639,15 +590,14 @@ function createAppCard(app) {
     }
     
     const authorUrl = getAuthorUrl(app);
-    
-    // 图片错误处理：失败时显示首字母
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
     
+    // 优化：添加 loading="lazy" 实现图片懒加载
     return `
         <div class="miuix-card app-card" data-app-id="${app.id}">
             <div class="app-card-header">
                 <div class="app-icon">
-                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
+                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" loading="lazy" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
                 </div>
                 <div class="app-info">
                     <div class="app-name">${app.name}</div>
@@ -673,7 +623,6 @@ function showAppDetail(appId) {
     const app = appsData.find(a => a.id === appId);
     if (!app) return;
 
-    // 隐藏分页，防止详情页中残留的页码占位
     if (paginationEl) {
         paginationEl.classList.add('hidden');
     }
@@ -686,15 +635,14 @@ function showAppDetail(appId) {
     }
     
     const authorUrl = getAuthorUrl(app);
-    
-    // 图片错误处理
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
     
+    // 优化：详情图和截图也启用懒加载
     appDetailContent.innerHTML = `
         <div class="app-detail-container">
             <div class="app-detail-header">
                 <div class="app-detail-icon">
-                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
+                    ${iconUrl ? `<img src="${getProxyUrl(iconUrl)}" alt="${app.name}" loading="lazy" ${imgErrorHandler} style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;"><span class="img-placeholder" style="display:none;">${initial}</span>` : initial}
                 </div>
                 <div class="app-detail-info">
                     <div class="app-detail-name">${app.name} ${sourceBadge}</div>
@@ -722,7 +670,7 @@ function showAppDetail(appId) {
                     <h3>截图</h3>
                     <div class="screenshot-container">
                         ${app.screenshots.map(screenshot => `
-                            <img src="${getProxyUrl(screenshot)}" alt="应用截图" class="screenshot">
+                            <img src="${getProxyUrl(screenshot)}" alt="应用截图" loading="lazy" class="screenshot">
                         `).join('')}
                     </div>
                 </div>
@@ -734,7 +682,6 @@ function showAppDetail(appId) {
         </div>
     `;
     
-    // 平滑切换到详情页
     appList.style.opacity = '0';
     setTimeout(() => {
         appList.classList.add('hidden');
@@ -745,24 +692,6 @@ function showAppDetail(appId) {
     }, 200);
 }
 
-// 显示应用列表
-function showAppList() {
-    // 平滑切换回列表页
-    appDetail.style.opacity = '0';
-    setTimeout(() => {
-        appDetail.classList.add('hidden');
-        appList.classList.remove('hidden');
-        // 恢复分页显示
-        if (paginationEl) {
-            paginationEl.classList.remove('hidden');
-        }
-        setTimeout(() => {
-            appList.style.opacity = '1';
-        }, 50);
-    }, 200);
-}
-
-// 格式化日期
 function formatDate(dateString) {
     if (!dateString) return '未知';
     
@@ -782,14 +711,11 @@ function formatDate(dateString) {
     }
 }
 
-// 显示错误信息
 function showError(message) {
     appList.innerHTML = `<div class="miuix-card"><div class="miuix-card-content" style="padding: 32px; text-align: center; font-size: 16px; color: var(--miuix-color-error);">${message}</div></div>`;
 }
 
-// 显示加载动画
 function showLoading() {
-    // 使用骨架屏代替旋转加载器
     const skeletonCards = Array(6).fill('').map(() => `
         <div class="skeleton-card">
             <div class="skeleton-header">
@@ -805,7 +731,6 @@ function showLoading() {
             </div>
         </div>
     `).join('');
-    
     appList.innerHTML = skeletonCards;
 }
 
@@ -814,7 +739,6 @@ async function fetchWithVersionCheck(url, cacheKey, versionKey, remoteVersion) {
     const cachedData = localStorage.getItem(cacheKey);
     const cachedVersion = localStorage.getItem(`${cacheKey}_version`);
     
-    // 如果版本号相同且有缓存，直接使用缓存
     if (remoteVersion && cachedVersion === remoteVersion && cachedData) {
         console.log(`[Cache] ${cacheKey}: 版本未变化(${remoteVersion})，使用缓存`);
         try {
@@ -840,7 +764,6 @@ async function fetchWithVersionCheck(url, cacheKey, versionKey, remoteVersion) {
             return data;
         }
         
-        // 请求失败但有缓存，使用缓存
         if (cachedData) {
             console.warn(`请求 ${url} 失败，使用缓存数据`);
             return JSON.parse(cachedData);
@@ -848,7 +771,6 @@ async function fetchWithVersionCheck(url, cacheKey, versionKey, remoteVersion) {
         
         throw new Error(`HTTP ${response.status}`);
     } catch (error) {
-        // 网络错误时尝试使用缓存
         if (cachedData) {
             console.warn(`网络错误，使用缓存数据:`, error);
             return JSON.parse(cachedData);
@@ -874,10 +796,8 @@ async function fetchVersionInfo() {
 // 加载应用数据
 async function loadAppsData() {
     try {
-        // 显示加载动画
         showLoading();
         
-        // 根据测试模式选择数据源
         const appUrl = TEST_MODE ? TEST_DATA_URL : './app_details.json';
         const fnpackUrl = TEST_MODE ? TEST_FNPACK_URL : './fnpack_details.json';
         
@@ -885,43 +805,36 @@ async function loadAppsData() {
             console.log('[Debug] 测试模式已启用，从 GitHub 远程获取数据');
         }
         
-        // 首先获取版本信息（小文件，~100字节）
         const versionInfo = await fetchVersionInfo();
         const appVersion = versionInfo?.app_details?.hash;
         const fnpackVersion = versionInfo?.fnpack_details?.hash;
         
-        // 根据版本信息智能加载数据
         const [appData, fnpackData] = await Promise.all([
             fetchWithVersionCheck(appUrl, 'appDetailsCache', 'app_details', appVersion),
             fetchWithVersionCheck(fnpackUrl, 'fnpackDetailsCache', 'fnpack_details', fnpackVersion)
         ]);
         
-        // 合并两个数据源的应用数据，并为不同来源的应用添加标识
         const standardApps = (appData.apps || []).map(app => ({ ...app, source: '2FStore' }));
         const fnpackApps = (fnpackData.apps || []).map(app => ({ ...app, source: 'FnDepot' }));
         
-        // 建立 2FStore 应用的索引用于去重
+        // 优化：2FStore 优先去重逻辑
         const standardIds = new Set(standardApps.map(a => a.id));
         const standardNames = new Set(standardApps.map(a => a.name));
         
-        // 合并并去重
         const appMap = new Map();
         
-        // 1. 先添加所有 2FStore 应用 (高优先级)
+        // 1. 先添加 2FStore 应用
         standardApps.forEach(app => {
             appMap.set(app.id, app);
         });
         
-        // 2. 再添加 FnDepot 应用 (低优先级，需去重)
+        // 2. 添加 FnDepot 应用，过滤重复
         fnpackApps.forEach(app => {
-            // 规则1: ID 完全相同则跳过 (已在 Map 中)
+            // ID重复
             if (appMap.has(app.id)) return;
-            
-            // 规则2: 名称完全相同则跳过 (优先展示 2FStore 版本)
+            // 名称重复 (优先保留 2FStore)
             if (app.name && standardNames.has(app.name)) return;
-            
-            // 规则3: 如果 FnPack 的 app_key 存在于 2FStore 的 ID 列表中，视为同一应用，跳过
-            // 例如: 2FStore ID='lunatv', FnDepot ID='yuexps_lunatv' (fnpack_app_key='lunatv')
+            // Key冲突 (如 lunatv 和 yuexps_lunatv 指向同一应用)
             if (app.fnpack_app_key && standardIds.has(app.fnpack_app_key)) return;
             
             appMap.set(app.id, app);
@@ -929,10 +842,7 @@ async function loadAppsData() {
         
         appsData = Array.from(appMap.values());
         
-        // 提取所有分类
         extractCategories();
-        
-        // 初始显示所有应用
         filterApps();
     } catch (error) {
         console.error('加载应用数据失败:', error);
