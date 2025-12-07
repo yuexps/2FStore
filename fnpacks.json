@@ -27,6 +27,10 @@
     {
       "key": "FNOSP",
       "repo": "https://github.com/FNOSP/FnDepot"
+    },
+    {
+      "key": "yuexps",
+      "repo": "https://github.com/yuexps/FnDepot"
     }
   ]
 }
