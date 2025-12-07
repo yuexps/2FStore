@@ -70,10 +70,10 @@
       "downloadUrl": "https://github.com/yuexps/v2raya-fnos/releases/download/2.2.7.4/v2raya.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 45,
+      "stars": 50,
       "forks": 6,
       "category": "network",
-      "lastUpdate": "2025-12-06T13:26:43Z"
+      "lastUpdate": "2025-12-07T08:41:38Z"
     },
     {
       "id": "lunatv-enhanced",
@@ -85,10 +85,10 @@
       "downloadUrl": "https://github.com/yuexps/lunatv-enhanced-fnos/releases/download/1.0.0/lunatv-enhanced.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 0,
+      "stars": 2,
       "forks": 1,
       "category": "media",
-      "lastUpdate": "2025-12-04T08:43:15Z"
+      "lastUpdate": "2025-12-07T05:38:53Z"
     },
     {
       "id": "iventoy",
@@ -121,5 +121,5 @@
       "lastUpdate": "2025-12-05T07:16:22Z"
     }
   ],
-  "lastUpdated": "2025-12-06T16:23:56.346364Z"
+  "lastUpdated": "2025-12-07T16:23:14.659296Z"
 }

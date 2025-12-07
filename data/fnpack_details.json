@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• ✨ 实现图标，文件夹自由，彻底取代收藏夹 • 🌈 多项个性化设置：背景、LOGO、主题库<br> • 👑 多层文件夹，自由缩放拖动，右键菜单 • 🌐 智能识别内外网环境，更多自定义链接<br><br>更多信息请关注:<br>• 飞牛论坛（搜：飞牛桌面管理工具）或 GitHub：IMGZCQ/fndesk",
-      "version": "0.86",
+      "version": "0.88",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -57,6 +57,7 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
+        "v0.88": "☑️ 支持自定义访问端口,HTTP和HTTPS共用一个端口,应用中心增加右键菜单Fndepot, 取消fndesk服务图标的显示",
         "v0.86": "☑️ 此版起支持在线升级！适配飞牛1.1.4",
         "v0.85": "📢 支持创建飞牛原生图标！APP也能用完美支持FN Connect，适配飞牛内测版1.1.2",
         "v0.83": "☑️ 适配飞牛1.1.0内测版,每个图标/文件夹独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
@@ -65,11 +66,11 @@
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-05T12:12:11Z",
+      "lastUpdate": "2025-12-07T14:03:24Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.876"
+      "size": "0.883"
     },
     {
       "id": "IMGZCQ_fncube",
@@ -93,7 +94,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-05T12:12:11Z",
+      "lastUpdate": "2025-12-07T14:03:24Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -146,10 +147,10 @@
       "history": {
         "V4.9.80": "1、新增 pnpm-lock.yaml 以跟踪依赖项并更新 .gitignore <br> 2、新增 9.9.25-42905 (x64/Win) 和 6.9.86-42905 (arm64/Mac) 版本支持"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T17:46:24Z",
+      "lastUpdate": "2025-12-07T15:44:48Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -179,10 +180,10 @@
       "history": {
         "V2.11": "JS、CSS本地化"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T17:46:24Z",
+      "lastUpdate": "2025-12-07T15:44:48Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -218,10 +219,10 @@
       "history": {
         "V4.5.0": "https://docs.zfile.vip/changelog/os"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T17:46:24Z",
+      "lastUpdate": "2025-12-07T15:44:48Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -250,7 +251,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-05T12:12:11Z",
+      "lastUpdate": "2025-12-07T14:03:24Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -299,10 +300,10 @@
       "history": {
         "V3.1.5": "https://github.com/px-org/PanIndex/releases/tag/v3.1.5"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T17:46:24Z",
+      "lastUpdate": "2025-12-07T15:44:48Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -325,10 +326,10 @@
       "history": {
         "V4.10.1": "https://github.com/cloudreve/Cloudreve/releases"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T17:46:24Z",
+      "lastUpdate": "2025-12-07T15:44:48Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -352,10 +353,10 @@
       "history": {
         "V0.0.1": "第一版版本的飞牛应用Docker"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-04T17:46:24Z",
+      "lastUpdate": "2025-12-07T15:44:48Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -381,7 +382,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-06T15:55:13Z",
+      "lastUpdate": "2025-12-07T13:40:06Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -407,7 +408,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-06T15:55:13Z",
+      "lastUpdate": "2025-12-07T13:40:06Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -417,7 +418,7 @@
       "id": "hbestm_miguvideo",
       "name": "咪咕TV",
       "repository": "https://github.com/hbestm/FnDepot",
-      "description": "咪咕的官方电视直播源。需要 NodeJS 18+ 环境，自行安装",
+      "description": "咪咕的官方电视直播源，需要Node.js V22环境，请自行安装,可配合OmniBox，LunaTV实现在线播放。",
       "version": "1.0.0",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/miguvideo/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/miguvideo/miguvideo.fpk",
@@ -433,12 +434,68 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-06T15:55:13Z",
+      "lastUpdate": "2025-12-07T13:40:06Z",
       "fnpack_app_key": "miguvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.13"
+    },
+    {
+      "id": "IMGZCQ_cutcubes",
+      "name": "切碎方块",
+      "repository": "https://github.com/IMGZCQ/FnDepot",
+      "description": "切碎方块的解压小游戏",
+      "version": "0.88",
+      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/cutcubes/ICON.PNG",
+      "downloadUrl": "https://fndesk.imcq.top/FPK/cutcubes.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/cutcubes/Preview/1.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/cutcubes/Preview/2.png",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/cutcubes/Preview/3.png"
+      ],
+      "author": "米恋泥",
+      "author_url": "https://github.com/IMGZCQ/FnDepot",
+      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
+      "history": {
+        "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
+        "v0.77": "修复错误,性能优化"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "games",
+      "lastUpdate": "2025-12-07T14:03:24Z",
+      "fnpack_app_key": "cutcubes",
+      "fnpack_repo_key": "IMGZCQ",
+      "install_type": "系统空间",
+      "size": "0.676"
+    },
+    {
+      "id": "hbestm_easyvoice",
+      "name": "EasyVoice",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "EasyVoice 是一个开源的文本、小说智能转语音解决方案，旨在帮助用户轻松将文本内容转换为高质量的语音输出。\n一键生成语音和字幕,AI 智能推荐配音,完全免费，无时长、无字数限制。\n支持将 10 万字以上的小说一键转为有声书！流式传输，多长的文本都能立刻播放支持自定义多角色配音。\n无论你是想听小说、为创作配音，还是打造个性化音频，EasyVoice 都是你的最佳助手！\n本项目需要Node.js V22环境，请在应用中心自行安装。",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/easyvoice/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/easyvoice/easyvoice.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/easyvoice/Preview/01.PNG",
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/easyvoice/Preview/01.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "bug_report_url": "https://github.com/cosin2077/easyVoice",
+      "history": {
+        "1.0.0": "初始版本。"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-07T13:40:06Z",
+      "fnpack_app_key": "easyvoice",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.25"
     }
   ],
-  "lastUpdated": "2025-12-06T16:24:29.063394Z"
+  "lastUpdated": "2025-12-07T16:23:32.691949Z"
 }
