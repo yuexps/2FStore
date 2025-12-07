@@ -131,7 +131,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.9.80",
+      "version": "4.17",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -150,7 +150,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-07T15:44:48Z",
+      "lastUpdate": "2025-12-07T16:32:09Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -183,7 +183,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-07T15:44:48Z",
+      "lastUpdate": "2025-12-07T16:32:09Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -222,7 +222,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-07T15:44:48Z",
+      "lastUpdate": "2025-12-07T16:32:09Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -303,7 +303,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-07T15:44:48Z",
+      "lastUpdate": "2025-12-07T16:32:09Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -329,7 +329,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-07T15:44:48Z",
+      "lastUpdate": "2025-12-07T16:32:09Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -356,7 +356,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-07T15:44:48Z",
+      "lastUpdate": "2025-12-07T16:32:09Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -495,7 +495,115 @@
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.25"
+    },
+    {
+      "id": "Hxido-RXM_clouddrive2",
+      "name": "clouddrive2",
+      "repository": "https://github.com/Hxido-RXM/FnDepot",
+      "description": "CloudDrive 是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案。注：理论上后续更新点运行界面的更新就行。",
+      "version": "0.9.16",
+      "iconUrl": "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/clouddrive2/ICON.PNG",
+      "downloadUrl": "https://github.com/Hxido-RXM/FnDepot/releases/download/clouddrive2/clouddrive2.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/clouddrive2/Preview/01.png",
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/clouddrive2/Preview/02.png",
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/clouddrive2/Preview/03.png"
+      ],
+      "author": "CloudDrive2",
+      "author_url": "https://www.clouddrive2.com/",
+      "bug_report_url": "https://github.com/Hxido-RXM/FnDepot/issues",
+      "history": {
+        "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-07T09:19:36Z",
+      "fnpack_app_key": "clouddrive2",
+      "fnpack_repo_key": "Hxido-RXM",
+      "install_type": "系统空间",
+      "size": "24.2"
+    },
+    {
+      "id": "Hxido-RXM_audiobookshelf",
+      "name": "audiobookshelf",
+      "repository": "https://github.com/Hxido-RXM/FnDepot",
+      "description": "Audiobookshelf 是一个用于管理和播放有声读物的开源软件。它提供了一个用户友好的界面，使您能够组织和播放您的有声读物。",
+      "version": "2.31.0",
+      "iconUrl": "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/audiobookshelf/ICON.PNG",
+      "downloadUrl": "https://github.com/Hxido-RXM/FnDepot/releases/download/audiobookshelf/audiobookshelf.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/audiobookshelf/Preview/01.png",
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/audiobookshelf/Preview/02.png",
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/audiobookshelf/Preview/03.png"
+      ],
+      "author": "Audiobookshelf",
+      "author_url": "https://www.audiobookshelf.org/",
+      "bug_report_url": "https://github.com/Hxido-RXM/FnDepot/issues",
+      "history": {
+        "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-07T09:19:36Z",
+      "fnpack_app_key": "audiobookshelf",
+      "fnpack_repo_key": "Hxido-RXM",
+      "install_type": "系统空间",
+      "size": "89.1"
+    },
+    {
+      "id": "Hxido-RXM_embyserver",
+      "name": "embyserver",
+      "repository": "https://github.com/Hxido-RXM/FnDepot",
+      "description": "Emby Server 是一个开源的媒体服务器软件，用于管理和播放您的媒体库。它提供了一个用户友好的界面，使您能够组织和播放您的电影、电视节目、音乐和照片。",
+      "version": "4.9.1.90",
+      "iconUrl": "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/embyserver/ICON.PNG",
+      "downloadUrl": "https://github.com/Hxido-RXM/FnDepot/releases/download/embyserver/embyserver.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/embyserver/Preview/01.png"
+      ],
+      "author": "Emby",
+      "author_url": "https://emby.media/",
+      "bug_report_url": "https://github.com/Hxido-RXM/FnDepot/issues",
+      "history": {
+        "V4.9.1.90": "https://emby.media/download.html"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-07T09:19:36Z",
+      "fnpack_app_key": "embyserver",
+      "fnpack_repo_key": "Hxido-RXM",
+      "install_type": "系统空间",
+      "size": "382.44"
+    },
+    {
+      "id": "Hxido-RXM_1panel",
+      "name": "1panel",
+      "repository": "https://github.com/Hxido-RXM/FnDepot",
+      "description": "1Panel 是一个基于 Web 的开源面板，用于管理和监控您的服务器。它提供了一个用户友好的界面，使您能够轻松地管理您的服务器资源。",
+      "version": "2.0.14",
+      "iconUrl": "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/1panel/ICON.PNG",
+      "downloadUrl": "https://github.com/Hxido-RXM/FnDepot/releases/download/1panel/1panel.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Hxido-RXM/FnDepot/main/1panel/Preview/01.png"
+      ],
+      "author": "1Panel",
+      "author_url": "https://1panel.cn/",
+      "bug_report_url": "https://github.com/Hxido-RXM/FnDepot/issues",
+      "history": {
+        "V2.0.14": "hhttps://1panel.cn/"
+      },
+      "stars": 1,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-07T09:19:36Z",
+      "fnpack_app_key": "1panel",
+      "fnpack_repo_key": "Hxido-RXM",
+      "install_type": "系统空间",
+      "size": "55.41"
     }
   ],
-  "lastUpdated": "2025-12-07T16:23:32.691949Z"
+  "lastUpdated": "2025-12-07T17:15:20.903877Z"
 }
