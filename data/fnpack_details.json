@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• ✨ 实现图标，文件夹自由，彻底取代收藏夹 • 🌈 多项个性化设置：背景、LOGO、主题库<br> • 👑 多层文件夹，自由缩放拖动，右键菜单 • 🌐 智能识别内外网环境，更多自定义链接<br><br>更多信息请关注:<br>• 飞牛论坛（搜：飞牛桌面管理工具）或 GitHub：IMGZCQ/fndesk",
-      "version": "0.88",
+      "version": "0.89",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -69,7 +69,7 @@
       "stars": 1,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-08T05:52:54Z",
+      "lastUpdate": "2025-12-08T15:13:13Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -97,7 +97,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-08T05:52:54Z",
+      "lastUpdate": "2025-12-08T15:13:13Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -254,7 +254,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-08T05:52:54Z",
+      "lastUpdate": "2025-12-08T15:13:13Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -466,7 +466,7 @@
       "stars": 1,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-08T05:52:54Z",
+      "lastUpdate": "2025-12-08T15:13:13Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -518,10 +518,10 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-08T05:24:52Z",
+      "lastUpdate": "2025-12-08T09:02:48Z",
       "fnpack_app_key": "clouddrive2",
       "fnpack_repo_key": "Hxido-RXM",
       "install_type": "系统空间",
@@ -546,10 +546,10 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-08T05:24:52Z",
+      "lastUpdate": "2025-12-08T09:02:48Z",
       "fnpack_app_key": "audiobookshelf",
       "fnpack_repo_key": "Hxido-RXM",
       "install_type": "系统空间",
@@ -572,10 +572,10 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-08T05:24:52Z",
+      "lastUpdate": "2025-12-08T09:02:48Z",
       "fnpack_app_key": "embyserver",
       "fnpack_repo_key": "Hxido-RXM",
       "install_type": "系统空间",
@@ -598,10 +598,10 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-08T05:24:52Z",
+      "lastUpdate": "2025-12-08T09:02:48Z",
       "fnpack_app_key": "1panel",
       "fnpack_repo_key": "Hxido-RXM",
       "install_type": "系统空间",
@@ -839,5 +839,5 @@
       "size": "3"
     }
   ],
-  "lastUpdated": "2025-12-08T06:37:30.275512Z"
+  "lastUpdated": "2025-12-08T16:29:16.103172Z"
 }
