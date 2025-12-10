@@ -23,7 +23,7 @@ let githubProxy = ''; // 全局变量存储GitHub代理URL
 
 // 分页相关变量
 let currentPage = 1;
-const APPS_PER_PAGE = 12;
+let appsPerPage = 12; // 默认值，之后会根据屏幕大小动态调整
 
 // DOM元素引用
 const paginationEl = document.getElementById('pagination');
@@ -50,7 +50,7 @@ const BING_API = 'https://bing.biturl.top/?resolution=1920&format=json&index=0&m
 
 // 安全 HTML 标签白名单
 const ALLOWED_TAGS = [
-    'b', 'i', 'strong', 'em', 'br', 'a', 'p', 'ul', 'ol', 'li', 
+    'b', 'i', 'strong', 'em', 'br', 'a', 'p', 'ul', 'ol', 'li',
     'code', 'pre', 'span', 'div', 'blockquote', 'hr',
     'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'sub', 'sup', 'mark'
 ];
@@ -84,7 +84,7 @@ const ALLOWED_STYLES = [
  */
 function debounce(func, wait) {
     let timeout;
-    return function(...args) {
+    return function (...args) {
         const context = this;
         clearTimeout(timeout);
         timeout = setTimeout(() => func.apply(context, args), wait);
@@ -96,22 +96,22 @@ function debounce(func, wait) {
  */
 function sanitizeStyle(styleString) {
     if (!styleString) return '';
-    
+
     const safeStyles = [];
     const styles = styleString.split(';');
-    
+
     for (const style of styles) {
         const [prop, value] = style.split(':').map(s => s.trim().toLowerCase());
         if (prop && value && ALLOWED_STYLES.includes(prop)) {
             // 检查值中是否包含危险内容
-            if (!value.includes('url(') && 
-                !value.includes('expression(') && 
+            if (!value.includes('url(') &&
+                !value.includes('expression(') &&
                 !value.includes('javascript:')) {
                 safeStyles.push(`${prop}: ${value}`);
             }
         }
     }
-    
+
     return safeStyles.join('; ');
 }
 
@@ -121,33 +121,33 @@ function sanitizeStyle(styleString) {
  */
 function sanitizeHtml(html) {
     if (!html || typeof html !== 'string') return '';
-    
+
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = html;
-    
+
     function cleanNode(node) {
         const childNodes = Array.from(node.childNodes);
-        
+
         for (const child of childNodes) {
             if (child.nodeType === Node.TEXT_NODE) {
                 continue;
             } else if (child.nodeType === Node.ELEMENT_NODE) {
                 const tagName = child.tagName.toLowerCase();
-                
+
                 if (!ALLOWED_TAGS.includes(tagName)) {
                     const textNode = document.createTextNode(child.textContent);
                     node.replaceChild(textNode, child);
                 } else {
                     const allowedAttrs = ALLOWED_ATTRS[tagName] || [];
                     const attrs = Array.from(child.attributes);
-                    
+
                     for (const attr of attrs) {
                         if (!allowedAttrs.includes(attr.name)) {
                             child.removeAttribute(attr.name);
                         } else if (attr.name === 'href') {
                             const href = attr.value.toLowerCase().trim();
-                            if (!href.startsWith('http://') && 
-                                !href.startsWith('https://') && 
+                            if (!href.startsWith('http://') &&
+                                !href.startsWith('https://') &&
                                 !href.startsWith('mailto:')) {
                                 child.removeAttribute('href');
                             }
@@ -160,12 +160,12 @@ function sanitizeHtml(html) {
                             }
                         }
                     }
-                    
+
                     if (tagName === 'a') {
                         child.setAttribute('target', '_blank');
                         child.setAttribute('rel', 'noopener noreferrer');
                     }
-                    
+
                     cleanNode(child);
                 }
             } else {
@@ -173,7 +173,7 @@ function sanitizeHtml(html) {
             }
         }
     }
-    
+
     cleanNode(tempDiv);
     return tempDiv.innerHTML;
 }
@@ -182,9 +182,55 @@ function sanitizeHtml(html) {
 document.addEventListener('DOMContentLoaded', () => {
     loadProxySetting();
     loadBingBackground();
+    updatePageSize(); // 初始化页面大小
     loadAppsData();
     setupEventListeners();
+
+    // 监听窗口大小变化
+    window.addEventListener('resize', debounce(() => {
+        const oldSize = appsPerPage;
+        updatePageSize();
+        if (oldSize !== appsPerPage) {
+            currentPage = 1; // 页面大小改变时重置页码，防止索引越界
+            renderAppList();
+        }
+    }, 200));
 });
+
+// 计算合适的每页显示数量
+function updatePageSize() {
+    const container = document.getElementById('app-list');
+    if (!container) return;
+
+    // 获取Grid布局的列宽（参考 styles.css: minmax(340px, 1fr) + gap 24px）
+    // 估算每行能放几个：(容器宽度 + gap) / (最小卡片宽度 + gap)
+    // 注意：CSS grid 的 gap 也会占用空间
+    // 这里使用一个简单的断点策略或者基于宽度的动态计算
+
+    const width = window.innerWidth;
+    const sidebarWidth = document.documentElement.classList.contains('sidebar-collapsed') ? 0 : 280;
+    const availableWidth = width - sidebarWidth - 48; // 减去内边距
+
+    // 估算列数
+    const minCardWidth = 340;
+    const gap = 24;
+    let columns = Math.floor((availableWidth + gap) / (minCardWidth + gap));
+    if (columns < 1) columns = 1;
+
+    // 目标行数：大屏显示更多行
+    let rows = 3;
+    if (width > 2560) rows = 5;      // 超宽屏/4K
+    else if (width > 1920) rows = 4; // 2K/大屏
+    else if (width > 1200) rows = 3; // 1080P/标准
+    else rows = 4;                   // 平板/手机（列数少，多显示几行）
+
+    appsPerPage = columns * rows;
+
+    // 确保至少显示12个
+    if (appsPerPage < 12) appsPerPage = 12;
+
+    console.log(`[Layout] Width: ${width}, Cols: ${columns}, Rows: ${rows}, PageSize: ${appsPerPage}`);
+}
 
 // 加载 Bing 每日背景图片
 async function loadBingBackground() {
@@ -192,12 +238,12 @@ async function loadBingBackground() {
         const cached = localStorage.getItem('bingBackground');
         const cachedDate = localStorage.getItem('bingBackgroundDate');
         const today = new Date().toDateString();
-        
+
         if (cached && cachedDate === today) {
             document.body.style.backgroundImage = `url(${cached})`;
             return;
         }
-        
+
         const response = await fetch(BING_API);
         if (response.ok) {
             const data = await response.json();
@@ -216,7 +262,7 @@ async function loadBingBackground() {
 function setupEventListeners() {
     backBtn.addEventListener('click', showAppList);
     searchBtn.addEventListener('click', handleSearch);
-    
+
     // 优化：使用防抖处理搜索输入，延迟 300ms 执行
     searchInput.addEventListener('input', debounce(() => {
         handleSearch();
@@ -234,31 +280,41 @@ function setupEventListeners() {
     closeModal.addEventListener('click', () => {
         submitModal.classList.add('hidden');
     });
-    
+
     // 汉堡菜单切换侧边栏
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('collapsed');
         document.documentElement.classList.toggle('sidebar-collapsed');
         localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+
+        // 侧边栏切换也会影响内容宽度，触发页面大小重新计算
+        setTimeout(() => {
+            const oldSize = appsPerPage;
+            updatePageSize();
+            if (oldSize !== appsPerPage) {
+                currentPage = 1;
+                renderAppList();
+            }
+        }, 350); // 等待过渡动画完成
     });
-    
+
     if (document.documentElement.classList.contains('sidebar-collapsed')) {
         sidebar.classList.add('collapsed');
     }
-    
+
     // 代理设置相关
     proxySelect.addEventListener('change', handleProxyChange);
     customProxyInput.addEventListener('blur', handleCustomProxyChange);
     customProxyInput.addEventListener('keyup', (e) => {
         if (e.key === 'Enter') handleCustomProxyChange();
     });
-    
+
     submitModal.addEventListener('click', (e) => {
         if (e.target === submitModal) {
             submitModal.classList.add('hidden');
         }
     });
-    
+
     // 分类点击事件
     categoryList.addEventListener('click', (e) => {
         const listItem = e.target.closest('.miuix-list-item');
@@ -271,7 +327,7 @@ function setupEventListeners() {
             filterApps();
         }
     });
-    
+
     // 优化：事件委托处理应用列表点击
     // 替代了在每个卡片上单独绑定事件的做法
     appList.addEventListener('click', (e) => {
@@ -279,12 +335,12 @@ function setupEventListeners() {
         if (card && appList.contains(card)) {
             // 防止点击作者链接时触发卡片点击（虽然作者链接有 stopPropagation，但为了保险）
             if (e.target.closest('.author-link')) return;
-            
+
             const appId = card.dataset.appId;
             showAppDetail(appId);
         }
     });
-    
+
     // 键盘快捷键
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
@@ -293,6 +349,17 @@ function setupEventListeners() {
             } else if (!appDetail.classList.contains('hidden')) {
                 showAppList();
             }
+        }
+    });
+
+    // 路由历史处理
+    window.addEventListener('popstate', (e) => {
+        const params = new URLSearchParams(window.location.search);
+        const appId = params.get('q');
+        if (appId) {
+            showAppDetail(appId, false);
+        } else {
+            showAppList(false);
         }
     });
 }
@@ -332,7 +399,7 @@ function handleCustomProxyChange() {
 }
 
 function initProxyOptions() {
-    proxySelect.innerHTML = PROXY_OPTIONS.map(option => 
+    proxySelect.innerHTML = PROXY_OPTIONS.map(option =>
         `<option value="${option.value}">${option.label}</option>`
     ).join('');
 }
@@ -372,17 +439,17 @@ function extractCategories() {
             categories.add(app.category);
         }
     });
-    
+
     categoryList.innerHTML = '';
     categories.forEach(category => {
         const li = document.createElement('li');
         li.className = 'miuix-list-item';
         li.dataset.category = category;
-        
+
         const span = document.createElement('span');
         span.className = 'miuix-list-item-text';
         span.textContent = category === 'all' ? '全部' : getCategoryDisplayName(category);
-        
+
         li.appendChild(span);
         if (category === currentCategory) {
             li.classList.add('active');
@@ -399,7 +466,7 @@ function getCategoryDisplayName(category) {
         'network': '网络',
         'development': '开发',
         'system': '系统',
-        'productivity': '生产力',
+        'productivity': '效率',
         'games': '游戏'
     };
     return categoryNames[category] || category;
@@ -412,16 +479,16 @@ function filterApps() {
     } else {
         filteredApps = appsData.filter(app => app.category === currentCategory);
     }
-    
+
     const searchTerm = searchInput.value.trim().toLowerCase();
     if (searchTerm) {
-        filteredApps = filteredApps.filter(app => 
+        filteredApps = filteredApps.filter(app =>
             app.name.toLowerCase().includes(searchTerm) ||
             app.description.toLowerCase().includes(searchTerm) ||
             app.author.toLowerCase().includes(searchTerm)
         );
     }
-    
+
     sortApps();
     currentPage = 1; // 重置页码
     renderAppList();
@@ -455,7 +522,7 @@ function renderAppList() {
     if (appCountEl) {
         appCountEl.textContent = `共 ${filteredApps.length} 个应用`;
     }
-    
+
     if (filteredApps.length === 0) {
         appList.innerHTML = `
             <div class="empty-state">
@@ -471,12 +538,12 @@ function renderAppList() {
         `;
         return;
     }
-    
+
     appList.innerHTML = '';
     const fragment = document.createDocumentFragment();
 
-    const startIndex = (currentPage - 1) * APPS_PER_PAGE;
-    const endIndex = startIndex + APPS_PER_PAGE;
+    const startIndex = (currentPage - 1) * appsPerPage;
+    const endIndex = startIndex + appsPerPage;
     const pageApps = filteredApps.slice(startIndex, endIndex);
 
     pageApps.forEach((app, index) => {
@@ -508,7 +575,7 @@ function renderAppList() {
 
 // 分页功能
 function goToPage(page) {
-    const totalPages = Math.ceil(filteredApps.length / APPS_PER_PAGE);
+    const totalPages = Math.ceil(filteredApps.length / appsPerPage);
     if (page < 1) page = 1;
     if (page > totalPages) page = totalPages;
     if (page === currentPage) return;
@@ -518,13 +585,13 @@ function goToPage(page) {
 
 function renderPagination() {
     if (!paginationEl) return;
-    const totalPages = Math.ceil(filteredApps.length / APPS_PER_PAGE);
-    
+    const totalPages = Math.ceil(filteredApps.length / appsPerPage);
+
     if (totalPages <= 1) {
         paginationEl.innerHTML = '';
         return;
     }
-    
+
     let html = '';
     const prevDisabled = currentPage === 1 ? 'disabled' : '';
     html += `<button class="page-btn prev-btn" data-page="${currentPage - 1}" ${prevDisabled}>&laquo;</button>`;
@@ -570,15 +637,23 @@ function renderPagination() {
 }
 
 // 显示应用列表（从详情页返回）
-function showAppList() {
+function showAppList(updateHistory = true) {
+    if (updateHistory) {
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.delete('q');
+        window.history.pushState({}, '', newUrl);
+    }
+
+    document.title = '2FStore - FNOS 第三方应用仓库';
+
     appDetail.style.opacity = '0';
-    
+
     setTimeout(() => {
         appDetail.classList.add('hidden');
         appList.classList.remove('hidden');
-        
+
         // 如果当前列表需要分页，恢复显示分页控件
-        if (paginationEl && filteredApps.length > APPS_PER_PAGE) {
+        if (paginationEl && filteredApps.length > appsPerPage) {
             paginationEl.classList.remove('hidden');
         }
 
@@ -607,10 +682,10 @@ function createAppCard(app) {
     if (app.source) {
         sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
     }
-    
+
     const authorUrl = getAuthorUrl(app);
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
-    
+
     // 优化：添加 loading="lazy" 实现图片懒加载
     return `
         <div class="miuix-card app-card" data-app-id="${app.id}">
@@ -638,24 +713,32 @@ function createAppCard(app) {
 }
 
 // 显示应用详情
-function showAppDetail(appId) {
+function showAppDetail(appId, updateHistory = true) {
     const app = appsData.find(a => a.id === appId);
     if (!app) return;
+
+    if (updateHistory) {
+        const newUrl = new URL(window.location);
+        newUrl.searchParams.set('q', appId);
+        window.history.pushState({ appId: appId }, '', newUrl);
+    }
+
+    document.title = `${app.name} - 2FStore`;
 
     if (paginationEl) {
         paginationEl.classList.add('hidden');
     }
-    
+
     const initial = app.name.charAt(0).toUpperCase();
     const iconUrl = app.iconUrl || '';
     let sourceBadge = '';
     if (app.source) {
         sourceBadge = `<span class="app-source-badge store-${app.source.toLowerCase()}">${app.source}</span>`;
     }
-    
+
     const authorUrl = getAuthorUrl(app);
     const imgErrorHandler = `onerror="this.style.display='none';this.parentElement.querySelector('.img-placeholder').style.display='flex';"`;
-    
+
     // 优化：详情图和截图也启用懒加载
     appDetailContent.innerHTML = `
         <div class="app-detail-container">
@@ -700,7 +783,7 @@ function showAppDetail(appId) {
             </div>
         </div>
     `;
-    
+
     appList.style.opacity = '0';
     setTimeout(() => {
         appList.classList.add('hidden');
@@ -713,12 +796,12 @@ function showAppDetail(appId) {
 
 function formatDate(dateString) {
     if (!dateString) return '未知';
-    
+
     const date = new Date(dateString);
     const now = new Date();
     const diffTime = Math.abs(now - date);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
+
     if (diffDays < 7) {
         return `${diffDays}天前`;
     } else if (diffDays < 30) {
@@ -757,7 +840,7 @@ function showLoading() {
 async function fetchWithVersionCheck(url, cacheKey, versionKey, remoteVersion) {
     const cachedData = localStorage.getItem(cacheKey);
     const cachedVersion = localStorage.getItem(`${cacheKey}_version`);
-    
+
     if (remoteVersion && cachedVersion === remoteVersion && cachedData) {
         console.log(`[Cache] ${cacheKey}: 版本未变化(${remoteVersion})，使用缓存`);
         try {
@@ -766,28 +849,28 @@ async function fetchWithVersionCheck(url, cacheKey, versionKey, remoteVersion) {
             // 缓存损坏，继续下载
         }
     }
-    
+
     try {
         const response = await fetch(url, { cache: 'no-cache' });
-        
+
         if (response.ok) {
             const data = await response.json();
-            
+
             // 保存到缓存
             localStorage.setItem(cacheKey, JSON.stringify(data));
             if (remoteVersion) {
                 localStorage.setItem(`${cacheKey}_version`, remoteVersion);
             }
-            
+
             console.log(`[Cache] ${cacheKey}: 已更新缓存，版本: ${remoteVersion || 'unknown'}`);
             return data;
         }
-        
+
         if (cachedData) {
             console.warn(`请求 ${url} 失败，使用缓存数据`);
             return JSON.parse(cachedData);
         }
-        
+
         throw new Error(`HTTP ${response.status}`);
     } catch (error) {
         if (cachedData) {
@@ -816,37 +899,37 @@ async function fetchVersionInfo() {
 async function loadAppsData() {
     try {
         showLoading();
-        
+
         const appUrl = TEST_MODE ? TEST_DATA_URL : './app_details.json';
         const fnpackUrl = TEST_MODE ? TEST_FNPACK_URL : './fnpack_details.json';
-        
+
         if (TEST_MODE) {
             console.log('[Debug] 测试模式已启用，从 GitHub 远程获取数据');
         }
-        
+
         const versionInfo = await fetchVersionInfo();
         const appVersion = versionInfo?.app_details?.hash;
         const fnpackVersion = versionInfo?.fnpack_details?.hash;
-        
+
         const [appData, fnpackData] = await Promise.all([
             fetchWithVersionCheck(appUrl, 'appDetailsCache', 'app_details', appVersion),
             fetchWithVersionCheck(fnpackUrl, 'fnpackDetailsCache', 'fnpack_details', fnpackVersion)
         ]);
-        
+
         const standardApps = (appData.apps || []).map(app => ({ ...app, source: '2FStore' }));
         const fnpackApps = (fnpackData.apps || []).map(app => ({ ...app, source: 'FnDepot' }));
-        
+
         // 优化：2FStore 优先去重逻辑
         const standardIds = new Set(standardApps.map(a => a.id));
         const standardNames = new Set(standardApps.map(a => a.name));
-        
+
         const appMap = new Map();
-        
+
         // 1. 先添加 2FStore 应用
         standardApps.forEach(app => {
             appMap.set(app.id, app);
         });
-        
+
         // 2. 添加 FnDepot 应用，过滤重复
         fnpackApps.forEach(app => {
             // ID重复
@@ -855,14 +938,21 @@ async function loadAppsData() {
             if (app.name && standardNames.has(app.name)) return;
             // Key冲突 (如 lunatv 和 yuexps_lunatv 指向同一应用)
             if (app.fnpack_app_key && standardIds.has(app.fnpack_app_key)) return;
-            
+
             appMap.set(app.id, app);
         });
-        
+
         appsData = Array.from(appMap.values());
-        
+
         extractCategories();
         filterApps();
+
+        // 处理初始路由
+        const params = new URLSearchParams(window.location.search);
+        const appId = params.get('q');
+        if (appId) {
+            showAppDetail(appId, false);
+        }
     } catch (error) {
         console.error('加载应用数据失败:', error);
         showError('加载应用数据失败，请稍后再试。');

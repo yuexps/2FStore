@@ -125,7 +125,7 @@ body::before {
 
 /* 侧边栏收起时旋转汉堡菜单图标 */
 .sidebar-collapsed .miuix-brand-button .menu-icon,
-.miuix-sidebar.collapsed ~ .miuix-topbar .menu-icon {
+.miuix-sidebar.collapsed~.miuix-topbar .menu-icon {
     transform: rotate(90deg);
 }
 
@@ -292,7 +292,8 @@ body::before {
     display: flex;
     flex: 1;
     overflow: hidden;
-    height: calc(100vh - 56px); /* 减去顶栏高度 */
+    height: calc(100vh - 56px);
+    /* 减去顶栏高度 */
 }
 
 /* 侧边栏 */
@@ -611,9 +612,9 @@ html.sidebar-collapsed .miuix-sidebar {
     align-items: center;
     gap: 6px;
     padding: 4px 10px 4px 6px;
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-primary-rgb), 0.06) 0%, 
-        rgba(var(--miuix-color-primary-rgb), 0.02) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-primary-rgb), 0.06) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.02) 100%);
     border-radius: 20px;
     border: 1px solid rgba(var(--miuix-color-primary-rgb), 0.1);
     margin-top: 4px;
@@ -640,9 +641,9 @@ html.sidebar-collapsed .miuix-sidebar {
     left: 0;
     width: 0;
     height: 1.5px;
-    background: linear-gradient(90deg, 
-        var(--miuix-color-primary) 0%, 
-        rgba(var(--miuix-color-primary-rgb), 0.5) 100%);
+    background: linear-gradient(90deg,
+            var(--miuix-color-primary) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.5) 100%);
     border-radius: 1px;
     transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -805,9 +806,9 @@ html.sidebar-collapsed .miuix-sidebar {
     align-items: center;
     gap: 8px;
     padding: 8px 14px 8px 10px;
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-primary-rgb), 0.08) 0%, 
-        rgba(var(--miuix-color-primary-rgb), 0.03) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-primary-rgb), 0.08) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.03) 100%);
     border-radius: 24px;
     border: 1px solid rgba(var(--miuix-color-primary-rgb), 0.12);
     backdrop-filter: blur(8px);
@@ -868,7 +869,8 @@ html.sidebar-collapsed .miuix-sidebar {
     flex-wrap: wrap;
 }
 
-.download-btn, .repo-btn {
+.download-btn,
+.repo-btn {
     padding: 12px 28px;
     border-radius: 12px;
     border: none;
@@ -1031,7 +1033,7 @@ html.sidebar-collapsed .miuix-sidebar {
     width: 90%;
     max-height: 90%;
     overflow: hidden;
-    box-shadow: 
+    box-shadow:
         0 24px 48px rgba(0, 0, 0, 0.2),
         0 0 0 1px rgba(255, 255, 255, 0.1) inset;
     border: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.1);
@@ -1049,9 +1051,9 @@ html.sidebar-collapsed .miuix-sidebar {
     justify-content: space-between;
     padding: 20px 24px;
     border-bottom: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.08);
-    background: linear-gradient(180deg, 
-        rgba(var(--miuix-color-surface-rgb), 0.5) 0%,
-        transparent 100%);
+    background: linear-gradient(180deg,
+            rgba(var(--miuix-color-surface-rgb), 0.5) 0%,
+            transparent 100%);
 }
 
 .miuix-modal-title {
@@ -1086,16 +1088,16 @@ html.sidebar-collapsed .miuix-sidebar {
 
 /* 提交应用选项样式 */
 .submit-option {
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-primary-rgb), 0.06) 0%,
-        rgba(var(--miuix-color-primary-rgb), 0.02) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-primary-rgb), 0.06) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.02) 100%);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 16px;
     padding: 20px;
     margin: 16px 0;
     border: 1px solid rgba(var(--miuix-color-primary-rgb), 0.12);
-    box-shadow: 
+    box-shadow:
         0 4px 16px rgba(0, 0, 0, 0.06),
         0 0 0 1px rgba(255, 255, 255, 0.05) inset;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1110,20 +1112,20 @@ html.sidebar-collapsed .miuix-sidebar {
     left: 0;
     right: 0;
     height: 1px;
-    background: linear-gradient(90deg, 
-        transparent 0%,
-        rgba(var(--miuix-color-primary-rgb), 0.3) 50%,
-        transparent 100%);
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.3) 50%,
+            transparent 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .submit-option:hover {
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-primary-rgb), 0.1) 0%,
-        rgba(var(--miuix-color-primary-rgb), 0.04) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-primary-rgb), 0.1) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.04) 100%);
     border-color: rgba(var(--miuix-color-primary-rgb), 0.2);
-    box-shadow: 
+    box-shadow:
         0 8px 24px rgba(var(--miuix-color-primary-rgb), 0.12),
         0 0 0 1px rgba(255, 255, 255, 0.08) inset;
     transform: translateY(-2px);
@@ -1162,9 +1164,9 @@ html.sidebar-collapsed .miuix-sidebar {
 }
 
 .miuix-button-outline {
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-primary-rgb), 0.08) 0%,
-        rgba(var(--miuix-color-primary-rgb), 0.04) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-primary-rgb), 0.08) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.04) 100%);
     border: 1.5px solid rgba(var(--miuix-color-primary-rgb), 0.4);
     color: var(--miuix-color-primary);
     backdrop-filter: blur(8px);
@@ -1172,9 +1174,9 @@ html.sidebar-collapsed .miuix-sidebar {
 }
 
 .miuix-button-outline:hover {
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-primary-rgb), 0.15) 0%,
-        rgba(var(--miuix-color-primary-rgb), 0.1) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-primary-rgb), 0.15) 0%,
+            rgba(var(--miuix-color-primary-rgb), 0.1) 100%);
     border-color: var(--miuix-color-primary);
     box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.2);
     transform: translateY(-1px);
@@ -1285,8 +1287,13 @@ html.sidebar-collapsed .miuix-sidebar {
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Miuix UI颜色变量 */
@@ -1443,9 +1450,12 @@ html.sidebar-collapsed .miuix-sidebar {
 }
 
 @keyframes skeleton-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.5;
     }
@@ -1519,9 +1529,9 @@ html.sidebar-collapsed .miuix-sidebar {
     font-size: 12px;
     color: var(--miuix-color-on-surface-variant);
     padding: 10px 20px;
-    background: linear-gradient(135deg, 
-        rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.04) 0%,
-        rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.02) 100%);
+    background: linear-gradient(135deg,
+            rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.04) 0%,
+            rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.02) 100%);
     border-radius: 20px;
     border: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.06);
     backdrop-filter: blur(8px);
@@ -1536,41 +1546,66 @@ html.sidebar-collapsed .miuix-sidebar {
 .pagination {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    margin: 32px 0 16px;
     gap: 8px;
+    padding: 8px;
 }
 
 .page-btn {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.1);
-    border: none;
-    border-radius: 6px;
-    padding: 6px 12px;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(var(--miuix-color-surface-variant-rgb, 255, 255, 255), 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(var(--miuix-color-outline-rgb, 0, 0, 0), 0.05);
+    border-radius: 12px;
+    padding: 0 12px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 14px;
+    font-weight: 500;
     color: var(--miuix-color-on-surface);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .page-btn:hover {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.2);
+    background-color: rgba(var(--miuix-color-surface-rgb), 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.15);
+    color: var(--miuix-color-primary);
+    border-color: rgba(var(--miuix-color-primary-rgb), 0.2);
 }
 
 .page-btn:active {
-    transform: scale(0.98);
+    transform: translateY(0) scale(0.96);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .page-btn.active {
-    background-color: rgba(var(--miuix-color-primary-rgb), 0.3);
-    transform: scale(1.05);
+    background-color: var(--miuix-color-primary);
+    color: var(--miuix-color-on-primary);
+    border-color: var(--miuix-color-primary);
+    box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.4);
     font-weight: 600;
-    box-shadow: 0 2px 6px rgba(var(--miuix-color-primary-rgb), 0.25);
+    transform: scale(1.05);
+}
+
+.page-btn.prev-btn,
+.page-btn.next-btn {
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 8px;
 }
 
 .page-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
+
 .page-ellipsis {
     padding: 6px 12px;
     color: var(--miuix-color-on-surface);
@@ -1617,19 +1652,19 @@ html.sidebar-collapsed .miuix-sidebar {
     body::before {
         background: rgba(var(--miuix-color-surface-rgb), 0.8);
     }
-    
+
     .miuix-topbar {
         background-color: rgba(var(--miuix-color-surface-rgb), 0.6);
         backdrop-filter: blur(20px) saturate(180%);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
         border-bottom: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.08);
     }
-    
+
     .miuix-sidebar {
         background-color: rgba(var(--miuix-color-surface-rgb), 0.65);
         border-right: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.06);
     }
-    
+
     .miuix-card {
         background-color: rgba(var(--miuix-color-surface-variant-rgb), 0.5);
         border: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.08);
@@ -1643,25 +1678,23 @@ html.sidebar-collapsed .miuix-sidebar {
     }
 
     .app-card-header {
-        background: linear-gradient(
-            135deg,
-            rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.9),
-            rgba(var(--miuix-color-surface-rgb), 0.7)
-        );
+        background: linear-gradient(135deg,
+                rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.9),
+                rgba(var(--miuix-color-surface-rgb), 0.7));
         border-bottom-color: rgba(var(--miuix-color-on-surface-rgb), 0.12);
     }
 
     .app-meta span {
         background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.8);
     }
-    
+
     .miuix-search {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.08);
         backdrop-filter: blur(12px) saturate(150%);
         -webkit-backdrop-filter: blur(12px) saturate(150%);
         border: 1px solid rgba(var(--miuix-color-on-surface-rgb), 0.1);
     }
-    
+
     .miuix-search:focus-within {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.12);
         border-color: rgba(var(--miuix-color-on-surface-rgb), 0.2);
@@ -1685,61 +1718,59 @@ html.sidebar-collapsed .miuix-sidebar {
     .miuix-topbar-button:hover {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.15);
     }
-    
+
     .miuix-icon-button:hover {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.15);
     }
-    
+
     /* 深色模式下应用详情卡片整体加深，保证可读性 */
     .app-detail-container {
         background-color: rgba(var(--miuix-color-surface-rgb), 0.96);
         border-color: rgba(var(--miuix-color-on-surface-rgb), 0.16);
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.75);
     }
-    
+
     .app-detail-header {
-        background: linear-gradient(
-            135deg,
-            rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.95),
-            rgba(var(--miuix-color-surface-rgb), 0.9)
-        );
+        background: linear-gradient(135deg,
+                rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.95),
+                rgba(var(--miuix-color-surface-rgb), 0.9));
         border-color: rgba(var(--miuix-color-on-surface-rgb), 0.16);
     }
-    
+
     .app-detail-description {
         background-color: rgba(var(--miuix-color-surface-rgb), 0.95);
     }
-    
+
     .app-detail-actions {
         background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.95);
         border-color: rgba(var(--miuix-color-on-surface-rgb), 0.16);
     }
-    
+
     .app-screenshots {
         background-color: rgba(var(--miuix-color-surface-rgb), 0.9);
     }
-    
+
     .app-last-update {
         background-color: rgba(var(--miuix-color-surface-variant-rgb, 30, 30, 30), 0.9);
     }
-    
+
     .back-btn {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.1);
         border-color: rgba(var(--miuix-color-on-surface-rgb), 0.1);
     }
-    
+
     .back-btn:hover {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.15);
     }
-    
+
     .repo-btn {
         background-color: rgba(var(--miuix-color-on-surface-rgb), 0.1);
     }
 
     .footer-disclaimer {
-        background: linear-gradient(135deg, 
-            rgba(var(--miuix-color-on-surface-rgb), 0.04) 0%,
-            rgba(var(--miuix-color-on-surface-rgb), 0.02) 100%);
+        background: linear-gradient(135deg,
+                rgba(var(--miuix-color-on-surface-rgb), 0.04) 0%,
+                rgba(var(--miuix-color-on-surface-rgb), 0.02) 100%);
         border-color: rgba(var(--miuix-color-on-surface-rgb), 0.06);
     }
 

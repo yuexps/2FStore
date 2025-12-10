@@ -21,7 +21,8 @@ CATEGORY_KEYWORDS = {
     'network': [
         '网络', 'net', 'browser', '浏览器', 'vpn', '代理', 'proxy',
         '连接', 'connect', 'wifi', 'v2ray', 'clash', 'trojan',
-        'shadowsocks', 'wireguard', 'frp', 'ddns', 'dns'
+        'shadowsocks', 'wireguard', 'frp', 'ddns', 'dns',
+        '网盘', 'drive', 'cloud', '云', 'nas', 'webdav', 'alist', 'cloudreve'  # Storage merged here
     ],
     'development': [
         '开发', 'dev', 'code', '编程', 'program', 'ide', 'editor',
@@ -31,7 +32,10 @@ CATEGORY_KEYWORDS = {
     'system': [
         '系统', 'system', '设置', 'setting', '优化', 'optimize',
         '管理', 'manager', '监控', 'monitor', 'terminal', '终端',
-        'shell', 'ssh', 'admin', '管理员', 'backup', '备份'
+        'shell', 'ssh', 'admin', '管理员', 'backup', '备份',
+        '安全', 'security', '密码', 'password', '加密', 'encrypt',  # Security merged here
+        'vault', 'auth', '认证', 'firewall', '防火墙', 'antivirus',
+        '存储', 'storage', 'file', '文件'  # Local storage merged here
     ],
     'productivity': [
         '办公', 'office', '文档', 'document', '效率', 'productivity',
@@ -42,17 +46,11 @@ CATEGORY_KEYWORDS = {
         '工具', 'utility', '计算器', 'calculator', '转换', 'convert',
         '下载', 'download', '搜索', 'search', '助手', 'helper',
         'tool', 'toolkit', '同步', 'sync', 'transfer', '传输'
-    ],
-    'security': [
-        '安全', 'security', '密码', 'password', '加密', 'encrypt',
-        'vault', 'auth', '认证', 'firewall', '防火墙', 'antivirus'
-    ],
-    'storage': [
-        '存储', 'storage', '网盘', 'drive', 'cloud', '云',
-        'file', '文件', 'nas', 'webdav', 'alist', 'cloudreve'
     ]
 }
 
+
+import re
 
 def auto_classify_app(name, description=''):
     """
@@ -68,8 +66,9 @@ def auto_classify_app(name, description=''):
     if not name:
         return 'uncategorized'
     
-    # 组合名称和描述用于分析
-    text = f"{name} {description or ''}".lower()
+    # 预处理文本
+    name_lower = name.lower()
+    desc_lower = (description or '').lower()
     
     # 计算每个分类的匹配分数
     best_category = 'uncategorized'
@@ -78,13 +77,33 @@ def auto_classify_app(name, description=''):
     for category, keywords in CATEGORY_KEYWORDS.items():
         score = 0
         for keyword in keywords:
-            if keyword in text:
-                score += 1
+            # 判断关键词是否为纯英文（用于区分匹配模式）
+            is_english = all(ord(c) < 128 for c in keyword)
+            
+            # 定义匹配加分函数
+            def check_match(text, weight):
+                if not text: return 0
+                count = 0
+                if is_english:
+                    # 英文使用正则全词匹配，避免 "net" 匹配 "planet"
+                    # \b 是单词边界
+                    if re.search(r'\b' + re.escape(keyword) + r'\b', text):
+                        count += weight
+                else:
+                    # 中文使用子串匹配
+                    if keyword in text:
+                        count += weight
+                return count
+
+            # 标题权重 x3
+            score += check_match(name_lower, 3)
+            # 描述权重 x1
+            score += check_match(desc_lower, 1)
         
         if score > highest_score:
             highest_score = score
             best_category = category
-    
+            
     return best_category if highest_score > 0 else 'uncategorized'
 
 
@@ -116,8 +135,6 @@ def get_category_display_name(category):
         'system': '系统',
         'productivity': '效率',
         'utility': '工具',
-        'security': '安全',
-        'storage': '存储',
         'uncategorized': '未分类'
     }
     return display_names.get(category, category)

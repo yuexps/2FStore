@@ -164,7 +164,8 @@ def fetch_app_info(repo_url, github_token=None):
         'stars': repo_info.get('stargazers_count', 0),
         'forks': repo_info.get('forks_count', 0),
         'category': manifest_data.get('category', 'uncategorized'),
-        'lastUpdate': repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z')
+        # 优先使用最新 Release 的发布时间，如果没有 Release 则使用仓库更新时间
+        'lastUpdate': (releases[0].get('published_at') or releases[0].get('created_at')) if releases else repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z')
     }
     
     # 从 README 补充版本号
