@@ -13,7 +13,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T05:32:33Z"
+      "lastUpdate": "2025-12-01T05:30:25Z"
     },
     {
       "id": "reader",
@@ -28,7 +28,7 @@
       "stars": 1,
       "forks": 0,
       "category": "system",
-      "lastUpdate": "2025-12-01T11:59:30Z"
+      "lastUpdate": "2025-12-01T11:54:27Z"
     },
     {
       "id": "read",
@@ -43,7 +43,7 @@
       "stars": 1,
       "forks": 0,
       "category": "network",
-      "lastUpdate": "2025-12-01T15:52:23Z"
+      "lastUpdate": "2025-12-03T08:29:12Z"
     },
     {
       "id": "moviepilot",
@@ -58,7 +58,7 @@
       "stars": 0,
       "forks": 0,
       "category": "network",
-      "lastUpdate": "2025-12-03T08:32:12Z"
+      "lastUpdate": "2025-12-03T09:40:32Z"
     },
     {
       "id": "lunatv-enhanced",
@@ -73,7 +73,7 @@
       "stars": 2,
       "forks": 1,
       "category": "media",
-      "lastUpdate": "2025-12-04T08:44:54Z"
+      "lastUpdate": "2025-12-04T08:40:42Z"
     },
     {
       "id": "iventoy",
@@ -88,7 +88,7 @@
       "stars": 0,
       "forks": 0,
       "category": "system",
-      "lastUpdate": "2025-12-04T13:25:51Z"
+      "lastUpdate": "2025-12-04T13:12:22Z"
     },
     {
       "id": "omnibox",
@@ -103,11 +103,11 @@
       "stars": 0,
       "forks": 0,
       "category": "network",
-      "lastUpdate": "2025-12-05T07:22:25Z"
+      "lastUpdate": "2025-12-05T07:16:15Z"
     },
     {
       "id": "2fmusic",
-      "name": "2FMusic - 测试版",
+      "name": "2FMusic-Test",
       "repository": "https://github.com/yuexps/2FMusic",
       "description": "<p><b>2FMusic</b> —— 一款简洁高效的本地音乐播放器，专为FNOS而设计。</p>\n<li>🧪 <b style='color:#d32f2f;'>测试版</b>-功能暂不稳定，仅供测试！</li>\n<ul>\n    <li>⚡ 界面简洁，操作高效</li>\n    <li>🎵 自动获取歌词与专辑封面</li>\n    <li>🗂️ 集成文件管理器右键导入与播放</li>\n</ul>",
       "version": "0.0.6",
@@ -118,8 +118,8 @@
       "stars": 4,
       "forks": 0,
       "category": "media",
-      "lastUpdate": "2025-12-10T14:57:32Z"
+      "lastUpdate": "2025-12-10T14:56:24Z"
     }
   ],
-  "lastUpdated": "2025-12-10T15:07:25.784583Z"
+  "lastUpdated": "2025-12-10T15:28:09.450222Z"
 }
