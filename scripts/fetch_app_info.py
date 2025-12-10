@@ -105,11 +105,6 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
     if not repo_info:
         raise ValueError('无法获取仓库信息')
     
-    # 1. 获取仓库基础信息 (轻量请求)
-    repo_info = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}', github_token)
-    if not repo_info:
-        raise ValueError('无法获取仓库信息')
-    
     # 2. 获取 manifest 文件的提交信息 (用于判断是否需要更新)
     manifest_commits = fetch_github_api(
         f'https://api.github.com/repos/{owner}/{repo}/commits?path=manifest&per_page=1',
@@ -183,8 +178,6 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
         github_token
     ) or []
     
-    display_last_update = (releases[0].get('published_at') or releases[0].get('created_at')) if releases else repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z')
-
     app_info = {
         'description': manifest_data.get('desc') or repo_info.get('description', '') or '暂无描述',
         'version': manifest_data.get('version') or (releases[0].get('tag_name') if releases else None) or '1.0.0',
@@ -195,7 +188,7 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
         'stars': repo_info.get('stargazers_count', 0),
         'forks': repo_info.get('forks_count', 0),
         'category': manifest_data.get('category', 'uncategorized'),
-        'lastUpdate': display_last_update
+        'lastUpdate': current_last_update
     }
     
     # 从 README 补充版本号
