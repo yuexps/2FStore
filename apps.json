@@ -34,6 +34,11 @@
       "id": "omnibox",
       "name": "OmniBox",
       "repository": "https://github.com/UCKETX/omnibox"
+    },
+    {
+      "id": "2fmusic",
+      "name": "2FMusic - 测试版",
+      "repository": "https://github.com/yuexps/2FMusic"
     }
   ]
 }
