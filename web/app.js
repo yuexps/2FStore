@@ -482,11 +482,40 @@ function filterApps() {
 
     const searchTerm = searchInput.value.trim().toLowerCase();
     if (searchTerm) {
-        filteredApps = filteredApps.filter(app =>
-            app.name.toLowerCase().includes(searchTerm) ||
-            app.description.toLowerCase().includes(searchTerm) ||
-            app.author.toLowerCase().includes(searchTerm)
-        );
+        // 模糊搜索算法：检查 query 中的字符是否按顺序出现在 text 中
+        const fuzzyMatch = (text, query) => {
+            let i = 0, j = 0;
+            while (i < text.length && j < query.length) {
+                if (text[i] === query[j]) {
+                    j++;
+                }
+                i++;
+            }
+            return j === query.length;
+        };
+
+        filteredApps = filteredApps.filter(app => {
+            const name = app.name.toLowerCase();
+            const desc = (app.description || '').toLowerCase();
+            const author = (app.author || '').toLowerCase();
+
+            // 优先检查精确包含 (性能好)
+            if (name.includes(searchTerm) ||
+                desc.includes(searchTerm) ||
+                author.includes(searchTerm)) {
+                return true;
+            }
+
+            // 其次使用模糊匹配 (只针对英文应用名/作者名，因为中文模糊匹配无意义且慢)
+            // 仅当搜索词不含空格时启用（防止复杂语句误判）
+            if (!searchTerm.includes(' ')) {
+                if (fuzzyMatch(name, searchTerm) || fuzzyMatch(author, searchTerm)) {
+                    return true;
+                }
+            }
+
+            return false;
+        });
     }
 
     sortApps();

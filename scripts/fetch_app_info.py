@@ -83,26 +83,58 @@ def parse_manifest(content):
     return manifest_data
 
 
-def fetch_app_info(repo_url, github_token=None):
+
+def fetch_app_info(repo_url, github_token=None, existing_app=None):
     """
-    从 GitHub 获取应用信息
+    从 GitHub 获取应用信息 (支持增量更新)
     
     参数:
     - repo_url: GitHub 仓库 URL
-    - github_token: GitHub API token（可选）
+    - github_token: GitHub API token
+    - existing_app: 已存在的应用信息（用于对比更新时间）
     
     返回:
-    - dict: 应用信息字典
+    - dict: 应用信息字典 (如果无需更新且提供了 existing_app，可能返回 existing_app)
     """
     owner, repo = parse_github_url(repo_url)
     if not owner or not repo:
         raise ValueError('无效的 GitHub 仓库 URL')
     
-    # 获取仓库信息
+    # 1. 获取仓库基础信息 (轻量请求)
     repo_info = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}', github_token)
     if not repo_info:
         raise ValueError('无法获取仓库信息')
     
+    # 1. 获取仓库基础信息 (轻量请求)
+    repo_info = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}', github_token)
+    if not repo_info:
+        raise ValueError('无法获取仓库信息')
+    
+    # 2. 获取 manifest 文件的提交信息 (用于判断是否需要更新)
+    manifest_commits = fetch_github_api(
+        f'https://api.github.com/repos/{owner}/{repo}/commits?path=manifest&per_page=1',
+        github_token
+    )
+    
+    current_last_update = repo_info.get('updated_at')
+    if manifest_commits and isinstance(manifest_commits, list) and len(manifest_commits) > 0:
+        current_last_update = manifest_commits[0].get('commit', {}).get('committer', {}).get('date')
+
+    # 3. 增量更新检查
+    if existing_app:
+        cached_last_update = existing_app.get('lastUpdate')
+        
+        # 如果时间戳一致，且数据完整
+        if cached_last_update == current_last_update:
+             if existing_app.get('version') and existing_app.get('description'):
+                print(f"应用 {repo} Manifest 无变更 (Last update: {current_last_update})，更新动态数据")
+                # 仅更新 Star 和 Fork
+                existing_app['stars'] = repo_info.get('stargazers_count', 0)
+                existing_app['forks'] = repo_info.get('forks_count', 0)
+                # 依然返回现有对象
+                return existing_app
+
+    # 4. 详细抓取 (Manifest, README, Icon, Releases) - 只有检测到变更才执行
     # 获取 manifest 文件
     manifest_data = {}
     try:
@@ -127,14 +159,6 @@ def fetch_app_info(repo_url, github_token=None):
             readme_content = base64.b64decode(readme_res['content']).decode('utf-8')
     except Exception as e:
         print(f"获取 README 失败: {str(e)}")
-    
-    # 获取 Release 信息
-    releases = fetch_github_api(
-        f'https://api.github.com/repos/{owner}/{repo}/releases',
-        github_token
-    ) or []
-    
-    # 获取 ICON 文件（支持多种大小写变体，静默模式不打印 404 错误）
     icon_url = ''
     icon_variants = [
         'ICON_256.PNG', 'ICON_256.png', 'icon_256.png',
@@ -146,14 +170,15 @@ def fetch_app_info(repo_url, github_token=None):
             f'https://api.github.com/repos/{owner}/{repo}/contents/{icon_name}',
             github_token,
             max_retries=1,
-            silent=True  # 静默模式，不打印 404 错误
+            silent=True
         )
         if icon_res:
             icon_url = f'https://raw.githubusercontent.com/{owner}/{repo}/{default_branch}/{icon_name}'
             print(f"找到图标: {icon_url}")
             break
     
-    # 构建应用信息
+    display_last_update = (releases[0].get('published_at') or releases[0].get('created_at')) if releases else repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z')
+
     app_info = {
         'description': manifest_data.get('desc') or repo_info.get('description', '') or '暂无描述',
         'version': manifest_data.get('version') or (releases[0].get('tag_name') if releases else None) or '1.0.0',
@@ -164,8 +189,7 @@ def fetch_app_info(repo_url, github_token=None):
         'stars': repo_info.get('stargazers_count', 0),
         'forks': repo_info.get('forks_count', 0),
         'category': manifest_data.get('category', 'uncategorized'),
-        # 优先使用最新 Release 的发布时间，如果没有 Release 则使用仓库更新时间
-        'lastUpdate': (releases[0].get('published_at') or releases[0].get('created_at')) if releases else repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z')
+        'lastUpdate': display_last_update
     }
     
     # 从 README 补充版本号
@@ -202,30 +226,57 @@ def fetch_app_info(repo_url, github_token=None):
     return app_info
 
 
+def fetch_and_process_app(app_data, store, github_token):
+    """
+    处理单个应用的获取和更新（供并发调用）
+    
+    返回:
+    - dict: 更新后的应用详情，失败返回 None
+    """
+    app_id = app_data.get('id')
+    app_name = app_data.get('name')
+    repo_url = app_data.get('repository')
+    
+    if not app_id or not repo_url:
+        return None
+        
+    try:
+        existing_app = store.find_app(app_id)
+        
+        # 传入 existing_app 触发增量检查
+        app_info = fetch_app_info(repo_url, github_token, existing_app)
+        
+        app_detail = {
+            'id': app_id,
+            'name': app_name,
+            'repository': repo_url,
+            **app_info
+        }
+        return app_detail
+    except Exception as e:
+        print(f"处理应用 {app_name} ({app_id}) 失败: {str(e)}")
+        return None
+
+
 def update_apps(app_id=None, app_name=None, repo_url=None, active_app_ids=None, github_token=None):
     """
-    更新应用列表或清理已删除的应用
-    
-    参数:
-    - app_id, app_name, repo_url: 单个应用的信息（用于更新单个应用）
-    - active_app_ids: 当前活跃的应用ID集合（用于清理已删除的应用）
-    - github_token: GitHub API token（可选，不提供则从环境变量获取）
+    更新应用列表 (保留用于单应用更新的入口)
     """
-    # 如果没有提供 token，尝试从环境变量获取
     if not github_token:
         github_token = os.environ.get('GITHUB_TOKEN') or os.environ.get('PERSONAL_TOKEN')
     
     store = AppDetailsStore()
     
-    # 清理已删除的应用
     if active_app_ids is not None:
         store.sync_with_apps_list(active_app_ids)
     
-    # 更新单个应用
     if app_id and app_name and repo_url:
         print(f"开始获取应用 {app_id} 的详细信息...")
         try:
-            app_info = fetch_app_info(repo_url, github_token)
+            # 单应用更新也复用 fetch_app_info
+            existing_app = store.find_app(app_id)
+            app_info = fetch_app_info(repo_url, github_token, existing_app)
+            
             app_detail = {
                 'id': app_id,
                 'name': app_name,

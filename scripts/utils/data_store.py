@@ -386,6 +386,7 @@ class AppDetailsStore:
             return self.save(data)
         return False
     
+    
     def sync_with_apps_list(self, active_app_ids):
         """
         与 apps.json 同步，移除不存在的应用
@@ -406,6 +407,35 @@ class AppDetailsStore:
             print(f"清理了 {removed_count} 个已删除应用的详细信息")
         
         return removed_count
+
+    def upsert_apps_batch(self, apps_list):
+        """
+        批量更新或插入应用详情
+        
+        参数:
+        - apps_list: 应用详情列表
+        
+        返回:
+        - int: 更新的应用数量
+        """
+        data = self.load()
+        existing_ids = {app.get('id'): i for i, app in enumerate(data['apps'])}
+        
+        count = 0
+        for app_detail in apps_list:
+            app_id = app_detail.get('id')
+            if not app_id:
+                continue
+            
+            if app_id in existing_ids:
+                data['apps'][existing_ids[app_id]] = app_detail
+            else:
+                data['apps'].append(app_detail)
+                existing_ids[app_id] = len(data['apps']) - 1
+            count += 1
+        
+        self.save(data)
+        return count
 
 
 class FnpackDetailsStore:

@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from utils import fetch_github_api, auto_classify_app, validate_app_key, parse_github_url
 
 
-def fetch_fnpack_info(repo_url, app_name_in_fnpack=None, github_token=None):
+def fetch_fnpack_info(repo_url, app_name_in_fnpack=None, github_token=None, existing_apps=None):
     """
     从GitHub仓库读取fnpack.json文件并提取应用信息
     严格按照fnpack.json规范解析数据
@@ -28,6 +28,7 @@ def fetch_fnpack_info(repo_url, app_name_in_fnpack=None, github_token=None):
     - repo_url: GitHub仓库URL
     - app_name_in_fnpack: fnpack.json中应用的键名，如果不提供则返回所有应用
     - github_token: GitHub API token，用于提高API调用限制
+    - existing_apps: 已存在的应用列表（用于增量更新检查），列表中的元素为已存储的应用详情字典
     
     返回:
     - 如果指定了app_name_in_fnpack: 返回单个应用信息字典
@@ -50,7 +51,58 @@ def fetch_fnpack_info(repo_url, app_name_in_fnpack=None, github_token=None):
         repo_info = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}', github_token)
         if not repo_info:
             raise ValueError('无法获取仓库信息')
+
+        # 增量更新检查：获取 fnpack.json 的最后提交时间
+        fnpack_commits = fetch_github_api(
+            f'https://api.github.com/repos/{owner}/{repo}/commits?path=fnpack.json&per_page=1',
+            github_token
+        )
         
+        current_last_update = repo_info.get('updated_at')
+        if fnpack_commits and isinstance(fnpack_commits, list) and len(fnpack_commits) > 0:
+            current_last_update = fnpack_commits[0].get('commit', {}).get('committer', {}).get('date')
+
+        # 检查是否可以跳过更新
+        # 只要现有的应用中有一个记录的 lastUpdate 与 fnpack.json 的 commit 时间一致，就可以认为没变
+        if existing_apps:
+            # 找到任意一个来自此仓库的有效应用
+            sample_app = None
+            for app in existing_apps:
+                # 简单验证一下 app 是否属于当前仓库 (通过 id 或 url)
+                if app.get('repository', '').lower() == repo_url.lower():
+                    sample_app = app
+                    break
+            
+            if sample_app:
+                cached_last_update = sample_app.get('lastUpdate')
+                if cached_last_update == current_last_update:
+                    print(f"Fnpack仓库 {repo} 无变更 (Last update: {current_last_update})，更新动态数据")
+                    
+                    # 构建返回结果，直接复用 existing_apps，但更新 Stars/Forks
+                    result_apps = {}
+                    
+                    # 重新映射 existing_apps 为 {app_key: app_info} 格式
+                    relevant_apps = [a for a in existing_apps if a.get('repository', '').lower() == repo_url.lower()]
+                    
+                    for app in relevant_apps:
+                        app_key = app.get('fnpack_app_key')
+                        if not app_key:
+                             continue # 跳过没有 key 的旧数据
+                        
+                        # 更新动态数据
+                        app['stars'] = repo_info.get('stargazers_count', 0)
+                        app['forks'] = repo_info.get('forks_count', 0)
+                        
+                        # 如果指定了只获取特定应用
+                        if app_name_in_fnpack and app_key != app_name_in_fnpack:
+                            continue
+
+                        result_apps[app_key] = app
+                    
+                    if app_name_in_fnpack:
+                        return result_apps.get(app_name_in_fnpack)
+                    return result_apps
+
         # 获取fnpack.json文件内容
         fnpack_content = ''
         fnpack_data = {}
@@ -67,6 +119,9 @@ def fetch_fnpack_info(repo_url, app_name_in_fnpack=None, github_token=None):
             print(f"获取或解析fnpack.json失败: {str(e)}")
             return None
         
+        # 传递 current_last_update 给 _process_single_app 以便使用统一的 commit 时间
+        repo_info['fnpack_commit_date'] = current_last_update
+
         # 如果指定了应用键名，只返回单个应用
         if app_name_in_fnpack:
             if app_name_in_fnpack not in fnpack_data:
@@ -199,7 +254,7 @@ def _process_single_app(app_config, app_key, owner, repo, repo_info, github_toke
             'stars': repo_info.get('stargazers_count', 0),
             'forks': repo_info.get('forks_count', 0),
             'category': category,
-            'lastUpdate': repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z'),
+            'lastUpdate': repo_info.get('fnpack_commit_date') or repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z'),
             # 额外存储规范要求的字段
             'app_key': app_key,
             'install_type': app_config.get('install_type', ''),

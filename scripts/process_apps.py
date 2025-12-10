@@ -13,31 +13,24 @@ import argparse
 # 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-from utils import AppsStore
-from fetch_app_info import fetch_app_info, update_apps
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from utils import AppsStore, AppDetailsStore
+from fetch_app_info import fetch_app_info, update_apps, fetch_and_process_app
 
 
 def add_app(app_id, app_name, repo_url):
-    """
-    添加新应用到列表
-    """
+    """添加新应用到列表"""
     store = AppsStore()
-    
     if store.find_app(app_id):
         print(f"应用 {app_id} 已存在于列表中")
         return False
-    
     store.add_or_update_app(app_id, app_name, repo_url)
     print(f"成功添加应用: {app_name} ({app_id})")
     return True
 
-
 def remove_app(app_id):
-    """
-    从列表中移除应用
-    """
+    """从列表中移除应用"""
     store = AppsStore()
-    
     if store.remove_app(app_id):
         print(f"成功移除应用: {app_id}")
         return True
@@ -45,31 +38,22 @@ def remove_app(app_id):
         print(f"未找到应用: {app_id}")
         return False
 
-
 def list_apps():
-    """
-    列出所有应用
-    """
+    """列出所有应用"""
     store = AppsStore()
     apps = store.get_all_apps()
-    
     if not apps:
         print("应用列表为空")
         return
-    
     print("应用列表:")
     for i, app in enumerate(apps, 1):
         print(f"{i}. {app['name']} ({app['id']}) - {app['repository']}")
 
-
 def preview_app(repo_url):
-    """
-    预览从仓库获取的应用信息
-    """
+    """预览从仓库获取的应用信息"""
     try:
         print(f"正在从 {repo_url} 获取应用信息...")
         app_info = fetch_app_info(repo_url)
-        
         print("\n获取到的应用信息:")
         print("-" * 40)
         for key, value in app_info.items():
@@ -78,50 +62,62 @@ def preview_app(repo_url):
             else:
                 print(f"{key}: {value}")
         print("-" * 40)
-        
         return app_info
     except Exception as e:
         print(f"获取应用信息时出错: {str(e)}")
         return None
 
-
 def batch_update_apps():
     """
-    批量更新所有应用信息
+    批量更新所有应用信息（并发版）
     """
     apps_store = AppsStore()
+    app_details_store = AppDetailsStore()
     apps = apps_store.get_apps()
     
     if not apps:
         print("应用列表为空")
         return
     
-    # 获取当前活跃的应用ID集合
+    # 获取 GitHub Token
+    github_token = os.environ.get('GITHUB_TOKEN') or os.environ.get('PERSONAL_TOKEN')
+    
+    # 获取当前活跃的应用ID集合并清理已删除应用
     active_app_ids = apps_store.get_app_ids()
+    app_details_store.sync_with_apps_list(active_app_ids)
     
-    # 首先清理已删除的应用
-    update_apps(active_app_ids=active_app_ids)
+    print(f"开始批量更新 {len(apps)} 个应用...")
     
-    # 遍历并更新每个应用
+    updated_apps = []
     success_count = 0
     fail_count = 0
     
-    for app in apps:
-        app_id = app.get('id')
-        app_name = app.get('name')
-        repo_url = app.get('repository')
+    # 使用线程池并发抓取
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        future_to_app = {
+            executor.submit(fetch_and_process_app, app, app_details_store, github_token): app 
+            for app in apps
+        }
         
-        if not app_id or not app_name or not repo_url:
-            print(f"跳过无效的应用条目: {app}")
-            continue
-        
-        try:
-            print(f"\n正在处理应用: {app_name} ({app_id})")
-            update_apps(app_id, app_name, repo_url)
-            success_count += 1
-        except Exception as e:
-            print(f"处理应用 {app_name} 时出错: {str(e)}")
-            fail_count += 1
+        for future in as_completed(future_to_app):
+            app = future_to_app[future]
+            app_name = app.get('name')
+            try:
+                result = future.result()
+                if result:
+                    updated_apps.append(result)
+                    success_count += 1
+                else:
+                    print(f"应用 {app_name} 更新失败或无需更新")
+
+            except Exception as e:
+                print(f"应用 {app_name} 处理异常: {str(e)}")
+                fail_count += 1
+                
+    # 批量保存结果
+    if updated_apps:
+        print(f"正在保存 {len(updated_apps)} 个应用的数据...")
+        app_details_store.upsert_apps_batch(updated_apps)
     
     print(f"\n批量更新完成: 成功 {success_count} 个，失败 {fail_count} 个")
 

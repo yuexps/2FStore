@@ -153,81 +153,149 @@ def update_fnpack_app(app_id=None, repo_url=None, app_key=None, github_token=Non
         return False
 
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+def process_repo_for_batch(fnpack, existing_apps_map, github_token):
+    """
+    处理单个仓库的更新（供并发调用）
+    返回: list of app_details
+    """
+    repo_key = fnpack.get('key')
+    repo_url = fnpack.get('repo')
+    
+    try:
+        # 获取此仓库的现有应用数据，用于增量检查
+        repo_existing_apps = existing_apps_map.get(repo_url, [])
+        
+        # 获取应用信息 (支持增量)
+        app_info_map = fetch_fnpack_info(repo_url, None, github_token, repo_existing_apps)
+        
+        if not app_info_map:
+            return []
+            
+        processed_apps = []
+        
+        # 统一处理返回结果（可能是单个字典或字典的字典）
+        # fetch_fnpack_info 如果没指定 app_key，返回的是 {app_key: info}
+        # 如果返回的是跳过的结果 (复用了 existing_apps 且更新了 star/fork)，结构是一样的
+        
+        if isinstance(app_info_map, dict):
+             for app_key, single_app_info in app_info_map.items():
+                display_name = single_app_info.get('name', app_key)
+                
+                # 构建应用唯一ID: repo_key + '_' + app_key
+                final_app_id = f"{repo_key}_{app_key}"
+                
+                new_app_detail = {
+                    'id': final_app_id,
+                    'name': display_name,
+                    'repository': repo_url,
+                    'description': single_app_info.get('description', ''),
+                    'version': single_app_info.get('version', '1.0.0'),
+                    'iconUrl': single_app_info.get('iconUrl', ''),
+                    'downloadUrl': single_app_info.get('downloadUrl', ''),
+                    'screenshots': single_app_info.get('screenshots', []),
+                    'author': single_app_info.get('author', ''),
+                    'author_url': single_app_info.get('author_url', ''),
+                    'bug_report_url': single_app_info.get('bug_report_url', ''),
+                    'history': single_app_info.get('history', {}),
+                    'stars': single_app_info.get('stars', 0),
+                    'forks': single_app_info.get('forks', 0),
+                    'category': single_app_info.get('category', 'uncategorized'),
+                    'lastUpdate': single_app_info.get('lastUpdate', ''),
+                    'fnpack_app_key': app_key,
+                    'fnpack_repo_key': repo_key,
+                    'install_type': single_app_info.get('install_type', ''),
+                    'size': single_app_info.get('size', '')
+                }
+                processed_apps.append(new_app_detail)
+        
+        return processed_apps
+        
+    except Exception as e:
+        print(f"处理仓库 {repo_key} 失败: {str(e)}")
+        return []
+
 def batch_update_fnpack_apps(github_token=None):
     """
-    批量更新所有使用 fnpack.json 格式的应用
-    将应用信息存储到 data/fnpack_details.json
-    会自动清理已从 fnpacks.json 或仓库 fnpack.json 中移除的应用
+    批量更新所有使用 fnpack.json 格式的应用 (并发版)
     """
-    # 如果没有提供token，尝试从环境变量获取
     if not github_token:
         github_token = os.environ.get('GITHUB_TOKEN')
     
     try:
+        from utils.data_store import FnpacksStore, FnpackDetailsStore
+        
         store = FnpacksStore()
         fnpacks = store.get_fnpacks()
         
         if not fnpacks:
             print("fnpack仓库列表为空")
             return False
+            
+        details_store = FnpackDetailsStore()
+        # 加载所有现有应用，用于增量更新
+        all_existing_data = details_store.load()
+        existing_apps_list = all_existing_data.get('apps', [])
         
-        # 收集所有有效的应用ID
+        # 按仓库URL分组现有应用，以便传递给 worker
+        existing_apps_map = {}
+        for app in existing_apps_list:
+            repo_url = app.get('repository')
+            if repo_url:
+                if repo_url not in existing_apps_map:
+                    existing_apps_map[repo_url] = []
+                existing_apps_map[repo_url].append(app)
+
+        print(f"开始批量更新 {len(fnpacks)} 个fnpack仓库 (并发)...")
+        
+        all_new_apps = []
         valid_app_ids = set()
         repo_success_count = 0
         repo_fail_count = 0
-        total_app_success_count = 0
         
-        print(f"开始批量更新 {len(fnpacks)} 个fnpack仓库...")
-        
-        for fnpack in fnpacks:
-            repo_key = fnpack.get('key')
-            repo_url = fnpack.get('repo')
-            app_key = None
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            future_to_fnpack = {
+                executor.submit(process_repo_for_batch, fnpack, existing_apps_map, github_token): fnpack 
+                for fnpack in fnpacks
+            }
             
-            print(f"\n正在更新仓库: {repo_key} ({repo_url})")
-            print(f"从fnpack.json获取所有应用信息...")
-            
-            # 首先获取仓库中的应用数量
-            app_info = fetch_fnpack_info(repo_url, app_key, github_token)
-            if app_info and isinstance(app_info, dict) and 'name' not in app_info:
-                repo_app_count = len(app_info)
-                print(f"仓库中找到 {repo_app_count} 个应用")
-                # 收集有效的应用ID
-                for app_key_name in app_info.keys():
-                    valid_app_ids.add(f"{repo_key}_{app_key_name}")
-            elif app_info and isinstance(app_info, dict) and 'name' in app_info:
-                repo_app_count = 1
-                app_key_name = app_info.get('app_key', repo_key)
-                valid_app_ids.add(f"{repo_key}_{app_key_name}")
-            else:
-                repo_app_count = 0
-            
-            # 调用 fnpack 更新函数
-            success = update_apps_from_fnpack(
-                repo_key, 
-                repo_key,
-                repo_url,
-                app_key,
-                github_token
-            )
-            
-            if success:
-                repo_success_count += 1
-                total_app_success_count += repo_app_count
-                print(f"✓ 成功更新: {repo_key}")
-            else:
-                repo_fail_count += 1
-                print(f"✗ 更新失败: {repo_key}")
+            for future in as_completed(future_to_fnpack):
+                fnpack = future_to_fnpack[future]
+                repo_key = fnpack.get('key')
+                
+                try:
+                    repo_apps = future.result()
+                    if repo_apps:
+                        repo_success_count += 1
+                        all_new_apps.extend(repo_apps)
+                        for app in repo_apps:
+                            valid_app_ids.add(app['id'])
+                        print(f"✓ 成功更新: {repo_key} ({len(repo_apps)} 个应用)")
+                    else:
+                        # 可能是空仓库或失败
+                        # 如果没有返回数据，就不计入成功，但也不一定是严重错误
+                        print(f"⚠ 仓库 {repo_key} 未返回应用数据或更新失败")
+                        
+                except Exception as exc:
+                    repo_fail_count += 1
+                    print(f"✗ 更新仓库 {repo_key} 发生异常: {exc}")
+
+        # 批量保存
+        if all_new_apps:
+            print(f"正在保存 {len(all_new_apps)} 个应用的数据...")
+            details_store.upsert_apps_batch(all_new_apps)
         
         # 清理已删除的应用
         cleaned_count = _cleanup_deleted_fnpack_apps(valid_app_ids)
         
         print(f"\n批量更新完成!")
-        print(f"成功更新: {total_app_success_count} 个应用")
+        print(f"成功获取应用总数: {len(all_new_apps)}")
         if cleaned_count > 0:
             print(f"清理删除: {cleaned_count} 个应用")
-        print(f"  所有fnpack应用信息已存储到 data/fnpack_details.json")
+            
         return True
+        
     except Exception as e:
         print(f"批量更新过程中出现错误: {str(e)}")
         return False
