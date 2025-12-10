@@ -128,6 +128,8 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
                 existing_app['forks'] = repo_info.get('forks_count', 0)
                 # 依然返回现有对象
                 return existing_app
+        else:
+            print(f"应用 {repo} 需要更新: Cached={cached_last_update}, Current={current_last_update}")
 
     # 4. 详细抓取 (Manifest, README, Icon, Releases) - 只有检测到变更才执行
     # 获取 manifest 文件
