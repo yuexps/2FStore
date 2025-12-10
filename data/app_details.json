@@ -109,17 +109,17 @@
       "id": "2fmusic",
       "name": "2FMusic-Test",
       "repository": "https://github.com/yuexps/2FMusic",
-      "description": "<p><b>2FMusic</b> —— 一款简洁高效的本地音乐播放器，专为FNOS而设计。</p>\n<li>🧪 <b style='color:#d32f2f;'>测试版</b>-功能暂不稳定，仅供测试！</li>\n<ul>\n    <li>⚡ 界面简洁，操作高效</li>\n    <li>🎵 自动获取歌词与专辑封面</li>\n    <li>🗂️ 集成文件管理器右键导入与播放</li>\n</ul>",
+      "description": "<p><b>2FMusic</b>一款简洁高效的本地音乐播放器，专为FNOS而设计。</p>\n<li>🧪 <b style='color:#d32f2f;'>测试版</b>-功能暂不稳定，仅供测试！</li>\n<ul>\n    <li>⚡ 界面简洁，操作高效</li>\n    <li>🎵 自动获取歌词与专辑封面</li>\n    <li>🗂️ 集成文件管理器右键导入与播放</li>\n</ul>",
       "version": "0.0.6",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/2FMusic/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.6-pre/2fmusic-0.0.6-amd64.fpk",
+      "downloadUrl": "",
       "screenshots": [],
       "author": "yuexps",
       "stars": 4,
       "forks": 0,
       "category": "media",
-      "lastUpdate": "2025-12-10T14:56:24Z"
+      "lastUpdate": "2025-12-10T16:18:13Z"
     }
   ],
-  "lastUpdated": "2025-12-10T15:28:09.450222Z"
+  "lastUpdated": "2025-12-10T16:28:36.422643Z"
 }
