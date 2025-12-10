@@ -176,6 +176,12 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
             icon_url = f'https://raw.githubusercontent.com/{owner}/{repo}/{default_branch}/{icon_name}'
             print(f"找到图标: {icon_url}")
             break
+            
+    # 获取 Release 信息
+    releases = fetch_github_api(
+        f'https://api.github.com/repos/{owner}/{repo}/releases',
+        github_token
+    ) or []
     
     display_last_update = (releases[0].get('published_at') or releases[0].get('created_at')) if releases else repo_info.get('updated_at', datetime.utcnow().isoformat() + 'Z')
 
