@@ -383,7 +383,7 @@
       "history": {
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-10T14:48:11Z",
@@ -409,7 +409,7 @@
       "history": {
         "v7.2.2": "初始版本.可在线升级"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-10T14:48:11Z",
@@ -465,7 +465,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-10T14:48:11Z",
@@ -625,7 +625,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "lunatv",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -647,7 +647,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "reader",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -684,7 +684,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "read",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -711,7 +711,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "moviepilot",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -733,7 +733,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "lunatv-enhanced",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -757,7 +757,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "iventoy",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -781,7 +781,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "omnibox",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -794,7 +794,7 @@
       "description": "2FMusic一款简洁高效的本地音乐播放器，专为FNOS而设计。\n测试版-功能暂不稳定，仅供测试！",
       "version": "0.0.6",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/FnDepot/main/2fmusic/ICON.PNG",
-      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.6-pre/2fmusic-0.0.6-python.fpk",
+      "downloadUrl": "https://github.com/yuexps/FnDepot/releases/download/2FMusic/2fmusic.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/yuexps/FnDepot/main/2fmusic/Preview/屏幕截图 2025-12-07 194640.png",
         "https://raw.githubusercontent.com/yuexps/FnDepot/main/2fmusic/Preview/屏幕截图 2025-12-07 194700.png",
@@ -807,7 +807,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "2fmusic",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -829,7 +829,7 @@
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T15:34:35Z",
+      "lastUpdate": "2025-12-11T14:58:31Z",
       "fnpack_app_key": "netease",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -853,7 +853,7 @@
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-10T14:48:11Z",
@@ -863,5 +863,5 @@
       "size": "0.13"
     }
   ],
-  "lastUpdated": "2025-12-10T16:28:42.113142Z"
+  "lastUpdated": "2025-12-11T16:32:10.365473Z"
 }
