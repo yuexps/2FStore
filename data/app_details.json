@@ -25,7 +25,7 @@
       "downloadUrl": "https://github.com/yuexps/reader-fnos/releases/download/3.2.14/reader.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "category": "system",
       "lastUpdate": "2025-12-01T11:54:27Z"
@@ -115,11 +115,11 @@
       "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.7-f320cb8-pre/2fmusic-0.0.7-f320cb8-amd64.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 25,
+      "stars": 27,
       "forks": 4,
       "category": "media",
       "lastUpdate": "2025-12-14T13:12:38Z"
     }
   ],
-  "lastUpdated": "2025-12-14T16:24:25.994285Z"
+  "lastUpdated": "2025-12-15T16:32:00.139925Z"
 }
