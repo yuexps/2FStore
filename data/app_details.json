@@ -26,7 +26,7 @@
       "screenshots": [],
       "author": "yuexps",
       "stars": 2,
-      "forks": 0,
+      "forks": 1,
       "category": "system",
       "lastUpdate": "2025-12-01T11:54:27Z"
     },
@@ -115,11 +115,11 @@
       "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.7-f320cb8-pre/2fmusic-0.0.7-f320cb8-amd64.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 28,
+      "stars": 29,
       "forks": 5,
       "category": "media",
       "lastUpdate": "2025-12-14T13:12:38Z"
     }
   ],
-  "lastUpdated": "2025-12-16T16:29:58.976199Z"
+  "lastUpdated": "2025-12-17T16:29:34.823524Z"
 }
