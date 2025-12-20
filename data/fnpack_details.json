@@ -69,7 +69,7 @@
         "v0.83": "☑️ 适配飞牛1.1.0内测版,每个图标/文件夹独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
         "v0.80": "✅ 外链分享自定义(PC和移动Web端Logo标题描述链接等),优化一键还原,还原后不需要重启,优化窗口最大化/调整默认排序"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-18T22:06:14Z",
@@ -97,7 +97,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2025-12-18T22:06:14Z",
@@ -255,7 +255,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2025-12-18T22:06:14Z",
@@ -389,7 +389,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T14:48:11Z",
+      "lastUpdate": "2025-12-20T05:13:16Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -415,7 +415,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T14:48:11Z",
+      "lastUpdate": "2025-12-20T05:13:16Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -441,7 +441,7 @@
         "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2025-12-18T22:06:14Z",
@@ -471,7 +471,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T14:48:11Z",
+      "lastUpdate": "2025-12-20T05:13:16Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -850,7 +850,7 @@
       "name": "咪咕TV",
       "repository": "https://github.com/hbestm/FnDepot",
       "description": "咪咕的官方电视直播源,可配合OmniBox，LunaTV实现在线播放。",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/mgvideo/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/mgvideo/mgvideo.fpk",
       "screenshots": [
@@ -860,17 +860,18 @@
       "author_url": "https://qm.qq.com/q/4MKTzfs9os",
       "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
       "history": {
+        "v1.0.3": "1.同步最新源码。2.增加画质，7: 原画，9: 4K，ps:蓝光及以上需要登录且有VIP。3.去掉安装时端口选择 4.因增加新可选参数，建议先删除后安装，注意保留ID及Token。",
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-10T14:48:11Z",
+      "lastUpdate": "2025-12-20T05:13:16Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
-      "size": "0.13"
+      "size": "0.136"
     },
     {
       "id": "yuexps_2fmusic-preview",
@@ -898,5 +899,5 @@
       "size": "1.02"
     }
   ],
-  "lastUpdated": "2025-12-19T16:27:11.022468Z"
+  "lastUpdated": "2025-12-20T16:24:27.252863Z"
 }
