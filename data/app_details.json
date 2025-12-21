@@ -13,7 +13,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-01T05:30:25Z"
+      "lastUpdate": "2025-12-01T05:32:33Z"
     },
     {
       "id": "reader",
@@ -28,7 +28,7 @@
       "stars": 2,
       "forks": 1,
       "category": "system",
-      "lastUpdate": "2025-12-01T11:54:27Z"
+      "lastUpdate": "2025-12-01T11:59:30Z"
     },
     {
       "id": "read",
@@ -73,7 +73,7 @@
       "stars": 2,
       "forks": 1,
       "category": "media",
-      "lastUpdate": "2025-12-04T08:40:42Z"
+      "lastUpdate": "2025-12-04T08:44:54Z"
     },
     {
       "id": "iventoy",
@@ -88,7 +88,7 @@
       "stars": 0,
       "forks": 0,
       "category": "system",
-      "lastUpdate": "2025-12-04T13:12:22Z"
+      "lastUpdate": "2025-12-04T13:25:51Z"
     },
     {
       "id": "omnibox",
@@ -103,7 +103,7 @@
       "stars": 0,
       "forks": 0,
       "category": "network",
-      "lastUpdate": "2025-12-05T07:16:15Z"
+      "lastUpdate": "2025-12-05T07:22:25Z"
     },
     {
       "id": "2fmusic",
@@ -112,14 +112,14 @@
       "description": "<p><b>2FMusic</b> 简洁高效的本地音乐播放器，专为 FNOS 而设计。</p>\n<li>🧪 <b style='color:#d32f2f;'>测试版</b> - 功能暂不稳定，仅供测试！</li>\n<ul>\n    <li>🎵 <b>本地音乐库</b>：自动扫描，支持识别 ID3 内嵌元数据。</li>\n    <li>🖥️ <b>Web 播放器</b>：移动端适配，支持网络自动获取歌词、封面。</li>\n    <li>🗂️ <b>目录管理</b>：支持将服务器任意文件夹添加到音乐库。</li>\n    <li>☁️ <b>网易云集成</b>：支持搜索、下载、链接解析及扫码登录。</li>\n    <li>🎧 <b>音频预览</b>：支持文件管理器双击预览播放（需安装2FMusic Preview）。</li>\n</ul>",
       "version": "0.0.7",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/2FMusic/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.7-f320cb8-pre/2fmusic-0.0.7-f320cb8-amd64.fpk",
+      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.7-3232482-pre/2fmusic-0.0.7-3232482-amd64.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 29,
+      "stars": 30,
       "forks": 5,
       "category": "media",
-      "lastUpdate": "2025-12-14T13:12:38Z"
+      "lastUpdate": "2025-12-20T18:44:37Z"
     }
   ],
-  "lastUpdated": "2025-12-17T16:29:34.823524Z"
+  "lastUpdated": "2025-12-21T05:12:41.438156Z"
 }
