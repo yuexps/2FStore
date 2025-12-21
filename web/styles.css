@@ -572,12 +572,27 @@ html.sidebar-collapsed .miuix-sidebar {
     height: 56px;
     border-radius: 14px;
     margin-right: 16px;
-    background: linear-gradient(135deg, var(--miuix-color-primary-container), var(--miuix-color-primary));
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
     color: white;
+    position: relative;
+}
+
+.app-icon:has(> img) {
+    background: none;
+}
+
+.app-icon:not(:has(> img)),
+.app-icon > .img-placeholder {
+    background: linear-gradient(135deg, var(--miuix-color-primary-container), var(--miuix-color-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
     font-size: 24px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(var(--miuix-color-primary-rgb), 0.25);
@@ -586,6 +601,9 @@ html.sidebar-collapsed .miuix-sidebar {
 
 .app-card:hover .app-icon {
     transform: scale(1.05);
+}
+
+.app-card:hover .app-icon:not(:has(> img)) {
     box-shadow: 0 6px 16px rgba(var(--miuix-color-primary-rgb), 0.35);
 }
 
@@ -761,7 +779,6 @@ html.sidebar-collapsed .miuix-sidebar {
     height: 100px;
     border-radius: 20px;
     margin-right: 28px;
-    background: linear-gradient(135deg, var(--miuix-color-primary-container), var(--miuix-color-primary));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -769,12 +786,31 @@ html.sidebar-collapsed .miuix-sidebar {
     color: white;
     font-size: 40px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(var(--miuix-color-primary-rgb), 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.app-detail-icon:has(> img) {
+    background: none;
+}
+
+.app-detail-icon:not(:has(> img)),
+.app-detail-icon > .img-placeholder {
+    background: linear-gradient(135deg, var(--miuix-color-primary-container), var(--miuix-color-primary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(var(--miuix-color-primary-rgb), 0.3);
 }
 
 .app-detail-icon:hover {
     transform: scale(1.03);
+}
+
+.app-detail-icon:hover:not(:has(> img)) {
     box-shadow: 0 12px 32px rgba(var(--miuix-color-primary-rgb), 0.4);
 }
 
