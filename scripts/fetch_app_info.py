@@ -105,15 +105,30 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
     if not repo_info:
         raise ValueError('无法获取仓库信息')
     
-    # 2. 获取 manifest 文件的提交信息 (用于判断是否需要更新)
+    # 2. 获取 manifest 文件的提交信息和 Releases 信息 (用于判断是否需要更新)
     manifest_commits = fetch_github_api(
         f'https://api.github.com/repos/{owner}/{repo}/commits?path=manifest&per_page=1',
         github_token
     )
-    
-    current_last_update = repo_info.get('updated_at')
+    releases = fetch_github_api(
+        f'https://api.github.com/repos/{owner}/{repo}/releases',
+        github_token
+    ) or []
+
+    manifest_update = None
     if manifest_commits and isinstance(manifest_commits, list) and len(manifest_commits) > 0:
-        current_last_update = manifest_commits[0].get('commit', {}).get('committer', {}).get('date')
+        manifest_update = manifest_commits[0].get('commit', {}).get('committer', {}).get('date')
+
+    release_update = None
+    if releases:
+        release_update = releases[0].get('published_at') or releases[0].get('created_at')
+
+    # 取 manifest 和 release 的最大时间
+    update_times = [t for t in [manifest_update, release_update] if t]
+    if update_times:
+        current_last_update = max(update_times)
+    else:
+        current_last_update = repo_info.get('updated_at')
 
     # 3. 增量更新检查
     if existing_app:
