@@ -25,7 +25,7 @@
         "v0.16.2": "修复插件启动事件循环后等待返回逻辑错误的问题",
         "v0.16.1": "修复接口请求pydantic验证失败的问题"
       },
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-11-27T12:03:16Z",
@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br><br>更多信息请关注：Q群 1039270739 或 GitHub：IMGZCQ/fndesk",
-      "version": "0.93.2",
+      "version": "0.94",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -57,6 +57,7 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
+        "v0.94": "☑️ 一个字：丝滑！（解决CGI诸多问题）",
         "v0.93": "☑️ 播放器支持密码访问,保持歌词区域行数高度,改成CGI访问突破端口限制",
         "v0.92": "☑️ 解决缓存问题！写不下了自己去Github看",
         "v0.91.6": "🎵 记忆最后播放曲目和播放进度,LRC和MP3内嵌歌词,拖拽进度条,播放失败自动下一曲,记忆播放器打开最后位置",
@@ -70,14 +71,14 @@
         "v0.83": "☑️ 适配飞牛1.1.0内测版,每个图标/文件夹独立开关,页內窗口/文件夹增加明暗色调ui风格,修复删除文件夹后所属图标无家可归",
         "v0.80": "✅ 外链分享自定义(PC和移动Web端Logo标题描述链接等),优化一键还原,还原后不需要重启,优化窗口最大化/调整默认排序"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-22T05:05:02Z",
+      "lastUpdate": "2025-12-23T19:56:25Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.963"
+      "size": "差不多1"
     },
     {
       "id": "IMGZCQ_fncube",
@@ -98,14 +99,14 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-22T05:05:02Z",
+      "lastUpdate": "2025-12-23T19:56:25Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.455"
+      "size": "大概半个"
     },
     {
       "id": "snltty_linker",
@@ -124,7 +125,7 @@
       "history": {
         "v1.9.6": "初始版本"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-04T02:04:52Z",
@@ -154,7 +155,7 @@
       "history": {
         "V4.9.80": "1、新增 pnpm-lock.yaml 以跟踪依赖项并更新 .gitignore <br> 2、新增 9.9.25-42905 (x64/Win) 和 6.9.86-42905 (arm64/Mac) 版本支持"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-23T03:51:14Z",
@@ -188,7 +189,7 @@
         "V2.11": "JS、CSS本地化",
         "V2.12": "https://github.com/netcccyun/dnsmgr/releases/tag/2.12.0"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-23T03:51:14Z",
@@ -227,7 +228,7 @@
       "history": {
         "V4.5.0": "https://docs.zfile.vip/changelog/os"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-23T03:51:14Z",
@@ -256,14 +257,14 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-22T05:05:02Z",
+      "lastUpdate": "2025-12-23T19:56:25Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.895"
+      "size": "不超过1"
     },
     {
       "id": "snltty_certimate",
@@ -280,7 +281,7 @@
       "history": {
         "v0.4.7": "初始版本"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-04T02:04:52Z",
@@ -308,7 +309,7 @@
       "history": {
         "V3.1.5": "https://github.com/px-org/PanIndex/releases/tag/v3.1.5"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-23T03:51:14Z",
@@ -334,7 +335,7 @@
       "history": {
         "V4.10.1": "https://github.com/cloudreve/Cloudreve/releases 已更新支持修改端口"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-23T03:51:14Z",
@@ -361,7 +362,7 @@
       "history": {
         "V0.0.1": "第一版版本的飞牛应用Docker"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-23T03:51:14Z",
@@ -390,7 +391,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-23T07:19:43Z",
+      "lastUpdate": "2025-12-24T07:19:42Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -416,7 +417,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-23T07:19:43Z",
+      "lastUpdate": "2025-12-24T07:19:42Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -442,14 +443,14 @@
         "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-22T05:05:02Z",
+      "lastUpdate": "2025-12-23T19:56:25Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "0.676"
+      "size": "只有0.6"
     },
     {
       "id": "hbestm_easyvoice",
@@ -472,7 +473,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-23T07:19:43Z",
+      "lastUpdate": "2025-12-24T07:19:42Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -497,7 +498,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 10,
+      "stars": 12,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -525,7 +526,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 10,
+      "stars": 12,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -551,7 +552,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 10,
+      "stars": 12,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -577,7 +578,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 10,
+      "stars": 12,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -604,7 +605,7 @@
       "history": {
         "v2.3.9-Beta": "轻量（应用包仅5.2MB）、低占用、原生方案无其他环境依赖，NAS内应用窗口化，支持App及公网访问，兼容反代用户"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-11-30T10:59:04Z",
@@ -626,7 +627,7 @@
       "author_url": "https://github.com/MoonTechLab/LunaTV",
       "bug_report_url": "https://github.com/yuexps/lunatv-fnos/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -648,7 +649,7 @@
       "author_url": "https://github.com/hectorqin/reader",
       "bug_report_url": "https://github.com/yuexps/reader-fnos/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -685,7 +686,7 @@
       "author_url": "https://github.com/autobcb/read",
       "bug_report_url": "https://github.com/UCKETX/qreader-fnos/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -712,7 +713,7 @@
       "author_url": "https://github.com/jxxghp/MoviePilot",
       "bug_report_url": "https://github.com/UCKETX/moviepilot/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -734,7 +735,7 @@
       "author_url": "https://github.com/SzeMeng76/LunaTV",
       "bug_report_url": "https://github.com/yuexps/lunatv-fnos/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -758,7 +759,7 @@
       "author_url": "https://iventoy.com/cn/index.html",
       "bug_report_url": "https://github.com/UCKETX/iventoy/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -782,7 +783,7 @@
       "author_url": "",
       "bug_report_url": "https://github.com/UCKETX/omnibox/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -816,7 +817,7 @@
         "v0.0.7": "⚠️ 重要提示：为避免兼容性问题，安装新版前必须完全卸载旧版本并清除数据！",
         "v0.0.8": "feat:自动刮削与收藏夹功能"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -838,7 +839,7 @@
       "author_url": "https://github.com/NeteaseCloudMusicApiEnhanced/api-enhanced",
       "bug_report_url": "https://github.com/UCKETX/netease/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -851,7 +852,7 @@
       "id": "hbestm_mgvideo",
       "name": "咪咕TV",
       "repository": "https://github.com/hbestm/FnDepot",
-      "description": "咪咕的官方电视直播源,可配合OmniBox，LunaTV实现在线播放。",
+      "description": "咪咕的官方电视直播源,可配合OmniBox，LunaTV实现在线播放。默认端口7788",
       "version": "1.0.4",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/mgvideo/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/mgvideo/mgvideo.fpk",
@@ -870,7 +871,7 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-23T07:19:43Z",
+      "lastUpdate": "2025-12-24T07:19:42Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -892,7 +893,7 @@
       "author_url": "https://github.com/yuexps/2FMusic",
       "bug_report_url": "https://github.com/yuexps/2FMusic/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-22T16:34:12Z",
@@ -905,7 +906,7 @@
       "id": "hbestm_gotify",
       "name": "Gotify",
       "repository": "https://github.com/hbestm/FnDepot",
-      "description": "一个自托管的推送通知服务。初始账号，密码：admin",
+      "description": "一个自托管的推送通知服务。初始账号，密码：admin,默认端口7789",
       "version": "2.7.3",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/gotify/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/gotify/gotify.fpk",
@@ -921,12 +922,98 @@
       "stars": 2,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-23T07:19:43Z",
+      "lastUpdate": "2025-12-24T07:19:42Z",
       "fnpack_app_key": "gotify",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.096"
+    },
+    {
+      "id": "IMGZCQ_fnwin12",
+      "name": "Windows12",
+      "repository": "https://github.com/IMGZCQ/FnDepot",
+      "description": "Windows 12 网页版是一个开源项目，由星源原创，使用 HTML、CSS 和 JavaScript，在网络上模拟、创新操作系统。",
+      "version": "10.0.7",
+      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/ICON.PNG",
+      "downloadUrl": "https://fndesk.imcq.top/FPK/fnwin12.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/1.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/2.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/3.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/4.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/5.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/6.jpg",
+        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/7.jpg"
+      ],
+      "author": "米恋泥",
+      "author_url": "https://github.com/IMGZCQ/FnDepot",
+      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
+      "history": {
+        "10.0.7": "修整+打包,原项目:tjy-gitnub/win12"
+      },
+      "stars": 6,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-23T19:56:25Z",
+      "fnpack_app_key": "fnwin12",
+      "fnpack_repo_key": "IMGZCQ",
+      "install_type": "系统空间",
+      "size": "4.5"
+    },
+    {
+      "id": "hbestm_termix",
+      "name": "Termix-SSH",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "Termix 是一个开源的服务器管理平台，具备 SSH 终端、隧道和文件编辑功能。默认端口7790",
+      "version": "1.9.0",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/termix.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/Preview/01.png",
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/Preview/02.png",
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/Preview/03.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "bug_report_url": "https://github.com/Termix-SSH/Termix",
+      "history": {
+        "v1.9.0": "初始版本。"
+      },
+      "stars": 2,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-24T07:19:42Z",
+      "fnpack_app_key": "termix",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.04"
+    },
+    {
+      "id": "hbestm_iptv",
+      "name": "iptv-checker",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "iptv-checker 是款跨平台的直播源检测工具，支持Docker部署和Windows客户端。它能通过FFmpeg的ffprobe组件深度分析视频流，比普通ping检测更精准。默认端口7791",
+      "version": "4.3.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/iptv/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/iptv/iptv.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/iptv/Preview/01.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "bug_report_url": "https://github.com/zhimin-dev/iptv-checker",
+      "history": {
+        "v4.3.0.1": "初始版本。"
+      },
+      "stars": 2,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-24T07:19:42Z",
+      "fnpack_app_key": "iptv",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.09"
     }
   ],
-  "lastUpdated": "2025-12-23T16:28:23.659708Z"
+  "lastUpdated": "2025-12-24T16:26:42.880477Z"
 }
