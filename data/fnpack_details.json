@@ -392,7 +392,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -418,7 +418,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -474,7 +474,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -872,7 +872,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -923,7 +923,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "gotify",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -983,7 +983,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "termix",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1009,7 +1009,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-24T23:24:50Z",
+      "lastUpdate": "2025-12-26T11:58:09Z",
       "fnpack_app_key": "iptv",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1040,7 +1040,33 @@
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
       "size": "0.05"
+    },
+    {
+      "id": "hbestm_ittools",
+      "name": "It-tools",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "IT-TOOLS是备受瞩目的免费开源工具站点项目，为开发人员和IT专业人员提供了一个便捷的在线工具集合。该项目以其小巧轻便、易于部署以及功能强大、界面美观等特点而广受欢迎，令人赞叹。这个集合包括各种实用工具，如令牌生成器、大小写转换器、基本转换器、哈希文本、UUID生成、二维码生成器等等，默认端口7792",
+      "version": "2024.10.22-7ca5933",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/ittools/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/ittools/ittools.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/ittools/Preview/01.png"
+      ],
+      "author": "87袜子",
+      "author_url": "https://qm.qq.com/q/4MKTzfs9os",
+      "bug_report_url": "https://github.com/CorentinTh/it-tools",
+      "history": {
+        "v2024.10.22-7ca5933": "初始版本。"
+      },
+      "stars": 3,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-26T11:58:09Z",
+      "fnpack_app_key": "ittools",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.08"
     }
   ],
-  "lastUpdated": "2025-12-25T16:26:55.185880Z"
+  "lastUpdated": "2025-12-26T16:25:23.717083Z"
 }
