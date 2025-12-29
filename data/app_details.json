@@ -85,7 +85,7 @@
       "downloadUrl": "https://github.com/UCKETX/iventoy/releases/download/1.0.20/iventoy.fpk",
       "screenshots": [],
       "author": "UCKETX",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "system",
       "lastUpdate": "2025-12-04T13:25:51Z"
@@ -117,11 +117,11 @@
         "https://github.com/yuexps/2FMusic/actions/workflows/build-source-on-app-change.yml/badge.svg"
       ],
       "author": "yuexps",
-      "stars": 38,
+      "stars": 40,
       "forks": 6,
       "category": "media",
       "lastUpdate": "2025-12-26T15:09:08Z"
     }
   ],
-  "lastUpdated": "2025-12-28T16:25:21.823547Z"
+  "lastUpdated": "2025-12-29T16:27:08.160627Z"
 }
