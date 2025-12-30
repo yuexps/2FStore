@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br><br>更多信息请关注：Q群 1039270739 或 GitHub：IMGZCQ/fndesk",
-      "version": "0.95",
+      "version": "0.96",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -75,7 +75,7 @@
       "stars": 7,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-25T14:26:27Z",
+      "lastUpdate": "2025-12-30T04:25:26Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -103,7 +103,7 @@
       "stars": 7,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-25T14:26:27Z",
+      "lastUpdate": "2025-12-30T04:25:26Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -129,7 +129,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-25T08:15:05Z",
+      "lastUpdate": "2025-12-30T10:54:49Z",
       "fnpack_app_key": "linker",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -261,7 +261,7 @@
       "stars": 7,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-25T14:26:27Z",
+      "lastUpdate": "2025-12-30T04:25:26Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -285,7 +285,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-25T08:15:05Z",
+      "lastUpdate": "2025-12-30T10:54:49Z",
       "fnpack_app_key": "certimate",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -389,10 +389,10 @@
       "history": {
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -415,10 +415,10 @@
       "history": {
         "v7.2.2": "初始版本.可在线升级"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -447,7 +447,7 @@
       "stars": 7,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2025-12-25T14:26:27Z",
+      "lastUpdate": "2025-12-30T04:25:26Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -471,10 +471,10 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -869,10 +869,10 @@
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -920,46 +920,14 @@
       "history": {
         "v2.7.3": "初始版本。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "gotify",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.096"
-    },
-    {
-      "id": "IMGZCQ_fnwin12",
-      "name": "Windows12",
-      "repository": "https://github.com/IMGZCQ/FnDepot",
-      "description": "Windows 12 网页版是一个开源项目，由星源原创，使用 HTML、CSS 和 JavaScript，在网络上模拟、创新操作系统。",
-      "version": "10.0.7",
-      "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/ICON.PNG",
-      "downloadUrl": "https://fndesk.imcq.top/FPK/fnwin12.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/1.jpg",
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/2.jpg",
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/3.jpg",
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/4.jpg",
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/5.jpg",
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/6.jpg",
-        "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fnwin12/Preview/7.jpg"
-      ],
-      "author": "米恋泥",
-      "author_url": "https://github.com/IMGZCQ/FnDepot",
-      "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
-      "history": {
-        "10.0.7": "修整+打包,原项目:tjy-gitnub/win12"
-      },
-      "stars": 7,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2025-12-25T14:26:27Z",
-      "fnpack_app_key": "fnwin12",
-      "fnpack_repo_key": "IMGZCQ",
-      "install_type": "系统空间",
-      "size": "4.5"
     },
     {
       "id": "hbestm_termix",
@@ -980,10 +948,10 @@
       "history": {
         "v1.9.0": "初始版本。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "termix",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1006,10 +974,10 @@
       "history": {
         "v4.3.0.1": "初始版本。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "iptv",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1020,7 +988,7 @@
       "name": "在线fpk",
       "repository": "https://github.com/snltty/FnDepot",
       "description": "fnpack二次包装UI，在线编辑和打包fpk",
-      "version": "0.0.1",
+      "version": "0.0.3",
       "iconUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/fnpackup/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/fnpackup/fnpackup.fpk",
       "screenshots": [
@@ -1035,7 +1003,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-25T08:15:05Z",
+      "lastUpdate": "2025-12-30T10:54:49Z",
       "fnpack_app_key": "fnpackup",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -1058,15 +1026,69 @@
       "history": {
         "v2024.10.22-7ca5933": "初始版本。"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2025-12-26T11:58:09Z",
+      "lastUpdate": "2025-12-30T13:44:04Z",
       "fnpack_app_key": "ittools",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.08"
+    },
+    {
+      "id": "hbestm_prunemate-cn",
+      "name": "PruneMate-CN",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "PruneMate 是一个简洁轻量的Docker垃圾清理工具，通过定时清理未使用的镜像、容器、网络和卷，让你的Docker主机保持整洁高效。汉化by:87袜子（默认占用端口7676）",
+      "version": "1.3.1",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/prunemate-cn/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/prunemate-cn/prunemate-cn.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/prunemate-cn/Preview/01.PNG",
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/prunemate-cn/Preview/02.PNG"
+      ],
+      "author": "87袜子",
+      "author_url": "https://github.com/hbestm/PruneMate-CN",
+      "bug_report_url": "https://github.com/anoniemerd/PruneMate",
+      "history": {
+        "v1.3.1": "初始版本。"
+      },
+      "stars": 4,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-30T13:44:04Z",
+      "fnpack_app_key": "prunemate-cn",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.01"
+    },
+    {
+      "id": "hbestm_app2docker",
+      "name": "App2Docker",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "一键将应用打包成 Docker 镜像的可视化平台（默认占用端口7795）",
+      "version": "1.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/app2docker/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/app2docker/app2docker.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/app2docker/Preview/01.PNG",
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/app2docker/Preview/02.PNG"
+      ],
+      "author": "87袜子",
+      "author_url": "https://gitee.com/numen06/app2docker",
+      "bug_report_url": "https://gitee.com/numen06/app2docker",
+      "history": {
+        "v1.3.1": "初始版本。"
+      },
+      "stars": 4,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2025-12-30T13:44:04Z",
+      "fnpack_app_key": "app2docker",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.013"
     }
   ],
-  "lastUpdated": "2025-12-29T16:27:09.445567Z"
+  "lastUpdated": "2025-12-30T16:28:16.085728Z"
 }
