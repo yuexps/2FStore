@@ -25,7 +25,7 @@
         "v0.16.2": "修复插件启动事件循环后等待返回逻辑错误的问题",
         "v0.16.1": "修复接口请求pydantic验证失败的问题"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-11-27T12:03:16Z",
@@ -126,7 +126,7 @@
       "history": {
         "v1.9.6": "初始版本"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T10:54:49Z",
@@ -282,7 +282,7 @@
       "history": {
         "v0.4.7": "初始版本"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T10:54:49Z",
@@ -389,7 +389,7 @@
       "history": {
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -415,7 +415,7 @@
       "history": {
         "v7.2.2": "初始版本.可在线升级"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -471,7 +471,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -869,7 +869,7 @@
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -920,7 +920,7 @@
       "history": {
         "v2.7.3": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -948,7 +948,7 @@
       "history": {
         "v1.9.0": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -974,7 +974,7 @@
       "history": {
         "v4.3.0.1": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -1000,7 +1000,7 @@
       "history": {
         "v0.0.1": "初始版本"
       },
-      "stars": 3,
+      "stars": 4,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T10:54:49Z",
@@ -1026,7 +1026,7 @@
       "history": {
         "v2024.10.22-7ca5933": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -1053,7 +1053,7 @@
       "history": {
         "v1.3.1": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -1080,7 +1080,7 @@
       "history": {
         "v1.3.1": "初始版本。"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-30T13:44:04Z",
@@ -1090,5 +1090,5 @@
       "size": "0.013"
     }
   ],
-  "lastUpdated": "2025-12-30T16:28:16.085728Z"
+  "lastUpdated": "2025-12-31T16:27:04.346652Z"
 }
