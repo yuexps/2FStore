@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br><br>更多信息请关注：Q群 1039270739 或 GitHub：IMGZCQ/fndesk",
-      "version": "0.96",
+      "version": "0.97",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -75,7 +75,7 @@
       "stars": 7,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2025-12-30T04:25:26Z",
+      "lastUpdate": "2026-01-03T00:23:06Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -103,7 +103,7 @@
       "stars": 7,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2025-12-30T04:25:26Z",
+      "lastUpdate": "2026-01-03T00:23:06Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -129,7 +129,7 @@
       "stars": 4,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2025-12-30T10:54:49Z",
+      "lastUpdate": "2026-01-03T09:11:48Z",
       "fnpack_app_key": "linker",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -261,7 +261,7 @@
       "stars": 7,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2025-12-30T04:25:26Z",
+      "lastUpdate": "2026-01-03T00:23:06Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -285,7 +285,7 @@
       "stars": 4,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2025-12-30T10:54:49Z",
+      "lastUpdate": "2026-01-03T09:11:48Z",
       "fnpack_app_key": "certimate",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -392,7 +392,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -418,7 +418,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -447,7 +447,7 @@
       "stars": 7,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2025-12-30T04:25:26Z",
+      "lastUpdate": "2026-01-03T00:23:06Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -474,7 +474,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -499,7 +499,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 13,
+      "stars": 12,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -527,7 +527,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 13,
+      "stars": 12,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -553,7 +553,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 13,
+      "stars": 12,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -579,7 +579,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 13,
+      "stars": 12,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -872,7 +872,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -923,7 +923,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "gotify",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -952,7 +952,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "termix",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -978,7 +978,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "iptv",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -989,7 +989,7 @@
       "name": "在线fpk",
       "repository": "https://github.com/snltty/FnDepot",
       "description": "fnpack二次包装UI，在线编辑和打包fpk",
-      "version": "0.0.3",
+      "version": "0.0.5",
       "iconUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/fnpackup/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/fnpackup/fnpackup.fpk",
       "screenshots": [
@@ -999,12 +999,12 @@
       "author_url": "https://github.com/snltty/fnpackup",
       "bug_report_url": "https://github.com/snltty/fnpackup",
       "history": {
-        "v0.0.1": "初始版本"
+        "v0.0.5": "初始版本"
       },
       "stars": 4,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2025-12-30T10:54:49Z",
+      "lastUpdate": "2026-01-03T09:11:48Z",
       "fnpack_app_key": "fnpackup",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -1030,7 +1030,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "ittools",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1057,7 +1057,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "prunemate-cn",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1079,17 +1079,43 @@
       "author_url": "https://gitee.com/numen06/app2docker",
       "bug_report_url": "https://gitee.com/numen06/app2docker",
       "history": {
-        "v1.3.1": "初始版本。"
+        "v1.0.1": "初始版本。"
       },
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T14:09:33Z",
+      "lastUpdate": "2026-01-03T10:55:40Z",
       "fnpack_app_key": "app2docker",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.013"
+    },
+    {
+      "id": "hbestm_kvideo",
+      "name": "KVideo",
+      "repository": "https://github.com/hbestm/FnDepot",
+      "description": "一个基于 Next.js 16 构建的现代化视频聚合播放平台。采用独特的 Liquid Glass 设计语言，提供流畅的视觉体验和强大的视频搜索功能。（默认密码password，占用端口7798）",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/kvideo/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/kvideo/kvideo.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/kvideo/Preview/01.PNG"
+      ],
+      "author": "87袜子",
+      "author_url": "https://github.com/KuekHaoYang/KVideo",
+      "bug_report_url": "https://github.com/KuekHaoYang/KVideo",
+      "history": {
+        "v1.0.0": "初始版本。"
+      },
+      "stars": 5,
+      "forks": 1,
+      "category": "utility",
+      "lastUpdate": "2026-01-03T10:55:40Z",
+      "fnpack_app_key": "kvideo",
+      "fnpack_repo_key": "hbestm",
+      "install_type": "存储空间",
+      "size": "0.03"
     }
   ],
-  "lastUpdated": "2026-01-02T16:27:01.804836Z"
+  "lastUpdated": "2026-01-03T16:25:26.918360Z"
 }
