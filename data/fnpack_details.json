@@ -140,7 +140,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.9.99",
+      "version": "4.10.8",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -159,7 +159,7 @@
       "stars": 6,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T00:50:03Z",
+      "lastUpdate": "2026-01-04T00:55:34Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -193,7 +193,7 @@
       "stars": 6,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T00:50:03Z",
+      "lastUpdate": "2026-01-04T00:55:34Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -216,12 +216,7 @@
         "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-3d.png",
         "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-audio.png",
         "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-office.png",
-        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-pdf.png",
-        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-video.png",
-        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/storage-edit-local.png",
-        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/storage-list.png",
-        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/user-edit.png",
-        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/view-setting.png"
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-zflie/Preview/preview-pdf.png"
       ],
       "author": "moxyis",
       "author_url": "https://github.com/moxyis",
@@ -232,7 +227,7 @@
       "stars": 6,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T00:50:03Z",
+      "lastUpdate": "2026-01-04T00:55:34Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -313,7 +308,7 @@
       "stars": 6,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T00:50:03Z",
+      "lastUpdate": "2026-01-04T00:55:34Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -339,7 +334,7 @@
       "stars": 6,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T00:50:03Z",
+      "lastUpdate": "2026-01-04T00:55:34Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -366,7 +361,7 @@
       "stars": 6,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-02T00:50:03Z",
+      "lastUpdate": "2026-01-04T00:55:34Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -499,7 +494,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 12,
+      "stars": 13,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -527,7 +522,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 12,
+      "stars": 13,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -553,7 +548,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 12,
+      "stars": 13,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -579,7 +574,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 12,
+      "stars": 13,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -1117,5 +1112,5 @@
       "size": "0.03"
     }
   ],
-  "lastUpdated": "2026-01-03T16:25:26.918360Z"
+  "lastUpdated": "2026-01-04T14:09:37.911419Z"
 }
