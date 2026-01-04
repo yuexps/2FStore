@@ -197,7 +197,6 @@ def _process_single_app(app_config, app_key, owner, repo, repo_info, github_toke
         screenshots = []
         try:
             # 检查Preview目录是否存在
-            preview_dir = f'https://raw.githubusercontent.com/{owner}/{repo}/main/{app_key}/Preview/'
             preview_res = fetch_github_api(f'https://api.github.com/repos/{owner}/{repo}/contents/{app_key}/Preview', github_token)
             if preview_res and isinstance(preview_res, list):
                 # 筛选支持的图片格式
@@ -206,6 +205,8 @@ def _process_single_app(app_config, app_key, owner, repo, repo_info, github_toke
                     if any(item.get('name', '').lower().endswith(ext) for ext in image_extensions):
                         img_url = f'https://raw.githubusercontent.com/{owner}/{repo}/main/{app_key}/Preview/{item.get("name")}'
                         screenshots.append(img_url)
+                # 限制最多 9 张预览图
+                screenshots = screenshots[:9]
                 print(f"找到 {len(screenshots)} 张预览图")
         except Exception as e:
             print(f"获取预览图失败: {str(e)}")

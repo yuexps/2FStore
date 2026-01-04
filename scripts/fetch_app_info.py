@@ -224,7 +224,12 @@ def fetch_app_info(repo_url, github_token=None, existing_app=None):
     # 提取 README 中的截图
     screenshot_matches = re.findall(r'!\[[^\]]*\]\((https?://[^)]+)\)', readme_content)
     if screenshot_matches:
-        app_info['screenshots'] = screenshot_matches
+        # 筛选支持的图片格式
+        image_extensions = ['.png', '.jpg', '.jpeg', '.webp']
+        # 过滤掉不支持的格式，只保留支持的格式
+        supported_screenshots = [url for url in screenshot_matches if any(url.lower().endswith(ext) for ext in image_extensions)]
+        # 限制最多 9 张截图
+        app_info['screenshots'] = supported_screenshots[:9]
     
     # 获取下载链接（.fpk 文件）
     if releases:
