@@ -70,7 +70,7 @@
       "downloadUrl": "https://github.com/yuexps/lunatv-enhanced-fnos/releases/download/1.0.0/lunatv-enhanced.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 2,
+      "stars": 4,
       "forks": 1,
       "category": "media",
       "lastUpdate": "2025-12-04T08:44:54Z"
@@ -85,7 +85,7 @@
       "downloadUrl": "https://github.com/UCKETX/iventoy/releases/download/1.0.20/iventoy.fpk",
       "screenshots": [],
       "author": "UCKETX",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "system",
       "lastUpdate": "2025-12-04T13:25:51Z"
@@ -107,19 +107,21 @@
     },
     {
       "id": "2fmusic",
-      "name": "2FMusic-Test",
+      "name": "2FMusic",
       "repository": "https://github.com/yuexps/2FMusic",
-      "description": "<p><b>2FMusic</b> 简洁高效的本地音乐播放器，专为 FNOS 而设计。</p>\n<li>🧪 <b style='color:#d32f2f;'>测试版</b> - 功能暂不稳定，仅供测试！</li>\n<ul>\n    <li>🎵 <b>本地音乐库</b>：自动扫描，支持识别 ID3 内嵌元数据。</li>\n    <li>🖥️ <b>Web 播放器</b>：移动端适配，支持网络自动获取歌词、封面。</li>\n    <li>🗂️ <b>目录管理</b>：支持将服务器任意文件夹添加到音乐库。</li>\n    <li>☁️ <b>网易云集成</b>：支持搜索、下载、链接解析及扫码登录。</li>\n    <li>🎧 <b>音频预览</b>：支持文件管理器双击预览播放（需安装2FMusic Preview）。</li>\n</ul>",
-      "version": "0.0.7",
+      "description": "<p><b>2FMusic</b> 简洁的本地音乐播放器。</p>\n<ul>\n    <li>🎵 <b>本地音乐库</b>：自动扫描，支持识别提取 ID3 内嵌元数据 或 网络自动获取歌词、封面。</li>\n    <li>🖥️ <b>Web 播放器</b>：支持歌词滚动，播放器页自动取色。</li>\n    <li>🗂️ <b>目录管理</b>：支持将服务器任意文件夹添加到音乐库。</li>\n    <li>☁️ <b>网易云集成</b>：支持搜索、下载、链接解析及扫码登录。</li>\n    <li>🎧 <b>音频预览</b>：支持文件管理器双击预览播放（需安装2FMusic Preview）。</li>\n</ul>",
+      "version": "0.0.8",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/2FMusic/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.7-3232482-pre/2fmusic-0.0.7-3232482-amd64.fpk",
-      "screenshots": [],
+      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.8-1aefd94-pre/2fmusic-0.0.8-1aefd94-amd64.fpk",
+      "screenshots": [
+        "https://github.com/yuexps/2FMusic/actions/workflows/build-source-on-app-change.yml/badge.svg"
+      ],
       "author": "yuexps",
-      "stars": 30,
-      "forks": 5,
+      "stars": 45,
+      "forks": 7,
       "category": "media",
-      "lastUpdate": "2025-12-20T18:44:37Z"
+      "lastUpdate": "2025-12-26T15:09:08Z"
     }
   ],
-  "lastUpdated": "2025-12-21T05:12:41.438156Z"
+  "lastUpdated": "2026-01-01T16:27:58.641885Z"
 }
