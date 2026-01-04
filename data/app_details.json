@@ -112,14 +112,14 @@
       "description": "<b>2FMusic</b> 简洁的本地音乐播放器。\n<ul>\n    <li>🎵 <b>本地音乐库</b>：自动扫描，支持识别提取 ID3 内嵌元数据 或 网络自动获取歌词、封面。</li>\n    <li>🖥️ <b>Web 播放器</b>：支持歌词滚动，播放器页自动取色。</li>\n    <li>🗂️ <b>目录管理</b>：支持将服务器任意文件夹添加到音乐库。</li>\n    <li>☁️ <b>网易云集成</b>：支持搜索、下载、链接解析及扫码登录。</li>\n    <li>🎧 <b>音频预览</b>：支持文件管理器双击预览播放（需安装2FMusic Preview）。</li>\n</ul>",
       "version": "0.0.8",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/2FMusic/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.8-d42172b-pre/2fmusic-0.0.8-d42172b-amd64.fpk",
+      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.8-c476e3e-pre/2fmusic-0.0.8-c476e3e-amd64.fpk",
       "screenshots": [],
       "author": "yuexps",
       "stars": 46,
       "forks": 7,
       "category": "media",
-      "lastUpdate": "2026-01-04T14:06:47Z"
+      "lastUpdate": "2026-01-04T15:20:15Z"
     }
   ],
-  "lastUpdated": "2026-01-04T14:09:33.460643Z"
+  "lastUpdated": "2026-01-04T16:13:12.092438Z"
 }
