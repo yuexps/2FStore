@@ -59,7 +59,7 @@
       "history": {
         "更新日志": "✅ 已适配arm版飞牛！其他更新细节请到Github查看"
       },
-      "stars": 7,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-08T08:35:15Z",
@@ -87,7 +87,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 7,
+      "stars": 9,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-08T08:35:15Z",
@@ -113,10 +113,10 @@
       "history": {
         "v1.9.6": "初始版本"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-03T09:11:48Z",
+      "lastUpdate": "2026-01-10T10:49:02Z",
       "fnpack_app_key": "linker",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -143,7 +143,7 @@
       "history": {
         "V4.9.80": "1、新增 pnpm-lock.yaml 以跟踪依赖项并更新 .gitignore <br> 2、新增 9.9.25-42905 (x64/Win) 和 6.9.86-42905 (arm64/Mac) 版本支持"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-09T16:11:04Z",
@@ -177,7 +177,7 @@
         "V2.11": "JS、CSS本地化",
         "V2.12": "https://github.com/netcccyun/dnsmgr/releases/tag/2.12.0"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-09T16:11:04Z",
@@ -211,7 +211,7 @@
       "history": {
         "V4.5.0": "https://docs.zfile.vip/changelog/os"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-09T16:11:04Z",
@@ -240,7 +240,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 7,
+      "stars": 9,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-08T08:35:15Z",
@@ -264,10 +264,10 @@
       "history": {
         "v0.4.7": "初始版本"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-03T09:11:48Z",
+      "lastUpdate": "2026-01-10T10:49:02Z",
       "fnpack_app_key": "certimate",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -292,7 +292,7 @@
       "history": {
         "V3.1.5": "https://github.com/px-org/PanIndex/releases/tag/v3.1.5"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-09T16:11:04Z",
@@ -316,7 +316,7 @@
       "author_url": "",
       "bug_report_url": "",
       "history": {},
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "uncategorized",
       "lastUpdate": "2026-01-09T16:11:04Z",
@@ -343,7 +343,7 @@
       "history": {
         "V0.0.1": "第一版版本的飞牛应用Docker"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-09T16:11:04Z",
@@ -369,10 +369,10 @@
       "history": {
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -395,10 +395,10 @@
       "history": {
         "v7.2.2": "初始版本.可在线升级"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -424,7 +424,7 @@
         "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 7,
+      "stars": 9,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-08T08:35:15Z",
@@ -451,10 +451,10 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -479,8 +479,8 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 13,
-      "forks": 1,
+      "stars": 15,
+      "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
       "fnpack_app_key": "clouddrive2",
@@ -507,8 +507,8 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 13,
-      "forks": 1,
+      "stars": 15,
+      "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
       "fnpack_app_key": "audiobookshelf",
@@ -533,8 +533,8 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 13,
-      "forks": 1,
+      "stars": 15,
+      "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
       "fnpack_app_key": "embyserver",
@@ -559,8 +559,8 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 13,
-      "forks": 1,
+      "stars": 15,
+      "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
       "fnpack_app_key": "1panel",
@@ -586,7 +586,7 @@
       "history": {
         "v2.3.9-Beta": "轻量（应用包仅5.2MB）、低占用、原生方案无其他环境依赖，NAS内应用窗口化，支持App及公网访问，兼容反代用户"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-11-30T10:59:04Z",
@@ -845,10 +845,10 @@
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -896,10 +896,10 @@
       "history": {
         "v2.7.3": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "gotify",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -925,10 +925,10 @@
         "v1.9.0": "初始版本。",
         "v1.10.0": "量更新内容，见官方网站。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "termix",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -951,10 +951,10 @@
       "history": {
         "v4.3.0.1": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "iptv",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -965,7 +965,7 @@
       "name": "在线fpk",
       "repository": "https://github.com/snltty/FnDepot",
       "description": "fnpack二次包装UI，在线编辑和打包fpk",
-      "version": "0.0.5",
+      "version": "0.0.9",
       "iconUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/fnpackup/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/snltty/FnDepot/main/fnpackup/fnpackup.fpk",
       "screenshots": [
@@ -975,12 +975,12 @@
       "author_url": "https://github.com/snltty/fnpackup",
       "bug_report_url": "https://github.com/snltty/fnpackup",
       "history": {
-        "v0.0.5": "初始版本"
+        "v0.0.9": "初始版本"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-03T09:11:48Z",
+      "lastUpdate": "2026-01-10T10:49:02Z",
       "fnpack_app_key": "fnpackup",
       "fnpack_repo_key": "snltty",
       "install_type": "存储空间",
@@ -1003,10 +1003,10 @@
       "history": {
         "v2024.10.22-7ca5933": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "ittools",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1030,10 +1030,10 @@
       "history": {
         "v1.3.1": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "prunemate-cn",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1057,10 +1057,10 @@
       "history": {
         "v1.0.1": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "app2docker",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1083,10 +1083,10 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
+      "lastUpdate": "2026-01-10T12:20:37Z",
       "fnpack_app_key": "kvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1121,16 +1121,16 @@
       "size": "7.8"
     },
     {
-      "id": "hbestm_wechat",
+      "id": "hbestm_wechat-article-exporter",
       "name": "公众号下载器",
       "repository": "https://github.com/hbestm/FnDepot",
       "description": "一款在线的 微信公众号文章批量下载 工具，支持导出阅读量与评论数据，无需搭建任何环境，支持 docker 私有化部署和 Cloudflare 部署。 支持下载各种文件格式，其中 HTML 格式可100%还原文章排版与样式。默认端口7799",
       "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat/wechat.fpk",
+      "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat-article-exporter/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat-article-exporter/wechat-article-exporter.fpk",
       "screenshots": [
-        "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat/Preview/01.png",
-        "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat/Preview/02.png"
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat-article-exporter/Preview/01.png",
+        "https://raw.githubusercontent.com/hbestm/FnDepot/main/wechat-article-exporter/Preview/02.png"
       ],
       "author": "87袜子",
       "author_url": "https://github.com/wechat-article/wechat-article-exporter",
@@ -1138,15 +1138,15 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T07:53:58Z",
-      "fnpack_app_key": "wechat",
+      "lastUpdate": "2026-01-10T12:20:37Z",
+      "fnpack_app_key": "wechat-article-exporter",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.315"
     }
   ],
-  "lastUpdated": "2026-01-09T16:29:05.264549Z"
+  "lastUpdated": "2026-01-10T16:26:01.353837Z"
 }
