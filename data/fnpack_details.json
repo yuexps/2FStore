@@ -479,7 +479,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 15,
+      "stars": 16,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -507,7 +507,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 15,
+      "stars": 16,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -533,7 +533,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 15,
+      "stars": 16,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -559,7 +559,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 15,
+      "stars": 16,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -1148,5 +1148,5 @@
       "size": "0.315"
     }
   ],
-  "lastUpdated": "2026-01-10T16:26:01.353837Z"
+  "lastUpdated": "2026-01-11T16:25:47.727375Z"
 }
