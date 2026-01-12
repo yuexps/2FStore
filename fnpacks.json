@@ -31,6 +31,10 @@
     {
       "key": "yuexps",
       "repo": "https://github.com/yuexps/FnDepot"
+    },
+    {
+      "key": "DPanel-dev",
+      "repo": "https://github.com/DPanel-dev/FnDepot"
     }
   ]
 }
