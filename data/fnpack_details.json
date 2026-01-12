@@ -369,7 +369,7 @@
       "history": {
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -395,7 +395,7 @@
       "history": {
         "v7.2.2": "初始版本.可在线升级"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -451,7 +451,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -586,7 +586,7 @@
       "history": {
         "v2.3.9-Beta": "轻量（应用包仅5.2MB）、低占用、原生方案无其他环境依赖，NAS内应用窗口化，支持App及公网访问，兼容反代用户"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-11-30T10:59:04Z",
@@ -845,7 +845,7 @@
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -896,7 +896,7 @@
       "history": {
         "v2.7.3": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -925,7 +925,7 @@
         "v1.9.0": "初始版本。",
         "v1.10.0": "量更新内容，见官方网站。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -951,7 +951,7 @@
       "history": {
         "v4.3.0.1": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -1003,7 +1003,7 @@
       "history": {
         "v2024.10.22-7ca5933": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -1031,7 +1031,7 @@
         "v1.3.2": "1.修改日期显示格式，更符合国人习惯。2.修改部分汉化表述。3.支持ARM系统",
         "v1.3.1": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -1058,7 +1058,7 @@
       "history": {
         "v1.0.1": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -1084,7 +1084,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -1139,7 +1139,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-12T06:08:43Z",
@@ -1153,7 +1153,7 @@
       "name": "DPanel",
       "repository": "https://github.com/DPanel-dev/FnDepot",
       "description": "DPanel 是一款轻量化的管理 Docker、Podman 容器的可视化面板。\n原生的中文的界面，更适合中文环境使用。同时支持英文、日文等多种语言。安装简单，占用资源极低，更适合各种 Nas 设备、盒子以及小型服务器。面板提供了容器、Compose、镜像等容器管理的基础功能。支持管理容器内部文件，支持多种类型添加 Compose 项目。可以通过 Docker Api 和 SSH 的方式添加、管理多个 Docker 服务端。",
-      "version": "v1.9.3",
+      "version": "v1.9.3.1",
       "iconUrl": "https://raw.githubusercontent.com/DPanel-dev/FnDepot/main/dpanel/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/DPanel-dev/FnDepot/main/dpanel/dpanel.fpk",
       "screenshots": [
@@ -1166,17 +1166,18 @@
       "author_url": "https://dpanel.cc",
       "bug_report_url": "https://github.com/donknap/dpanel/issues",
       "history": {
-        "v1.9.3": "更新日志: https://github.com/donknap/dpanel/releases/tag/v1.9.3"
+        "v1.9.3": "更新日志: https://github.com/donknap/dpanel/releases/tag/v1.9.3",
+        "v1.9.3.1": "更新日志: https://github.com/donknap/dpanel/releases/tag/v1.9.3.1"
       },
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-12T06:20:54Z",
+      "lastUpdate": "2026-01-12T11:54:37Z",
       "fnpack_app_key": "dpanel",
       "fnpack_repo_key": "DPanel-dev",
       "install_type": "存储空间",
       "size": "~30"
     }
   ],
-  "lastUpdated": "2026-01-12T06:37:25.880165Z"
+  "lastUpdated": "2026-01-12T16:28:20.229484Z"
 }
