@@ -38,7 +38,7 @@
       "id": "IMGZCQ_fndesk",
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
-      "description": "`若在FnDepot安装失败请手动下载安装：<a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>下载链接</a></p>多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>更多信息请关注：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
+      "description": "`多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>• ⬇️ <a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>手动下载链接</a> • 更多信息：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
       "version": "1.0.0",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
@@ -62,7 +62,7 @@
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-12T05:37:21Z",
+      "lastUpdate": "2026-01-13T11:46:45Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -90,7 +90,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-01-12T05:37:21Z",
+      "lastUpdate": "2026-01-13T11:46:45Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -113,7 +113,7 @@
       "history": {
         "v1.9.6": "初始版本"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2026-01-10T10:49:02Z",
@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.10.9",
+      "version": "4.10.15",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 8,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T16:11:04Z",
+      "lastUpdate": "2026-01-13T15:53:07Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 8,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T16:11:04Z",
+      "lastUpdate": "2026-01-13T15:53:07Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 8,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T16:11:04Z",
+      "lastUpdate": "2026-01-13T15:53:07Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -243,7 +243,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-01-12T05:37:21Z",
+      "lastUpdate": "2026-01-13T11:46:45Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -264,7 +264,7 @@
       "history": {
         "v0.4.7": "初始版本"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2026-01-10T10:49:02Z",
@@ -295,7 +295,7 @@
       "stars": 8,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T16:11:04Z",
+      "lastUpdate": "2026-01-13T15:53:07Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -319,7 +319,7 @@
       "stars": 8,
       "forks": 1,
       "category": "uncategorized",
-      "lastUpdate": "2026-01-09T16:11:04Z",
+      "lastUpdate": "2026-01-13T15:53:07Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "",
@@ -346,7 +346,7 @@
       "stars": 8,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-09T16:11:04Z",
+      "lastUpdate": "2026-01-13T15:53:07Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -427,7 +427,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-01-12T05:37:21Z",
+      "lastUpdate": "2026-01-13T11:46:45Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -479,7 +479,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 16,
+      "stars": 17,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -507,7 +507,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 16,
+      "stars": 17,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -533,7 +533,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 16,
+      "stars": 17,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -559,7 +559,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 16,
+      "stars": 17,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -977,7 +977,7 @@
       "history": {
         "v0.0.9": "初始版本"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2026-01-10T10:49:02Z",
@@ -1169,7 +1169,7 @@
         "v1.9.3": "更新日志: https://github.com/donknap/dpanel/releases/tag/v1.9.3",
         "v1.9.3.1": "更新日志: https://github.com/donknap/dpanel/releases/tag/v1.9.3.1"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-12T11:54:37Z",
@@ -1179,5 +1179,5 @@
       "size": "~30"
     }
   ],
-  "lastUpdated": "2026-01-12T16:28:20.229484Z"
+  "lastUpdated": "2026-01-13T16:33:10.695672Z"
 }
