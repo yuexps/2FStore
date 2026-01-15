@@ -146,7 +146,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T14:03:37Z",
+      "lastUpdate": "2026-01-14T23:24:46Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T14:03:37Z",
+      "lastUpdate": "2026-01-14T23:24:46Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T14:03:37Z",
+      "lastUpdate": "2026-01-14T23:24:46Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T14:03:37Z",
+      "lastUpdate": "2026-01-14T23:24:46Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T14:03:37Z",
+      "lastUpdate": "2026-01-14T23:24:46Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T14:03:37Z",
+      "lastUpdate": "2026-01-14T23:24:46Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -371,7 +371,7 @@
       "history": {
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -397,7 +397,7 @@
       "history": {
         "v7.2.2": "初始版本.可在线升级"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -453,7 +453,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -847,7 +847,7 @@
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
         "v1.0.0": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -898,7 +898,7 @@
       "history": {
         "v2.7.3": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -927,7 +927,7 @@
         "v1.9.0": "初始版本。",
         "v1.10.0": "量更新内容，见官方网站。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -953,7 +953,7 @@
       "history": {
         "v4.3.0.1": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1005,7 +1005,7 @@
       "history": {
         "v2024.10.22-7ca5933": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1033,7 +1033,7 @@
         "v1.3.2": "1.修改日期显示格式，更符合国人习惯。2.修改部分汉化表述。3.支持ARM系统",
         "v1.3.1": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1060,7 +1060,7 @@
       "history": {
         "v1.0.1": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1086,7 +1086,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1141,7 +1141,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1199,7 +1199,7 @@
       "history": {
         "v1.0.0": "初始版本。"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-14T10:25:45Z",
@@ -1207,7 +1207,41 @@
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.04"
+    },
+    {
+      "id": "moxyis_fpk-xianyu",
+      "name": "闲鱼管理系统",
+      "repository": "https://github.com/moxyis/FnDepot",
+      "description": "一个功能完整的闲鱼自动回复和管理系统，支持多用户、多账号管理，具备智能回复、自动发货、自动确认发货、商品管理等企业级功能。<br>默认账号：admin<br>默认密码：admin123",
+      "version": "0.0.1",
+      "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/fpk-xianyu.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065653_760.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065717_999.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065722_865.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065727_911.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065732_656.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065738_207.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065743_503.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065748_327.png",
+        "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-xianyu/Preview/ScreenShot_2026-01-15_065755_127.png"
+      ],
+      "author": "moxyis",
+      "author_url": "https://github.com/moxyis",
+      "bug_report_url": "https://github.com/moxyis/FnDepot/issues",
+      "history": {
+        "V0.0.1": "第一版版本的飞牛应用Docker"
+      },
+      "stars": 8,
+      "forks": 2,
+      "category": "utility",
+      "lastUpdate": "2026-01-14T23:24:46Z",
+      "fnpack_app_key": "fpk-xianyu",
+      "fnpack_repo_key": "moxyis",
+      "install_type": "工具",
+      "size": "0.0184"
     }
   ],
-  "lastUpdated": "2026-01-14T16:31:35.271493Z"
+  "lastUpdated": "2026-01-15T16:35:52.745523Z"
 }
