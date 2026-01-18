@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.10.15",
+      "version": "4.10.36",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -481,7 +481,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 17,
+      "stars": 18,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -509,7 +509,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 17,
+      "stars": 18,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -535,7 +535,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 17,
+      "stars": 18,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -561,7 +561,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 17,
+      "stars": 18,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -1236,12 +1236,12 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-14T23:24:46Z",
+      "lastUpdate": "2026-01-18T00:54:38Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
       "size": "0.0184"
     }
   ],
-  "lastUpdated": "2026-01-16T16:30:09.202294Z"
+  "lastUpdated": "2026-01-18T16:25:36.209435Z"
 }
