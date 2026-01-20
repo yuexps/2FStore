@@ -1290,7 +1290,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-19T07:45:19Z",
+      "lastUpdate": "2026-01-20T03:30:38Z",
       "fnpack_app_key": "OpenList",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1321,7 +1321,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-19T07:45:19Z",
+      "lastUpdate": "2026-01-20T03:30:38Z",
       "fnpack_app_key": "AdGuardHome",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1332,7 +1332,7 @@
       "name": "TaoSync",
       "repository": "https://github.com/710850609/FnDepot",
       "description": "TaoSync是一个适用于OpenList/AList v3+的自动化同步工具。",
-      "version": "0.3.2-7",
+      "version": "0.3.2-8",
       "iconUrl": "https://raw.githubusercontent.com/710850609/FnDepot/main/TaoSync/ICON.PNG",
       "downloadUrl": "https://github.com/710850609/fpk-TaoSync/releases/latest/download/TaoSync-linux-amd64.fpk",
       "screenshots": [
@@ -1352,7 +1352,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-19T07:45:19Z",
+      "lastUpdate": "2026-01-20T03:30:38Z",
       "fnpack_app_key": "TaoSync",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1373,7 +1373,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-codeserver package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1397,7 +1397,7 @@
       "history": {
         "v1.0.2": "Initial release of fn-kodi package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1421,7 +1421,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-msedge package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1445,7 +1445,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-ntfs3 package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1469,7 +1469,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1493,7 +1493,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-qemu-ga package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1517,7 +1517,7 @@
       "history": {
         "v1.1.5": "Initial release of fn-scheduler package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1541,7 +1541,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1565,7 +1565,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-terminal package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1589,7 +1589,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 73,
+      "stars": 77,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1777,7 +1777,7 @@
       "history": {
         "v1.0.0": "初始版本"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-18T04:42:32Z",
@@ -1806,7 +1806,7 @@
       "history": {
         "v1.0.0": "初始版本"
       },
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-18T04:42:32Z",
@@ -2295,5 +2295,5 @@
       "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-01-19T16:30:50.095683Z"
+  "lastUpdated": "2026-01-20T16:36:42.129582Z"
 }
