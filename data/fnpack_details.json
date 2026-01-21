@@ -1260,7 +1260,7 @@
       "history": {
         "v0.0.7": "加入支持动态视频下载-合成一个视频以及其他优化"
       },
-      "stars": 4,
+      "stars": 5,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-14T16:38:24Z",
@@ -1373,7 +1373,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-codeserver package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1397,7 +1397,7 @@
       "history": {
         "v1.0.2": "Initial release of fn-kodi package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1421,7 +1421,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-msedge package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1445,7 +1445,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-ntfs3 package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1469,7 +1469,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1493,7 +1493,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-qemu-ga package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1517,7 +1517,7 @@
       "history": {
         "v1.1.5": "Initial release of fn-scheduler package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1541,7 +1541,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1565,7 +1565,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-terminal package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1589,7 +1589,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 77,
+      "stars": 83,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-16T09:49:40Z",
@@ -1834,7 +1834,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-17T03:09:54Z",
+      "lastUpdate": "2026-01-21T07:34:48Z",
       "fnpack_app_key": "kerkerker",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1862,7 +1862,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-17T03:09:54Z",
+      "lastUpdate": "2026-01-21T07:34:48Z",
       "fnpack_app_key": "splayer",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1887,7 +1887,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-17T03:09:54Z",
+      "lastUpdate": "2026-01-21T07:34:48Z",
       "fnpack_app_key": "php-epg",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1909,7 +1909,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-17T03:09:54Z",
+      "lastUpdate": "2026-01-21T07:34:48Z",
       "fnpack_app_key": "php-runtime",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1934,7 +1934,7 @@
       "stars": 3,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-17T03:09:54Z",
+      "lastUpdate": "2026-01-21T07:34:48Z",
       "fnpack_app_key": "lingyin",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -2293,7 +2293,29 @@
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
       "size": "不超过1"
+    },
+    {
+      "id": "zyp1690_iptv-api",
+      "name": "iptv-api- IPTV直播源自动更新平台",
+      "repository": "https://github.com/zyp1690/FnDepot",
+      "description": "⚡️IPTV直播源自动更新平台『🤖全自动采集、筛选、测速、生成🚀』：自定义获取频道；IPv4/IPv6；接口验效；推流；多平台支持；工作流、Docker、命令行、GUI多端部署 | IPTV live streaming source automatic update platform",
+      "version": "1.7.3",
+      "iconUrl": "https://raw.githubusercontent.com/zyp1690/FnDepot/main/iptv-api/ICON.PNG",
+      "downloadUrl": "https://github.com/zyp1690/FnDepot/refs/heads/main/iptv-api/iptv-api-v1.7.3-x86.fpk",
+      "screenshots": [],
+      "author": "火舞狂沙",
+      "author_url": "https://github.com/zyp1690/FnDepot",
+      "bug_report_url": "https://github.com/Guovin/iptv-api/",
+      "history": {},
+      "stars": 3,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2026-01-21T07:34:48Z",
+      "fnpack_app_key": "iptv-api",
+      "fnpack_repo_key": "zyp1690",
+      "install_type": "docker",
+      "size": "122 KB"
     }
   ],
-  "lastUpdated": "2026-01-20T16:36:42.129582Z"
+  "lastUpdated": "2026-01-21T16:50:55.072926Z"
 }
