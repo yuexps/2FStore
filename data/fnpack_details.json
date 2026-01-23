@@ -59,7 +59,7 @@
       "history": {
         "更新日志": "🌈 热烈庆祝1.0版,特此发布纪念版🍕 ✅已适配arm版飞牛！其他更新细节请到Github查看"
       },
-      "stars": 9,
+      "stars": 8,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -87,7 +87,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 9,
+      "stars": 8,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.10.41",
+      "version": "4.10.47",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -240,7 +240,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 9,
+      "stars": 8,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -295,7 +295,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -426,7 +426,7 @@
         "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 9,
+      "stars": 8,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -1236,7 +1236,7 @@
       "stars": 8,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-19T00:54:03Z",
+      "lastUpdate": "2026-01-23T00:53:11Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1374,7 +1374,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-codeserver package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1398,7 +1398,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-kodi package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1422,7 +1422,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-msedge package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1446,7 +1446,7 @@
       "history": {
         "v1.0.3": "Initial release of fn-ntfs3 package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1470,7 +1470,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1494,7 +1494,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-qemu-ga package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1518,7 +1518,7 @@
       "history": {
         "v1.1.6": "Initial release of fn-scheduler package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1542,7 +1542,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1566,7 +1566,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-terminal package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1590,7 +1590,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -1942,283 +1942,6 @@
       "size": "118 KB"
     },
     {
-      "id": "ctllo-bit_ubuntu-xfce",
-      "name": "Ubuntu",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "这是一个简单的Ubuntu桌面应用，由于webto实现",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce/ubuntu-xfce.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce/Preview/01.png"
-      ],
-      "author": "linuxserver",
-      "author_url": "https://github.com/linuxserver/docker-webtop",
-      "bug_report_url": "https://github.com/linuxserver/docker-webtop/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "ubuntu-xfce",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "0.39"
-    },
-    {
-      "id": "ctllo-bit_vs-code",
-      "name": "VS Code桌面版",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "一款可内嵌的桌面代码编辑器，同时支持内嵌、外链入口。\n默认密码是password，",
-      "version": "1.0.1",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/vs-code/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/vs-code/vs-code.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/vs-code/Preview/01.png"
-      ],
-      "author": "coder",
-      "author_url": "https://github.com/coder/code-server",
-      "bug_report_url": "https://github.com/coder/code-server/issues",
-      "history": {
-        "v1.0.0": "初始版本,ctllo-bit提供内嵌桌面",
-        "v1.0.1": "修复了命令终端不能复制粘贴的问题"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "development",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "vs-code",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "0.17"
-    },
-    {
-      "id": "ctllo-bit_ubuntu-xfce-novnc",
-      "name": "Ubuntu-novnc",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "一个简单的Ubuntu的桌面系统（带VNC/noVNC）。\n默认密码：password",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce-novnc/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce-novnc/ubuntu-xfce-novnc.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce-novnc/Preview/01.png"
-      ],
-      "author": "fcwu",
-      "author_url": "https://github.com/fcwu/docker-ubuntu-vnc-desktop",
-      "bug_report_url": "https://github.com/fcwu/docker-ubuntu-vnc-desktop/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "ubuntu-xfce-novnc",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "0.35"
-    },
-    {
-      "id": "ctllo-bit_subwaySurfers",
-      "name": "地铁跑酷",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "html5小游戏",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/subwaySurfers/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/subwaySurfers/subwaySurfers.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/subwaySurfers/Preview/01.png"
-      ],
-      "author": "KILOO & SYBO",
-      "author_url": "https://github.com/ctllo-bit/FnDepot_Game",
-      "bug_report_url": "https://github.com/ctllo-bit/FnDepot_Game/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "games",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "subwaySurfers",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_tombRunner",
-      "name": "古墓丽影",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "一个简单的网页游戏封装",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/tombRunner/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/tombRunner/tombRunner.fpk",
-      "screenshots": [],
-      "author": "唔知喔",
-      "author_url": "https://github.com/ctllo-bit/FnDepot_Game",
-      "bug_report_url": "https://github.com/ctllo-bit/FnDepot_Game/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "games",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "tombRunner",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_cuber",
-      "name": "魔方栈",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "优美而强大的网页魔方",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/cuber/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/cuber/cuber.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/cuber/Preview/01.png"
-      ],
-      "author": "huazhechen",
-      "author_url": "https://gitee.com/huazhechen/cuber",
-      "bug_report_url": "https://gitee.com/huazhechen/cuber/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "cuber",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_templeRun2",
-      "name": "神庙逃亡2",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "直接在网页浏览器中畅玩 Temple Run 2,即刻体验 Temple Run 2 带来的肾上腺素飙升的快感",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/templeRun2/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/templeRun2/templeRun2.fpk",
-      "screenshots": [],
-      "author": "Imangi Studios",
-      "author_url": "https://github.com/ctllo-bit/FnDepot_Game",
-      "bug_report_url": "https://github.com/ctllo-bit/FnDepot_Game/issues",
-      "history": {
-        "v1.0.0": "优化包的大小，改为网页封装"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "games",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "templeRun2",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_pvz2-gardendless",
-      "name": "植物大站僵尸2重制版",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "PvZ2 Gardendless，完全重制的全桌面平台PvZ2",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/pvz2-gardendless/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/pvz2-gardendless/pvz2-gardendless.fpk",
-      "screenshots": [
-        "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/pvz2-gardendless/Preview/01.png"
-      ],
-      "author": "南Garden",
-      "author_url": "https://space.bilibili.com/355909245",
-      "bug_report_url": "https://github.com/Gzh0821/pvzg_site/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "games",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "pvz2-gardendless",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_lifeRestart",
-      "name": "人生重开模拟器",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "一款文字类网页游戏",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/lifeRestart/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/lifeRestart/lifeRestart.fpk",
-      "screenshots": [],
-      "author": "VickScarlet",
-      "author_url": "https://github.com/VickScarlet/lifeRestart",
-      "bug_report_url": "https://github.com/VickScarlet/lifeRestart/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "games",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "lifeRestart",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_webcs",
-      "name": "网页版CS1.6",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "一个用浏览器也能在线玩CS。",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/webcs/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/webcs/webcs.fpk",
-      "screenshots": [],
-      "author": "yohimik",
-      "author_url": "https://github.com/yohimik/webxash3d-fwgs",
-      "bug_report_url": "https://github.com/yohimik/webxash3d-fwgs/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "games",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "webcs",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
-      "id": "ctllo-bit_cpuFind",
-      "name": "硬件天梯查询",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "可以高效查询cpu多核性能、游戏性能、GPU性能、硬盘性能，并进行对比的工具。",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/cpuFind/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/cpuFind/cpuFind.fpk",
-      "screenshots": [],
-      "author": "Lainbo",
-      "author_url": "https://github.com/ctllo-bit/FnDepot_Tools",
-      "bug_report_url": "https://github.com/ctllo-bit/FnDepot_Tools/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "cpuFind",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
-    },
-    {
       "id": "KKKK987_小松鼠",
       "name": "小松鼠",
       "repository": "https://github.com/KKKK987/FnDepot",
@@ -2270,30 +1993,6 @@
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
       "size": "0.9"
-    },
-    {
-      "id": "ctllo-bit_we-mp-rss",
-      "name": "微信公众号订阅",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "将公众号内容自动转为标准 RSS 订阅源,通过 Feedly、Inoreader 等 RSS 阅读器统一管理。",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/we-mp-rss/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/we-mp-rss/we-mp-rss.fpk",
-      "screenshots": [],
-      "author": "rachelos",
-      "author_url": "https://github.com/rachelos/we-mp-rss",
-      "bug_report_url": "https://github.com/rachelos/we-mp-rss/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "we-mp-rss",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "不超过1"
     },
     {
       "id": "zyp1690_iptv-api",
@@ -2383,7 +2082,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 85,
+      "stars": 92,
       "forks": 10,
       "category": "utility",
       "lastUpdate": "2026-01-22T07:26:19Z",
@@ -2391,31 +2090,7 @@
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
       "size": " 0.180"
-    },
-    {
-      "id": "ctllo-bit_fusion",
-      "name": "Fusion",
-      "repository": "https://github.com/ctllo-bit/FnDepot",
-      "description": "一款轻量级的 RSS 源聚合器和阅读器，配合微信公众号订阅来使用。",
-      "version": "1.0.0",
-      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/fusion/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/fusion/fusion.fpk",
-      "screenshots": [],
-      "author": "0x2E",
-      "author_url": "https://github.com/0x2E/fusion",
-      "bug_report_url": "https://github.com/0x2E/fusion/issues",
-      "history": {
-        "v1.0.0": "初始版本"
-      },
-      "stars": 3,
-      "forks": 0,
-      "category": "utility",
-      "lastUpdate": "2026-01-22T06:05:09Z",
-      "fnpack_app_key": "fusion",
-      "fnpack_repo_key": "ctllo-bit",
-      "install_type": "存储空间",
-      "size": "7.8"
     }
   ],
-  "lastUpdated": "2026-01-22T16:37:00.123863Z"
+  "lastUpdated": "2026-01-23T16:31:46.108526Z"
 }
