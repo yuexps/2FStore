@@ -59,7 +59,7 @@
       "history": {
         "更新日志": "🌈 热烈庆祝1.0版,特此发布纪念版🍕 ✅已适配arm版飞牛！其他更新细节请到Github查看"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -87,7 +87,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.10.47",
+      "version": "4.12.0",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -143,10 +143,10 @@
       "history": {
         "V4.9.80": "1、新增 pnpm-lock.yaml 以跟踪依赖项并更新 .gitignore <br> 2、新增 9.9.25-42905 (x64/Win) 和 6.9.86-42905 (arm64/Mac) 版本支持"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -177,10 +177,10 @@
         "V2.11": "JS、CSS本地化",
         "V2.12": "https://github.com/netcccyun/dnsmgr/releases/tag/2.12.0"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -211,10 +211,10 @@
       "history": {
         "V4.5.0": "https://docs.zfile.vip/changelog/os"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -240,7 +240,7 @@
         "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -292,10 +292,10 @@
       "history": {
         "V3.1.5": "https://github.com/px-org/PanIndex/releases/tag/v3.1.5"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -318,10 +318,10 @@
       "history": {
         "V4.10.1": "https://github.com/cloudreve/Cloudreve/releases"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -345,10 +345,10 @@
       "history": {
         "V0.0.1": "第一版版本的飞牛应用Docker"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -426,7 +426,7 @@
         "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
         "v0.77": "修复错误,性能优化"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-15T18:11:42Z",
@@ -481,7 +481,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 19,
+      "stars": 20,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -509,7 +509,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 19,
+      "stars": 20,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -535,7 +535,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 19,
+      "stars": 20,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -561,7 +561,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 19,
+      "stars": 20,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -588,7 +588,7 @@
       "history": {
         "v2.3.9-Beta": "轻量（应用包仅5.2MB）、低占用、原生方案无其他环境依赖，NAS内应用窗口化，支持App及公网访问，兼容反代用户"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-11-30T10:59:04Z",
@@ -1233,10 +1233,10 @@
       "history": {
         "V0.0.1": "第一版版本的飞牛应用Docker"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "category": "utility",
-      "lastUpdate": "2026-01-23T00:53:11Z",
+      "lastUpdate": "2026-01-25T00:55:52Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1290,7 +1290,7 @@
       "author_url": "https://github.com/710850609",
       "bug_report_url": "https://github.com/710850609/fpk-OpenList/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-22T08:35:42Z",
@@ -1321,7 +1321,7 @@
       "author_url": "https://github.com/710850609",
       "bug_report_url": "https://github.com/710850609/fpk-adguardhome/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-22T08:35:42Z",
@@ -1352,7 +1352,7 @@
       "author_url": "https://github.com/710850609",
       "bug_report_url": "https://github.com/710850609/fpk-TaoSync/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-22T08:35:42Z",
@@ -1618,7 +1618,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1644,7 +1644,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1671,7 +1671,7 @@
         "2.0.72": "最新稳定版本",
         "1.1.0": "性能优化和Bug修复"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1697,7 +1697,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1725,7 +1725,7 @@
         "v2.1.1867-1": "飞牛NAS适配版本",
         "v2.1.1867": "主要功能更新和Bug修复"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "media",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1751,7 +1751,7 @@
       "history": {
         "0.10.0": "初始版本发布"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1780,7 +1780,7 @@
       "history": {
         "v1.0.0": "初始版本"
       },
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-18T04:42:32Z",
@@ -1809,7 +1809,7 @@
       "history": {
         "v1.0.0": "初始版本"
       },
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-18T04:42:32Z",
@@ -1959,7 +1959,7 @@
         "v0.0.6": "None",
         "v0.0.7": "⚠️ 重要提示：为避免兼容性问题，安装新版前必须完全卸载旧版本并清除数据！"
       },
-      "stars": 2,
+      "stars": 3,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2025-12-21T16:26:29Z",
@@ -1987,7 +1987,7 @@
       "history": {
         "2.0.1": "初始版本发布"
       },
-      "stars": 6,
+      "stars": 7,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -2036,7 +2036,7 @@
       "author_url": "https://github.com/710850609",
       "bug_report_url": "https://github.com/710850609/fpk-SmartDNS/issues",
       "history": {},
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-22T08:35:42Z",
@@ -2094,5 +2094,5 @@
       "size": " 0.180"
     }
   ],
-  "lastUpdated": "2026-01-24T16:25:58.296853Z"
+  "lastUpdated": "2026-01-25T16:26:30.507689Z"
 }
