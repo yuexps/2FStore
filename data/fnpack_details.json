@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.13.5",
+      "version": "4.14.6",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -481,7 +481,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 21,
+      "stars": 22,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -509,7 +509,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 21,
+      "stars": 22,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -535,7 +535,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 21,
+      "stars": 22,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -561,7 +561,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 21,
+      "stars": 22,
       "forks": 2,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -1236,7 +1236,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-30T00:58:16Z",
+      "lastUpdate": "2026-01-31T00:56:17Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1379,7 +1379,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1403,7 +1403,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1427,7 +1427,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1451,7 +1451,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1475,7 +1475,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1499,7 +1499,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1523,7 +1523,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1547,7 +1547,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1571,7 +1571,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1597,7 +1597,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1623,7 +1623,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1650,7 +1650,7 @@
         "2.0.72": "最新稳定版本",
         "1.1.0": "性能优化和Bug修复"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1676,7 +1676,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1704,7 +1704,7 @@
         "v2.1.1867-1": "飞牛NAS适配版本",
         "v2.1.1867": "主要功能更新和Bug修复"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "media",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1730,7 +1730,7 @@
       "history": {
         "0.10.0": "初始版本发布"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1816,7 +1816,7 @@
       "stars": 6,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-29T06:35:07Z",
+      "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "kerkerker",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1827,9 +1827,9 @@
       "name": "splayer 网易云第三方音乐播放器",
       "repository": "https://github.com/zyp1690/FnDepot",
       "description": "SPlayer 🎉 一个简约的网易云第三方音乐播放器，支持逐字歌词、歌曲下载、评论区展示、音乐云盘及歌单管理、音乐频谱，移动端基础适配 | A minimalist music player",
-      "version": "3.0.0-beta.8",
+      "version": "3.0.0-beta.9",
       "iconUrl": "https://raw.githubusercontent.com/zyp1690/FnDepot/main/splayer/ICON.PNG",
-      "downloadUrl": "https://raw.githubusercontent.com/zyp1690/FnDepot/refs/heads/main/splayer/splayer.fpk",
+      "downloadUrl": "https://raw.githubusercontent.com/zyp1690/FnDepot/refs/heads/main/splayer/splayer-3.0.0-beta.9-x86.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/zyp1690/FnDepot/main/splayer/Preview/01.png",
         "https://raw.githubusercontent.com/zyp1690/FnDepot/main/splayer/Preview/1.png",
@@ -1844,7 +1844,7 @@
       "stars": 6,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-29T06:35:07Z",
+      "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "splayer",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1869,7 +1869,7 @@
       "stars": 6,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-29T06:35:07Z",
+      "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "php-epg",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1891,7 +1891,7 @@
       "stars": 6,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-29T06:35:07Z",
+      "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "php-runtime",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -1941,7 +1941,7 @@
       "history": {
         "2.0.1": "初始版本发布"
       },
-      "stars": 7,
+      "stars": 8,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-01-19T06:54:38Z",
@@ -1969,7 +1969,7 @@
       "stars": 6,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-29T06:35:07Z",
+      "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "iptv-api",
       "fnpack_repo_key": "zyp1690",
       "install_type": "docker",
@@ -2038,7 +2038,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2065,7 +2065,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "cpuFind",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2089,7 +2089,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "webcs",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2113,7 +2113,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "winxp",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2186,7 +2186,7 @@
       "stars": 0,
       "forks": 0,
       "category": "development",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "vs-code",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2210,7 +2210,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "webintosh",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2234,7 +2234,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "tenfellos",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2255,7 +2255,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2282,7 +2282,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "pvz2-gardendless",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2306,7 +2306,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "we-mp-rss",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2330,7 +2330,7 @@
       "stars": 0,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "cuber",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2354,7 +2354,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "templeRun2",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2378,7 +2378,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "tombRunner",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2402,7 +2402,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "subwaySurfers",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2427,7 +2427,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "webMC",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2451,7 +2451,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "beKing",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2475,7 +2475,7 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "stickFigure",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
@@ -2496,7 +2496,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2520,7 +2520,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2544,7 +2544,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2571,11 +2571,11 @@
       "stars": 0,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-30T14:36:59Z",
+      "lastUpdate": "2026-01-31T06:51:42Z",
       "fnpack_app_key": "eaglercraft",
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
-      "size": "10.9"
+      "size": "10.87"
     },
     {
       "id": "RROrg_fn-broadcom-sta",
@@ -2592,7 +2592,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 98,
+      "stars": 99,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2600,7 +2600,58 @@
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
       "size": " 5.498"
+    },
+    {
+      "id": "zyp1690_nas-music",
+      "name": "nas-music- NSA音乐播放器",
+      "repository": "https://github.com/zyp1690/FnDepot",
+      "description": "🎵 NAS 音乐服务器(nas-music) 是一个功能强大的基于 Node.js 的音乐服务器，支持本地音乐管理、在线音乐搜索和数据同步功能。",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/zyp1690/FnDepot/main/nas-music/ICON.PNG",
+      "downloadUrl": "https://github.com/zyp1690/FnDepot/refs/heads/main/nas-music/nas-music-1.0.0-x86.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/zyp1690/FnDepot/main/nas-music/Preview/01.png",
+        "https://raw.githubusercontent.com/zyp1690/FnDepot/main/nas-music/Preview/02.png",
+        "https://raw.githubusercontent.com/zyp1690/FnDepot/main/nas-music/Preview/03.png",
+        "https://raw.githubusercontent.com/zyp1690/FnDepot/main/nas-music/Preview/04.png"
+      ],
+      "author": "火舞狂沙",
+      "author_url": "https://github.com/zyp1690/FnDepot",
+      "bug_report_url": "https://gitee.com/yanfanVIP/nas-music",
+      "history": {},
+      "stars": 6,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2026-01-31T07:34:00Z",
+      "fnpack_app_key": "nas-music",
+      "fnpack_repo_key": "zyp1690",
+      "install_type": "docker",
+      "size": "202 KB"
+    },
+    {
+      "id": "ctllo-bit_ubuntu-xfce",
+      "name": "Ubuntu",
+      "repository": "https://github.com/ctllo-bit/FnDepot",
+      "description": "这是一个简单的Ubuntu的桌面应用，由Dokcer来驱动。\n默认用户名：webtop\n默认密码：password",
+      "version": "1.0.0",
+      "iconUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/ctllo-bit/FnDepot/main/ubuntu-xfce/ubuntu-xfce.fpk",
+      "screenshots": [],
+      "author": "linuxserver",
+      "author_url": "https://github.com/linuxserver/docker-webtop",
+      "bug_report_url": "https://github.com/linuxserver/docker-webtop/issues",
+      "history": {
+        "v1.0.0": "初始版本"
+      },
+      "stars": 0,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2026-01-31T06:51:42Z",
+      "fnpack_app_key": "ubuntu-xfce",
+      "fnpack_repo_key": "ctllo-bit",
+      "install_type": "存储空间",
+      "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-01-30T16:40:28.100082Z"
+  "lastUpdated": "2026-01-31T16:29:36.175749Z"
 }
