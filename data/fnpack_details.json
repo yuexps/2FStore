@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "`多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>• ⬇️ <a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>手动下载链接</a> • 更多信息：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
-      "version": "1.1.15.3",
+      "version": "1.1.18",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -62,7 +62,7 @@
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-28T10:19:09Z",
+      "lastUpdate": "2026-02-01T07:53:36Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -90,7 +90,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-01-28T10:19:09Z",
+      "lastUpdate": "2026-02-01T07:53:36Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.14.6",
+      "version": "4.14.7",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -243,7 +243,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-01-28T10:19:09Z",
+      "lastUpdate": "2026-02-01T07:53:36Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -429,7 +429,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-01-28T10:19:09Z",
+      "lastUpdate": "2026-02-01T07:53:36Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -1236,7 +1236,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-01-31T00:56:17Z",
+      "lastUpdate": "2026-02-01T01:08:54Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1247,7 +1247,7 @@
       "name": "抖小云",
       "repository": "https://github.com/jianzhichu/FnDepot",
       "description": "基于.NET 6 开发,同步抖音「收藏的」视频、「喜欢的」视频、指定博主的作品、内置刮削、可直接丢到Emby或Jellyfin、支持多账号同步|默认账号：douyin/douyin2026,图文视频依赖ffmpeg，飞牛默认有安装，如果发现没有，需要自己安装一下",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "iconUrl": "https://raw.githubusercontent.com/jianzhichu/FnDepot/main/dy.net/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/jianzhichu/FnDepot/main/dy.net/dy.net.fpk",
       "screenshots": [
@@ -1264,12 +1264,13 @@
         "0.1.0": "增加下载视频编码选择 h264 h265",
         "0.1.1": "修复bug",
         "0.1.2": "修复bug",
-        "0.1.3": "修复bug"
+        "0.1.3": "修复bug",
+        "0.1.4": "关注列表 保存路径，同步关注列表的时候直接把保存路径设置好了=博主名字（这样可以避免你没设置路径，但是博主又改名字，导致同一个博主的视频，后面视频分散在多个文件夹），已经设置过路径的不会变"
       },
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-28T04:46:52Z",
+      "lastUpdate": "2026-02-01T14:01:24Z",
       "fnpack_app_key": "dy.net",
       "fnpack_repo_key": "jianzhichu",
       "install_type": "系统空间",
@@ -1379,7 +1380,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1403,7 +1404,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1427,7 +1428,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1451,7 +1452,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1475,7 +1476,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1499,7 +1500,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1523,7 +1524,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1547,7 +1548,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1571,7 +1572,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2038,7 +2039,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2124,7 +2125,7 @@
       "name": "toolsplus",
       "repository": "https://github.com/upchr/FnDepot",
       "description": "主要功能为个人便签速记，轻量级多设备定时任务管理。它基于 Vue 3 和 Python3 构建，旨在为开发、多设备用户提供集中定时任务管理、以及事项备忘。\n",
-      "version": "2.3.6",
+      "version": "2.3.7",
       "iconUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/toolsplus.fpk",
       "screenshots": [
@@ -2157,12 +2158,13 @@
         "v2.3.3": "便签、定时任务管理（v2.3.3）",
         "v2.3.4": "便签、定时任务管理（v2.3.4）",
         "v2.3.5": "便签、定时任务管理（v2.3.5）",
-        "v2.3.6": "便签、定时任务管理（v2.3.6）"
+        "v2.3.6": "便签、定时任务管理（v2.3.6）",
+        "v2.3.7": "便签、定时任务管理（v2.3.7）"
       },
       "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-30T10:34:53Z",
+      "lastUpdate": "2026-02-01T03:07:43Z",
       "fnpack_app_key": "toolsplus",
       "fnpack_repo_key": "upchr",
       "install_type": "存储空间",
@@ -2255,7 +2257,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2496,7 +2498,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2520,7 +2522,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2544,7 +2546,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2592,7 +2594,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 99,
+      "stars": 100,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2653,5 +2655,5 @@
       "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-01-31T16:29:36.175749Z"
+  "lastUpdated": "2026-02-01T16:31:01.826967Z"
 }
