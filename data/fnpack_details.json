@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.14.7",
+      "version": "4.14.10",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -1236,7 +1236,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-01T01:08:54Z",
+      "lastUpdate": "2026-02-02T01:01:40Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1247,7 +1247,7 @@
       "name": "抖小云",
       "repository": "https://github.com/jianzhichu/FnDepot",
       "description": "基于.NET 6 开发,同步抖音「收藏的」视频、「喜欢的」视频、指定博主的作品、内置刮削、可直接丢到Emby或Jellyfin、支持多账号同步|默认账号：douyin/douyin2026,图文视频依赖ffmpeg，飞牛默认有安装，如果发现没有，需要自己安装一下",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "iconUrl": "https://raw.githubusercontent.com/jianzhichu/FnDepot/main/dy.net/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/jianzhichu/FnDepot/main/dy.net/dy.net.fpk",
       "screenshots": [
@@ -1265,12 +1265,13 @@
         "0.1.1": "修复bug",
         "0.1.2": "修复bug",
         "0.1.3": "修复bug",
-        "0.1.4": "关注列表 保存路径，同步关注列表的时候直接把保存路径设置好了=博主名字（这样可以避免你没设置路径，但是博主又改名字，导致同一个博主的视频，后面视频分散在多个文件夹），已经设置过路径的不会变"
+        "0.1.4": "关注列表 保存路径，同步关注列表的时候直接把保存路径设置好了=博主名字（这样可以避免你没设置路径，但是博主又改名字，导致同一个博主的视频，后面视频分散在多个文件夹），已经设置过路径的不会变",
+        "0.1.5": "修复bug"
       },
       "stars": 5,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-02-01T14:01:24Z",
+      "lastUpdate": "2026-02-02T15:34:02Z",
       "fnpack_app_key": "dy.net",
       "fnpack_repo_key": "jianzhichu",
       "install_type": "系统空间",
@@ -1281,9 +1282,9 @@
       "name": "OpenList",
       "repository": "https://github.com/710850609/FnDepot",
       "description": "OpenList是一个有韧性、长期治理、社区驱动的 AList 分支，旨在防御基于信任的开源攻击。支持多种存储的文件列表程序",
-      "version": "4.1.9-10",
+      "version": "4.1.10-10",
       "iconUrl": "https://raw.githubusercontent.com/710850609/FnDepot/main/OpenList/ICON.PNG",
-      "downloadUrl": "https://github.com/710850609/fpk-OpenList/releases/latest/download/OpenList-4.1.9-10-amd64.fpk",
+      "downloadUrl": "https://github.com/710850609/fpk-OpenList/releases/latest/download/OpenList-4.1.10-10-amd64.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/710850609/FnDepot/main/OpenList/Preview/1.png",
         "https://raw.githubusercontent.com/710850609/FnDepot/main/OpenList/Preview/2.png",
@@ -1297,7 +1298,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-30T06:38:55Z",
+      "lastUpdate": "2026-02-02T05:38:23Z",
       "fnpack_app_key": "OpenList",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1328,7 +1329,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-30T06:38:55Z",
+      "lastUpdate": "2026-02-02T05:38:23Z",
       "fnpack_app_key": "AdGuardHome",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1359,7 +1360,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-30T06:38:55Z",
+      "lastUpdate": "2026-02-02T05:38:23Z",
       "fnpack_app_key": "TaoSync",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1380,7 +1381,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1404,7 +1405,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1428,7 +1429,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1452,7 +1453,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1476,7 +1477,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1500,7 +1501,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1524,7 +1525,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1548,7 +1549,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1572,7 +1573,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1994,7 +1995,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-30T06:38:55Z",
+      "lastUpdate": "2026-02-02T05:38:23Z",
       "fnpack_app_key": "SmartDNS",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -2039,7 +2040,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2125,7 +2126,7 @@
       "name": "toolsplus",
       "repository": "https://github.com/upchr/FnDepot",
       "description": "主要功能为个人便签速记，轻量级多设备定时任务管理。它基于 Vue 3 和 Python3 构建，旨在为开发、多设备用户提供集中定时任务管理、以及事项备忘。\n",
-      "version": "2.3.7",
+      "version": "2.3.9",
       "iconUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/toolsplus.fpk",
       "screenshots": [
@@ -2159,12 +2160,14 @@
         "v2.3.4": "便签、定时任务管理（v2.3.4）",
         "v2.3.5": "便签、定时任务管理（v2.3.5）",
         "v2.3.6": "便签、定时任务管理（v2.3.6）",
-        "v2.3.7": "便签、定时任务管理（v2.3.7）"
+        "v2.3.7": "便签、定时任务管理（v2.3.7）",
+        "v2.3.8": "便签、定时任务管理（v2.3.8）",
+        "v2.3.9": "便签、定时任务管理（v2.3.9）"
       },
       "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-02-01T03:07:43Z",
+      "lastUpdate": "2026-02-02T05:40:32Z",
       "fnpack_app_key": "toolsplus",
       "fnpack_repo_key": "upchr",
       "install_type": "存储空间",
@@ -2257,7 +2260,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2498,7 +2501,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2522,7 +2525,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2546,7 +2549,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2594,7 +2597,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 100,
+      "stars": 101,
       "forks": 13,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2655,5 +2658,5 @@
       "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-02-01T16:31:01.826967Z"
+  "lastUpdated": "2026-02-02T16:41:24.689090Z"
 }
