@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.14.10",
+      "version": "4.15.0",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -1236,7 +1236,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-02T01:01:40Z",
+      "lastUpdate": "2026-02-03T01:02:33Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1381,8 +1381,8 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-codeserver",
@@ -1405,8 +1405,8 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-kodi",
@@ -1429,8 +1429,8 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-ntfs3",
@@ -1453,8 +1453,8 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-open-vm-tools",
@@ -1477,8 +1477,8 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-qemu-ga",
@@ -1501,8 +1501,8 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-scheduler",
@@ -1525,8 +1525,8 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-sshd-config",
@@ -1549,8 +1549,8 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-terminal",
@@ -1573,8 +1573,8 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-wifi-hotspot",
@@ -2040,8 +2040,8 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-fail2ban",
@@ -2260,8 +2260,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-chromium",
@@ -2501,8 +2501,8 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-yt6801",
@@ -2525,8 +2525,8 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-VirtualHereServer",
@@ -2549,8 +2549,8 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-monitor",
@@ -2597,8 +2597,8 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 101,
-      "forks": 13,
+      "stars": 103,
+      "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
       "fnpack_app_key": "fn-broadcom-sta",
@@ -2658,5 +2658,5 @@
       "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-02-02T16:41:24.689090Z"
+  "lastUpdated": "2026-02-03T16:54:21.466877Z"
 }
