@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "`多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>• ⬇️ <a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>手动下载链接</a> • 更多信息：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
-      "version": "1.1.18",
+      "version": "1.1.19",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -62,7 +62,7 @@
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-01T07:53:36Z",
+      "lastUpdate": "2026-02-06T07:15:26Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -90,7 +90,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-01T07:53:36Z",
+      "lastUpdate": "2026-02-06T07:15:26Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.15.4",
+      "version": "4.15.13",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -243,7 +243,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-01T07:53:36Z",
+      "lastUpdate": "2026-02-06T07:15:26Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -306,7 +306,7 @@
       "name": "Cloudreve",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。你可以使用 Cloudreve 搭建个人用网盘、文件分享系统，亦或是针对大小团体的公有云系统。",
-      "version": "4.12.1",
+      "version": "4.13.0",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-cloudreve/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-cloudreve/fpk-cloudreve.fpk",
       "screenshots": [
@@ -321,7 +321,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -359,7 +359,7 @@
       "name": "memos",
       "repository": "https://github.com/hbestm/FnDepot",
       "description": "一款开源的自托管笔记服务。你的想法、你的数据、由你掌控，多端数据共享，安卓客服端，随时记录，更有浏览器插件，方便快捷。—— 无跟踪、无广告、无订阅费用。",
-      "version": "0.25.3",
+      "version": "0.26.0",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/memos/memos.fpk",
       "screenshots": [
@@ -369,12 +369,13 @@
       "author_url": "https://github.com/usememos/memos",
       "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
       "history": {
+        "v0.26.0": "更新到最新版，修复客户端连接问题。",
         "v0.25.3": "更新到最新版，修复客户端连接问题。"
       },
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "memos",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -400,7 +401,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "dsm",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -429,7 +430,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-01T07:53:36Z",
+      "lastUpdate": "2026-02-06T07:15:26Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -456,7 +457,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "easyvoice",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -841,7 +842,8 @@
       "author_url": "https://qm.qq.com/q/4MKTzfs9os",
       "bug_report_url": "https://qm.qq.com/q/4MKTzfs9os",
       "history": {
-        "v1.0.5": "同步最新镜像。",
+        "v1.0.6": "同步最新镜像,废弃mhost参数。",
+        "v1.0.5": "同步最新镜像，优化安装流程，建议保留ID及Token后删除原应用，重新安装。",
         "v1.0.4": "优化安装时的提示，无功能更新。",
         "v1.0.3": "1.同步最新源码。2.增加画质，7: 原画，9: 4K，ps:蓝光及以上需要登录且有VIP。3.去掉安装时端口选择 4.因增加新可选参数，建议先删除后安装，注意保留ID及Token。",
         "v1.0.2": "\n1.优化安装流程。 \n2.安装过程中可自定义端口、ID、token、host等关键信息（默认值可以正常使用。） \n3.安装过程中自动检查node.js环境，可自动安装。",
@@ -850,7 +852,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "mgvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -901,7 +903,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "gotify",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -912,7 +914,7 @@
       "name": "Termix-SSH",
       "repository": "https://github.com/hbestm/FnDepot",
       "description": "Termix 是一个开源的服务器管理平台，具备 SSH 终端、隧道和文件编辑功能。默认端口7790",
-      "version": "1.10.0",
+      "version": "1.11.0",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/termix/termix.fpk",
       "screenshots": [
@@ -925,12 +927,13 @@
       "bug_report_url": "https://github.com/Termix-SSH/Termix",
       "history": {
         "v1.9.0": "初始版本。",
-        "v1.10.0": "量更新内容，见官方网站。"
+        "v1.10.0": "量更新内容，见官方网站。",
+        "v1.11.0": "量更新内容，见官方网站。"
       },
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "termix",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -956,7 +959,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "iptv",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1008,7 +1011,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "ittools",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1036,7 +1039,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "prunemate-cn",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1063,7 +1066,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "app2docker",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1074,7 +1077,7 @@
       "name": "KVideo",
       "repository": "https://github.com/hbestm/FnDepot",
       "description": "一个基于 Next.js 16 构建的现代化视频聚合播放平台。采用独特的 Liquid Glass 设计语言，提供流畅的视觉体验和强大的视频搜索功能。（默认密码password，占用端口7798）",
-      "version": "1.0.0",
+      "version": "1.2.0",
       "iconUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/kvideo/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/hbestm/FnDepot/main/kvideo/kvideo.fpk",
       "screenshots": [
@@ -1084,12 +1087,13 @@
       "author_url": "https://github.com/KuekHaoYang/KVideo",
       "bug_report_url": "https://github.com/KuekHaoYang/KVideo",
       "history": {
+        "v1.2.0": "Upgrade。",
         "v1.0.0": "初始版本。"
       },
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "kvideo",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1144,7 +1148,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "wechat-article-exporter",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1202,7 +1206,7 @@
       "stars": 13,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-01-29T07:30:22Z",
+      "lastUpdate": "2026-02-06T14:19:57Z",
       "fnpack_app_key": "myspeed",
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
@@ -1236,7 +1240,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-04T00:57:29Z",
+      "lastUpdate": "2026-02-06T02:33:52Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1381,7 +1385,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1405,7 +1409,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1429,7 +1433,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1453,7 +1457,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1477,7 +1481,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1501,7 +1505,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1525,7 +1529,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1549,7 +1553,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1573,7 +1577,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1816,7 +1820,7 @@
       "bug_report_url": "https://github.com/unilei/kerkerker",
       "history": {},
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "kerkerker",
@@ -1844,7 +1848,7 @@
       "bug_report_url": null,
       "history": {},
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "splayer",
@@ -1869,7 +1873,7 @@
       "bug_report_url": "https://github.com/php-epg/php-epg/issues",
       "history": {},
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "php-epg",
@@ -1891,7 +1895,7 @@
       "bug_report_url": "/",
       "history": {},
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "php-runtime",
@@ -1969,7 +1973,7 @@
       "bug_report_url": "https://github.com/Guovin/iptv-api/",
       "history": {},
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "iptv-api",
@@ -2040,7 +2044,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2260,7 +2264,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2501,7 +2505,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2525,7 +2529,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2549,7 +2553,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2597,7 +2601,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 105,
+      "stars": 107,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2625,7 +2629,7 @@
       "bug_report_url": "https://gitee.com/yanfanVIP/nas-music",
       "history": {},
       "stars": 6,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-31T07:34:00Z",
       "fnpack_app_key": "nas-music",
@@ -2658,5 +2662,5 @@
       "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-02-05T16:50:58.577990Z"
+  "lastUpdated": "2026-02-06T16:45:39.184347Z"
 }
