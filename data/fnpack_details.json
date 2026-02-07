@@ -113,7 +113,7 @@
       "history": {
         "v1.9.9": "初始版本"
       },
-      "stars": 8,
+      "stars": 7,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-24T07:38:02Z",
@@ -264,7 +264,7 @@
       "history": {
         "v0.4.7": "初始版本"
       },
-      "stars": 8,
+      "stars": 7,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-24T07:38:02Z",
@@ -614,7 +614,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "lunatv",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -636,7 +636,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "reader",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -668,7 +668,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "read",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -695,7 +695,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "moviepilot",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -717,7 +717,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "lunatv-enhanced",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -741,7 +741,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "iventoy",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -765,7 +765,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "omnibox",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -775,8 +775,8 @@
       "id": "yuexps_2fmusic",
       "name": "2FMusic",
       "repository": "https://github.com/yuexps/FnDepot",
-      "description": "2FMusic 简洁的本地音乐播放器。\n🧪 测试版 - 功能暂不稳定，仅供测试！\n• 🎵 本地音乐库：自动扫描，支持识别 ID3 内嵌元数据。\n• 🖥️ Web 播放器：移动端适配，支持网络自动获取歌词、封面。\n• 🗂️ 目录管理：支持将服务器任意文件夹添加到音乐库。\n• ☁️ 网易云集成：支持搜索、下载、链接解析及扫码登录。\n• 🎧 音频预览：支持文件管理器双击预览播放（需安装2FMusic Preview）。",
-      "version": "0.0.8",
+      "description": "2FMusic 简洁的本地音乐播放器。\n测试版 - 功能暂不稳定，仅供测试！\n• 本地音乐库：自动扫描，支持识别 ID3 内嵌元数据。\n• Web 播放器：移动端适配，支持网络自动获取歌词、封面。\n• 目录管理：支持将服务器任意文件夹添加到音乐库。\n• 网易云集成：支持搜索、下载、链接解析及扫码登录。\n• 音频预览：支持文件管理器双击预览播放（需安装2FMusic Preview）。",
+      "version": "0.0.9",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/FnDepot/main/2fmusic/ICON.PNG",
       "downloadUrl": "https://github.com/yuexps/FnDepot/releases/download/2FMusic/2fmusic.fpk",
       "screenshots": [
@@ -792,18 +792,18 @@
       "author_url": "https://github.com/yuexps/2FMusic",
       "bug_report_url": "https://github.com/yuexps/2FMusic/issues",
       "history": {
-        "v0.0.6": "None",
         "v0.0.7": "⚠️ 重要提示：为避免兼容性问题，安装新版前必须完全卸载旧版本并清除数据！",
-        "v0.0.8": "feat:自动刮削与收藏夹功能"
+        "v0.0.8": "feat:自动刮削与收藏夹功能",
+        "v0.0.9": "feat:适配 Android APP，下载地址：https://github.com/yuexps/2FMusic/releases/tag/v0.0.9-d75ed9b-pre"
       },
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "2fmusic",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
-      "size": "26.95"
+      "size": "27.61"
     },
     {
       "id": "yuexps_netease",
@@ -821,7 +821,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "netease",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -877,7 +877,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "2fmusic-preview",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -982,7 +982,7 @@
       "history": {
         "v1.0.3": "初始版本"
       },
-      "stars": 8,
+      "stars": 7,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-01-24T07:38:02Z",
@@ -1121,7 +1121,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-01-07T10:28:40Z",
+      "lastUpdate": "2026-02-07T04:53:04Z",
       "fnpack_app_key": "antigravity",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -2020,7 +2020,7 @@
       "history": {
         "v1.0.0": "初始版本"
       },
-      "stars": 8,
+      "stars": 7,
       "forks": 1,
       "category": "games",
       "lastUpdate": "2026-01-24T07:38:02Z",
@@ -2662,5 +2662,5 @@
       "size": "不超过1"
     }
   ],
-  "lastUpdated": "2026-02-06T16:45:39.184347Z"
+  "lastUpdated": "2026-02-07T16:30:52.418109Z"
 }
