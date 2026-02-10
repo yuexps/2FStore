@@ -109,17 +109,17 @@
       "id": "2fmusic",
       "name": "2FMusic",
       "repository": "https://github.com/yuexps/2FMusic",
-      "description": "<b>2FMusic</b> 简洁的本地音乐播放器。\n<ul>\n    <li><b>本地音乐库</b>：自动扫描，支持识别提取 ID3 内嵌元数据 或 网络自动获取歌词、封面。</li>\n    <li><b>Web 播放器</b>：支持歌词滚动，播放器页自动取色。</li>\n    <li><b>目录管理</b>：支持将服务器任意文件夹添加到音乐库。</li>\n    <li><b>网易云集成</b>：支持搜索、下载、链接解析及扫码登录。</li>\n    <li><b>音频预览</b>：支持文件管理器双击预览播放（需安装2FMusic Preview）。</li>\n    <li><b>Android APP</b>：提供专属原生 Android APP，流畅体验（也许吧）。</li>\n</ul>",
-      "version": "0.0.9",
+      "description": "<b>2FMusic</b> 简洁的本地音乐播放器。\n<ul>\n    <li><b>本地音乐库</b>：自动扫描，支持识别提取 ID3 内嵌元数据 或 网络自动获取歌词、封面。</li>\n    <li><b>Web 播放器</b>：支持歌词滚动，播放器页自动取色。</li>\n    <li><b>目录管理</b>：支持将服务器任意文件夹添加到音乐库。</li>\n    <li><b>网易云集成</b>：支持搜索、下载、链接解析及扫码登录。</li>\n    <li><b>音频预览</b>：支持文件管理器双击预览播放（需安装2FMusic Preview）。</li>\n    <li><b>Android</b>：提供专属原生 Android APP，流畅体验（也许吧）。</li>\n</ul>",
+      "version": "0.1.0",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/2FMusic/main/ICON_256.PNG",
-      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.0.9-d75ed9b-pre/2fmusic-0.0.9-d75ed9b-amd64.fpk",
+      "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.1.0-3fba165-pre/fnnas.2fmusic-0.1.0-3fba165-amd64.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 53,
+      "stars": 52,
       "forks": 8,
       "category": "media",
-      "lastUpdate": "2026-02-07T04:44:53Z"
+      "lastUpdate": "2026-02-10T09:36:51Z"
     }
   ],
-  "lastUpdated": "2026-02-07T16:30:46.189764Z"
+  "lastUpdated": "2026-02-10T17:02:20.583970Z"
 }

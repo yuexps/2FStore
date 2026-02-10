@@ -614,7 +614,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "lunatv",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -636,7 +636,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "reader",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -668,7 +668,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "read",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -695,7 +695,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "moviepilot",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -717,7 +717,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "lunatv-enhanced",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -741,7 +741,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "iventoy",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -765,7 +765,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "omnibox",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -775,8 +775,8 @@
       "id": "yuexps_2fmusic",
       "name": "2FMusic",
       "repository": "https://github.com/yuexps/FnDepot",
-      "description": "2FMusic 简洁的本地音乐播放器。\n测试版 - 功能暂不稳定，仅供测试！\n• 本地音乐库：自动扫描，支持识别 ID3 内嵌元数据。\n• Web 播放器：移动端适配，支持网络自动获取歌词、封面。\n• 目录管理：支持将服务器任意文件夹添加到音乐库。\n• 网易云集成：支持搜索、下载、链接解析及扫码登录。\n• 音频预览：支持文件管理器双击预览播放（需安装2FMusic Preview）。",
-      "version": "0.0.9",
+      "description": "2FMusic 简洁的本地音乐播放器。\n测试版 - 功能暂不稳定，仅供测试！\n• 本地音乐库：自动扫描，支持识别 ID3 内嵌元数据。\n• Web 播放器：移动端适配，支持网络自动获取歌词、封面。\n• 目录管理：支持将服务器任意文件夹添加到音乐库。\n• 网易云集成：支持搜索、下载、链接解析及扫码登录。\n• 音频预览：支持文件管理器双击预览播放（需安装2FMusic Preview）。\n• Android APP 下载：https://github.com/yuexps/2FMusic/releases/tag/v0.1.0-3fba165-pre",
+      "version": "0.1.0",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/FnDepot/main/2fmusic/ICON.PNG",
       "downloadUrl": "https://github.com/yuexps/FnDepot/releases/download/2FMusic/2fmusic.fpk",
       "screenshots": [
@@ -794,12 +794,13 @@
       "history": {
         "v0.0.7": "⚠️ 重要提示：为避免兼容性问题，安装新版前必须完全卸载旧版本并清除数据！",
         "v0.0.8": "feat:自动刮削与收藏夹功能",
-        "v0.0.9": "feat:适配 Android APP，下载地址：https://github.com/yuexps/2FMusic/releases/tag/v0.0.9-d75ed9b-pre"
+        "v0.0.9": "feat:适配 Android APP",
+        "v0.1.0": "fix:修复因应用名称首位数字导致的安装失败问题"
       },
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "2fmusic",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -821,7 +822,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "netease",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -863,7 +864,7 @@
       "name": "2FMusic-Preview",
       "repository": "https://github.com/yuexps/FnDepot",
       "description": "Web端文件管理器双击预览播放拓展。\n2FMusic-Preview依赖2FMusic\n注意：此拓展会导致移动端APP音乐播放器失效！",
-      "version": "0.0.2",
+      "version": "0.0.3",
       "iconUrl": "https://raw.githubusercontent.com/yuexps/FnDepot/main/2fmusic-preview/ICON.PNG",
       "downloadUrl": "https://github.com/yuexps/FnDepot/releases/download/2FMusic/2fmusic-preview.fpk",
       "screenshots": [
@@ -877,7 +878,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "2fmusic-preview",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -1121,7 +1122,7 @@
       "stars": 9,
       "forks": 4,
       "category": "utility",
-      "lastUpdate": "2026-02-07T04:53:04Z",
+      "lastUpdate": "2026-02-10T11:42:23Z",
       "fnpack_app_key": "antigravity",
       "fnpack_repo_key": "yuexps",
       "install_type": "系统空间",
@@ -1385,7 +1386,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1409,7 +1410,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1433,7 +1434,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1457,7 +1458,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1481,7 +1482,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1505,7 +1506,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1529,7 +1530,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1553,7 +1554,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1577,7 +1578,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1603,7 +1604,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1629,7 +1630,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1656,7 +1657,7 @@
         "2.0.72": "最新稳定版本",
         "1.1.0": "性能优化和Bug修复"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1682,7 +1683,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1710,7 +1711,7 @@
         "v2.1.1867-1": "飞牛NAS适配版本",
         "v2.1.1867": "主要功能更新和Bug修复"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "media",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1736,7 +1737,7 @@
       "history": {
         "0.10.0": "初始版本发布"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1947,7 +1948,7 @@
       "history": {
         "2.0.1": "初始版本发布"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -2044,7 +2045,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2265,7 +2266,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2506,7 +2507,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2530,7 +2531,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2554,7 +2555,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2602,7 +2603,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 108,
+      "stars": 109,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2703,7 +2704,7 @@
       "history": {
         "0.144.2": "初始版本发布"
       },
-      "stars": 8,
+      "stars": 9,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -2713,5 +2714,5 @@
       "size": "1.9"
     }
   ],
-  "lastUpdated": "2026-02-10T00:21:11.606871Z"
+  "lastUpdated": "2026-02-10T17:02:28.124494Z"
 }
