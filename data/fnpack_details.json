@@ -62,7 +62,7 @@
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-06T07:15:26Z",
+      "lastUpdate": "2026-02-09T07:08:44Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -73,7 +73,7 @@
       "name": "三阶魔方",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "一个完整的三阶魔方",
-      "version": "0.88",
+      "version": "0.89",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fncube/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fncube.fpk",
       "screenshots": [
@@ -90,7 +90,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-06T07:15:26Z",
+      "lastUpdate": "2026-02-09T07:08:44Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -127,7 +127,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.15.17",
+      "version": "4.15.18",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -146,7 +146,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -225,7 +225,7 @@
       "name": "压爆只雀",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "压扁小鸟的解压小游戏",
-      "version": "0.88",
+      "version": "0.89",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/boombird/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/boombird.fpk",
       "screenshots": [
@@ -243,7 +243,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-06T07:15:26Z",
+      "lastUpdate": "2026-02-09T07:08:44Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -321,7 +321,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -412,7 +412,7 @@
       "name": "切碎方块",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "切碎方块的解压小游戏",
-      "version": "0.88",
+      "version": "0.89",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/cutcubes/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/cutcubes.fpk",
       "screenshots": [
@@ -430,7 +430,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-06T07:15:26Z",
+      "lastUpdate": "2026-02-09T07:08:44Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -1240,7 +1240,7 @@
       "stars": 11,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-08T01:18:13Z",
+      "lastUpdate": "2026-02-09T01:04:07Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1302,7 +1302,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-02T05:38:23Z",
+      "lastUpdate": "2026-02-09T02:00:10Z",
       "fnpack_app_key": "OpenList",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1333,7 +1333,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-02T05:38:23Z",
+      "lastUpdate": "2026-02-09T02:00:10Z",
       "fnpack_app_key": "AdGuardHome",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1364,7 +1364,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-02T05:38:23Z",
+      "lastUpdate": "2026-02-09T02:00:10Z",
       "fnpack_app_key": "TaoSync",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1385,7 +1385,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1409,7 +1409,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1433,7 +1433,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1457,7 +1457,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1481,7 +1481,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1505,7 +1505,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1529,7 +1529,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1553,7 +1553,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1577,7 +1577,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1606,7 +1606,7 @@
       "stars": 8,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-allinssl",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1632,7 +1632,7 @@
       "stars": 8,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-bark",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1659,7 +1659,7 @@
       "stars": 8,
       "forks": 0,
       "category": "games",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-factorio",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1685,7 +1685,7 @@
       "stars": 8,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-quark-auto-save",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1713,7 +1713,7 @@
       "stars": 8,
       "forks": 0,
       "category": "media",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-suwayomi",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1739,7 +1739,7 @@
       "stars": 8,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-xiaomi-album-syncer",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1950,7 +1950,7 @@
       "stars": 8,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-01-19T06:54:38Z",
+      "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-icloud-photos",
       "fnpack_repo_key": "yaya918",
       "install_type": "系统空间",
@@ -1999,7 +1999,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-02T05:38:23Z",
+      "lastUpdate": "2026-02-09T02:00:10Z",
       "fnpack_app_key": "SmartDNS",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -2044,7 +2044,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2130,7 +2130,7 @@
       "name": "toolsplus",
       "repository": "https://github.com/upchr/FnDepot",
       "description": "主要功能为个人便签速记，轻量级多设备定时任务管理。它基于 Vue 3 和 Python3 构建，旨在为开发、多设备用户提供集中定时任务管理、以及事项备忘。\n",
-      "version": "2.3.9",
+      "version": "2.3.10",
       "iconUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/toolsplus.fpk",
       "screenshots": [
@@ -2166,12 +2166,13 @@
         "v2.3.6": "便签、定时任务管理（v2.3.6）",
         "v2.3.7": "便签、定时任务管理（v2.3.7）",
         "v2.3.8": "便签、定时任务管理（v2.3.8）",
-        "v2.3.9": "便签、定时任务管理（v2.3.9）"
+        "v2.3.9": "便签、定时任务管理（v2.3.9）",
+        "v2.3.10": "便签、定时任务管理（v2.3.10）"
       },
       "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-02-02T05:40:32Z",
+      "lastUpdate": "2026-02-09T04:58:13Z",
       "fnpack_app_key": "toolsplus",
       "fnpack_repo_key": "upchr",
       "install_type": "存储空间",
@@ -2264,7 +2265,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2505,7 +2506,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2529,7 +2530,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2553,7 +2554,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2601,7 +2602,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 107,
+      "stars": 108,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2660,7 +2661,57 @@
       "fnpack_repo_key": "ctllo-bit",
       "install_type": "存储空间",
       "size": "不超过1"
+    },
+    {
+      "id": "710850609_DBland",
+      "name": "DBland",
+      "repository": "https://github.com/710850609/FnDepot",
+      "description": "Go语言实现的Web版本数据库连接工具，内存占用少，启动快，支持MySQL，Oracle，SQLite等",
+      "version": "1.1.1-001",
+      "iconUrl": "https://raw.githubusercontent.com/710850609/FnDepot/main/DBland/ICON.PNG",
+      "downloadUrl": "https://github.com/710850609/fpk-dbland/releases/latest/download/dbland-1.1.1-001-amd64.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/710850609/FnDepot/main/DBland/Preview/1.png"
+      ],
+      "author": "BoB",
+      "author_url": "https://github.com/710850609",
+      "bug_report_url": "https://github.com/710850609/fpk-DBland/issues",
+      "history": {},
+      "stars": 5,
+      "forks": 1,
+      "category": "utility",
+      "lastUpdate": "2026-02-09T02:00:10Z",
+      "fnpack_app_key": "DBland",
+      "fnpack_repo_key": "710850609",
+      "install_type": "存储空间",
+      "size": "15.67"
+    },
+    {
+      "id": "yaya918_fpk-scrypted",
+      "name": "Scrypted",
+      "repository": "https://github.com/yaya918/FnDepot",
+      "description": "Scrypted是一个高性能家庭视频集成平台和NVR（网络视频录像机），支持HomeKit、Google Home和Alexa。提供实时视频流、智能检测、插件化架构，可将各种摄像头和智能设备集成到统一的智能家居生态中。基于Scrypted开源项目进行打包。数据默认保存在/vol[x]/@appshare/scrypted-data（路径中不能存在中文）。",
+      "version": "0.144.2",
+      "iconUrl": "https://raw.githubusercontent.com/yaya918/FnDepot/main/fpk-scrypted/ICON.PNG",
+      "downloadUrl": "https://raw.githubusercontent.com/yaya918/FnDepot/main/fpk-scrypted/fpk-scrypted.fpk",
+      "screenshots": [
+        "https://raw.githubusercontent.com/yaya918/FnDepot/main/fpk-scrypted/Preview/001.png"
+      ],
+      "author": "koush",
+      "author_url": "https://github.com/koush/scrypted",
+      "bug_report_url": "https://github.com/koush/scrypted/issues",
+      "history": {
+        "0.144.2": "初始版本发布"
+      },
+      "stars": 8,
+      "forks": 0,
+      "category": "utility",
+      "lastUpdate": "2026-02-09T06:18:22Z",
+      "fnpack_app_key": "fpk-scrypted",
+      "fnpack_repo_key": "yaya918",
+      "install_type": "系统空间",
+      "size": "1.9"
     }
   ],
-  "lastUpdated": "2026-02-08T16:32:22.742986Z"
+  "lastUpdated": "2026-02-10T00:21:11.606871Z"
 }
