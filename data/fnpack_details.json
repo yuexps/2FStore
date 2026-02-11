@@ -1386,7 +1386,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-codeserver package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1410,7 +1410,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-kodi package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1434,7 +1434,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-ntfs3 package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1458,7 +1458,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1482,7 +1482,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-qemu-ga package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1506,7 +1506,7 @@
       "history": {
         "v1.1.8": "Initial release of fn-scheduler package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1530,7 +1530,7 @@
       "history": {
         "v1.0.4": "Initial release of fn-sshd-config package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1554,7 +1554,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-terminal package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -1578,7 +1578,7 @@
       "history": {
         "v1.0.7": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2045,7 +2045,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fail2ban package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2131,7 +2131,7 @@
       "name": "toolsplus",
       "repository": "https://github.com/upchr/FnDepot",
       "description": "主要功能为个人便签速记，轻量级多设备定时任务管理。它基于 Vue 3 和 Python3 构建，旨在为开发、多设备用户提供集中定时任务管理、以及事项备忘。\n",
-      "version": "2.3.10",
+      "version": "3.0.0",
       "iconUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/upchr/FnDepot/main/toolsplus/toolsplus.fpk",
       "screenshots": [
@@ -2168,12 +2168,13 @@
         "v2.3.7": "便签、定时任务管理（v2.3.7）",
         "v2.3.8": "便签、定时任务管理（v2.3.8）",
         "v2.3.9": "便签、定时任务管理（v2.3.9）",
-        "v2.3.10": "便签、定时任务管理（v2.3.10）"
+        "v2.3.10": "便签、定时任务管理（v2.3.10）",
+        "v3.0.0": "便签、定时任务管理（v3.0.0）"
       },
       "stars": 4,
       "forks": 0,
       "category": "utility",
-      "lastUpdate": "2026-02-09T04:58:13Z",
+      "lastUpdate": "2026-02-11T10:24:18Z",
       "fnpack_app_key": "toolsplus",
       "fnpack_repo_key": "upchr",
       "install_type": "存储空间",
@@ -2266,7 +2267,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2507,7 +2508,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-yt6801 package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2531,7 +2532,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2555,7 +2556,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-monitor package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2603,7 +2604,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 109,
+      "stars": 110,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-01-30T04:31:56Z",
@@ -2714,5 +2715,5 @@
       "size": "1.9"
     }
   ],
-  "lastUpdated": "2026-02-10T17:02:28.124494Z"
+  "lastUpdated": "2026-02-11T17:04:48.112312Z"
 }
