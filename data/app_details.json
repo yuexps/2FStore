@@ -86,7 +86,7 @@
       "screenshots": [],
       "author": "UCKETX",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "category": "system",
       "lastUpdate": "2025-12-04T13:25:51Z"
     },
@@ -115,11 +115,11 @@
       "downloadUrl": "https://github.com/yuexps/2FMusic/releases/download/v0.1.0-3fba165-pre/fnnas.2fmusic-0.1.0-3fba165-amd64.fpk",
       "screenshots": [],
       "author": "yuexps",
-      "stars": 52,
+      "stars": 53,
       "forks": 8,
       "category": "media",
       "lastUpdate": "2026-02-10T09:36:51Z"
     }
   ],
-  "lastUpdated": "2026-02-10T17:02:20.583970Z"
+  "lastUpdated": "2026-02-13T16:49:22.894701Z"
 }
