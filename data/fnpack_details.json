@@ -39,7 +39,7 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "`多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>• ⬇️ <a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>手动下载链接</a> • 更多信息：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
-      "version": "1.1.19",
+      "version": "1.1.22",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
       "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
       "screenshots": [
@@ -57,12 +57,12 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
-        "墙裂建议": "安装的版本号与飞牛版本一致即可！ ✅已适配arm版飞牛！其他更新细节请到Github查看"
+        "墙裂建议": "可以的！ ✅已适配arm版飞牛！其他更新细节请到Github查看"
       },
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-09T07:08:44Z",
+      "lastUpdate": "2026-02-15T13:03:46Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -90,7 +90,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-09T07:08:44Z",
+      "lastUpdate": "2026-02-15T13:03:46Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -146,7 +146,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -180,7 +180,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -214,7 +214,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -243,7 +243,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-09T07:08:44Z",
+      "lastUpdate": "2026-02-15T13:03:46Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -295,7 +295,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -306,7 +306,7 @@
       "name": "Cloudreve",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "Cloudreve 可以让您快速搭建起公私兼备的网盘系统。Cloudreve 在底层支持不同的云存储平台，用户在实际使用时无须关心物理存储方式。你可以使用 Cloudreve 搭建个人用网盘、文件分享系统，亦或是针对大小团体的公有云系统。",
-      "version": "4.13.0",
+      "version": "4.14.1",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-cloudreve/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-cloudreve/fpk-cloudreve.fpk",
       "screenshots": [
@@ -321,7 +321,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -348,7 +348,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -430,7 +430,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-09T07:08:44Z",
+      "lastUpdate": "2026-02-15T13:03:46Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -1241,7 +1241,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-14T00:59:49Z",
+      "lastUpdate": "2026-02-15T02:44:01Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1605,7 +1605,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1631,7 +1631,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1658,7 +1658,7 @@
         "2.0.72": "最新稳定版本",
         "1.1.0": "性能优化和Bug修复"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1684,7 +1684,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1712,7 +1712,7 @@
         "v2.1.1867-1": "飞牛NAS适配版本",
         "v2.1.1867": "主要功能更新和Bug修复"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "media",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1738,7 +1738,7 @@
       "history": {
         "0.10.0": "初始版本发布"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1949,7 +1949,7 @@
       "history": {
         "2.0.1": "初始版本发布"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -2714,7 +2714,7 @@
       "history": {
         "0.144.2": "初始版本发布"
       },
-      "stars": 9,
+      "stars": 10,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -2772,5 +2772,5 @@
       "size": " 0.039"
     }
   ],
-  "lastUpdated": "2026-02-14T16:30:58.471113Z"
+  "lastUpdated": "2026-02-15T16:31:20.497800Z"
 }
