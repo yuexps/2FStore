@@ -41,7 +41,7 @@
       "description": "`多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>• ⬇️ <a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>手动下载链接</a> • 更多信息：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
       "version": "1.1.22",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
-      "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk.fpk",
+      "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk_x86.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/1.jpg",
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/2.jpg",
@@ -57,12 +57,12 @@
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
       "history": {
-        "墙裂建议": "可以的！ ✅已适配arm版飞牛！其他更新细节请到Github查看"
+        "祝大家": "🍩 新年快乐,身体健康,开开心心！ ✅已适配arm版飞牛！其他更新细节请到Github查看"
       },
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-15T13:03:46Z",
+      "lastUpdate": "2026-02-16T11:40:44Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -90,7 +90,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-15T13:03:46Z",
+      "lastUpdate": "2026-02-16T11:40:44Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -243,7 +243,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-15T13:03:46Z",
+      "lastUpdate": "2026-02-16T11:40:44Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -430,7 +430,7 @@
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-15T13:03:46Z",
+      "lastUpdate": "2026-02-16T11:40:44Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
@@ -1387,7 +1387,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-codeserver package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1411,7 +1411,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-kodi package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1435,7 +1435,7 @@
       "history": {
         "v1.0.6": "Initial release of fn-ntfs3 package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1459,7 +1459,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1483,7 +1483,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-qemu-ga package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1507,7 +1507,7 @@
       "history": {
         "v1.1.9": "Initial release of fn-scheduler package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1531,7 +1531,7 @@
       "history": {
         "v1.0.5": "Initial release of fn-sshd-config package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1555,7 +1555,7 @@
       "history": {
         "v1.0.9": "Initial release of fn-terminal package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1579,7 +1579,7 @@
       "history": {
         "v1.0.8": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -1605,7 +1605,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1631,7 +1631,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1658,7 +1658,7 @@
         "2.0.72": "最新稳定版本",
         "1.1.0": "性能优化和Bug修复"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "games",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1684,7 +1684,7 @@
       "history": {
         "1.0.0": "初始版本发布"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1712,7 +1712,7 @@
         "v2.1.1867-1": "飞牛NAS适配版本",
         "v2.1.1867": "主要功能更新和Bug修复"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "media",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1738,7 +1738,7 @@
       "history": {
         "0.10.0": "初始版本发布"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -1949,7 +1949,7 @@
       "history": {
         "2.0.1": "初始版本发布"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -2046,7 +2046,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-fail2ban package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2276,7 +2276,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2517,7 +2517,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-yt6801 package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2541,7 +2541,7 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2565,7 +2565,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-monitor package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2613,7 +2613,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2714,7 +2714,7 @@
       "history": {
         "0.144.2": "初始版本发布"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
@@ -2738,7 +2738,7 @@
       "history": {
         "v1.0.1": "Initial release of fn-aic8800 package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2762,7 +2762,7 @@
       "history": {
         "v1.0.0": "Initial release of fn-fnOS-aarch64 package."
       },
-      "stars": 113,
+      "stars": 114,
       "forks": 14,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
@@ -2772,5 +2772,5 @@
       "size": " 0.039"
     }
   ],
-  "lastUpdated": "2026-02-15T16:31:20.497800Z"
+  "lastUpdated": "2026-02-16T16:44:26.682899Z"
 }
