@@ -128,7 +128,7 @@
       "name": "NapCatQQ",
       "repository": "https://github.com/moxyis/FnDepot",
       "description": "基于 TypeScript 构建的 Bot 框架，通过相应的启动器或者框架，主动调用 QQ Node 模块提供给客户端的接口，实现 Bot 的功能。默认登录Token：qq123456",
-      "version": "4.17.15",
+      "version": "4.17.18",
       "iconUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/ICON.PNG",
       "downloadUrl": "https://raw.githubusercontent.com/moxyis/FnDepot/main/fpk-napcatqq/fpk-napcatqq.fpk",
       "screenshots": [
@@ -147,7 +147,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-napcatqq",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -181,7 +181,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-dnsmgr",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -215,7 +215,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-zflie",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -297,7 +297,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-panindex",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -323,7 +323,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-cloudreve",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -350,7 +350,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-oneapi",
       "fnpack_repo_key": "moxyis",
       "install_type": "系统空间",
@@ -1244,7 +1244,7 @@
       "stars": 12,
       "forks": 3,
       "category": "utility",
-      "lastUpdate": "2026-02-19T01:03:24Z",
+      "lastUpdate": "2026-02-21T00:58:22Z",
       "fnpack_app_key": "fpk-xianyu",
       "fnpack_repo_key": "moxyis",
       "install_type": "工具",
@@ -1277,7 +1277,7 @@
         "0.1.5": "修复bug",
         "0.1.6": "合集短剧刮削优化"
       },
-      "stars": 5,
+      "stars": 6,
       "forks": 0,
       "category": "utility",
       "lastUpdate": "2026-02-12T09:41:15Z",
@@ -2801,5 +2801,5 @@
       "size": "0.04"
     }
   ],
-  "lastUpdated": "2026-02-20T16:39:35.829604Z"
+  "lastUpdated": "2026-02-21T16:30:22.948933Z"
 }
