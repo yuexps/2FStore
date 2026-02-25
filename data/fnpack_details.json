@@ -1391,7 +1391,7 @@
         "v1.0.6": "Initial release of fn-codeserver package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-codeserver",
@@ -1415,7 +1415,7 @@
         "v1.0.6": "Initial release of fn-kodi package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-kodi",
@@ -1439,7 +1439,7 @@
         "v1.0.6": "Initial release of fn-ntfs3 package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-ntfs3",
@@ -1463,7 +1463,7 @@
         "v1.0.8": "Initial release of fn-open-vm-tools package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-open-vm-tools",
@@ -1487,7 +1487,7 @@
         "v1.0.8": "Initial release of fn-qemu-ga package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-qemu-ga",
@@ -1511,7 +1511,7 @@
         "v1.1.9": "Initial release of fn-scheduler package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-scheduler",
@@ -1535,7 +1535,7 @@
         "v1.0.5": "Initial release of fn-sshd-config package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-sshd-config",
@@ -1559,7 +1559,7 @@
         "v1.0.9": "Initial release of fn-terminal package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-terminal",
@@ -1583,7 +1583,7 @@
         "v1.0.8": "Initial release of fn-wifi-hotspot package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-wifi-hotspot",
@@ -2050,7 +2050,7 @@
         "v1.0.1": "Initial release of fn-fail2ban package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-fail2ban",
@@ -2280,7 +2280,7 @@
         "v1.0.1": "Initial release of fn-chromium package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-chromium",
@@ -2521,7 +2521,7 @@
         "v1.0.1": "Initial release of fn-yt6801 package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-yt6801",
@@ -2545,7 +2545,7 @@
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-VirtualHereServer",
@@ -2569,7 +2569,7 @@
         "v1.0.1": "Initial release of fn-monitor package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-monitor",
@@ -2617,7 +2617,7 @@
         "v1.0.1": "Initial release of fn-broadcom-sta package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-broadcom-sta",
@@ -2742,7 +2742,7 @@
         "v1.0.1": "Initial release of fn-aic8800 package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-aic8800",
@@ -2766,7 +2766,7 @@
         "v1.0.0": "Initial release of fn-fnOS-aarch64 package."
       },
       "stars": 118,
-      "forks": 14,
+      "forks": 15,
       "category": "utility",
       "lastUpdate": "2026-02-12T18:06:11Z",
       "fnpack_app_key": "fn-fnOS-aarch64",
@@ -2801,5 +2801,5 @@
       "size": "0.04"
     }
   ],
-  "lastUpdated": "2026-02-24T17:06:24.034436Z"
+  "lastUpdated": "2026-02-25T17:07:50.749120Z"
 }
