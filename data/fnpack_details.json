@@ -485,7 +485,7 @@
       "history": {
         "V0.9.16": "https://github.com/cloud-fs/cloud-fs.github.io/releases"
       },
-      "stars": 22,
+      "stars": 23,
       "forks": 3,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -513,7 +513,7 @@
       "history": {
         "V2.31.0": "https://github.com/advplyr/audiobookshelf/releases"
       },
-      "stars": 22,
+      "stars": 23,
       "forks": 3,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -539,7 +539,7 @@
       "history": {
         "V4.9.1.90": "https://emby.media/download.html"
       },
-      "stars": 22,
+      "stars": 23,
       "forks": 3,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -565,7 +565,7 @@
       "history": {
         "V2.0.14": "hhttps://1panel.cn/"
       },
-      "stars": 22,
+      "stars": 23,
       "forks": 3,
       "category": "utility",
       "lastUpdate": "2025-12-06T12:08:37Z",
@@ -592,7 +592,7 @@
       "history": {
         "v2.3.9-Beta": "轻量（应用包仅5.2MB）、低占用、原生方案无其他环境依赖，NAS内应用窗口化，支持App及公网访问，兼容反代用户"
       },
-      "stars": 10,
+      "stars": 11,
       "forks": 1,
       "category": "utility",
       "lastUpdate": "2025-11-30T10:59:04Z",
@@ -1307,7 +1307,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-24T09:06:46Z",
+      "lastUpdate": "2026-02-26T10:30:46Z",
       "fnpack_app_key": "OpenList",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1318,9 +1318,9 @@
       "name": "AdGuardHome",
       "repository": "https://github.com/710850609/FnDepot",
       "description": "免费开源、强大的网络范围广告和跟踪器阻止DNS服务器",
-      "version": "0.107.72-12",
+      "version": "0.107.72-13",
       "iconUrl": "https://raw.githubusercontent.com/710850609/FnDepot/main/AdGuardHome/ICON.PNG",
-      "downloadUrl": "https://github.com/710850609/fpk-adguardhome/releases/latest/download/AdGuardHome-0.107.72-12-x86.fpk",
+      "downloadUrl": "https://github.com/710850609/fpk-adguardhome/releases/download/0.107.72-13/AdGuardHome-0.107.72-13-x86.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/710850609/FnDepot/main/AdGuardHome/Preview/1.png",
         "https://raw.githubusercontent.com/710850609/FnDepot/main/AdGuardHome/Preview/2.png",
@@ -1338,11 +1338,11 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-24T09:06:46Z",
+      "lastUpdate": "2026-02-26T10:30:46Z",
       "fnpack_app_key": "AdGuardHome",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
-      "size": "12.4"
+      "size": "12"
     },
     {
       "id": "710850609_TaoSync",
@@ -1369,11 +1369,11 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-24T09:06:46Z",
+      "lastUpdate": "2026-02-26T10:30:46Z",
       "fnpack_app_key": "TaoSync",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
-      "size": "2.5"
+      "size": "2"
     },
     {
       "id": "RROrg_fn-codeserver",
@@ -1382,7 +1382,7 @@
       "description": "code-server 是 VS Code 的在线版本，允许您通过浏览器进行代码编辑和开发。",
       "version": "1.0.6",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-codeserver/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-codeserver_all_v1.0.6.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-codeserver_all_v1.0.6.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1390,10 +1390,10 @@
       "history": {
         "v1.0.6": "Initial release of fn-codeserver package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-codeserver",
       "fnpack_repo_key": "RROrg",
       "install_type": "",
@@ -1406,7 +1406,7 @@
       "description": "Kodi 是一个免费且开源的媒体播放器软件，用于播放视频、音频和图像。",
       "version": "1.0.6",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-kodi/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-kodi_all_v1.0.6.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-kodi_all_v1.0.6.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1414,10 +1414,10 @@
       "history": {
         "v1.0.6": "Initial release of fn-kodi package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-kodi",
       "fnpack_repo_key": "RROrg",
       "install_type": "",
@@ -1430,7 +1430,7 @@
       "description": "ntfs3 驱动是一个用于 Linux 内核的开源 NTFS 文件系统驱动程序，旨在提供对 NTFS 格式化分区的高性能读写支持。",
       "version": "1.0.6",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-ntfs3/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-ntfs3_all_v1.0.6.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-ntfs3_all_v1.0.6.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1438,10 +1438,10 @@
       "history": {
         "v1.0.6": "Initial release of fn-ntfs3 package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-ntfs3",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -1454,7 +1454,7 @@
       "description": "Open-VM-Tools 是 VMware Tools 的开源替代品，旨在为运行在 VMware 环境中的虚拟机提供更好的性能和用户体验。",
       "version": "1.0.8",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-open-vm-tools/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-open-vm-tools_all_v1.0.8.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-open-vm-tools_all_v1.0.8.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1462,10 +1462,10 @@
       "history": {
         "v1.0.8": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-open-vm-tools",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -1478,7 +1478,7 @@
       "description": "QEMU Guest Agent 是一个运行在虚拟机内部的守护进程，旨在通过与虚拟化主机的交互，执行一系列操作以增强虚拟机的管理能力。",
       "version": "1.0.8",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-qemu-ga/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-qemu-ga_all_v1.0.8.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-qemu-ga_all_v1.0.8.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1486,10 +1486,10 @@
       "history": {
         "v1.0.8": "Initial release of fn-qemu-ga package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-qemu-ga",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -1502,7 +1502,7 @@
       "description": "轻量级的任务计划应用，支持设置定时任务以自动执行脚本或命令，同时也支持基于条件的任务触发，例如在特定时间、特定事件或特定文件变化时执行任务。",
       "version": "1.1.9",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-scheduler/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-scheduler_all_v1.1.9.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-scheduler_all_v1.1.9.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1510,10 +1510,10 @@
       "history": {
         "v1.1.9": "Initial release of fn-scheduler package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-scheduler",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -1526,7 +1526,7 @@
       "description": "设置 root 用户密码，修改 SSHD 配置.",
       "version": "1.0.5",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-sshd-config/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-sshd-config_all_v1.0.5.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-sshd-config_all_v1.0.5.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1534,10 +1534,10 @@
       "history": {
         "v1.0.5": "Initial release of fn-sshd-config package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-sshd-config",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -1550,7 +1550,7 @@
       "description": "terminal (ttyd + tmux) 是一个基于 Web 的终端应用程序，允许用户通过浏览器访问和管理服务器终端会话，提供便捷的远程终端操作体验。",
       "version": "1.0.9",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-terminal/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-terminal_all_v1.0.9.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-terminal_all_v1.0.9.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1558,10 +1558,10 @@
       "history": {
         "v1.0.9": "Initial release of fn-terminal package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-terminal",
       "fnpack_repo_key": "RROrg",
       "install_type": "",
@@ -1574,7 +1574,7 @@
       "description": "无线热点创建工具，允许用户轻松地将计算机变成一个 Wi-Fi 热点，分享网络连接给其他设备。",
       "version": "1.0.8",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-wifi-hotspot/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-wifi-hotspot_all_v1.0.8.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-wifi-hotspot_all_v1.0.8.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -1582,10 +1582,10 @@
       "history": {
         "v1.0.8": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-wifi-hotspot",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -1609,7 +1609,7 @@
         "1.0.0": "初始版本发布"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-allinssl",
@@ -1635,7 +1635,7 @@
         "1.0.0": "初始版本发布"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-bark",
@@ -1662,7 +1662,7 @@
         "1.1.0": "性能优化和Bug修复"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "games",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-factorio",
@@ -1688,7 +1688,7 @@
         "1.0.0": "初始版本发布"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-quark-auto-save",
@@ -1716,7 +1716,7 @@
         "v2.1.1867": "主要功能更新和Bug修复"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "media",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-suwayomi",
@@ -1742,7 +1742,7 @@
         "0.10.0": "初始版本发布"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-xiaomi-album-syncer",
@@ -1953,7 +1953,7 @@
         "2.0.1": "初始版本发布"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-icloud-photos",
@@ -2004,11 +2004,11 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-24T09:06:46Z",
+      "lastUpdate": "2026-02-26T10:30:46Z",
       "fnpack_app_key": "SmartDNS",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
-      "size": "8.6"
+      "size": "8"
     },
     {
       "id": "snltty_cs16server",
@@ -2041,7 +2041,7 @@
       "description": "fail2ban 是一个开源的入侵防御工具，用于保护 Linux 服务器免受暴力破解攻击。 它通过监控日志文件，检测可疑的登录尝试，并自动封禁恶意 IP 地址，从而增强系统的安全性。",
       "version": "1.0.1",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-fail2ban/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-fail2ban_all_v1.0.1.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-fail2ban_all_v1.0.1.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2049,10 +2049,10 @@
       "history": {
         "v1.0.1": "Initial release of fn-fail2ban package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-fail2ban",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -2271,7 +2271,7 @@
       "description": "Chromium 是一个开源的网页浏览器项目，旨在为用户提供更安全、更快速和更稳定的浏览体验。",
       "version": "1.0.1",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-chromium/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-chromium_all_v1.0.1.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-chromium_all_v1.0.1.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2279,10 +2279,10 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-chromium",
       "fnpack_repo_key": "RROrg",
       "install_type": "",
@@ -2512,7 +2512,7 @@
       "description": "Motorcomm/裕太微 千兆有线网卡 YT6801 驱动，提供对该芯片的网络功能支持。",
       "version": "1.0.1",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-yt6801/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-yt6801_all_v1.0.1.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-yt6801_all_v1.0.1.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2520,10 +2520,10 @@
       "history": {
         "v1.0.1": "Initial release of fn-yt6801 package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-yt6801",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -2536,7 +2536,7 @@
       "description": "VirtualHere USB 服务器支持通过网络远程访问 USB 设备。",
       "version": "4.8.6",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-VirtualHereServer/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-VirtualHereServer_all_v4.8.6.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-VirtualHereServer_all_v4.8.6.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2544,10 +2544,10 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-VirtualHereServer",
       "fnpack_repo_key": "RROrg",
       "install_type": "",
@@ -2560,7 +2560,7 @@
       "description": "显示器/电源设置应用，用于配置系统的显示器和电源选选项。",
       "version": "1.0.1",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-monitor/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-monitor_all_v1.0.1.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-monitor_all_v1.0.1.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2568,10 +2568,10 @@
       "history": {
         "v1.0.1": "Initial release of fn-monitor package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-monitor",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -2608,7 +2608,7 @@
       "description": "Broadcom STA 是 BCM4311-、BCM4312-、BCM4313-、BCM4321-、BCM4322-、BCM43142-、BCM43224-、BCM43225-、BCM43227-、BCM43228-、BCM4331-、BCM4360- 和 BCM4352 等 IEEE 802.11a/b/g/n 无线网卡的驱动程序。",
       "version": "1.0.1",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-broadcom-sta/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-broadcom-sta_all_v1.0.1.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-broadcom-sta_all_v1.0.1.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2616,10 +2616,10 @@
       "history": {
         "v1.0.1": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-broadcom-sta",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -2694,11 +2694,11 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-24T09:06:46Z",
+      "lastUpdate": "2026-02-26T10:30:46Z",
       "fnpack_app_key": "DBland",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
-      "size": "15.67"
+      "size": "15"
     },
     {
       "id": "yaya918_fpk-scrypted",
@@ -2718,7 +2718,7 @@
         "0.144.2": "初始版本发布"
       },
       "stars": 11,
-      "forks": 0,
+      "forks": 1,
       "category": "utility",
       "lastUpdate": "2026-02-09T06:18:22Z",
       "fnpack_app_key": "fpk-scrypted",
@@ -2733,7 +2733,7 @@
       "description": "AICSemi/爱科微科技 AIC8800 芯片的 WiFi6 模组驱动，提供对该芯片的网络功能支持。",
       "version": "1.0.1",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-aic8800/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-aic8800_all_v1.0.1.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-aic8800_all_v1.0.1.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2741,10 +2741,10 @@
       "history": {
         "v1.0.1": "Initial release of fn-aic8800 package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-aic8800",
       "fnpack_repo_key": "RROrg",
       "install_type": "root",
@@ -2757,7 +2757,7 @@
       "description": "基于 aarch64 架构 的 fnOS 系统。",
       "version": "1.0.0",
       "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-fnOS-aarch64/ICON.PNG",
-      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.13-0205/fn-fnOS-aarch64_x86_v1.0.0.fpk",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-fnOS-aarch64_x86_v1.0.0.fpk",
       "screenshots": [],
       "author": "Ing",
       "author_url": "https://github.com/RROrg/fn-apps",
@@ -2765,10 +2765,10 @@
       "history": {
         "v1.0.0": "Initial release of fn-fnOS-aarch64 package."
       },
-      "stars": 118,
-      "forks": 15,
+      "stars": 119,
+      "forks": 16,
       "category": "utility",
-      "lastUpdate": "2026-02-12T18:06:11Z",
+      "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-fnOS-aarch64",
       "fnpack_repo_key": "RROrg",
       "install_type": "",
@@ -2799,7 +2799,55 @@
       "fnpack_repo_key": "hbestm",
       "install_type": "存储空间",
       "size": "0.04"
+    },
+    {
+      "id": "RROrg_fn-grafana-alloy",
+      "name": "Grafana Alloy",
+      "repository": "https://github.com/RROrg/fn-apps",
+      "description": "可观测性数据收集器，收集系统日志、应用日志发送到 Loki",
+      "version": "1.13.2",
+      "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-grafana-alloy/ICON.PNG",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-grafana-alloy_all_v1.13.2.fpk",
+      "screenshots": [],
+      "author": "Ing",
+      "author_url": "https://github.com/RROrg/fn-apps",
+      "bug_report_url": "https://github.com/RROrg/fn-apps/issues",
+      "history": {
+        "v1.13.2": "Initial release of fn-grafana-alloy package."
+      },
+      "stars": 119,
+      "forks": 16,
+      "category": "utility",
+      "lastUpdate": "2026-02-26T11:29:19Z",
+      "fnpack_app_key": "fn-grafana-alloy",
+      "fnpack_repo_key": "RROrg",
+      "install_type": "",
+      "size": " 216.806"
+    },
+    {
+      "id": "RROrg_fn-scrutiny-collector",
+      "name": "Scrutiny Collector",
+      "repository": "https://github.com/RROrg/fn-apps",
+      "description": "硬盘 S.M.A.R.T 健康监控采集器，定时采集硬盘健康数据发送到 Scrutiny Web 服务",
+      "version": "1.33.0",
+      "iconUrl": "https://raw.githubusercontent.com/RROrg/fn-apps/main/fn-scrutiny-collector/ICON.PNG",
+      "downloadUrl": "https://github.com/RROrg/fn-apps/releases/download/2026.02.26-1928/fn-scrutiny-collector_all_v1.33.0.fpk",
+      "screenshots": [],
+      "author": "Ing",
+      "author_url": "https://github.com/RROrg/fn-apps",
+      "bug_report_url": "https://github.com/RROrg/fn-apps/issues",
+      "history": {
+        "v1.33.0": "Initial release of fn-scrutiny-collector package."
+      },
+      "stars": 119,
+      "forks": 16,
+      "category": "utility",
+      "lastUpdate": "2026-02-26T11:29:19Z",
+      "fnpack_app_key": "fn-scrutiny-collector",
+      "fnpack_repo_key": "RROrg",
+      "install_type": "",
+      "size": ""
     }
   ],
-  "lastUpdated": "2026-02-25T17:07:50.749120Z"
+  "lastUpdated": "2026-02-26T16:59:25.437186Z"
 }
