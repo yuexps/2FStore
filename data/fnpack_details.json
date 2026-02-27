@@ -39,9 +39,9 @@
       "name": "飞牛桌面管理工具",
       "repository": "https://github.com/IMGZCQ/FnDepot",
       "description": "`多处自定样式主题美化,桌面图标任君摆布,让飞牛成为你的导航页，收藏夹,Docker应用入口~<br>• 🎵 飞牛桌面音乐播放器正式上线！从此桌面不再沉默<br>• ✨ 桌面图标、文件夹完全自由设置，彻底取代收藏夹<br>• 🌈 多项个性化设置：背景，LOGO，标题，预设主题等<br>• 🌐 内外网链接智能识别跳转，更可自定义更多链接<br>• 👑 多层文件夹，最小化托盘，右键菜单，拓展更多功能<br>• ⚙️ 更多自定义：外链分享页，登录页备案信息，飞牛影视<br>• ⬇️ <a target='_blank' href='https://fndesk.imcq.top/?url=dl&at=FnDepot' style='color: #60a5fa;font-size:16px; font-weight: bold; text-decoration: none;'>手动下载链接</a> • 更多信息：Q群 1039270739 或 GitHub：IMGZCQ/fndesk`",
-      "version": "1.1.22.9",
+      "version": "1.1.23",
       "iconUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/ICON.PNG",
-      "downloadUrl": "https://fndesk.imcq.top/FPK/fndesk_x86.fpk",
+      "downloadUrl": "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/fndesk.fpk",
       "screenshots": [
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/1.jpg",
         "https://raw.githubusercontent.com/IMGZCQ/FnDepot/main/fndesk/Preview/2.jpg",
@@ -56,17 +56,15 @@
       "author": "米恋泥",
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
-      "history": {
-        "祝大家": "🍩 新年快乐,身体健康,开开心心！ ✅已适配arm版飞牛！其他更新细节请到Github查看"
-      },
+      "history": {},
       "stars": 9,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-23T07:49:54Z",
+      "lastUpdate": "2026-02-27T02:01:24Z",
       "fnpack_app_key": "fndesk",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "差不多1"
+      "size": "950KB"
     },
     {
       "id": "IMGZCQ_fncube",
@@ -83,19 +81,15 @@
       "author": "米恋泥",
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
-      "history": {
-        "v0.90": "兼容x86和arm飞牛",
-        "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
-        "v0.77": "修复错误,性能优化"
-      },
+      "history": {},
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-23T07:49:54Z",
+      "lastUpdate": "2026-02-27T02:01:24Z",
       "fnpack_app_key": "fncube",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "大概半个"
+      "size": "0.5"
     },
     {
       "id": "snltty_linker",
@@ -237,19 +231,15 @@
       "author": "米恋泥",
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
-      "history": {
-        "v0.90": "兼容x86和arm飞牛",
-        "v0.88": "优化运行环境,支持所有网络下运行,不占用任何端口",
-        "v0.77": "修复错误,性能优化"
-      },
+      "history": {},
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-23T07:49:54Z",
+      "lastUpdate": "2026-02-27T02:01:24Z",
       "fnpack_app_key": "boombird",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "不超过1"
+      "size": "0.9"
     },
     {
       "id": "snltty_certimate",
@@ -425,19 +415,15 @@
       "author": "米恋泥",
       "author_url": "https://github.com/IMGZCQ/FnDepot",
       "bug_report_url": "https://github.com/IMGZCQ/FnDepot/issues",
-      "history": {
-        "v0.90": "兼容x86和arm飞牛",
-        "v0.88": "手动汉化, 优化运行环境,支持所有网络下运行,不占用任何端口",
-        "v0.77": "修复错误,性能优化"
-      },
+      "history": {},
       "stars": 9,
       "forks": 1,
       "category": "games",
-      "lastUpdate": "2026-02-23T07:49:54Z",
+      "lastUpdate": "2026-02-27T02:01:24Z",
       "fnpack_app_key": "cutcubes",
       "fnpack_repo_key": "IMGZCQ",
       "install_type": "系统空间",
-      "size": "只有0.6"
+      "size": "0.7"
     },
     {
       "id": "hbestm_easyvoice",
@@ -1307,7 +1293,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-26T10:30:46Z",
+      "lastUpdate": "2026-02-27T06:54:04Z",
       "fnpack_app_key": "OpenList",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1318,7 +1304,7 @@
       "name": "AdGuardHome",
       "repository": "https://github.com/710850609/FnDepot",
       "description": "免费开源、强大的网络范围广告和跟踪器阻止DNS服务器",
-      "version": "0.107.72-13",
+      "version": "0.107.72-14",
       "iconUrl": "https://raw.githubusercontent.com/710850609/FnDepot/main/AdGuardHome/ICON.PNG",
       "downloadUrl": "https://github.com/710850609/fpk-adguardhome/releases/download/0.107.72-13/AdGuardHome-0.107.72-13-x86.fpk",
       "screenshots": [
@@ -1338,7 +1324,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-26T10:30:46Z",
+      "lastUpdate": "2026-02-27T06:54:04Z",
       "fnpack_app_key": "AdGuardHome",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1369,7 +1355,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-26T10:30:46Z",
+      "lastUpdate": "2026-02-27T06:54:04Z",
       "fnpack_app_key": "TaoSync",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -1390,8 +1376,8 @@
       "history": {
         "v1.0.6": "Initial release of fn-codeserver package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-codeserver",
@@ -1414,8 +1400,8 @@
       "history": {
         "v1.0.6": "Initial release of fn-kodi package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-kodi",
@@ -1438,8 +1424,8 @@
       "history": {
         "v1.0.6": "Initial release of fn-ntfs3 package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-ntfs3",
@@ -1462,8 +1448,8 @@
       "history": {
         "v1.0.8": "Initial release of fn-open-vm-tools package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-open-vm-tools",
@@ -1486,8 +1472,8 @@
       "history": {
         "v1.0.8": "Initial release of fn-qemu-ga package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-qemu-ga",
@@ -1510,8 +1496,8 @@
       "history": {
         "v1.1.9": "Initial release of fn-scheduler package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-scheduler",
@@ -1534,8 +1520,8 @@
       "history": {
         "v1.0.5": "Initial release of fn-sshd-config package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-sshd-config",
@@ -1558,8 +1544,8 @@
       "history": {
         "v1.0.9": "Initial release of fn-terminal package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-terminal",
@@ -1582,8 +1568,8 @@
       "history": {
         "v1.0.8": "Initial release of fn-wifi-hotspot package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-wifi-hotspot",
@@ -1991,7 +1977,7 @@
       "name": "SmartDNS",
       "repository": "https://github.com/710850609/FnDepot",
       "description": "SmartDNS是一个开源的DNS服务器，用于加速和优化网络访问。",
-      "version": "47.1-004",
+      "version": "47.1-005",
       "iconUrl": "https://raw.githubusercontent.com/710850609/FnDepot/main/SmartDNS/ICON.PNG",
       "downloadUrl": "https://github.com/710850609/fpk-smartdns/releases/latest/download/smartdns-47.1-004-x86.fpk",
       "screenshots": [
@@ -2004,7 +1990,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-26T10:30:46Z",
+      "lastUpdate": "2026-02-27T06:54:04Z",
       "fnpack_app_key": "SmartDNS",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -2049,8 +2035,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-fail2ban package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-fail2ban",
@@ -2279,8 +2265,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-chromium package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-chromium",
@@ -2520,8 +2506,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-yt6801 package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-yt6801",
@@ -2544,8 +2530,8 @@
       "history": {
         "v4.8.6": "Initial release of fn-VirtualHereServer package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-VirtualHereServer",
@@ -2568,8 +2554,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-monitor package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-monitor",
@@ -2616,8 +2602,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-broadcom-sta package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-broadcom-sta",
@@ -2694,7 +2680,7 @@
       "stars": 5,
       "forks": 1,
       "category": "utility",
-      "lastUpdate": "2026-02-26T10:30:46Z",
+      "lastUpdate": "2026-02-27T06:54:04Z",
       "fnpack_app_key": "DBland",
       "fnpack_repo_key": "710850609",
       "install_type": "存储空间",
@@ -2741,8 +2727,8 @@
       "history": {
         "v1.0.1": "Initial release of fn-aic8800 package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-aic8800",
@@ -2765,8 +2751,8 @@
       "history": {
         "v1.0.0": "Initial release of fn-fnOS-aarch64 package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-fnOS-aarch64",
@@ -2815,8 +2801,8 @@
       "history": {
         "v1.13.2": "Initial release of fn-grafana-alloy package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-grafana-alloy",
@@ -2839,8 +2825,8 @@
       "history": {
         "v1.33.0": "Initial release of fn-scrutiny-collector package."
       },
-      "stars": 119,
-      "forks": 16,
+      "stars": 121,
+      "forks": 17,
       "category": "utility",
       "lastUpdate": "2026-02-26T11:29:19Z",
       "fnpack_app_key": "fn-scrutiny-collector",
@@ -2849,5 +2835,5 @@
       "size": ""
     }
   ],
-  "lastUpdated": "2026-02-26T16:59:25.437186Z"
+  "lastUpdated": "2026-02-27T16:41:15.199642Z"
 }
